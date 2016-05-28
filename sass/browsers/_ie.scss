@@ -1,0 +1,13 @@
+body {
+	background: #000;
+}
+
+header,
+section,
+footer,
+p.credits { 
+	max-width: 1600px;
+	min-width: 1000px;
+	margin: 0 auto;
+}
+

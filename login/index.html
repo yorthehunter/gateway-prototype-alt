@@ -1,0 +1,48 @@
+---
+body_class: login neutral
+title: Login - Prototype
+status: logged-out
+skin: neutral
+active: login
+---
+
+{% include header.html %}
+
+<div class="page">
+
+
+<form class="sign-in-form" id="new_user">
+        <div class="row">
+          <div class="col-xs-12">
+            <legend class="content-headline">Sign In</legend>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 form-group">
+            <label class="control-label" for="user_login">Email</label>
+            <input autofocus="autofocus" class="form-control input-lg" type="email" value="torunn@stitchfix.com" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <label class="control-label" for="user_password">Password</label>
+            <input maxlength="75" class="form-control input-lg" size="75" type="password" value="**********" />
+
+      <span class="help-inline-block">Forgot your password?<a title="Forgot your password?"> Reset it now
+</a>            </span>
+          </div>
+        </div>
+        <br />
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="/logged-in" type="submit" name="commit" value="Sign In" class="btn btn--cta ">Sign in</a>
+        </div>
+      </div>
+</form>
+
+</div>
+
+
+{% include footer.html %}
+

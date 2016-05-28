@@ -1,0 +1,62 @@
+{% if page.status == "logged-in" %}
+<a href="/logged-in" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+{% else %}
+<a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+{% endif %}
+
+<div class="gender">
+{% if page.active == "womens" %}
+   / Womens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
+{% elsif page.active == "mens" %}
+   / Mens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
+{% endif %}
+</div>
+
+<div class="toggle-gender">
+  <div class="toggleable-gender">
+    <a href="/mens">Mens</a>
+    <a href="/womens">Womens</a> 
+  </div>
+</div>
+{% if page.status == "logged-in" %}  
+  {% if page.body_class == "mens" %} 
+    <a href="#get-started" class="btn btn--cta" id="get-started">Refer a friend</a>
+  {% endif %}  
+{% else %}
+  {% if page.skin == "neutral" %}
+  <a href="/#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  {% else %}
+  <a href="/" class="btn btn--cta" id="get-started">Get started</a>
+  {% endif %}
+{% endif %}
+  <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+
+    <nav class="main">
+      
+        <ul>
+
+                {% if page.status == "logged-in" %}
+
+                <li><a href="/logged-in">My fix</a></li>
+                <li><a href="/logged-in">Style profile</a></li>
+                <li><a href="/">Sign out</a></li>
+                {% else %}
+                <li><a href="/login">Sign in</a></li>
+                <li><a href="/faq">How it works</a></li>
+                <li><a href="/faq">Faq</a></li>
+                <li><a href="/faq">Style Tips</a></li>
+                <li><a href="/faq">Gift cards</a></li>
+                {% endif %}
+
+<!--
+            {% if page.active == "element" %}
+                <li class="active"><a href="/page/">Element</a></li>
+            {% else %}
+                <li><a href="/schedule/">Element</a></li>
+            {% endif %}
+
+     -->       
+    
+        </ul>
+
+    </nav>

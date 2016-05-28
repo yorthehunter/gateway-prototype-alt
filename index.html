@@ -1,0 +1,52 @@
+---
+body_class: home
+status: logged-out
+title: Prototype
+---
+
+{% include html.html %}
+
+<html>
+
+<head>
+
+  <title>{{ page.title }}</title> 
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta charset="utf-8">
+  
+  {% include includes.html %}
+
+</head>
+
+
+<body class="{{ page.body_class }}">
+
+<div class="page gateway">
+
+<div class="splash">
+<img src="img/gateway.jpg" alt="" />
+
+<div class="pick-a-gender">
+  <h4 style="margin-bottom: 5px;">Get started with Stitch Fix</h4>
+  <a href="womens" class="btn">Womens</a>
+  <a href="mens" class="btn mens">Mens</a>
+</div>
+
+</div>
+
+<div class="how-it-works">
+
+<h2>This is what we're about</h2>
+
+Lorem ipsum goes here <br /><br /><br /><br /><br /><br /><br />
+
+</div>
+
+
+{% include get-started.html %}
+
+
+{% include footer.html %}
+
