@@ -9,8 +9,6 @@ header {
   background: #fff;
   text-align: center;
   min-height: 44px;
-  padding-top: 10px;
-  max-width: 420px;
 
   a { text-decoration: none !important; }
 } 
@@ -26,8 +24,21 @@ nav {
   background: #f0f0f0;
   overflow: hidden; 
   display: none;
+  z-index: 0;
+
+  @media screen and (min-width: 500px) {
+    display: block;
+    position: relative;
+    top: 0; 
+    background: transparent;
+    li {
+      display: inline-block;
+    }
+  }
 
   ul, li { margin: 0; padding: 0; list-style: none; }
+
+
 
   a {
     display: block;
@@ -71,6 +82,9 @@ nav {
   border-bottom: 0;
   color: $sf-neutral; 
   display: inline-block;
+
+  @media screen and (min-width: 500px) { display: none; }
+
   &:hover, 
   &:focus { 
       background-color: #fff; 

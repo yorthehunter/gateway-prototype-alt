@@ -2,7 +2,6 @@
 #dp_swf_engine { display: none; }
 
 @import "layout/reset.scss"; 
-@import "compressed.scss"; 
 
 @import "layout/mixins.scss"; 
 @import "layout/limiters.scss";
@@ -32,7 +31,6 @@ html {
 
 body { 
 	background: #f7f7f7; 
-	max-width: 420px;
 	color: $sf-neutral;
 }
 
