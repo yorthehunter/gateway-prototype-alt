@@ -1,10 +1,4 @@
 
-$(document).ready(function(){
-    $(".video").fitVids();
-});
-
-
-
 $(function() {
 
 
@@ -15,6 +9,13 @@ $(function() {
     return false;
   });
 
+
+
+  $('.footer-toggle').click(function(){
+    $('footer').toggleClass('opened');
+    window.scrollBy(0,20)
+    return false;
+  });
 
 
   $('.divet-link').click(function(){

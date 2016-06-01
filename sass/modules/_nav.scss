@@ -146,9 +146,9 @@ header {
 i.divet {
   position: relative;
   z-index: 1000;
+  color: #ccc;
   &:after {
     content: "\e602";
-    color: #ccc;
   }
 }
 
