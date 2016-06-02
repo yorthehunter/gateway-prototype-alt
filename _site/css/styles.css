@@ -13529,6 +13529,9 @@ nav {
       background-color: #eafaa1; }
       nav .active a:hover:active, nav .active a:focus:active {
         background-color: #fbfeee; }
+  nav .secondary-nav {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc; }
 
 #toggle {
   position: absolute;

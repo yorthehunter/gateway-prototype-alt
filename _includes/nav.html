@@ -4,13 +4,13 @@
 <a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 {% endif %}
 
-<div class="gender">
+<!-- <div class="gender">
 {% if page.active == "womens" %}
    / Womens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
 {% elsif page.active == "mens" %}
    / Mens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
 {% endif %}
-</div>
+</div> -->
 
 <div class="toggle-gender">
   <div class="toggleable-gender">
@@ -35,18 +35,49 @@
       
         <ul>
 
-                {% if page.status == "logged-in" %}
+
+              {% if page.status != "logged-in" %}
+              <li><a href="/login">Sign in</a></li>
+
+              {% else %}
 
                 <li><a href="/logged-in">My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
-                <li><a href="/">Sign out</a></li>
-                {% else %}
-                <li><a href="/login">Sign in</a></li>
-                <li><a href="/faq">How it works</a></li>
-                <li><a href="/faq">Faq</a></li>
-                <li><a href="/faq">Style Tips</a></li>
-                <li><a href="/faq">Gift cards</a></li>
+                <li><a href="#">Referrals</a></li>
+                <li><a href="#">Account</a></li>
+              {% endif %}
+
+              <ul class="secondary-nav">
+
+                <li><a href="/faq">Get Help</a></li>
+                <li><a href="#">Style Tips</a></li>
+                {% if page.body_class == "womens" %}
+                  <li><a href="/#">Reviews - only for women</a></li>
                 {% endif %}
+                <li><a href="/#">Gift cards</a></li>
+
+                {% if page.status != "logged-in" %}
+
+    
+                  {% if page.body_class == "mens" %}
+                    <li><a href="/womens">Stitch Fix Women</a></li>
+                  {% endif %}
+
+                {% endif %}
+
+                {% if page.body_class == "womens" %}
+                  <li><a href="/logged-in/mens">Stitch Fix Mens</a></li>
+                {% endif %}
+
+              </ul>
+              
+              {% if page.status == "logged-in" %}
+
+                <li><a href="/">Sign out</a></li>
+
+              {% endif %}
+
+              
 
 <!--
             {% if page.active == "element" %}
