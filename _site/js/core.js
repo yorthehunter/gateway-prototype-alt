@@ -16,6 +16,13 @@ $(function() {
   });
 
 
+  $('#toggle-secondary').click(function(){
+    $('.secondary-nav').slideToggle( "fast" );
+    $('#toggle-secondary').toggleClass('active');
+    return false;
+  });
+
+
 
   $('.divet-link').click(function(){
     $('.toggleable-gender').slideToggle( "fast" );

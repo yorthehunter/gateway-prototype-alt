@@ -689,6 +689,10 @@ nav {
   overflow: hidden;
   display: none;
   z-index: 0; }
+  nav .secondary-nav {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    background: #f0f0f0; }
   @media screen and (min-width: 500px) {
     nav {
       display: block;
@@ -696,7 +700,14 @@ nav {
       top: 0;
       background: transparent; }
       nav li {
-        display: inline-block; } }
+        display: inline-block; }
+      nav .secondary-nav {
+        display: none; }
+      nav a {
+        padding: 0 10px; } }
+  @media screen and (min-width: 1000px) {
+    nav .secondary-nav {
+      display: inline; } }
   nav ul, nav li {
     margin: 0;
     padding: 0;
@@ -727,11 +738,11 @@ nav {
       background-color: #eafaa1; }
       nav .active a:hover:active, nav .active a:focus:active {
         background-color: #fbfeee; }
-  nav .secondary-nav {
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc; }
+  nav .men-or-women a {
+    display: inline-block; }
 
-#toggle {
+#toggle,
+#toggle-secondary {
   position: absolute;
   top: 0;
   right: 0;
@@ -744,27 +755,49 @@ nav {
   color: #3c3419;
   display: inline-block; }
   @media screen and (min-width: 500px) {
-    #toggle {
+    #toggle,
+    #toggle-secondary {
       display: none; } }
-  #toggle:hover, #toggle:focus {
+  #toggle:hover, #toggle:focus,
+  #toggle-secondary:hover,
+  #toggle-secondary:focus {
     background-color: #fff;
     color: #18150a; }
-  #toggle:active, #toggle.active {
+  #toggle:active, #toggle.active,
+  #toggle-secondary:active,
+  #toggle-secondary.active {
     background-color: #3c3419;
     color: #fff; }
-    #toggle:active i:after, #toggle.active i:after {
+    #toggle:active i:after, #toggle.active i:after,
+    #toggle-secondary:active i:after,
+    #toggle-secondary.active i:after {
       content: "\e609"; }
-  #toggle i:after {
+  #toggle i:after,
+  #toggle-secondary i:after {
     content: "\e60c"; }
-  #toggle span {
+  #toggle span,
+  #toggle-secondary span {
     display: none; }
+
+#toggle-secondary {
+  background: red; }
+  @media screen and (max-width: 500px) {
+    #toggle-secondary {
+      display: none; } }
+  @media screen and (min-width: 500px) {
+    #toggle-secondary {
+      display: block; } }
+  @media screen and (min-width: 1000px) {
+    #toggle-secondary {
+      display: none; } }
 
 header {
   height: 50px; }
   header .btn--cta {
     position: absolute;
     top: 6px;
-    right: 60px; }
+    right: 60px;
+    z-index: 10; }
 
 .link--avatar {
   display: block;
@@ -933,7 +966,9 @@ body {
   color: #3c3419; }
 
 .page {
-  padding-top: 50px; }
+  padding-top: 50px;
+  margin: 0 auto;
+  max-width: 800px; }
   .page.gateway {
     padding-top: 0; }
 
