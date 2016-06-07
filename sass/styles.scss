@@ -32,6 +32,7 @@ html {
 body { 
 	background: #f7f7f7; 
 	color: $sf-neutral;
+	font-family: arial;
 }
 
 .page {
@@ -44,7 +45,7 @@ body {
 	}
 }
 
-a { color: $sf-mint; text-decoration: none; }
+a { color: $sf-link; text-decoration: none; }
 
 img { max-width: 100%; }
 
@@ -102,7 +103,7 @@ img { max-width: 100%; }
 	}
 }
 
-.how-it-works {
+.how-it-works { 
 
 	background: #fff;
 	padding-top: 10px;

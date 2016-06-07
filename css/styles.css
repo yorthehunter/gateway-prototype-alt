@@ -716,7 +716,7 @@ nav {
     display: block;
     line-height: 44px;
     border: none;
-    color: #69bdb0; }
+    color: #4b74d1; }
     nav a:hover, nav a:focus {
       color: #000;
       background: #ebe8e8; }
@@ -752,7 +752,7 @@ nav {
   z-index: 6;
   background: #fff;
   border-bottom: 0;
-  color: #3c3419;
+  color: #666666;
   display: inline-block; }
   @media screen and (min-width: 500px) {
     #toggle,
@@ -762,11 +762,11 @@ nav {
   #toggle-secondary:hover,
   #toggle-secondary:focus {
     background-color: #fff;
-    color: #18150a; }
+    color: #4d4d4d; }
   #toggle:active, #toggle.active,
   #toggle-secondary:active,
   #toggle-secondary.active {
-    background-color: #3c3419;
+    background-color: #666666;
     color: #fff; }
     #toggle:active i:after, #toggle.active i:after,
     #toggle-secondary:active i:after,
@@ -963,7 +963,8 @@ html {
 
 body {
   background: #f7f7f7;
-  color: #3c3419; }
+  color: #666666;
+  font-family: arial; }
 
 .page {
   padding-top: 50px;
@@ -973,14 +974,14 @@ body {
     padding-top: 0; }
 
 a {
-  color: #69bdb0;
+  color: #4b74d1;
   text-decoration: none; }
 
 img {
   max-width: 100%; }
 
 .btn {
-  border: 1px solid #ff5c61;
+  border: 1px solid #666666;
   text-decoration: none;
   padding: 8px 12px;
   display: inline-block;
@@ -988,24 +989,24 @@ img {
   text-transform: uppercase;
   font-family: "BrandonGrotesque-Medium";
   letter-spacing: 0.8px !important;
-  color: #ff5c61;
+  color: #666666;
   min-width: inherit !important; }
 
 .btn--cta {
   border: 0;
   color: #fff;
-  background: #ff5c61; }
+  background: #666666; }
   .btn--cta:Hover {
-    background: #ff4348;
+    background: #595959;
     color: #fff !important; }
   .mens .btn--cta {
-    background: #204503;
+    background: #666666;
     color: #fff; }
   .womens .btn--cta {
-    background: #ff5c61;
+    background: #666666;
     color: #fff; }
   .neutral .btn--cta {
-    background: #3c3419;
+    background: #666666;
     color: #fff; }
 
 .splash {
@@ -1024,8 +1025,8 @@ img {
     .splash .pick-a-gender .btn {
       width: 36%;
       width: 30%;
-      border-color: #3c3419;
-      color: #3c3419; }
+      border-color: #666666;
+      color: #666666; }
 
 .how-it-works {
   background: #fff;
@@ -1055,8 +1056,8 @@ form#new_user {
     border-color: #ccc;
     color: #666; }
   form#new_user .pick-a-gender .btn.active {
-    background: #69bdb0;
-    border-color: #69bdb0;
+    background: #666666;
+    border-color: #666666;
     color: #fff; }
 
 .form-group {
@@ -1069,7 +1070,7 @@ form#new_user {
       display: none; }
 
 .promo {
-  background: #204503 !important;
+  background: #666666 !important;
   padding: 20px 0 !important; }
   .promo a {
-    color: #8ccdc3; }
+    color: gray; }
