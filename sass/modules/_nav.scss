@@ -28,9 +28,7 @@ nav {
 
 
   .secondary-nav {
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-    background: #f0f0f0;
+    a { opacity: 0.5; }
   }
 
   @media screen and (min-width: 500px) {
@@ -44,6 +42,9 @@ nav {
 
     .secondary-nav  {
       display: none;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      background: #f0f0f0;
     }
 
     a { padding: 0 10px;}
@@ -52,6 +53,9 @@ nav {
   @media screen and (min-width: 1000px) {
     .secondary-nav {
       display: inline;
+      background: transparent;
+      border-top: 0;
+      border-bottom: 0;
     }
   }
 
@@ -128,7 +132,6 @@ nav {
 }
 
 #toggle-secondary {
-  background: red;
   @media screen and (max-width: 500px) { display: none; }
   @media screen and (min-width: 500px) { display: block; }
   @media screen and (min-width: 1000px) { display: none; }

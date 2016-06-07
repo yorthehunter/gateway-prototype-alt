@@ -10,16 +10,16 @@
 {% elsif page.active == "mens" %}
    / Mens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
 {% endif %}
-</div>
+</div> -->
 
 <div class="toggle-gender">
   <div class="toggleable-gender">
     <a href="/mens">Mens</a>
     <a href="/womens">Womens</a> 
   </div>
-</div> -->
+</div>
 {% if page.status == "logged-in" %}  
-  {% if page.body_class == "mens" or page.body_class == "womens" %} 
+  {% if page.body_class == "mens" %} 
     <a href="#get-started" class="btn btn--cta" id="get-started">Refer a friend</a>
   {% endif %}  
 {% else %}
@@ -29,8 +29,8 @@
   <a href="/" class="btn btn--cta" id="get-started">Get started</a>
   {% endif %}
 {% endif %}
-
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+
   <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
     <nav class="main">
@@ -38,47 +38,22 @@
         <ul>
 
 
-              {% if page.status == "logged-out" %}
-              
-                <li><a href="/login">Sign in</a></li>
+              {% if page.status != "logged-in" %}
+              <li><a href="/login">Sign in</a></li>
 
-              {% endif %}
-
-              {% if page.status == "logged-in" %}
+              {% else %}
 
                 <li><a href="/logged-in">My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
-                <li><a href="/logged-in">Referrals</a></li>
-                <li><a href="/logged-in">Account</a></li>
-                
-
+                <li><a href="#">Referrals</a></li>
+                <li><a href="#">Account</a></li>
               {% endif %}
 
               <ul class="secondary-nav">
 
-<<<<<<< HEAD
-                {% if page.status == "logged-out" %}
-                  <li><a href="/faq">Get Help</a></li>
-                  <li><a href="/faq">Style Tips</a></li>
-                {% else %}
-                  <li><a href="/logged-in/faq">Get Help</a></li>
-                  <li><a href="/logged-in/faq">Style Tips</a></li>
-                {% endif %}
-
-                
-                <li><a href="/faq">Reviews</a></li>
-                <li><a href="/faq">Gift cards</a></li>
-
-                 <li class="men-or-women">Stitch Fix 
-                  
-                  {% if page.status == "logged-out" %}
-                    <a href="/mens">Men</a> / <a href="/womens">Women</a>
-                  {% else %}
-                    <a href="/logged-in/mens">Men</a> / <a href="/logged-in/womens">Women</a>
-=======
 
                 {% if page.status == "logged-in" %}
-                  <li><a href="#">FAQ</a></li>
+                  <li><a href="faq">FAQ</a></li>
                 {% else %}
                   <li><a href="/faq">FAQ</a></li>
                 {% endif %}
@@ -91,6 +66,7 @@
                 {% endif %}
                 <li><a href="#">Gift cards</a></li>
 
+
                 {% if page.status == "logged-out" %}
 
     
@@ -101,29 +77,22 @@
     
                   {% if page.body_class == "mens" %}
                     <li><a href="/womens">Women</a></li>
->>>>>>> master
                   {% endif %}
-                </li>
 
-<<<<<<< HEAD
-                {% if page.status == "logged-in" %}
-                  <li><a href="/">Sign out</a></li>
-                {% endif %}
-
-                
-=======
                 {% else %}
 
-                  {% if page.body_class == "womens" %}
-                    <li><a href="/logged-in/mens">Stitch Fix Mens</a></li>
-                  {% endif %}
+                   <li><a href="/logged-in/mens">Mens</a></li>
+             
+                {% endif %}
+                
+              
+                {% if page.status == "logged-in" %}
+
+                  <li><a href="/">Sign out</a></li>
 
                 {% endif %}
->>>>>>> master
 
               </ul>
-              
-              
 
               
 
