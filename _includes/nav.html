@@ -49,28 +49,34 @@
 
               <ul class="secondary-nav">
 
-                <li><a href="/faq">Get Help</a></li>
-                <li><a href="#">Style Tips</a></li>
-                {% if page.body_class == "womens" %}
-                  <li><a href="/#">Reviews - only for women</a></li>
+
+                {% if page.status == "logged-in" %}
+                  <li><a href="#">FAQ</a></li>
+                {% else %}
+                  <li><a href="/faq">FAQ</a></li>
                 {% endif %}
-                <li><a href="/#">Gift cards</a></li>
+
+
+                
+                <li><a href="#">Style Tips</a></li>
+                {% if page.body_class == "womens" or page.status == "logged-in" %}
+                  <li><a href="#">Reviews</a></li>
+                {% endif %}
+                <li><a href="#">Gift cards</a></li>
 
                 {% if page.status == "logged-out" %}
 
     
                   {% if page.body_class == "womens" %}
-                    <li><a href="/mens">Stitch Fix Men</a></li>
+                    <li><a href="/mens">Men</a></li>
                   {% endif %}
 
     
                   {% if page.body_class == "mens" %}
-                    <li><a href="/womens">Stitch Fix Women</a></li>
+                    <li><a href="/womens">Women</a></li>
                   {% endif %}
 
-                {% endif %}
-
-                {% if page.status == "logged-in" %}
+                {% else %}
 
                   {% if page.body_class == "womens" %}
                     <li><a href="/logged-in/mens">Stitch Fix Mens</a></li>

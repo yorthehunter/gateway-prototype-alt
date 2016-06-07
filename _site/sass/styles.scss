@@ -2,7 +2,6 @@
 #dp_swf_engine { display: none; }
 
 @import "layout/reset.scss"; 
-@import "compressed.scss"; 
 
 @import "layout/mixins.scss"; 
 @import "layout/limiters.scss";
@@ -34,6 +33,7 @@ body {
 	background: #f7f7f7; 
 	max-width: 420px;
 	color: $sf-neutral;
+	font-family: arial;
 }
 
 .page {
@@ -44,7 +44,7 @@ body {
 	}
 }
 
-a { color: $sf-mint; text-decoration: none; }
+a { color: $sf-link; text-decoration: none; }
 
 img { max-width: 100%; }
 
@@ -102,7 +102,7 @@ img { max-width: 100%; }
 	}
 }
 
-.how-it-works {
+.how-it-works { 
 
 	background: #fff;
 	padding-top: 10px;
