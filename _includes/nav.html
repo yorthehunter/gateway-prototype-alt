@@ -56,7 +56,12 @@
                 {% endif %}
                 <li><a href="/#">Gift cards</a></li>
 
-                {% if page.status != "logged-in" %}
+                {% if page.status == "logged-out" %}
+
+    
+                  {% if page.body_class == "womens" %}
+                    <li><a href="/mens">Stitch Fix Men</a></li>
+                  {% endif %}
 
     
                   {% if page.body_class == "mens" %}
@@ -65,8 +70,12 @@
 
                 {% endif %}
 
-                {% if page.body_class == "womens" %}
-                  <li><a href="/logged-in/mens">Stitch Fix Mens</a></li>
+                {% if page.status == "logged-in" %}
+
+                  {% if page.body_class == "womens" %}
+                    <li><a href="/logged-in/mens">Stitch Fix Mens</a></li>
+                  {% endif %}
+
                 {% endif %}
 
               </ul>
