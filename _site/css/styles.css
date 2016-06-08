@@ -717,7 +717,7 @@ nav {
     padding: 0;
     list-style: none; }
   nav a {
-    display: block;
+    display: inline-block;
     line-height: 44px;
     border: none;
     color: blue; }
@@ -951,7 +951,6 @@ img {
       border-color: #595959; }
 
 .btn--cta-secondary {
-  background: blue;
   right: 210px;
   background: none;
   border-color: #666666;
