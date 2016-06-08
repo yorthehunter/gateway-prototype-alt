@@ -2,6 +2,7 @@
 body_class: home
 status: logged-out
 title: Prototype
+skin: neutral
 ---
 
 {% include html.html %}
@@ -21,17 +22,18 @@ title: Prototype
 </head>
 
 
-<body class="{{ page.body_class }}">
+<body class="{{ page.body_class }} neutral">
 
 <div class="page gateway">
 
 <div class="splash">
+<a href="/login" class="btn btn--cta-secondary login">Sign in</a>
 <img src="img/gateway.jpg" alt="" />
 
 <div class="pick-a-gender">
   <h4 style="margin-bottom: 5px;">Get started with Stitch Fix</h4>
-  <a href="womens" class="btn">Womens</a>
-  <a href="mens" class="btn mens">Mens</a>
+  <a href="womens" class="btn btn--cta-secondary">Womens</a>
+  <a href="mens" class="btn btn--cta-secondary">Mens</a>
 </div>
 
 </div>

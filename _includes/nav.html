@@ -20,9 +20,11 @@
 </div>
 {% if page.status == "logged-in" %}  
   {% if page.body_class == "mens" %} 
-    <a href="#get-started" class="btn btn--cta" id="get-started">Refer a friend</a>
+    <a href="#get-started" class="btn btn--cta" id="get-started">Refer</a>
   {% endif %}  
 {% else %}
+
+  <a href="/login" class="btn btn--cta-secondary">Sign in</a>
   {% if page.skin == "neutral" %}
   <a href="/#get-started" class="btn btn--cta" id="get-started">Get started</a>
   {% else %}
@@ -37,12 +39,10 @@
       
         <ul>
 
+              <li><a>&nbsp;</a></li>
 
-              {% if page.status != "logged-in" %}
-              <li><a href="/login">Sign in</a></li>
 
-              {% else %}
-
+              {% if page.status == "logged-in" %}
                 <li><a href="/logged-in">My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
@@ -84,7 +84,7 @@
                    <li><a href="/logged-in/mens">Mens</a></li>
              
                 {% endif %}
-                
+
               
                 {% if page.status == "logged-in" %}
 

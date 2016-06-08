@@ -32,11 +32,11 @@ html {
 body { 
 	background: #f7f7f7; 
 	color: $sf-neutral;
-	font-family: arial;
+	font-family: arial, sans-serif;
 }
 
 .page {
-	padding-top: 50px;
+	padding-top: 100px;
 	margin:  0 auto;
 	max-width: 800px;
 
@@ -52,11 +52,12 @@ img { max-width: 100%; }
 .btn {
 	border: 1px solid $sf-pink;
 	text-decoration: none;
-  padding: 8px 12px;
+  line-height: 1rem;
+  padding: 0.6em 0.8em;
   display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: "BrandonGrotesque-Medium";
+  font-family: sans-serif;
   letter-spacing: 0.8px !important;
   color: $sf-pink;
   min-width: inherit !important;
@@ -64,23 +65,62 @@ img { max-width: 100%; }
 }
 
 .btn--cta {
-  border: 0;
+  border: 1px solid $sf-pink;
   color: #fff;
   background: $sf-pink;
   &:Hover {
     background: darken($sf-pink, 5%);
-    color: #fff !important;
+    color: #fff;
   }
 
-  .mens & { background: $sf-mens; color: #fff; }
-  .womens & { background: $sf-pink; color: #fff; }
-  .neutral & { background: $sf-neutral; color: #fff; }
+  .mens & { 
+  	background: $sf-mens; 
+  	border-color: $sf-mens; 
+  }
+  .womens & { 
+  	background: $sf-pink; 
+  }
+  .neutral & { 
+  	background: $sf-neutral; 
+  	border-color: $sf-neutral; 
+	  &:Hover {
+	    background: darken($sf-neutral, 5%);
+	    border-color: darken($sf-neutral, 5%);
+	  }
+  }
+
+  &.login {
+  }
+
+}
+
+.btn--cta-secondary {
+  	background: blue;
+  	right: 210px;
+  	background: none;
+  	border-color: $sf-neutral;
+  	color: $sf-neutral;
+
+  	&:hover { 
+  		color: darken($sf-neutral, 20%); 
+  		border-color: darken($sf-neutral, 20%); 
+  	}
+
 }
 
 .splash {
 	position: relative;
+	padding-top: 30px;
+	background: #fdfcfa;
 
 	img { display: block; }
+
+	.login {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 0.8rem;
+	}
 
 	.pick-a-gender {
 		position: absolute;
@@ -118,9 +158,11 @@ img { max-width: 100%; }
 }
 
 
-form#new_user {
+form#new_user, .refer-form {
 	background: #f7f7f7; 
 	padding: 10px;
+	max-width: 450px;
+	margin: 0 auto;
 
 	.pick-a-gender {
 

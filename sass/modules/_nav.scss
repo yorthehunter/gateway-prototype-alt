@@ -31,7 +31,7 @@ nav {
     a { opacity: 0.5; }
   }
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 375px) {
     display: block;
     position: relative;
     top: 0; 
@@ -111,7 +111,7 @@ nav {
   color: $sf-neutral; 
   display: inline-block;
 
-  @media screen and (min-width: 500px) { display: none; }
+  @media screen and (min-width: 375px) { display: none; }
 
 
   &:hover, 
@@ -132,8 +132,8 @@ nav {
 }
 
 #toggle-secondary {
-  @media screen and (max-width: 500px) { display: none; }
-  @media screen and (min-width: 500px) { display: block; }
+  @media screen and (max-width: 375px) { display: none; }
+  @media screen and (min-width: 375px) { display: block; }
   @media screen and (min-width: 1000px) { display: none; }
 
 }
@@ -148,6 +148,13 @@ header {
     right: 60px;
     z-index: 10;
 
+  }
+
+  .btn--cta-secondary {
+    position: absolute;
+    top: 6px;
+    right: 210px;
+    z-index: 10;
   }
 }
 
