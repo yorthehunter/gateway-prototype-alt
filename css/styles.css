@@ -13621,10 +13621,7 @@ i.divet {
 
 footer {
   padding: 10px;
-  position: relative;
-  border-top: 1px solid #ccc;
-  position: relative;
-  background: #fff; }
+  position: relative; }
   footer .bee {
     color: #f7f7f7;
     position: absolute;
@@ -13645,6 +13642,10 @@ footer {
   footer .below-the-footer-fold {
     background: red;
     display: none; }
+
+.footer-toggle {
+  background: red;
+  display: block; }
 
 /* BY TORUNN SEIM SKROGSTAD
 -------------------------------------*/

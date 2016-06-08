@@ -1,9 +1,6 @@
 footer {
   padding: 10px;
   position: relative;
-  border-top: 1px solid #ccc;
-  position: relative;
-  background: #fff;
 
   .bee {
     color: #f7f7f7;
@@ -34,4 +31,9 @@ footer {
     display: none;
   }
 
+}
+
+.footer-toggle {
+  background: red;
+  display: block;
 }
