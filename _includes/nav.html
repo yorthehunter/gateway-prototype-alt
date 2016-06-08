@@ -58,9 +58,16 @@
                   <li><a href="/faq">FAQ</a></li>
                 {% endif %}
 
+                {% if page.skin == "womens" %}
+                  <li><a href="#">Style Tips for Women</a></li>
+                {% elsif page.skin == "mens" %}
+                  <li><a href="#">Style Tips Men</a></li>
+                {% else %}
+                  <li><a href="#">Style Tips for Men and Women</a></li>
+                {% endif %}
 
-                
-                <li><a href="#">Style Tips</a></li>
+
+
                 {% if page.body_class == "womens" or page.status == "logged-in" %}
                   <li><a href="#">Reviews</a></li>
                 {% endif %}
