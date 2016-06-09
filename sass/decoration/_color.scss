@@ -3,50 +3,11 @@ $color-default: #847D78;
 $sf-mint: #69bdb0;
 $sf-pink: #ff5c61; 
 
+
 $sf-mens: #204503; 
-$sf-neutral: #3c3419;
-$sf-green: #1fb577;
+$sf-neutral: #666;
+$sf-link: #4b74d1;
 
-%scheme-mens-light {
-  background-color: lighten($sf-mens, 25%); 
-}
-
-%scheme-mens { 
-  background-color: $sf-mens; 
-  color: darken($sf-mens, 50%);
-}
-
-%scheme-green-light {
-  background-color: lighten($sf-green, 55%); 
-}
-
-%scheme-green { 
-  background-color: darken($sf-green, 10%); 
-  color: lighten($sf-green, 40%); 
-  a { color: lighten($sf-green, 40%); border-color: lighten($sf-green, 40%); 
-    &:hover, &:focus { color: #fff; border-color: #fff; } 
-    &:active { color: $sf-mens;   }
-  }
-}
-
-%scheme-pink-light {
-  background-color: lighten($sf-pink, 60%); 
-}
-
-%scheme-pink {
-  background-color: $sf-pink; 
-  color: lighten($sf-pink, 50%);   
-  a { color: lighten($sf-pink, 60%); border-color: lighten($sf-pink, 60%); 
-    &:hover, &:focus { color: #fff; border-color: #fff; } 
-    &:active { color: $sf-mens;   }
-  }
-}
-
-%scheme-pink-dark { 
-  background-color: darken($sf-pink, 10%); 
-  color: lighten($sf-pink, 70%);   
-  a { color: lighten($sf-pink, 40%); border-color: lighten($sf-pink, 40%); 
-    &:hover, &:focus { color: #fff; border-color: #fff; } 
-    &:active { color: $sf-mens;   }
-  }
-}
+$sf-mens: $sf-neutral;
+$sf-mint: $sf-neutral;
+$sf-pink: $sf-neutral; 

@@ -11,11 +11,16 @@ $(function() {
 
 
 
+
   $('.footer-toggle').click(function(){
-    $('footer').toggleClass('opened');
-    window.scrollBy(0,20)
+    $('#below-the-footer-fold').slideToggle( "fast" );
+    var desiredHeight = $(window).height() - 100;
+    $('html, body').animate({
+        scrollTop: $("#below-the-footer-fold").offset().top - desiredHeight
+    }, 500);
     return false;
   });
+
 
 
   $('.divet-link').click(function(){
@@ -58,11 +63,6 @@ $(function() {
             //});
     return false;
   });
-
-
-
-
-
 });
 
 
