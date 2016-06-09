@@ -24,7 +24,7 @@
 
 }
 
-i.icon {  
+.icon {  
   @include icons;
   @include corners(50%);
   span { display: none; }
