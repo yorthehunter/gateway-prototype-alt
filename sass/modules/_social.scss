@@ -1,0 +1,25 @@
+
+.social {
+  .icon {
+    border-bottom: 0;
+    background-color: $sf-neutral;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    color: #fff;
+    padding: 6px 7px;
+    &:hover, &:focus { background-color: darken($sf-neutral, 20%);  }
+    
+    &.twitter:after   { content: "\e60b"; }
+    &.facebook:after  { content: "\e60a"; }
+    &.tumblr:after { content: "\e606"; }
+    &.flickr:after { content: "\e604"; }
+    &.vimeo:after { content: "\e608"; }
+    &.linkedin:after { content: "\e605"; }
+    &.youtube:after { content: "\e600"; }
+    span { display: none; }
+
+  }
+}
+

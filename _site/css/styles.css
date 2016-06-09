@@ -855,6 +855,34 @@ footer.opened .below-the-footer-fold {
   display: none;
   padding: 10px; }
 
+.social .icon {
+  border-bottom: 0;
+  background-color: #666666;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  color: #fff;
+  padding: 6px 7px; }
+  .social .icon:hover, .social .icon:focus {
+    background-color: #333333; }
+  .social .icon.twitter:after {
+    content: "\e60b"; }
+  .social .icon.facebook:after {
+    content: "\e60a"; }
+  .social .icon.tumblr:after {
+    content: "\e606"; }
+  .social .icon.flickr:after {
+    content: "\e604"; }
+  .social .icon.vimeo:after {
+    content: "\e608"; }
+  .social .icon.linkedin:after {
+    content: "\e605"; }
+  .social .icon.youtube:after {
+    content: "\e600"; }
+  .social .icon span {
+    display: none; }
+
 /* BY TORUNN SEIM SKROGSTAD
 -------------------------------------*/
 html {
