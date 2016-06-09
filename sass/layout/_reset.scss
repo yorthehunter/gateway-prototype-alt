@@ -65,6 +65,41 @@ box-sizing: border-box;
    Typography
    ========================================================================== */
 
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1.5rem 0;
+  font-weight: 300;
+  
+  text-rendering: optimizelegibility;
+}
+
+h1 { font-size: 2rem; line-height: 2.4rem;}
+h2 { font-size: 1.8rem; line-height: 2.2rem;}
+h3 { font-size: 1.6rem; line-height: 2rem;}
+h4 { font-size: 1.4rem; line-height: 1.8rem;}
+h5 { font-size: 1.2rem; line-height: 1.6rem;}
+h6 { font-size: 1.0rem; line-height: 1.4rem;}
+
+@media only screen and (max-width : 800px) {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+@media only screen and (max-width : 600px) {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+}
+p { margin: 0 0 1rem; clear: both; }
+
 abbr[title], p.required { color: red; font-weight: bold; }
 
 b, strong { }

@@ -15,6 +15,7 @@
  
 @import "modules/nav.scss"; 
 @import "modules/footer.scss";
+@import "modules/social.scss";
  
 
 
@@ -42,6 +43,10 @@ body {
 
 	&.gateway {
 		padding-top: 0;
+	}
+
+	.marketing-page & {
+		padding-top: 50px;
 	}
 }
 
@@ -159,9 +164,9 @@ img { max-width: 100%; }
 
 form#new_user, .refer-form {
 	background: #f7f7f7; 
-	padding: 10px;
 	max-width: 450px;
 	margin: 0 auto;
+	padding: 30px 15px;
 
 	.pick-a-gender {
 

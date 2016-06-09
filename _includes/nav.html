@@ -68,7 +68,7 @@
 
 
 
-                {% if page.body_class == "womens" or page.status == "logged-in" %}
+                {% if page.active == "womens" or page.status == "logged-in" %}
                   <li><a href="#">Reviews</a></li>
                 {% endif %}
                 <li><a href="#">Gift cards</a></li>
@@ -77,12 +77,12 @@
                 {% if page.status == "logged-out" %}
 
     
-                  {% if page.body_class == "womens" %}
+                  {% if page.active == "womens" %}
                     <li><a href="/mens">Men</a></li>
                   {% endif %}
 
     
-                  {% if page.body_class == "mens" %}
+                  {% if page.active == "mens" %}
                     <li><a href="/womens">Women</a></li>
                   {% endif %}
 
