@@ -717,9 +717,9 @@ nav {
     background-color: #666666;
     color: #fff; }
     #toggle:active i:after, #toggle.active i:after {
-      content: "\e609"; }
+      content: "\ea0f"; }
   #toggle i:after {
-    content: "\e60c"; }
+    content: "\e9bd"; }
   #toggle span {
     display: none; }
 
