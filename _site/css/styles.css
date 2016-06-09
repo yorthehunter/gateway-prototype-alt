@@ -831,7 +831,6 @@ i.divet {
     text-align: left; }
 
 footer {
-  font-size: 0.8rem;
   background: rgba(0, 0, 0, 0.05); }
   footer .bee {
     font-family: sans-serif;
@@ -856,7 +855,7 @@ footer {
     display: block; }
 
 .above-the-footer-fold {
-  padding: 10px;
+  padding: 15px;
   zoom: 1; }
   .above-the-footer-fold:before {
     content: "";
@@ -884,7 +883,7 @@ footer {
 .below-the-footer-fold {
   background: #bfbfbf;
   display: none;
-  padding: 10px; }
+  padding: 15px; }
 
 .social {
   margin-bottom: 1rem; }
@@ -995,7 +994,7 @@ img {
 
 form#new_user {
   background: #f7f7f7;
-  padding: 10px; }
+  padding: 30px 15px; }
   form#new_user .pick-a-gender .flr-wrap {
     text-align: center;
     max-width: 200px;

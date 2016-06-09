@@ -1,5 +1,4 @@
 footer {
-  font-size: 0.8rem;
   background: rgba(0,0,0,0.05);
 
   .bee {
@@ -33,7 +32,7 @@ footer {
 }
 
 .above-the-footer-fold {
-  padding: 10px;
+  padding: 15px;
   @include clear;
 }
 
@@ -59,5 +58,5 @@ footer {
 .below-the-footer-fold {
   background: lighten($sf-neutral, 35%); 
   display: none;
-  padding: 10px;
+  padding: 15px;
 }
