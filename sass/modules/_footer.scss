@@ -1,4 +1,6 @@
 footer {
+  font-size: 0.8rem;
+  background: rgba(0,0,0,0.05);
 
   .bee {
     font-family: sans-serif;
@@ -32,6 +34,7 @@ footer {
 
 .above-the-footer-fold {
   padding: 10px;
+  @include clear;
 }
 
 .footer-toggle {
@@ -39,14 +42,18 @@ footer {
   background: lighten($sf-neutral, 35%); 
   display: block;
   position: relative;
-
   height: 10px;
+
+  &:hover  {
+    background: lighten($sf-neutral, 30%);
+    .bee:after { background: lighten($sf-neutral, 30%);}
+  }
 }
 
-.footer-close {
-  display: none;
-
-  &.visible { z-index: 10; display: block; }
+.style-tips,
+.questions {
+  float: left;
+  width: 50%;
 }
 
 .below-the-footer-fold {

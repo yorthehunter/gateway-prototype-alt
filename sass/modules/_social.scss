@@ -6,14 +6,10 @@
    li { display: inline-block; } 
 
   .icon {
-    border-bottom: 0;
     background-color: $sf-neutral;
-    border-radius: 100%;
     display: inline-block;
     color: #fff;
     padding: 6px;
-    line-height: 12px;
-    font-size: 12px;
     &:hover, &:focus { background-color: darken($sf-neutral, 20%);  }
     
     &.twitter:after   { content: "\ea96"; }
