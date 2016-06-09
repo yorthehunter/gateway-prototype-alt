@@ -11,13 +11,10 @@
     padding: 6px 7px;
     &:hover, &:focus { background-color: darken($sf-neutral, 20%);  }
     
-    &.twitter:after   { content: "\e60b"; }
-    &.facebook:after  { content: "\e60a"; }
-    &.tumblr:after { content: "\e606"; }
-    &.flickr:after { content: "\e604"; }
-    &.vimeo:after { content: "\e608"; }
-    &.linkedin:after { content: "\e605"; }
-    &.youtube:after { content: "\e600"; }
+    &.twitter:after   { content: "\ea96"; }
+    &.facebook:after  { content: "\ea90"; }
+    &.instagram:after { content: "\ea92"; }
+    &.pinterest:after { content: "\ead1"; }
     span { display: none; }
 
   }

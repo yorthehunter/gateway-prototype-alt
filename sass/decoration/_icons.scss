@@ -28,6 +28,6 @@ i.icon {
   @include icons;
   @include corners(50%);
   span { display: none; }
-  &:after { content: "\e601"; }
+  &:after { content: "\e97f"; }
 }
 

@@ -518,7 +518,7 @@ i.icon {
   i.icon span {
     display: none; }
   i.icon:after {
-    content: "\e601"; }
+    content: "\e97f"; }
 
 @-webkit-keyframes heroAnim {
   0% {
@@ -841,19 +841,13 @@ footer.opened .below-the-footer-fold {
   .social .icon:hover, .social .icon:focus {
     background-color: #333333; }
   .social .icon.twitter:after {
-    content: "\e60b"; }
+    content: "\ea96"; }
   .social .icon.facebook:after {
-    content: "\e60a"; }
-  .social .icon.tumblr:after {
-    content: "\e606"; }
-  .social .icon.flickr:after {
-    content: "\e604"; }
-  .social .icon.vimeo:after {
-    content: "\e608"; }
-  .social .icon.linkedin:after {
-    content: "\e605"; }
-  .social .icon.youtube:after {
-    content: "\e600"; }
+    content: "\ea90"; }
+  .social .icon.instagram:after {
+    content: "\ea92"; }
+  .social .icon.pinterest:after {
+    content: "\ead1"; }
   .social .icon span {
     display: none; }
 
