@@ -843,16 +843,20 @@ footer {
     text-align: center; }
     footer .bee:after {
       content: "... ";
+      content: "MORE";
       height: 60px;
       width: 60px;
-      background: #bfbfbf;
+      background: #69bdb0;
       border-radius: 50%;
       display: inline-block;
       z-index: 1;
-      font-size: 50px;
-      line-height: 5px;
-      font-family: serif;
-      letter-spacing: -3px; }
+           /*
+font-size: 50px;
+line-height: 5px;
+font-family: serif;
+letter-spacing: -3px;*/
+      font-size: 12px;
+      line-height: 35px; }
   footer.opened .below-the-footer-fold {
     display: block; }
 
@@ -868,7 +872,7 @@ footer {
     clear: both; }
 
 .footer-toggle {
-  background: #bfbfbf;
+  background: #69bdb0;
   display: block;
   position: relative;
   height: 10px; }
@@ -883,9 +887,11 @@ footer {
   width: 50%; }
 
 .below-the-footer-fold {
-  background: #bfbfbf;
+  background: #fff;
   display: none;
   padding: 15px; }
+  .below-the-footer-fold li {
+    line-height: 44px; }
 
 .social {
   margin-bottom: 1rem; }

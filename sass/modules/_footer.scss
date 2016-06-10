@@ -12,16 +12,20 @@ footer {
     text-align: center;
     &:after {
       content: "... ";
+      content: "MORE";
       height: 60px;
       width: 60px;
-      background: lighten($sf-neutral, 35%); 
+      background: $sf-mint;
       border-radius: 50%;
       display: inline-block;
-      z-index: 1;
+      z-index: 1;/*
       font-size: 50px;
       line-height: 5px;
       font-family: serif;
-      letter-spacing: -3px;
+      letter-spacing: -3px;*/
+
+      font-size: 12px;
+      line-height: 35px;
     }
   }
 
@@ -40,7 +44,7 @@ footer {
 
 .footer-toggle {
 
-  background: lighten($sf-neutral, 35%); 
+  background: $sf-mint;
   display: block;
   position: relative;
   height: 10px;
@@ -58,7 +62,16 @@ footer {
 }
 
 .below-the-footer-fold {
-  background: lighten($sf-neutral, 35%); 
+  background: #fff;
   display: none;
   padding: 15px;
+
+  a { 
+    
+  }
+
+  li { line-height: 44px; }
+  .about {
+
+  }
 }
