@@ -936,7 +936,7 @@ img {
   max-width: 100%; }
 
 .btn {
-  border: 1px solid #666666;
+  border: 1px solid #ff5c61;
   text-decoration: none;
   padding: 8px 12px;
   display: inline-block;
@@ -944,24 +944,22 @@ img {
   text-transform: uppercase;
   font-family: "BrandonGrotesque-Medium";
   letter-spacing: 0.8px !important;
-  color: #666666;
+  color: #ff5c61;
   min-width: inherit !important; }
 
 .btn--cta {
   border: 0;
   color: #fff;
-  background: #666666; }
+  background: #ff5c61;
+  /*.neutral & { background: $sf-neutral; color: #fff; }*/ }
   .btn--cta:Hover {
-    background: #595959;
+    background: #ff4348;
     color: #fff !important; }
   .mens .btn--cta {
-    background: #666666;
+    background: #d87e54;
     color: #fff; }
   .womens .btn--cta {
-    background: #666666;
-    color: #fff; }
-  .neutral .btn--cta {
-    background: #666666;
+    background: #ff5c61;
     color: #fff; }
 
 .splash {
@@ -1011,8 +1009,8 @@ form#new_user {
     border-color: #ccc;
     color: #666; }
   form#new_user .pick-a-gender .btn.active {
-    background: #666666;
-    border-color: #666666;
+    background: #69bdb0;
+    border-color: #69bdb0;
     color: #fff; }
 
 .form-group {
@@ -1025,7 +1023,7 @@ form#new_user {
       display: none; }
 
 .promo {
-  background: #666666 !important;
+  background: #d87e54 !important;
   padding: 20px 0 !important; }
   .promo a {
-    color: gray; }
+    color: #8ccdc3; }
