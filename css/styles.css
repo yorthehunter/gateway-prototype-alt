@@ -1013,21 +1013,24 @@ img {
 .btn--cta {
   border: 1px solid #ff5c61;
   color: #fff;
-  background: #ff5c61; }
+  background: #ff5c61;
+  /*  .womens & { 
+    	background: $sf-pink; 
+    }
+    .neutral & { 
+    	background: $sf-neutral; 
+    	border-color: $sf-neutral; 
+  	  &:Hover {
+  	    background: darken($sf-neutral, 5%);
+  	    border-color: darken($sf-neutral, 5%);
+  	  }
+    }*/ }
   .btn--cta:Hover {
     background: #ff4348;
     color: #fff; }
   .mens .btn--cta {
     background: #d87e54;
     border-color: #d87e54; }
-  .womens .btn--cta {
-    background: #ff5c61; }
-  .neutral .btn--cta {
-    background: #666666;
-    border-color: #666666; }
-    .neutral .btn--cta:Hover {
-      background: #595959;
-      border-color: #595959; }
 
 .btn--cta-secondary {
   right: 210px;
