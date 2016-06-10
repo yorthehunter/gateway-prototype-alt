@@ -737,7 +737,7 @@ nav {
     display: inline-block;
     line-height: 44px;
     border: none;
-    color: blue; }
+    color: #00ada5; }
     nav a:hover, nav a:focus {
       color: #000;
       background: #ebe8e8; }
@@ -957,14 +957,14 @@ body {
     padding-top: 50px; }
 
 a {
-  color: blue;
+  color: #00ada5;
   text-decoration: none; }
 
 img {
   max-width: 100%; }
 
 .btn {
-  border: 1px solid #666666;
+  border: 1px solid #ff5c61;
   text-decoration: none;
   line-height: 1rem;
   padding: 0.6em 0.8em;
@@ -973,21 +973,21 @@ img {
   text-transform: uppercase;
   font-family: sans-serif;
   letter-spacing: 0.8px !important;
-  color: #666666;
+  color: #ff5c61;
   min-width: inherit !important; }
 
 .btn--cta {
-  border: 1px solid #666666;
+  border: 1px solid #ff5c61;
   color: #fff;
-  background: #666666; }
+  background: #ff5c61; }
   .btn--cta:Hover {
-    background: #595959;
+    background: #ff4348;
     color: #fff; }
   .mens .btn--cta {
-    background: #666666;
-    border-color: #666666; }
+    background: #d87e54;
+    border-color: #d87e54; }
   .womens .btn--cta {
-    background: #666666; }
+    background: #ff5c61; }
   .neutral .btn--cta {
     background: #666666;
     border-color: #666666; }
@@ -999,7 +999,10 @@ img {
   right: 210px;
   background: none;
   border-color: #666666;
-  color: #666666; }
+  color: #666666;
+  /*  .mens & { background: $sf-mens; color: #fff; }
+    .womens & { background: $sf-pink; color: #fff; }
+    .neutral & { background: $sf-neutral; color: #fff; }*/ }
   .btn--cta-secondary:hover {
     color: #333333;
     border-color: #333333; }
@@ -1026,10 +1029,11 @@ img {
       text-align: center; }
     .splash .pick-a-gender .btn {
       width: 42%;
+      max-width: 200px;
       padding: 1rem;
       font-size: 1.2rem;
-      border-color: #666666;
-      color: #666666; }
+      background: #ff5c61;
+      border-color: #ff5c61; }
 
 .how-it-works {
   background: #fff;
@@ -1061,8 +1065,8 @@ form#new_user, .refer-form {
     border-color: #ccc;
     color: #666; }
   form#new_user .pick-a-gender .btn.active, .refer-form .pick-a-gender .btn.active {
-    background: #666666;
-    border-color: #666666;
+    background: #00ada5;
+    border-color: #00ada5;
     color: #fff; }
 
 .form-group {
@@ -1075,7 +1079,7 @@ form#new_user, .refer-form {
       display: none; }
 
 .promo {
-  background: #666666 !important;
+  background: #d87e54 !important;
   padding: 20px 0 !important; }
   .promo a {
-    color: gray; }
+    color: #00e0d6; }

@@ -110,6 +110,11 @@ img { max-width: 100%; }
   		border-color: darken($sf-neutral, 20%); 
   	}
 
+
+/*  .mens & { background: $sf-mens; color: #fff; }
+  .womens & { background: $sf-pink; color: #fff; }
+  .neutral & { background: $sf-neutral; color: #fff; }*/
+
 }
 
 .splash {
@@ -140,10 +145,11 @@ img { max-width: 100%; }
 
 		.btn { 
 			width: 42%; 
+			max-width: 200px;
 			padding: 1rem;
 			font-size: 1.2rem;
-			border-color: $sf-neutral;
-			color: $sf-neutral;
+			background: $sf-pink;
+			border-color: $sf-pink;
 		}
 	}
 }
