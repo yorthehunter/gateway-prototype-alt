@@ -76,8 +76,8 @@
 
                 {% if page.status == "logged-out" %}
                   
-                    <li><a href="/mens">Men</a></li>
-                    <li><a href="/womens">Women</a></li>            
+                    <li {% if page.active == "mens" %}class="active"{% endif %}><a href="/mens">Men</a></li>
+                    <li {% if page.active == "womens" %}class="active"{% endif %}><a href="/womens">Women</a></li>            
 
                 {% else %}
 
