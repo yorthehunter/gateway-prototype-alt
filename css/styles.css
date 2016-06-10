@@ -927,33 +927,27 @@ footer {
       .get-in-touch .get-in-touch-item:last-child {
         padding-right: 0; } }
 
-.social .icon {
-  border-bottom: 0;
-  background-color: #666666;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  color: #fff;
-  padding: 6px 7px; }
-  .social .icon:hover, .social .icon:focus {
-    background-color: #333333; }
-  .social .icon.twitter:after {
-    content: "\e60b"; }
-  .social .icon.facebook:after {
-    content: "\e60a"; }
-  .social .icon.tumblr:after {
-    content: "\e606"; }
-  .social .icon.flickr:after {
-    content: "\e604"; }
-  .social .icon.vimeo:after {
-    content: "\e608"; }
-  .social .icon.linkedin:after {
-    content: "\e605"; }
-  .social .icon.youtube:after {
-    content: "\e600"; }
-  .social .icon span {
-    display: none; }
+.social {
+  margin-bottom: 1rem; }
+  .social li {
+    display: inline-block; }
+  .social .icon {
+    background-color: #666666;
+    display: inline-block;
+    color: #fff;
+    padding: 6px; }
+    .social .icon:hover, .social .icon:focus {
+      background-color: #333333; }
+    .social .icon.twitter:after {
+      content: "\ea96"; }
+    .social .icon.facebook:after {
+      content: "\ea90"; }
+    .social .icon.instagram:after {
+      content: "\ea92"; }
+    .social .icon.pinterest:after {
+      content: "\ead1"; }
+    .social .icon span {
+      display: none; }
 
 /* BY TORUNN SEIM SKROGSTAD
 -------------------------------------*/
