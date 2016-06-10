@@ -139,8 +139,9 @@ img { max-width: 100%; }
 		}
 
 		.btn { 
-			width: 36%; 
-			width: 30%; 
+			width: 42%; 
+			padding: 1rem;
+			font-size: 1.2rem;
 			border-color: $sf-neutral;
 			color: $sf-neutral;
 		}
@@ -150,7 +151,7 @@ img { max-width: 100%; }
 .how-it-works { 
 
 	background: #fff;
-	padding-top: 10px;
+	padding: 50px 15px;
 
 	.step { 
 		background: none; 
@@ -163,7 +164,7 @@ img { max-width: 100%; }
 
 
 form#new_user, .refer-form {
-	background: #f7f7f7; 
+	background: #faf9f8; 
 	max-width: 450px;
 	margin: 0 auto;
 	padding: 30px 15px;
