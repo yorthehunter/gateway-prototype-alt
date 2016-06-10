@@ -1,10 +1,4 @@
 
-$(document).ready(function(){
-    $(".video").fitVids();
-});
-
-
-
 $(function() {
 
 
@@ -19,6 +13,18 @@ $(function() {
   $('#toggle-secondary').click(function(){
     $('.secondary-nav').slideToggle( "fast" );
     $('#toggle-secondary').toggleClass('active');
+    return false;
+  });
+
+
+
+
+  $('.footer-toggle').click(function(){
+    $('#below-the-footer-fold').slideToggle( "fast" );
+    var desiredHeight = $(window).height() - 120;
+    $('html, body').animate({
+        scrollTop: $("#below-the-footer-fold").offset().top - desiredHeight
+    }, 500);
     return false;
   });
 
@@ -64,11 +70,6 @@ $(function() {
             //});
     return false;
   });
-
-
-
-
-
 });
 
 

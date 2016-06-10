@@ -1,25 +1,78 @@
 
-.social {
-  .icon {
-    border-bottom: 0;
-    background-color: $sf-neutral;
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    color: #fff;
-    padding: 6px 7px;
-    &:hover, &:focus { background-color: darken($sf-neutral, 20%);  }
-    
-    &.twitter:after   { content: "\e60b"; }
-    &.facebook:after  { content: "\e60a"; }
-    &.tumblr:after { content: "\e606"; }
-    &.flickr:after { content: "\e604"; }
-    &.vimeo:after { content: "\e608"; }
-    &.linkedin:after { content: "\e605"; }
-    &.youtube:after { content: "\e600"; }
-    span { display: none; }
+footer {
+  background: rgba(0,0,0,0.05);
 
+  .bee {
+    font-family: sans-serif;
+    color: #fff;
+    position: absolute;
+    top: -22px;
+    left: calc(50% - 30px);
+    height: 32px;
+    overflow: hidden;
+    text-align: center;
+    &:after {
+      content: "... ";
+      content: "MORE";
+      height: 60px;
+      width: 60px;
+      background: $sf-mint;
+      border-radius: 50%;
+      display: inline-block;
+      z-index: 1;/*
+      font-size: 50px;
+      line-height: 5px;
+      font-family: serif;
+      letter-spacing: -3px;*/
+
+      font-size: 12px;
+      line-height: 35px;
+    }
+  }
+
+  &.opened {
+    .below-the-footer-fold {
+      display: block;
+    }
+  }
+  
+}
+
+.above-the-footer-fold {
+  padding: 15px;
+  @include clear;
+}
+
+.footer-toggle {
+
+  background: $sf-mint;
+  display: block;
+  position: relative;
+  height: 10px;
+
+  &:hover  {
+    background: lighten($sf-neutral, 30%);
+    .bee:after { background: lighten($sf-neutral, 30%);}
   }
 }
 
+.style-tips,
+.questions {
+  float: left;
+  width: 50%;
+}
+
+.below-the-footer-fold {
+  background: #fff;
+  display: none;
+  padding: 15px;
+
+  a { 
+    
+  }
+
+  li { line-height: 44px; }
+  .about {
+
+  }
+}
