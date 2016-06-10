@@ -61,7 +61,7 @@
                 {% if page.skin == "womens" %}
                   <li><a href="http://blog.stitchfix.com" target="_blank">Style Tips</a></li>
                 {% elsif page.skin == "mens" %}
-                  <li><a href="#">Style Tips Men - Name TBD</a></li>
+                  <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
                 {% else %}
                   <li>Style Tips for <a href="#">Men</a> and <a href="#">Women</a></li>
                 {% endif %}
@@ -75,16 +75,9 @@
 
 
                 {% if page.status == "logged-out" %}
-
-    
-                  {% if page.active == "womens" %}
+                  
                     <li><a href="/mens">Men</a></li>
-                  {% endif %}
-
-    
-                  {% if page.active == "mens" %}
-                    <li><a href="/womens">Women</a></li>
-                  {% endif %}
+                    <li><a href="/womens">Women</a></li>            
 
                 {% else %}
 
