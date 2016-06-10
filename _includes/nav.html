@@ -39,8 +39,6 @@
       
         <ul>
 
-              <li><a>&nbsp;</a></li>
-
 
               {% if page.status == "logged-in" %}
                 <li><a href="/logged-in">My fix</a></li>
@@ -53,9 +51,9 @@
 
 
                 {% if page.status == "logged-in" %}
-                  <li><a href="faq">FAQ</a></li>
+                  <li {% if page.active == "faq" %}class="active"{% endif %}><a href="faq">FAQ</a></li>
                 {% else %}
-                  <li><a href="/faq">FAQ</a></li>
+                  <li {% if page.active == "faq" %}class="active"{% endif %}><a href="/faq">FAQ</a></li>
                 {% endif %}
 
                 {% if page.skin == "womens" %}
@@ -63,7 +61,12 @@
                 {% elsif page.skin == "mens" %}
                   <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
                 {% else %}
-                  <li>Style Tips for<!--  <a href="#">Men</a> and <a href="#">Women</a> --></li>
+                  <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
+                    <div class="men-or-women">
+                      <a href="#">Men</a>
+                      <a href="#">Women</a>
+                    </div>
+                  </li>
                 {% endif %}
 
 

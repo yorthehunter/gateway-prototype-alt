@@ -703,7 +703,6 @@ nav {
   right: 0;
   top: 50px;
   background: #f0f0f0;
-  overflow: hidden;
   display: none;
   z-index: 0; }
   nav .secondary-nav a {
@@ -759,8 +758,18 @@ nav {
       background-color: #eafaa1; }
       nav .active a:hover:active, nav .active a:focus:active {
         background-color: #fbfeee; }
-  nav .men-or-women a {
-    display: inline-block; }
+
+.nav__style-tips {
+  position: relative; }
+
+.men-or-women {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0; }
+  .men-or-women a {
+    display: block; }
 
 #toggle,
 #toggle-secondary {
@@ -810,18 +819,16 @@ nav {
   #toggle-secondary {
     display: none; } }
 
-header {
-  height: 50px; }
-  header .btn--cta {
-    position: absolute;
-    top: 6px;
-    right: 60px;
-    z-index: 10; }
-  header .btn--cta-secondary {
-    position: absolute;
-    top: 6px;
-    right: 210px;
-    z-index: 10; }
+header .btn--cta {
+  position: absolute;
+  top: 6px;
+  right: 60px;
+  z-index: 10; }
+header .btn--cta-secondary {
+  position: absolute;
+  top: 6px;
+  right: 210px;
+  z-index: 10; }
 
 .link--avatar {
   display: block;

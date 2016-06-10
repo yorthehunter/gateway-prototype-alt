@@ -17,6 +17,14 @@ $(function() {
   });
 
 
+  $('.style-tips-toggle').click(function(){
+    $('.men-or-women').slideToggle( "fast" );
+    $('.nav__style-tips').toggleClass('active');
+    return false;
+  });
+
+  
+
 
 
   $('.footer-toggle').click(function(){
