@@ -1,23 +1,23 @@
 
 .social {
+
+    margin-bottom: 1rem;
+
+   li { display: inline-block; } 
+
   .icon {
-    border-bottom: 0;
     background-color: $sf-neutral;
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
     display: inline-block;
     color: #fff;
-    padding: 6px 7px;
+    padding: 6px;
     &:hover, &:focus { background-color: darken($sf-neutral, 20%);  }
     
-    &.twitter:after   { content: "\e60b"; }
-    &.facebook:after  { content: "\e60a"; }
-    &.tumblr:after { content: "\e606"; }
-    &.flickr:after { content: "\e604"; }
-    &.vimeo:after { content: "\e608"; }
-    &.linkedin:after { content: "\e605"; }
-    &.youtube:after { content: "\e600"; }
+    &.twitter:after   { content: "\ea96"; }
+    &.facebook:after  { content: "\ea90"; }
+    &.instagram:after { content: "\ea92"; }
+    &.pinterest:after { content: "\ead1"; }
+    &.email:after { content: "\ea83"; }
+    &.link:after { content: "\e9cb"; }
     span { display: none; }
 
   }
