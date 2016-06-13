@@ -692,68 +692,43 @@ header {
   display: block;
   color: #374019;
   background: #fff;
-  text-align: center;
+  text-align: left;
   min-height: 44px; }
   header a {
-    text-decoration: none !important; }
+    text-decoration: none !important;
+    padding: 0 1rem; }
 
 nav {
   position: absolute;
   left: 0;
   right: 0;
   top: 50px;
-  background: #f0f0f0;
+  background: rgba(240, 240, 240, 0.9);
   display: none;
-  z-index: 0;
-  /*
-    @media screen and (min-width: 1000px) {
-      .secondary-nav {
-        display: inline;
-        background: transparent;
-        border-top: 0;
-        border-bottom: 0;
-      }
-    }
-  */ }
-  @media screen and (min-width: 700px) {
-    nav {
-      display: block;
-      top: 0;
-      background: transparent;
-   /* .secondary-nav  {
-      display: none;
-      border-top: 2px solid #ccc;
-      border-bottom: 2px solid #ccc;
-      background: #f0f0f0;
-    }
-*/ }
-      nav li {
-        display: inline-block; }
-      nav a {
-        padding: 0 10px; } }
+  z-index: 0; }
   nav ul, nav li {
     margin: 0;
     padding: 0;
     list-style: none; }
   nav a {
-    display: inline-block;
+    display: block;
     line-height: 44px;
     border: none;
-    color: #00ada5; }
+    color: #00ada5;
+    /*   &.sign-up {
+         background: darken(#e4981b, 5%);
+         color: #fff; 
+         &:focus, 
+           &:hover { background: #c70008; }
+           &:active { background: #07b675; color: #fff;  }
+         
+       }*/ }
     nav a:hover, nav a:focus {
       color: #000;
       background: #ebe8e8; }
       nav a:hover:active, nav a:focus:active {
         color: #000;
         background: #ebe8e8; }
-    nav a.sign-up {
-      background: #cd8918;
-      color: #fff; }
-      nav a.sign-up:focus, nav a.sign-up:hover {
-        background: #c70008; }
-      nav a.sign-up:active {
-        background: #07b675;
-        color: #fff; }
   nav .active a {
     background-color: #dff86b;
     color: #000; }
@@ -761,6 +736,40 @@ nav {
       background-color: #eafaa1; }
       nav .active a:hover:active, nav .active a:focus:active {
         background-color: #fbfeee; }
+  @media screen and (min-width: 700px) {
+    nav {
+      display: block;
+      top: 0;
+      background: transparent; }
+      nav li {
+        display: inline-block; }
+        nav li a {
+          padding: 0 10px; } }
+
+@media screen and (min-width: 400px) {
+  .logged-in nav {
+    background: none;
+    display: block;
+    top: 0;
+    text-align: center; }
+    .logged-in nav li {
+      display: inline-block; }
+    .logged-in nav a {
+      padding: 0 0.3rem; }
+    .logged-in nav .secondary-nav {
+      background: blue;
+      position: absolute;
+      top: 50px;
+      right: 0px;
+      width: 200px;
+      text-align: left; }
+      .logged-in nav .secondary-nav li {
+        display: block; }
+      .logged-in nav .secondary-nav a {
+        padding: 0 1rem; } }
+@media screen and (min-width: 600px) {
+  .logged-in nav a {
+    padding: 0 1rem; } }
 
 .nav__style-tips {
   position: relative; }
@@ -771,7 +780,7 @@ nav {
   display: none;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100px;
   right: 0; }
   .men-or-women a {
     display: inline-block;
@@ -783,9 +792,7 @@ nav {
         display: block; } }
 
 #toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
   padding: 0 15px;
   line-height: 49px;
   font-size: 22px;
@@ -793,10 +800,14 @@ nav {
   background: #fff;
   border-bottom: 0;
   color: #666666;
-  display: inline-block; }
+  display: block;
+  position: relative; }
   @media screen and (min-width: 700px) {
     #toggle {
       display: none; } }
+  @media screen and (min-width: 700px) {
+    .logged-in #toggle {
+      display: block; } }
   #toggle:hover, #toggle:focus {
     background-color: #fff;
     color: #4d4d4d; }
@@ -821,15 +832,13 @@ nav {
     display: none; } }
 
 header .btn--cta {
-  position: absolute;
-  top: 6px;
-  right: 60px;
-  z-index: 10; }
+  float: right;
+  z-index: 10;
+  margin: 5px; }
 header .btn--cta-secondary {
-  position: absolute;
-  top: 6px;
-  right: 210px;
-  z-index: 10; }
+  float: right;
+  z-index: 10;
+  margin: 5px 0; }
 
 .link--avatar {
   display: block;
@@ -844,17 +853,10 @@ header .btn--cta-secondary {
   .link--avatar a {
     display: block; }
 
-.gender {
-  position: absolute;
-  top: 0px;
-  line-height: 50px;
-  left: 0;
-  padding-left: 50px;
-  z-index: 0; }
-
 .gender-toggle {
   height: 50px;
-  width: 54px; }
+  width: 54px;
+  float: left; }
 
 .toggle-gender {
   background: #fff;

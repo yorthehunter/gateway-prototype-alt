@@ -12,20 +12,21 @@
 {% endif %}
 
 
+  <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+
 {% if page.status == "logged-in" %}  
   {% if page.body_class == "mens" %} 
     <a href="#get-started" class="btn btn--cta" id="get-started">Refer</a>
   {% endif %}  
 {% else %}
 
-  <a href="/login" class="btn btn--cta-secondary">Sign in</a>
   {% if page.skin == "neutral" %}
   <a href="/#get-started" class="btn btn--cta" id="get-started">Get started</a>
   {% else %}
   <a href="/" class="btn btn--cta" id="get-started">Get started</a>
   {% endif %}
+  <a href="/login" class="btn btn--cta-secondary">Sign in</a>
 {% endif %}
-  <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
@@ -58,10 +59,7 @@
                     <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
                   {% else %}
                     <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
-                      <div class="men-or-women">
-                        <a href="#">Men</a>
-                        <a href="#">Women</a>
-                      </div>
+                      <div class="men-or-women"><a href="#">Men</a><a href="#">Women</a></div>
                     </li>
                   {% endif %}
 
