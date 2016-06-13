@@ -822,11 +822,16 @@ nav {
       .logged-in nav .secondary-nav a {
         padding: 0 1rem; } }
 @media screen and (min-width: 480px) {
-  .logged-in nav a {
-    padding: 0 0.6rem; } }
+  .logged-in nav {
+    font-size: inherit; }
+    .logged-in nav a {
+      padding: 0 0.6rem; } }
 @media screen and (min-width: 600px) {
   .logged-in nav a {
     padding: 0 1rem; } }
+@media screen and (min-width: 650px) {
+  .logged-in nav {
+    left: 0; } }
 
 .nav__style-tips {
   position: relative; }
