@@ -710,7 +710,7 @@ header {
   color: #666666;
   display: block;
   position: relative; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 650px) {
     #toggle,
     #secondary-toggle {
       display: none; } }
@@ -740,7 +740,7 @@ header {
 
 nav {
   position: absolute;
-  left: 70px;
+  width: 200px;
   right: 0;
   top: 50px;
   background: rgba(255, 255, 255, 0.95);
@@ -777,11 +777,13 @@ nav {
       background-color: #eafaa1; }
       nav .active a:hover:active, nav .active a:focus:active {
         background-color: #fbfeee; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 650px) {
     nav {
       display: block;
       top: 0;
-      background: transparent; }
+      background: transparent;
+      width: 100%;
+      left: 70px; }
       nav li {
         display: inline-block; }
         nav li a {
@@ -796,37 +798,36 @@ nav {
     display: block; }
   .logged-in #toggle {
     display: none; } }
-.logged-in nav {
-  left: 0; }
-  @media screen and (min-width: 375px) {
-    .logged-in nav {
-      background: none;
-      display: block;
-      top: 0;
-      text-align: center;
-      font-size: 15px; }
-      .logged-in nav li {
-        display: inline-block; }
-      .logged-in nav a {
-        padding: 0 0.2rem; }
-      .logged-in nav .secondary-nav {
-        display: none;
-        background: rgba(255, 255, 255, 0.95);
-        position: absolute;
-        top: 50px;
-        right: 0px;
-        width: 200px;
-        text-align: left; }
-        .logged-in nav .secondary-nav li {
-          display: block; }
-        .logged-in nav .secondary-nav a {
-          padding: 0 1rem; } }
-  @media screen and (min-width: 480px) {
+@media screen and (min-width: 375px) {
+  .logged-in nav {
+    background: none;
+    display: block;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px; }
+    .logged-in nav li {
+      display: inline-block; }
     .logged-in nav a {
-      padding: 0 0.6rem; } }
-  @media screen and (min-width: 600px) {
-    .logged-in nav a {
-      padding: 0 1rem; } }
+      padding: 0 0.2rem; }
+    .logged-in nav .secondary-nav {
+      display: none;
+      background: rgba(255, 255, 255, 0.95);
+      position: absolute;
+      top: 50px;
+      right: 0px;
+      width: 200px;
+      text-align: left; }
+      .logged-in nav .secondary-nav li {
+        display: block; }
+      .logged-in nav .secondary-nav a {
+        padding: 0 1rem; } }
+@media screen and (min-width: 480px) {
+  .logged-in nav a {
+    padding: 0 0.6rem; } }
+@media screen and (min-width: 600px) {
+  .logged-in nav a {
+    padding: 0 1rem; } }
 
 .nav__style-tips {
   position: relative; }
@@ -842,7 +843,7 @@ nav {
   .men-or-women a {
     display: inline-block;
     padding: 0 1rem; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 650px) {
     .men-or-women {
       top: 40px; }
       .men-or-women a {
@@ -924,7 +925,7 @@ i.divet {
 
 footer {
   background: rgba(0, 0, 0, 0.05); }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 500px) {
     footer {
       display: none; } }
   footer .bee {
