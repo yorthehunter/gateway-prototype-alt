@@ -4,8 +4,8 @@
 <div class="gender-toggle">
 <a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
   <div class="toggle-gender">
-      <a href="/mens">Mens</a>
-      <a href="/womens">Womens</a> 
+      <a {% if page.active == "mens" %}class="active"{% endif %} href="/mens">Mens</a>
+      <a {% if page.active == "womens" %}class="active"{% endif %} href="/womens">Womens</a> 
   </div>
 </div>
 

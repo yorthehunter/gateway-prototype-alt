@@ -771,12 +771,11 @@ nav {
         color: #000;
         background: #ebe8e8; }
   nav .active a {
-    background-color: #dff86b;
     color: #000; }
     nav .active a:hover, nav .active a:focus {
-      background-color: #eafaa1; }
+      background-color: #e6e6e6; }
       nav .active a:hover:active, nav .active a:focus:active {
-        background-color: #fbfeee; }
+        background-color: #e6e6e6; }
   @media screen and (min-width: 650px) {
     nav {
       display: block;
@@ -831,8 +830,10 @@ nav {
 
 .nav__style-tips {
   position: relative; }
-  .nav__style-tips .active {
+  .nav__style-tips.active a {
     display: block; }
+  .nav__style-tips .men-or-women a {
+    background: #00ada5; }
 
 .men-or-women {
   display: none;
@@ -894,10 +895,11 @@ header .btn--cta-secondary {
   z-index: 11; }
   .toggle-gender a {
     display: inline-block;
-    padding: 0 0.8rem 0 0; }
-    .toggle-gender a :hover {
-      cursor: pointer;
-      background: yellow; }
+    padding: 0 0.4rem; }
+    .toggle-gender a:hover {
+      cursor: pointer; }
+    .toggle-gender a.active {
+      background: rgba(255, 255, 255, 0.5); }
 
 .divet-link {
   position: absolute;
