@@ -740,7 +740,7 @@ header {
 
 nav {
   position: absolute;
-  width: 200px;
+  width: 250px;
   right: 0;
   top: 50px;
   background: rgba(255, 255, 255, 0.95);
@@ -816,7 +816,7 @@ nav {
       position: absolute;
       top: 50px;
       right: 0px;
-      width: 200px;
+      width: 250px;
       text-align: left; }
       .logged-in nav .secondary-nav li {
         display: block; }
@@ -845,7 +845,8 @@ nav {
     padding: 0 1rem; }
   @media screen and (min-width: 650px) {
     .men-or-women {
-      top: 40px; }
+      top: 40px;
+      left: 0; }
       .men-or-women a {
         display: block; } }
 
@@ -877,6 +878,8 @@ header .btn--cta-secondary {
   height: 50px;
   width: 54px;
   float: left; }
+  .gender-toggle:hover {
+    background: #eee; }
 
 .toggle-gender {
   display: none;
@@ -885,8 +888,7 @@ header .btn--cta-secondary {
   position: absolute;
   top: 0px;
   line-height: 50px;
-  left: 0;
-  padding-left: 50px;
+  left: 50px;
   z-index: 11; }
   .toggle-gender a {
     display: inline-block;

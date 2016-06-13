@@ -33,7 +33,7 @@ $(function() {
 
 
   $('.gender-toggle').hover(function(){
-    $('.toggle-gender').animate({width: 'toggle'});
+    $('.toggle-gender').animate({width: 'toggle'}, {duration: 200});
     return false;
   });
 
