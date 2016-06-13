@@ -761,11 +761,13 @@ nav {
 
 .nav__style-tips {
   position: relative; }
+  .nav__style-tips .active {
+    display: block; }
 
 .men-or-women {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: 0;
   right: 0; }
   .men-or-women a {

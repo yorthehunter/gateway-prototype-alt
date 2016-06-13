@@ -17,13 +17,13 @@ $(function() {
   });
 
 
-  $('.style-tips-toggle').click(function(){
+  $('.nav__style-tips').hover(function(){
     $('.men-or-women').slideToggle( "fast" );
     $('.nav__style-tips').toggleClass('active');
     return false;
   });
 
-  
+
 
 
 
@@ -35,6 +35,8 @@ $(function() {
     }, 500);
     return false;
   });
+
+
 
 
 

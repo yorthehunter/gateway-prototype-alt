@@ -4,13 +4,13 @@
 <a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 {% endif %}
 
-<!-- <div class="gender">
+<div class="gender">
 {% if page.active == "womens" %}
    / Womens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
 {% elsif page.active == "mens" %}
    / Mens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
 {% endif %}
-</div> -->
+</div>
 
 <div class="toggle-gender">
   <div class="toggleable-gender">
@@ -47,53 +47,57 @@
                 <li><a href="#">Account</a></li>
               {% endif %}
 
-              <ul class="secondary-nav">
+              <li>
+
+                <ul class="secondary-nav">
 
 
-                {% if page.status == "logged-in" %}
-                  <li {% if page.active == "faq" %}class="active"{% endif %}><a href="faq">FAQ</a></li>
-                {% else %}
-                  <li {% if page.active == "faq" %}class="active"{% endif %}><a href="/faq">FAQ</a></li>
-                {% endif %}
+                  {% if page.status == "logged-in" %}
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="faq">FAQ</a></li>
+                  {% else %}
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="/faq">FAQ</a></li>
+                  {% endif %}
 
-                {% if page.skin == "womens" %}
-                  <li><a href="http://blog.stitchfix.com" target="_blank">Style Tips</a></li>
-                {% elsif page.skin == "mens" %}
-                  <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
-                {% else %}
-                  <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
-                    <div class="men-or-women">
-                      <a href="#">Men</a>
-                      <a href="#">Women</a>
-                    </div>
-                  </li>
-                {% endif %}
-
-
-
-                {% if page.active == "womens" or page.status == "logged-in" %}
-                  <li><a href="#">Reviews</a></li>
-                {% endif %}
-                <li><a href="#">Gift cards</a></li>
+                  {% if page.skin == "womens" %}
+                    <li><a href="http://blog.stitchfix.com" target="_blank">Style Tips</a></li>
+                  {% elsif page.skin == "mens" %}
+                    <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
+                  {% else %}
+                    <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
+                      <div class="men-or-women">
+                        <a href="#">Men</a>
+                        <a href="#">Women</a>
+                      </div>
+                    </li>
+                  {% endif %}
 
 
-                {% if page.status == "logged-out" %}
-                  
-                    <li {% if page.active == "mens" %}class="active"{% endif %}><a href="/mens">Men</a></li>
-                    <li {% if page.active == "womens" %}class="active"{% endif %}><a href="/womens">Women</a></li>            
 
-                {% else %}
+                  {% if page.active == "womens" or page.status == "logged-in" %}
+                    <li><a href="#">Reviews</a></li>
+                  {% endif %}
+                  <li><a href="#">Gift cards</a></li>
 
-                   <li><a href="/logged-in/mens">Mens</a></li>
-             
-                {% endif %}
 
-              
-                {% if page.status == "logged-in" %}
+                  {% if page.status == "logged-out" %}
+                    
+                      <li {% if page.active == "mens" %}class="active"{% endif %}><a href="/mens">Men</a></li>
+                      <li {% if page.active == "womens" %}class="active"{% endif %}><a href="/womens">Women</a></li>            
 
-                  <li><a href="/">Sign out</a></li>
+                  {% else %}
 
-                {% endif %}
+                     <li><a href="/logged-in/mens">Mens</a></li>
+               
+                  {% endif %}
+
+                
+                  {% if page.status == "logged-in" %}
+
+                    <li><a href="/">Sign out</a></li>
+
+                  {% endif %}
+
+              </li>
 
               </ul>
 
