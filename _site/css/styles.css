@@ -698,6 +698,46 @@ header {
     text-decoration: none !important;
     padding: 0 1rem; }
 
+#toggle,
+#secondary-toggle {
+  float: right;
+  padding: 0 15px;
+  line-height: 49px;
+  font-size: 22px;
+  z-index: 6;
+  background: #fff;
+  border-bottom: 0;
+  color: #666666;
+  display: block;
+  position: relative; }
+  @media screen and (min-width: 700px) {
+    #toggle,
+    #secondary-toggle {
+      display: none; } }
+  #toggle:hover, #toggle:focus,
+  #secondary-toggle:hover,
+  #secondary-toggle:focus {
+    background-color: #fff;
+    color: #4d4d4d; }
+  #toggle:active, #toggle.active,
+  #secondary-toggle:active,
+  #secondary-toggle.active {
+    background-color: #666666;
+    color: #fff; }
+    #toggle:active i:after, #toggle.active i:after,
+    #secondary-toggle:active i:after,
+    #secondary-toggle.active i:after {
+      content: "\ea0f"; }
+  #toggle i:after,
+  #secondary-toggle i:after {
+    content: "\e9bd"; }
+  #toggle span,
+  #secondary-toggle span {
+    display: none; }
+
+#secondary-toggle {
+  display: none; }
+
 nav {
   position: absolute;
   left: 70px;
@@ -746,10 +786,19 @@ nav {
         display: inline-block; }
         nav li a {
           padding: 0 10px; } }
+  @media screen and (min-width: 800px) {
+    nav {
+      text-align: center;
+      left: 0; } }
 
+@media screen and (min-width: 375px) {
+  .logged-in #secondary-toggle {
+    display: block; }
+  .logged-in #toggle {
+    display: none; } }
 .logged-in nav {
   left: 0; }
-  @media screen and (min-width: 370px) {
+  @media screen and (min-width: 375px) {
     .logged-in nav {
       background: none;
       display: block;
@@ -761,7 +810,8 @@ nav {
       .logged-in nav a {
         padding: 0 0.2rem; }
       .logged-in nav .secondary-nav {
-        background: blue;
+        display: none;
+        background: rgba(255, 255, 255, 0.95);
         position: absolute;
         top: 50px;
         right: 0px;
@@ -797,46 +847,6 @@ nav {
       top: 40px; }
       .men-or-women a {
         display: block; } }
-
-#toggle {
-  float: right;
-  padding: 0 15px;
-  line-height: 49px;
-  font-size: 22px;
-  z-index: 6;
-  background: #fff;
-  border-bottom: 0;
-  color: #666666;
-  display: block;
-  position: relative; }
-  @media screen and (min-width: 700px) {
-    #toggle {
-      display: none; } }
-  @media screen and (min-width: 700px) {
-    .logged-in #toggle {
-      display: block; } }
-  #toggle:hover, #toggle:focus {
-    background-color: #fff;
-    color: #4d4d4d; }
-  #toggle:active, #toggle.active {
-    background-color: #666666;
-    color: #fff; }
-    #toggle:active i:after, #toggle.active i:after {
-      content: "\ea0f"; }
-  #toggle i:after {
-    content: "\e9bd"; }
-  #toggle span {
-    display: none; }
-
-@media screen and (max-width: 375px) {
-  #toggle-secondary {
-    display: none; } }
-@media screen and (min-width: 375px) {
-  #toggle-secondary {
-    display: block; } }
-@media screen and (min-width: 1000px) {
-  #toggle-secondary {
-    display: none; } }
 
 header .btn--cta {
   float: right;

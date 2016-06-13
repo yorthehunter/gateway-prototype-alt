@@ -10,11 +10,18 @@ $(function() {
   });
 
 
-  $('#toggle-secondary').click(function(){
+  $('#secondary-toggle').click(function(){
     $('.secondary-nav').slideToggle( "fast" );
-    $('#toggle-secondary').toggleClass('active');
+    $('#secondary-toggle').toggleClass('active');
     return false;
   });
+
+
+  // $('#toggle-secondary').click(function(){
+  //   $('.secondary-nav').slideToggle( "fast" );
+  //   $('#toggle-secondary').toggleClass('active');
+  //   return false;
+  // });
 
 
   $('.nav__style-tips').hover(function(){

@@ -16,6 +16,43 @@ header {
   }
 } 
 
+#toggle,
+#secondary-toggle {
+  float: right;
+  padding: 0 15px;
+  line-height: 49px;
+  font-size: 22px;
+  z-index: 6;
+  background: #fff;
+  border-bottom: 0;
+  color: $sf-neutral; 
+  display: block;
+  position: relative;
+
+  @media screen and (min-width: 700px) { display: none; }
+
+
+
+  &:hover, 
+  &:focus { 
+      background-color: #fff; 
+      color: darken($sf-neutral, 10%);
+      }
+      &:active,
+      &.active { 
+        background-color: $sf-neutral; 
+        color: #fff; 
+        i:after { content: "\ea0f"; }
+      }
+  i {
+    &:after   { content: "\e9bd"; }
+    }
+  span { display: none; }
+}
+
+#secondary-toggle {
+  display: none;
+}
 
 
 nav {
@@ -70,55 +107,74 @@ nav {
     }
   }
 
+  @media screen and (min-width: 800px) {
+    text-align: center;
+    left: 0;
+  }
+
 }
 
 
-.logged-in nav {
+.logged-in  {
 
-  left: 0;
-
-  @media screen and (min-width: 370px) {
-    background: none;
-    display: block;
-    top: 0;
-    text-align: center;
-    font-size: 15px;
-
-    li {
-      display: inline-block;
+  @media screen and (min-width: 375px) {
+    #secondary-toggle {
+      display: block;
     }
 
-    a {
-      padding: 0 0.2rem;
+    #toggle {
+      display: none;
     }
+  }
 
-    .secondary-nav {
-      background: blue;
-      position: absolute;
-      top:50px;
-      right: 0px;
-      width: 200px;
-      text-align: left;
-      li { 
-        display: block; 
+  nav {
+
+    left: 0;
+
+    @media screen and (min-width: 375px) {
+      background: none;
+      display: block;
+      top: 0;
+      text-align: center;
+      font-size: 15px;
+
+      li {
+        display: inline-block;
       }
+
+      a {
+        padding: 0 0.2rem;
+      }
+
+      .secondary-nav {
+        display: none;
+        background: rgba(255,255,255,0.95);
+        position: absolute;
+        top:50px;
+        right: 0px;
+        width: 200px;
+        text-align: left;
+        li { 
+          display: block; 
+        }
+        a {
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    @media screen and (min-width: 480px) {
+
+      a {
+        padding: 0 0.6rem;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+
       a {
         padding: 0 1rem;
       }
-    }
-  }
-
-  @media screen and (min-width: 480px) {
-
-    a {
-      padding: 0 0.6rem;
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-
-    a {
-      padding: 0 1rem;
     }
   }
 }
@@ -153,46 +209,6 @@ nav {
 
 }
 
-#toggle {
-  float: right;
-  padding: 0 15px;
-  line-height: 49px;
-  font-size: 22px;
-  z-index: 6;
-  background: #fff;
-  border-bottom: 0;
-  color: $sf-neutral; 
-  display: block;
-  position: relative;
-
-  @media screen and (min-width: 700px) { display: none; }
-
-  .logged-in & { @media screen and (min-width: 700px) { display: block; } }
-
-
-  &:hover, 
-  &:focus { 
-      background-color: #fff; 
-      color: darken($sf-neutral, 10%);
-      }
-      &:active,
-      &.active { 
-        background-color: $sf-neutral; 
-        color: #fff; 
-        i:after { content: "\ea0f"; }
-      }
-  i {
-    &:after   { content: "\e9bd"; }
-    }
-  span { display: none; }
-}
-
-#toggle-secondary {
-  @media screen and (max-width: 375px) { display: none; }
-  @media screen and (min-width: 375px) { display: block; }
-  @media screen and (min-width: 1000px) { display: none; }
-
-}
 
 
 header {
