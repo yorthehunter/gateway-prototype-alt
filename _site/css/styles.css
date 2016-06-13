@@ -867,6 +867,7 @@ header .btn--cta-secondary {
 
 .toggle-gender {
   display: none;
+  height: 50px;
   background: #eee;
   position: absolute;
   top: 0px;

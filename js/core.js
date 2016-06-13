@@ -26,7 +26,7 @@ $(function() {
 
 
   $('.gender-toggle').hover(function(){
-    $('.toggle-gender').toggle( "slide" );
+    $('.toggle-gender').animate({width: 'toggle'});
     return false;
   });
 
