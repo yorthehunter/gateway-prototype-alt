@@ -897,14 +897,18 @@ header .btn--cta-secondary {
   top: 0px;
   line-height: 50px;
   left: 50px;
-  z-index: 11; }
+  z-index: 11;
+  padding-right: 1rem; }
   .toggle-gender a {
     display: inline-block;
-    padding: 0 0.4rem; }
-    .toggle-gender a:hover {
-      cursor: pointer; }
+    padding: 0 0.4rem;
+    line-height: 1.7rem; }
     .toggle-gender a.active {
       background: rgba(255, 255, 255, 0.5); }
+    .toggle-gender a:hover {
+      cursor: pointer;
+      background: #00ada5;
+      color: #fff; }
 
 .divet-link {
   position: absolute;

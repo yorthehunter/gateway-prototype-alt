@@ -288,13 +288,15 @@ header {
   line-height: 50px;
   left: 50px;
   z-index: 11;
+  padding-right: 1rem;
   a { 
     display: inline-block; 
     padding: 0 0.4rem;
-    &:hover { cursor: pointer; }
+    line-height: 1.7rem;
     &.active {
       background: rgba(255,255,255,0.5);
     }
+    &:hover { cursor: pointer; background: $sf-mint; color: #fff; }
   }
 }
 
