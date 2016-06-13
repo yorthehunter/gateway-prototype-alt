@@ -20,12 +20,13 @@ header {
 
 nav {
   position: absolute;
-  left: 0;
+  left: 70px;
   right: 0;    
   top: 50px;
   background: rgba(240,240,240,0.9);
   display: none;
   z-index: 0;
+  line-height: 50px;
 
   ul, li { margin: 0; padding: 0; list-style: none; }
 
@@ -74,18 +75,21 @@ nav {
 
 .logged-in nav {
 
-  @media screen and (min-width: 400px) {
+  left: 0;
+
+  @media screen and (min-width: 370px) {
     background: none;
     display: block;
     top: 0;
     text-align: center;
+    font-size: 15px;
 
     li {
       display: inline-block;
     }
 
     a {
-      padding: 0 0.3rem;
+      padding: 0 0.2rem;
     }
 
     .secondary-nav {
@@ -101,6 +105,13 @@ nav {
       a {
         padding: 0 1rem;
       }
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+
+    a {
+      padding: 0 0.6rem;
     }
   }
 
@@ -224,8 +235,8 @@ header {
 }
 
 .toggle-gender {
-  background: #fff;
   display: none;
+  background: #eee;
   position: absolute;
   top: 0px;
   line-height: 50px;

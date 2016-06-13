@@ -700,12 +700,13 @@ header {
 
 nav {
   position: absolute;
-  left: 0;
+  left: 70px;
   right: 0;
   top: 50px;
   background: rgba(240, 240, 240, 0.9);
   display: none;
-  z-index: 0; }
+  z-index: 0;
+  line-height: 50px; }
   nav ul, nav li {
     margin: 0;
     padding: 0;
@@ -746,30 +747,36 @@ nav {
         nav li a {
           padding: 0 10px; } }
 
-@media screen and (min-width: 400px) {
-  .logged-in nav {
-    background: none;
-    display: block;
-    top: 0;
-    text-align: center; }
-    .logged-in nav li {
-      display: inline-block; }
+.logged-in nav {
+  left: 0; }
+  @media screen and (min-width: 370px) {
+    .logged-in nav {
+      background: none;
+      display: block;
+      top: 0;
+      text-align: center;
+      font-size: 15px; }
+      .logged-in nav li {
+        display: inline-block; }
+      .logged-in nav a {
+        padding: 0 0.2rem; }
+      .logged-in nav .secondary-nav {
+        background: blue;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        width: 200px;
+        text-align: left; }
+        .logged-in nav .secondary-nav li {
+          display: block; }
+        .logged-in nav .secondary-nav a {
+          padding: 0 1rem; } }
+  @media screen and (min-width: 480px) {
     .logged-in nav a {
-      padding: 0 0.3rem; }
-    .logged-in nav .secondary-nav {
-      background: blue;
-      position: absolute;
-      top: 50px;
-      right: 0px;
-      width: 200px;
-      text-align: left; }
-      .logged-in nav .secondary-nav li {
-        display: block; }
-      .logged-in nav .secondary-nav a {
-        padding: 0 1rem; } }
-@media screen and (min-width: 600px) {
-  .logged-in nav a {
-    padding: 0 1rem; } }
+      padding: 0 0.6rem; } }
+  @media screen and (min-width: 600px) {
+    .logged-in nav a {
+      padding: 0 1rem; } }
 
 .nav__style-tips {
   position: relative; }
@@ -859,8 +866,8 @@ header .btn--cta-secondary {
   float: left; }
 
 .toggle-gender {
-  background: #fff;
   display: none;
+  background: #eee;
   position: absolute;
   top: 0px;
   line-height: 50px;
