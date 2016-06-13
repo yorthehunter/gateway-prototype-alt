@@ -841,24 +841,26 @@ nav {
   left: 100px;
   right: 0; }
   .men-or-women a {
-    display: inline-block;
+    display: block;
+    float: left;
     padding: 0 1rem; }
   @media screen and (min-width: 650px) {
     .men-or-women {
       top: 40px;
       left: 0; }
       .men-or-women a {
-        display: block; } }
+        display: block;
+        float: none; } }
 
 header .btn--cta {
   float: right;
   z-index: 10;
-  margin: 5px;
+  margin: 6px;
   position: relative; }
 header .btn--cta-secondary {
   float: right;
   z-index: 10;
-  margin: 5px 0;
+  margin: 6px 0;
   position: relative; }
 
 .link--avatar {
