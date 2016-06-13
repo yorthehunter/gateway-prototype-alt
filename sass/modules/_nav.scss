@@ -27,28 +27,27 @@ nav {
 
 
   .secondary-nav {
-    a { opacity: 0.5; }
   }
 
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 700px) {
     display: block;
-    position: relative;
     top: 0; 
     background: transparent;
+
     li {
       display: inline-block;
     }
 
-    .secondary-nav  {
+   /* .secondary-nav  {
       display: none;
       border-top: 2px solid #ccc;
       border-bottom: 2px solid #ccc;
       background: #f0f0f0;
     }
-
+*/
     a { padding: 0 10px;}
   }
-
+/*
   @media screen and (min-width: 1000px) {
     .secondary-nav {
       display: inline;
@@ -57,7 +56,7 @@ nav {
       border-bottom: 0;
     }
   }
-
+*/
   ul, li { margin: 0; padding: 0; list-style: none; }
 
 
@@ -101,16 +100,26 @@ nav {
 .men-or-women {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 0;
   right: 0;
   a {
-    display: block;
+    display: inline-block;
+    padding: 0 1rem;
   }
+
+  @media screen and (min-width: 700px) {
+    top: 40px;
+
+    a {
+      display: block;
+    }
+  }
+
+
 }
 
-#toggle,
-#toggle-secondary {
+#toggle {
   position: absolute;
   top: 0;
   right: 0;
@@ -123,7 +132,7 @@ nav {
   color: $sf-neutral; 
   display: inline-block;
 
-  @media screen and (min-width: 375px) { display: none; }
+  @media screen and (min-width: 700px) { display: none; }
 
 
   &:hover, 
@@ -175,7 +184,7 @@ header {
   width: 50px;
   padding: 10px;
   position: relative;
-  z-index: 2;
+  z-index: 12;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -194,13 +203,25 @@ header {
 
 }
 
+.gender-toggle {
+  height: 50px;
+  width: 54px;
+}
+
 .toggle-gender {
+  background: #fff;
+  display: none;
   position: absolute;
   top: 0px;
   line-height: 50px;
   left: 0;
   padding-left:  50px;
-  z-index: 1;
+  z-index: 11;
+  a { 
+    display: inline-block; 
+    padding: 0 0.8rem 0 0;
+    :hover { cursor: pointer; background: yellow;}
+  }
 }
 
 .divet-link {

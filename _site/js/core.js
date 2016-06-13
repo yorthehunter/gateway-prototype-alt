@@ -25,6 +25,13 @@ $(function() {
 
 
 
+  $('.gender-toggle').hover(function(){
+    $('.toggle-gender').toggle( "slide" );
+    return false;
+  });
+
+
+
 
 
   $('.footer-toggle').click(function(){

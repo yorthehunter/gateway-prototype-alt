@@ -1,23 +1,17 @@
 {% if page.status == "logged-in" %}
 <a href="/logged-in" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 {% else %}
+<div class="gender-toggle">
 <a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
-{% endif %}
-
-<div class="gender">
-{% if page.active == "womens" %}
-   / Womens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
-{% elsif page.active == "mens" %}
-   / Mens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
-{% endif %}
-</div>
-
-<div class="toggle-gender">
-  <div class="toggleable-gender">
-    <a href="/mens">Mens</a>
-    <a href="/womens">Womens</a> 
+  <div class="toggle-gender">
+      <a href="/mens">Mens</a>
+      <a href="/womens">Womens</a> 
   </div>
 </div>
+
+{% endif %}
+
+
 {% if page.status == "logged-in" %}  
   {% if page.body_class == "mens" %} 
     <a href="#get-started" class="btn btn--cta" id="get-started">Refer</a>
@@ -33,7 +27,7 @@
 {% endif %}
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
-  <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
     <nav class="main">
       
@@ -79,12 +73,12 @@
                   <li><a href="#">Gift cards</a></li>
 
 
-                  {% if page.status == "logged-out" %}
+                  <!-- {% if page.status == "logged-out" %}
                     
                       <li {% if page.active == "mens" %}class="active"{% endif %}><a href="/mens">Men</a></li>
                       <li {% if page.active == "womens" %}class="active"{% endif %}><a href="/womens">Women</a></li>            
 
-                  {% else %}
+                  {% else %} -->
 
                      <li><a href="/logged-in/mens">Mens</a></li>
                

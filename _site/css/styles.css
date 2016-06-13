@@ -704,30 +704,33 @@ nav {
   top: 50px;
   background: #f0f0f0;
   display: none;
-  z-index: 0; }
-  nav .secondary-nav a {
-    opacity: 0.5; }
-  @media screen and (min-width: 375px) {
+  z-index: 0;
+  /*
+    @media screen and (min-width: 1000px) {
+      .secondary-nav {
+        display: inline;
+        background: transparent;
+        border-top: 0;
+        border-bottom: 0;
+      }
+    }
+  */ }
+  @media screen and (min-width: 700px) {
     nav {
       display: block;
-      position: relative;
       top: 0;
-      background: transparent; }
+      background: transparent;
+   /* .secondary-nav  {
+      display: none;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      background: #f0f0f0;
+    }
+*/ }
       nav li {
         display: inline-block; }
-      nav .secondary-nav {
-        display: none;
-        border-top: 2px solid #ccc;
-        border-bottom: 2px solid #ccc;
-        background: #f0f0f0; }
       nav a {
         padding: 0 10px; } }
-  @media screen and (min-width: 1000px) {
-    nav .secondary-nav {
-      display: inline;
-      background: transparent;
-      border-top: 0;
-      border-bottom: 0; } }
   nav ul, nav li {
     margin: 0;
     padding: 0;
@@ -767,14 +770,19 @@ nav {
 .men-or-women {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 0;
   right: 0; }
   .men-or-women a {
-    display: block; }
+    display: inline-block;
+    padding: 0 1rem; }
+  @media screen and (min-width: 700px) {
+    .men-or-women {
+      top: 40px; }
+      .men-or-women a {
+        display: block; } }
 
-#toggle,
-#toggle-secondary {
+#toggle {
   position: absolute;
   top: 0;
   right: 0;
@@ -786,29 +794,20 @@ nav {
   border-bottom: 0;
   color: #666666;
   display: inline-block; }
-  @media screen and (min-width: 375px) {
-    #toggle,
-    #toggle-secondary {
+  @media screen and (min-width: 700px) {
+    #toggle {
       display: none; } }
-  #toggle:hover, #toggle:focus,
-  #toggle-secondary:hover,
-  #toggle-secondary:focus {
+  #toggle:hover, #toggle:focus {
     background-color: #fff;
     color: #4d4d4d; }
-  #toggle:active, #toggle.active,
-  #toggle-secondary:active,
-  #toggle-secondary.active {
+  #toggle:active, #toggle.active {
     background-color: #666666;
     color: #fff; }
-    #toggle:active i:after, #toggle.active i:after,
-    #toggle-secondary:active i:after,
-    #toggle-secondary.active i:after {
+    #toggle:active i:after, #toggle.active i:after {
       content: "\ea0f"; }
-  #toggle i:after,
-  #toggle-secondary i:after {
+  #toggle i:after {
     content: "\e9bd"; }
-  #toggle span,
-  #toggle-secondary span {
+  #toggle span {
     display: none; }
 
 @media screen and (max-width: 375px) {
@@ -838,7 +837,7 @@ header .btn--cta-secondary {
   width: 50px;
   padding: 10px;
   position: relative;
-  z-index: 2;
+  z-index: 12;
   position: absolute;
   top: 0px;
   left: 0px; }
@@ -853,13 +852,25 @@ header .btn--cta-secondary {
   padding-left: 50px;
   z-index: 0; }
 
+.gender-toggle {
+  height: 50px;
+  width: 54px; }
+
 .toggle-gender {
+  background: #fff;
+  display: none;
   position: absolute;
   top: 0px;
   line-height: 50px;
   left: 0;
   padding-left: 50px;
-  z-index: 1; }
+  z-index: 11; }
+  .toggle-gender a {
+    display: inline-block;
+    padding: 0 0.8rem 0 0; }
+    .toggle-gender a :hover {
+      cursor: pointer;
+      background: yellow; }
 
 .divet-link {
   position: absolute;
@@ -891,6 +902,9 @@ i.divet {
 
 footer {
   background: rgba(0, 0, 0, 0.05); }
+  @media screen and (min-width: 700px) {
+    footer {
+      display: none; } }
   footer .bee {
     font-family: sans-serif;
     color: #fff;
