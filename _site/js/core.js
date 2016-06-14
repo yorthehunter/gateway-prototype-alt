@@ -31,6 +31,17 @@ $(function() {
   });
 
 
+  $('.social-close').click(function(){
+    $('.social-men-or-women').slideToggle( "fast" );
+    return false;
+  });
+
+  $('.social-open').click(function(){
+    $('.social-men-or-women').slideToggle( "fast" );
+    return false;
+  });
+
+
 
   $('.gender-toggle').hover(function(){
     $('.toggle-gender').animate({width: 'toggle'}, {duration: 200});

@@ -58,9 +58,9 @@ footer {
   }
 }
 
-.style-tips,
-.questions {
+.style-tips {
   text-align: center;
+  position: relative;
 }
 
 .below-the-footer-fold {
@@ -91,5 +91,34 @@ footer {
 
   .men-or-women {
     left: 0;
+  }
+}
+
+.social-men-or-women {
+  display: none;
+  padding: 10px 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid lighten($sf-neutral, 20%);
+
+  a {
+    color: $sf-neutral; 
+  }
+
+  li {
+    padding: 5px;
+    text-align: left;
+    display: block;
+    line-height: 20px;
+    width: 30%;
+    &.choose-women { text-align: right; }
+  }
+
+  .helper-text {
+    font-size: 12px;
+    border-top: 1px solid lighten($sf-neutral, 45%);
   }
 }
