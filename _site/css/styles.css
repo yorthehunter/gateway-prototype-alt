@@ -859,18 +859,30 @@ nav {
   top: 0;
   left: 100px;
   right: 0; }
-  .men-or-women a {
+  .men-or-women li {
     display: block;
     float: left;
-    padding: 0 1rem; }
+    width: 50%; }
+    .men-or-women li a {
+      padding: 0 1rem; }
   @media screen and (min-width: 650px) {
     .men-or-women {
       top: 40px;
       left: 0; }
-      .men-or-women a {
+      .men-or-women li {
         display: block;
-        float: none; } }
+        float: none;
+        width: 100%; } }
+  footer .men-or-women {
+    left: 80px; }
 
+/* developement to toggle overlays */
+/*.toggle-gender,
+#below-the-footer-fold, 
+.men-or-women {
+  display: block !important;
+}
+*/
 header .btn--cta {
   float: right;
   z-index: 10;
@@ -951,41 +963,40 @@ i.divet {
     display: block;
     text-align: left; }
 
-footer {
-  background: rgba(0, 0, 0, 0.05); }
-  @media screen and (min-width: 500px) {
-    footer {
-      display: none; } }
-  footer .bee {
-    font-family: sans-serif;
-    color: #fff;
-    position: absolute;
-    top: -22px;
-    left: calc(50% - 30px);
-    height: 32px;
-    overflow: hidden;
-    text-align: center; }
-    footer .bee:after {
-      content: "... ";
-      content: "MORE";
-      height: 60px;
-      width: 60px;
-      background: #00ada5;
-      border-radius: 50%;
-      display: inline-block;
-      z-index: 1;
+@media screen and (min-width: 500px) {
+  footer {
+    display: none; } }
+footer .bee {
+  font-family: sans-serif;
+  color: #fff;
+  position: absolute;
+  top: -22px;
+  left: calc(50% - 30px);
+  height: 32px;
+  overflow: hidden;
+  text-align: center; }
+  footer .bee:after {
+    content: "... ";
+    content: "MORE";
+    height: 60px;
+    width: 60px;
+    background: #00ada5;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 1;
            /*
 font-size: 50px;
 line-height: 5px;
 font-family: serif;
 letter-spacing: -3px;*/
-      font-size: 12px;
-      line-height: 35px; }
-  footer.opened .below-the-footer-fold {
-    display: block; }
+    font-size: 12px;
+    line-height: 35px; }
+footer.opened .below-the-footer-fold {
+  display: block; }
 
 .above-the-footer-fold {
   padding: 15px;
+  text-align: center;
   zoom: 1; }
   .above-the-footer-fold:before {
     content: "";
@@ -1007,8 +1018,7 @@ letter-spacing: -3px;*/
 
 .style-tips,
 .questions {
-  float: left;
-  width: 50%; }
+  text-align: center; }
 
 .below-the-footer-fold {
   background: #fff;
@@ -1016,6 +1026,22 @@ letter-spacing: -3px;*/
   padding: 15px; }
   .below-the-footer-fold li {
     line-height: 44px; }
+
+.footer-nav {
+  clear: both;
+  zoom: 1; }
+  .footer-nav:before {
+    content: "";
+    display: table; }
+  .footer-nav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .footer-nav > li {
+    width: 50%;
+    float: left; }
+  .footer-nav .men-or-women {
+    left: 0; }
 
 .social {
   margin-bottom: 1rem; }

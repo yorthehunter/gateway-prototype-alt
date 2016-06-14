@@ -1,6 +1,5 @@
 
 footer {
-  background: rgba(0,0,0,0.05);
 
   @media screen and (min-width: 500px) { display: none; }
 
@@ -42,6 +41,7 @@ footer {
 
 .above-the-footer-fold {
   padding: 15px;
+  text-align: center;
   @include clear;
 }
 
@@ -60,8 +60,7 @@ footer {
 
 .style-tips,
 .questions {
-  float: left;
-  width: 50%;
+  text-align: center;
 }
 
 .below-the-footer-fold {
@@ -76,5 +75,21 @@ footer {
   li { line-height: 44px; }
   .about {
 
+  }
+}
+
+.footer-nav {
+
+  clear: both;
+  @include clear;
+
+  > li {
+    width: 50%;
+    float: left;
+
+  }
+
+  .men-or-women {
+    left: 0;
   }
 }
