@@ -838,7 +838,8 @@ nav {
   .nav__style-tips.active a {
     display: block; }
   .nav__style-tips .men-or-women a {
-    background: #00ada5; }
+    background: #00ada5;
+    color: #fff; }
 
 .men-or-women {
   display: none;
