@@ -196,16 +196,29 @@ nav {
 .nav__style-tips {
   position: relative;
   
-  &.active a { 
-    display: block;
-    } 
-    .men-or-women { 
-      a {
-        background: $sf-mint;
-        color: #fff;
-      }
-    &:hover, &:focus {
+  &.active {
+    background: #e6e6e6;
+      a { 
+      display: block;
+      } 
     }
+    .men-or-women { 
+      background: #e6e6e6;
+      display: none;
+
+      li { line-height: 1.5rem; }
+
+      a {
+        line-height: 1.5rem;
+        margin: 10px 5px;
+        padding: 0 4px;
+        color: $sf-mint;
+        background: #fff;
+        &:hover, &:focus {
+          background: $sf-mint;
+          color: #fff;
+        }
+      }
   }
 }
 

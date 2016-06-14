@@ -835,11 +835,24 @@ nav {
 
 .nav__style-tips {
   position: relative; }
-  .nav__style-tips.active a {
-    display: block; }
-  .nav__style-tips .men-or-women a {
-    background: #00ada5;
-    color: #fff; }
+  .nav__style-tips.active {
+    background: #e6e6e6; }
+    .nav__style-tips.active a {
+      display: block; }
+  .nav__style-tips .men-or-women {
+    background: #e6e6e6;
+    display: none; }
+    .nav__style-tips .men-or-women li {
+      line-height: 1.5rem; }
+    .nav__style-tips .men-or-women a {
+      line-height: 1.5rem;
+      margin: 10px 5px;
+      padding: 0 4px;
+      color: #00ada5;
+      background: #fff; }
+      .nav__style-tips .men-or-women a:hover, .nav__style-tips .men-or-women a:focus {
+        background: #00ada5;
+        color: #fff; }
 
 .men-or-women {
   display: none;
