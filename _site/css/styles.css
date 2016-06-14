@@ -707,7 +707,7 @@ header {
   z-index: 6;
   background: #fff;
   border-bottom: 0;
-  color: #666666;
+  color: #584a49;
   display: block;
   position: relative; }
   @media screen and (min-width: 650px) {
@@ -718,11 +718,11 @@ header {
   #secondary-toggle:hover,
   #secondary-toggle:focus {
     background-color: #fff;
-    color: #4d4d4d; }
+    color: #3c3332; }
   #toggle:active, #toggle.active,
   #secondary-toggle:active,
   #secondary-toggle.active {
-    background-color: #666666;
+    background-color: #584a49;
     color: #fff; }
     #toggle:active i:after, #toggle.active i:after,
     #secondary-toggle:active i:after,
@@ -848,8 +848,7 @@ nav {
       line-height: 1.5rem;
       margin: 10px 5px;
       padding: 0 4px;
-      color: #00ada5;
-      background: #fff; }
+      color: #00ada5; }
       .nav__style-tips .men-or-women a:hover, .nav__style-tips .men-or-women a:focus {
         background: #00ada5;
         color: #fff; }
@@ -1002,9 +1001,9 @@ letter-spacing: -3px;*/
   position: relative;
   height: 10px; }
   .footer-toggle:hover {
-    background: #b3b3b3; }
+    background: #a69594; }
     .footer-toggle:hover .bee:after {
-      background: #b3b3b3; }
+      background: #a69594; }
 
 .style-tips,
 .questions {
@@ -1023,12 +1022,12 @@ letter-spacing: -3px;*/
   .social li {
     display: inline-block; }
   .social .icon {
-    background-color: #666666;
+    background-color: #584a49;
     display: inline-block;
     color: #fff;
     padding: 6px; }
     .social .icon:hover, .social .icon:focus {
-      background-color: #333333; }
+      background-color: #201b1b; }
     .social .icon.twitter:after {
       content: "\ea96"; }
     .social .icon.facebook:after {
@@ -1054,7 +1053,7 @@ html {
 
 body {
   background: #f7f7f7;
-  color: #666666;
+  color: #584a49;
   font-family: arial, sans-serif; }
 
 .page {
@@ -1108,14 +1107,14 @@ img {
     border-color: #d87e54; }
 
 .btn--cta-secondary {
-  border-color: #666666;
-  color: #666666;
+  border-color: #584a49;
+  color: #584a49;
   /*  .mens & { background: $sf-mens; color: #fff; }
     .womens & { background: $sf-pink; color: #fff; }
     .neutral & { background: $sf-neutral; color: #fff; }*/ }
   .btn--cta-secondary:hover {
-    color: #333333;
-    border-color: #333333; }
+    color: #201b1b;
+    border-color: #201b1b; }
 
 .splash {
   position: relative;
