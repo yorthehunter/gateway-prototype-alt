@@ -535,7 +535,6 @@ th, td {
     display: table;
     clear: both; }
   .unstyled li {
-    margin: 0;
     list-style: none; }
 
 @font-face {
@@ -873,7 +872,7 @@ nav {
     display: block;
     line-height: 44px;
     border: none;
-    color: #00ada5;
+    color: #584a49;
     /*   &.sign-up {
          background: darken(#e4981b, 5%);
          color: #fff; 
@@ -1228,17 +1227,16 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #f7f7f7;
-  background: #fefefe;
   color: #584a49;
-  font-family: 'Grad'; }
+  font-family: 'Grad';
+  background: #f9f9f8; }
 
 .page {
   padding-top: 100px;
-  margin: 0 auto;
-  max-width: 800px; }
+  margin: 0 auto; }
   .page.gateway {
-    padding-top: 0; }
+    padding-top: 0;
+    max-width: 100%; }
   .marketing-page .page {
     padding-top: 50px; }
 
@@ -1258,8 +1256,7 @@ img {
   font-size: 1rem;
   text-transform: uppercase;
   font-family: 'BrandonGrotesque-Medium';
-  color: #ff5c61;
-  min-width: inherit !important; }
+  color: #ff5c61; }
 
 .btn--cta {
   border: 1px solid #ff5c61;
@@ -1294,9 +1291,7 @@ img {
     border-color: #201b1b; }
 
 .splash {
-  position: relative;
-  padding-top: 30px;
-  background: #fdfcfa; }
+  position: relative; }
   .splash img {
     display: block; }
   .splash .login {
@@ -1305,35 +1300,82 @@ img {
     right: 5px;
     font-size: 0.8rem; }
   .splash .pick-a-gender {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 5px;
-    text-align: center; }
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    padding-left: calc(50% - 300px/2);
+    padding-right: calc(50% - 300px/2); }
     .splash .pick-a-gender .flr-wrap {
       text-align: center; }
     .splash .pick-a-gender .btn {
       width: 42%;
-      max-width: 200px;
       padding: 1rem;
       font-size: 1.2rem;
       background: #ff5c61;
       border-color: #ff5c61; }
+  @media screen and (min-width: 800px) {
+    .splash .pick-a-gender {
+      position: absolute;
+      top: 40%;
+      right: 30px;
+      padding: 30px;
+      min-width: 370px; } }
 
 .how-it-works {
-  background: #fff;
-  padding: 50px 15px; }
-  .how-it-works .step {
-    background: none;
-    padding: 15px;
-    height: auto;
-    border-bottom: 1px solid #eee; }
-    .how-it-works .step:nth-child(2) {
-      border-top: 1px solid #eee; }
+  text-align: center;
+  background: #eeecea; }
+
+.section-title {
+  background: #96908c;
+  color: #fff;
+  position: relative;
+  padding: 5% 0; }
+  .section-title:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #96908c;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 10px);
+    transform: rotate(45deg); }
+    @media screen and (min-width: 800px) {
+      .section-title:after {
+        width: 30px;
+        height: 30px;
+        bottom: -15px;
+        left: calc(50% - 15px); } }
+
+.how-it-works__steps {
+  padding: 3%;
+  margin: 0 auto;
+  max-width: 1000px; }
+
+.how-it-works__step {
+  max-width: 300px;
+  margin: 0 auto; }
+  @media screen and (min-width: 800px) {
+    .how-it-works__step {
+      width: 33.3%;
+      float: left;
+      padding: 3%; } }
+
+.how-it-works__step__number {
+  border: 1px solid #96908c;
+  display: block;
+  width: 40px;
+  margin: 0 auto 1rem;
+  line-height: 40px;
+  border-radius: 50%; }
+
+.how-it-works__step__title {
+  font-family: 'BrandonGrotesque-Bold';
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 1rem; }
 
 form#new_user, .refer-form {
-  background: #f7f7f7;
   max-width: 450px;
   margin: 0 auto;
   padding: 30px 15px; }

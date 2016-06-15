@@ -32,19 +32,18 @@ html {
 }
 
 body { 
-	background: #f7f7f7; 
-	background: lighten(#eeecea, 7%);
 	color: $sf-brown;
 	font-family: 'Grad';
+	background: lighten(#eeecea, 5%);
 }
 
 .page {
 	padding-top: 100px;
 	margin:  0 auto;
-	max-width: 800px;
 
 	&.gateway {
 		padding-top: 0;
+		max-width: 100%;
 	}
 
 	.marketing-page & {
@@ -66,7 +65,6 @@ img { max-width: 100%; }
   text-transform: uppercase;
   font-family: 'BrandonGrotesque-Medium'; 
   color: $sf-pink;
-  min-width: inherit !important;
 
 }
 
@@ -118,9 +116,6 @@ img { max-width: 100%; }
 
 .splash {
 	position: relative;
-	padding-top: 30px;
-	background: #fdfcfa;
-
 	img { display: block; }
 
 	.login {
@@ -131,12 +126,11 @@ img { max-width: 100%; }
 	}
 
 	.pick-a-gender {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: 5px;
+		padding: 20px;
 		text-align: center;
+		background: #fff;
+		padding-left: calc(50% - 300px/2);
+		padding-right: calc(50% - 300px/2);
 
 		.flr-wrap {
 			text-align: center;
@@ -144,32 +138,95 @@ img { max-width: 100%; }
 
 		.btn { 
 			width: 42%; 
-			max-width: 200px;
 			padding: 1rem;
 			font-size: 1.2rem;
 			background: $sf-pink;
 			border-color: $sf-pink;
 		}
 	}
+
+	@media screen and (min-width: 800px) {
+
+		.pick-a-gender {
+			position: absolute;
+			top: 40%;
+			right: 30px;
+			padding: 30px;
+			min-width: 370px;
+		}
+
+	}
 }
 
 .how-it-works { 
 
-	background: #fff;
-	padding: 50px 15px;
+	text-align: center;
+	background: $sf-grey;
 
-	.step { 
-		background: none; 
-		padding: 15px;
-		height: auto;
-		border-bottom: 1px solid #eee; 
-		&:nth-child(2) { border-top: 1px solid #eee;  }
+}
+
+.section-title {
+	background: $sf-dark-grey;
+	color: #fff;
+	position: relative;
+	padding: 5% 0;
+	&:after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		background:  $sf-dark-grey;
+		display: block; 
+		position: absolute;
+		bottom: -10px;
+		left: calc(50% - 10px);
+		transform: rotate(45deg);
+
+		@media screen and (min-width: 800px) {
+			width: 30px;
+			height: 30px;
+			bottom: -15px;
+			left: calc(50% - 15px);
+		}
 	}
 }
 
+.how-it-works__steps {
+	padding: 3%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.how-it-works__step {
+
+	max-width: 300px;
+	margin: 0 auto;
+
+	@media screen and (min-width: 800px) {
+		width: 33.3%;
+		float: left;
+		padding: 3%;
+	}
+
+}
+
+.how-it-works__step__number {
+	border: 1px solid $sf-dark-grey;
+	display: block;
+	width: 40px;
+	margin: 0 auto 1rem;
+	line-height: 40px;
+	border-radius: 50%;
+}
+
+.how-it-works__step__title {
+		font-family: 'BrandonGrotesque-Bold';
+		text-transform: uppercase;
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+
+}
 
 form#new_user, .refer-form {
-	background: #f7f7f7; 
 	max-width: 450px;
 	margin: 0 auto;
 	padding: 30px 15px;
