@@ -38,8 +38,17 @@
 <script type="text/javascript" src="/js/core.js"></script>
 <script type="text/javascript" src="/js/fitvids.js"></script>
 
+
+<script>
+var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
+</script>
+
+<script src="/js/rimg.min.js"></script>
+
 <!--- For Facebook -->
 <link rel="image_src" href="/img/prototype.jpg" />
+
+
 
 
 <!-- For iPhone 4 -->
@@ -77,11 +86,15 @@
 <div class="page gateway">
 
 <div class="splash">
+
 <a href="/login" class="btn btn--cta-secondary login">Sign in</a>
-<img src="img/gateway.jpg" alt="" />
+
+  <img data-src="img/gateway.jpg" alt="Man and Woman" />
+
 
 <div class="pick-a-gender">
-  <h4>Get started with Stitch Fix</h4>
+  <h4><img src="/img/stitchfix.svg" alt="logo" class="logo"/></h4>
+  <h5>Always my style</h4>
   <a href="womens" class="btn btn--cta">Womens</a>
   <a href="mens" class="btn btn--cta">Mens</a>
 </div>
@@ -90,15 +103,50 @@
 
 <div class="how-it-works">
 
-	<center>
+	<h2 class="section-title">How It Works</h2>
 
 
 
-<br /><br /><br />
-<h2>This is what we're about</h2>
-<p>Placeholder for value proposition</p>
-<br /><br /><br />
-</center>
+		<ul class="unstyled how-it-works__steps">
+
+			<li class="how-it-works__step">
+
+				<span class="how-it-works__step__number">1</span>
+
+				<h3 class="how-it-works__step__title">your style profile</h3>
+
+				<p>Fill out an online style profile to tell
+				us about your style preferences, size,
+				budget, and what occasions you
+				tend to dress for.</p>
+
+			</li>
+			<li class="how-it-works__step">
+
+				<span class="how-it-works__step__number">2</span>
+
+				<h3 class="how-it-works__step__title">hand-picked items</h3>
+
+				<p>Our personal stylists pick five clothing
+				or accessory items based on your unique
+				preferences and provide styling tips
+				for each piece.</p>
+
+			</li>
+			<li class="how-it-works__step">
+
+				<span class="how-it-works__step__number">3</span>
+
+				<h3 class="how-it-works__step__title">free, easy returns</h3>
+
+				<p>Keep and pay for only what you like.
+				Send back everything else in a
+				prepaid envelope.</p>
+
+		</li>
+
+	</ul>
+
 </div>
 
 
@@ -241,30 +289,8 @@
 
 	<div class="above-the-footer-fold">
 
-		<div class="style-tips">
 
-			<h5>Want Style tips?</h5>
-			<p><a href="#">Read our blog</a></p>
-
-			<ul class="social unstyled">
-				<li><a class="icon facebook"><span>Facebook</span></a></li>
-				<li><a class="icon twitter"><span>Twitter</span></a></li>
-				<li><a class="icon instagram"><span>Instagram</span></a></li>
-				<li><a class="icon pinterest"><span>Pinterest</span></a></li>
-			</ul>
-
-		</div>
-
-		<div class="questions">
-
-			<h5>Have a question?</h5>
-
-			<ul class="unstyled">
-				<li><a href="/faq">FAQ</a></li>
-				<li><a href="#">Help Center</a></li>
-			</ul>
-
-		</div>
+		<p>Have a question? <a href="/faq">Visit our FAQ</a></p>
 	
 	</div>
 
@@ -281,44 +307,65 @@
 
 		<div class="style-tips">
 
-			<h5>Want Style tips?</h5>
-			<p><a href="#">Read our blog</a></p>
+			<h5>Follow us</h5>
 
 			<ul class="social unstyled">
-				<li><a class="icon facebook"><span>Facebook</span></a></li>
-				<li><a class="icon twitter"><span>Twitter</span></a></li>
-				<li><a class="icon instagram"><span>Instagram</span></a></li>
-				<li><a class="icon pinterest"><span>Pinterest</span></a></li>
+				<li><a class="icon facebook social-open"><span>Facebook</span></a></li>
+				<li><a class="icon twitter social-open"><span>Twitter</span></a></li>
+				<li><a class="icon instagram social-open"><span>Instagram</span></a></li>
+				<li><a class="icon pinterest social-open"><span>Pinterest</span></a></li>
 			</ul>
+
+			<div class="social-men-or-women social">
+				<a href="#" class="icon social-close"><span>Close</span></a>
+				<a class="icon twitter"><span>Twitter</span></a>
+				 <ul class="unstyled">
+          <li class="choose-women"><a href="#">Women<div class="helper-text">@stitchfix</div></a></li>
+          <li><a href="#">Men<div class="helper-text">@stitchfix_men</div></a></li>
+        </ul>
+
+			</div>
 
 		</div>
 
-		<div class="questions">
+		<hr />
 
-			<h5>Have a question?</h5>
-
-			<ul class="unstyled">
-				<li><a href="/faq">FAQ</a></li>
-				<li><a href="#">Help Center</a></li>
-			</ul>
-
-		</div>
-	
-
-		<ul class="unstyled">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Gift Cards</a></li>
-			<li><a href="#">iPhone App</a></li>
-			<li><a href="#">Men</a></li>
-			<li><a href="#">Plus Sizes</a></li>
-			<li><a href="#">Press</a></li>
-			<li><a href="#">Affiliate Program</a></li>
-			<li><a href="#">Careers</a></li>
-			<li><a href="#">Tech Blog</a></li>
-			<li><a href="#">Terms of Use</a></li>
-			<li><a href="#">Privacy Policy</a></li>
+		<ul class="unstyled footer-nav">
+			<li>
+				<h5>About the service</h5>
+				<ul class="unstyled">
+					<li><a href="#">Help Center</a></li>
+						
+	            <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
+	           
+	                <ul class="men-or-women unstyled">
+	                  <li><a href="#">Men</a></li>
+	                  <li><a href="#">Women</a></li>
+	                </ul>
+	              
+	            </li>
+	          
+					<li><a href="#">Gift Cards</a></li>
+					<li><a href="#">iPhone App</a></li>
+					<li><a href="#">Plus Sizes</a></li>
+				</ul>
+			</li>
+			<li>
+				<h5>About the company</h5>
+				<ul class="unstyled">
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Affiliate Program</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Tech Blog</a></li>
+				</ul>
+			</li>
 		</ul>
-	<!-- 	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Less important footer links live here<br />Probably quite a long list -- a structured one!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Hi. What's up? -->
+
+<br><hr />
+		<center><p class="small"><a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></p></center>
+
+<!-- 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Less important footer links live here<br />Probably quite a long list -- a structured one!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Hi. What's up? -->
 
 	</div>
 

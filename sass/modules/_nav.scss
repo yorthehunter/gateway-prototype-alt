@@ -9,6 +9,10 @@ header {
   background: #fff;
   text-align: left;
   min-height: 44px;
+  font-family: 'BrandonText-Bold'; 
+  font-size: 14px; 
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
 
   a { 
     text-decoration: none !important; 
@@ -28,6 +32,7 @@ header {
   color: $sf-neutral; 
   display: block;
   position: relative;
+  font-family: Arial;
 
   @media screen and (min-width: 650px) { display: none; }
 
@@ -69,9 +74,8 @@ nav {
 
   a {
     display: block;
-    line-height: 44px;
     border: none;
-    color: $sf-link;
+    color: $sf-brown;
     &:hover,
     &:focus { color: #000; background: #ebe8e8;  
     &:active { color: #000; background: #ebe8e8; }
@@ -141,7 +145,6 @@ nav {
       top: 0;
       width: 100%;
       text-align: center;
-      font-size: 15px;
 
       li {
         display: inline-block;
@@ -206,8 +209,6 @@ nav {
       background: #e6e6e6;
       display: none;
 
-      li { line-height: 1.5rem; }
-
       a {
         line-height: 1.5rem;
         margin: 10px 5px;
@@ -227,24 +228,37 @@ nav {
   top: 0;
   left: 100px;
   right: 0;
-  a {
+  li {
     display: block;
     float: left;
-    padding: 0 1rem;
+    width: 50%;
+    a { padding: 0 1rem; }
   }
 
   @media screen and (min-width: 650px) {
 
     top: 40px;
     left: 0;
-    a {
+    li {
       display: block;
       float: none;
+      width: 100%;
     }
   }
 
+  footer & { left: 80px; }
 
 }
+
+/* developement to toggle overlays */
+
+/*.social-men-or-women, 
+.toggle-gender,
+#below-the-footer-fold, 
+.men-or-women {
+  display: block !important;
+}
+  */
 
 
 
