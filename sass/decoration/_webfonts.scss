@@ -1,0 +1,172 @@
+/*
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.eot"
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.woff"
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.ttf"
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.svg"
+
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.eot"
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.woff"
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.ttf"
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.svg"
+
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.eot"
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.woff"
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.ttf"
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.eot"
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.woff"
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.ttf"
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.eot"
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.woff"
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.ttf"
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.eot"
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.woff"
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.ttf"
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.eot"
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.woff"
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.ttf"
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.svg"
+
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.eot"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.woff"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.woff2"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.ttf"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.svg"
+
+= depend_on_asset "grad/Grad/2FF577_1_0.eot"
+= depend_on_asset "grad/Grad/2FF577_1_0.woff"
+= depend_on_asset "grad/Grad/2FF577_1_0.woff2"
+= depend_on_asset "grad/Grad/2FF577_1_0.ttf"
+= depend_on_asset "grad/Grad/2FF577_1_0.svg"
+
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.eot"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.woff"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.woff2"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.ttf"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.svg"
+
+*/
+
+// MyFonts Brandon
+@import url("//hello.myfonts.net/count/2b26e2");
+
+  
+@font-face {
+  font-family: 'BrandonText-Italic';
+  src: font-url('/webfonts/brandon/Text-Italic/2B26E2_0_0.eot');
+  src: font-url('/webfonts/brandon/Text-Italic/2B26E2_0_0.eot?#iefix') format('embedded-opentype'),
+       font-url('/webfonts/brandon/Text-Italic/2B26E2_0_0.woff') format('woff'),
+       font-url('/webfonts/brandon/Text-Italic/2B26E2_0_0.ttf') format('truetype'),
+       font-url('/webfonts/brandon/Text-Italic/2B26E2_0_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'BrandonText-Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: font-url('/webfonts/brandon/Text-Regular/2B26E2_1_0.eot');
+  src: font-url('/webfonts/brandon/Text-Regular/2B26E2_1_0.eot?#iefix') format('embedded-opentype'),
+       font-url('/webfonts/brandon/Text-Regular/2B26E2_1_0.woff') format('woff'),
+       font-url('/webfonts/brandon/Text-Regular/2B26E2_1_0.ttf') format('truetype'),
+       font-url('/webfonts/brandon/Text-Regular/2B26E2_1_0.svg#wf') format('svg');
+}
+
+ 
+@font-face {
+  font-family: 'BrandonText-Bold'; 
+  font-weight: bold;
+  font-style: normal;
+  src: font-url('/webfonts/brandon/Text-Bold/2B26E2_2_0.eot');
+  src: font-url('/webfonts/brandon/Text-Bold/2B26E2_2_0.eot?#iefix') format('embedded-opentype'),
+       font-url('/webfonts/brandon/Text-Bold/2B26E2_2_0.woff') format('woff'),
+       font-url('/webfonts/brandon/Text-Bold/2B26E2_2_0.ttf') format('truetype'),
+       font-url('/webfonts/brandon/Text-Bold/2B26E2_2_0.svg#wf') format('svg');
+}
+
+
+@font-face {
+  font-family: 'BrandonGrotesque-Light';
+  src: font-url('/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot');
+  src: font-url('/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot?#iefix') format('embedded-opentype'), 
+       font-url('/webfonts/brandon/Grotesque-Light/2B26E2_5_0.woff') format('woff'),
+       font-url('/webfonts/brandon/Grotesque-Light/2B26E2_5_0.ttf') format('truetype'),
+       font-url('/webfonts/brandon/Grotesque-Light/2B26E2_5_0.svg#wf') format('svg'); 
+}
+
+
+ 
+@font-face {
+  font-family: 'BrandonGrotesque-Medium';
+    src: font-url('/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot');
+    src: font-url('/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot?#iefix') format('embedded-opentype'),
+         font-url('/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.woff') format('woff'),
+         font-url('/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.ttf') format('truetype'),
+         font-url('/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.svg#wf') format('svg');
+}
+
+ 
+@font-face {
+  font-family: 'BrandonGrotesque-Regular';
+  src: font-url('/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot');
+  src: font-url('/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot?#iefix') format('embedded-opentype'),
+       font-url('/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.woff') format('woff'),
+       font-url('/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.ttf') format('truetype'),
+       font-url('/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.svg#wf') format('svg');
+}
+
+ 
+@font-face {
+  font-family: 'BrandonGrotesque-Bold'; 
+  src: font-url('/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot');
+  src: font-url('/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot?#iefix') format('embedded-opentype'),
+       font-url('/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.woff') format('woff'),
+       font-url('/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.ttf') format('truetype'),
+       font-url('/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.svg#wf') format('svg');
+}
+
+//MyFonts Grad
+@import url("//hello.myfonts.net/count/2ff577");
+
+@font-face {
+  font-family: 'Grad-Bold';
+  font-weight: bold;
+  font-style: normal;
+  src: font-url('/webfonts/grad/Grad-Bold/2FF577_0_0.eot');
+  src: font-url('/webfonts/grad/Grad-Bold/2FF577_0_0.eot?#iefix') format('embedded-opentype'),
+       font-url('/webfonts/grad/Grad-Bold/2FF577_0_0.woff2') format('woff2'),
+       font-url('/webfonts/grad/Grad-Bold/2FF577_0_0.woff') format('woff'),
+       font-url('/webfonts/grad/Grad-Bold/2FF577_0_0.ttf') format('truetype'),
+       font-url('/webfonts/grad/Grad-Bold/2FF577_0_0.svg#wf') format('svg');
+}
+ 
+  
+@font-face {
+  font-family: 'Grad';
+  font-weight: normal;
+  font-style: normal;
+  src: font-url('/webfonts/grad/Grad/2FF577_1_0.eot');
+  src: font-url('/webfonts/grad/Grad/2FF577_1_0.eot?#iefix') format('embedded-opentype'),
+       font-url('/webfonts/grad/Grad/2FF577_1_0.woff2') format('woff2'),
+       font-url('/webfonts/grad/Grad/2FF577_1_0.woff') format('woff'),
+       font-url('/webfonts/grad/Grad/2FF577_1_0.ttf') format('truetype'),
+       font-url('/webfonts/grad/Grad/2FF577_1_0.svg#wf') format('svg');
+}
+ 
+  
+@font-face {
+    font-family: 'Grad-Italic';
+    src: font-url('/webfonts/grad/Grad-Italic/2FF577_2_0.eot');
+    src: font-url('/webfonts/grad/Grad-Italic/2FF577_2_0.eot?#iefix') format('embedded-opentype'),
+         font-url('/webfonts/grad/Grad-Italic/2FF577_2_0.woff2') format('woff2'),
+         font-url('/webfonts/grad/Grad-Italic/2FF577_2_0.woff') format('woff'),
+         font-url('/webfonts/grad/Grad-Italic/2FF577_2_0.ttf') format('truetype'),
+         font-url('/webfonts/grad/Grad-Italic/2FF577_2_0.svg#wf') format('svg');
+}
+ 

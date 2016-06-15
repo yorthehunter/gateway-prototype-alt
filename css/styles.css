@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("//hello.myfonts.net/count/2b26e2");
+@import url("//hello.myfonts.net/count/2ff577");
 #dp_swf_engine {
   display: none; }
 
@@ -561,7 +563,7 @@ th, td {
   .icon span {
     display: none; }
   .icon:after {
-    content: "\e97f"; }
+    content: "\ea0f"; }
 
 @-webkit-keyframes heroAnim {
   0% {
@@ -685,6 +687,119 @@ th, td {
   color: #FF5C61;
   border-color: transparent; }
 
+/*
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.eot"
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.woff"
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.ttf"
+= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.svg"
+
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.eot"
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.woff"
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.ttf"
+= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.svg"
+
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.eot"
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.woff"
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.ttf"
+= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.eot"
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.woff"
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.ttf"
+= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.eot"
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.woff"
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.ttf"
+= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.eot"
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.woff"
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.ttf"
+= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.svg"
+
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.eot"
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.woff"
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.ttf"
+= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.svg"
+
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.eot"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.woff"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.woff2"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.ttf"
+= depend_on_asset "grad/Grad-Bold/2FF577_0_0.svg"
+
+= depend_on_asset "grad/Grad/2FF577_1_0.eot"
+= depend_on_asset "grad/Grad/2FF577_1_0.woff"
+= depend_on_asset "grad/Grad/2FF577_1_0.woff2"
+= depend_on_asset "grad/Grad/2FF577_1_0.ttf"
+= depend_on_asset "grad/Grad/2FF577_1_0.svg"
+
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.eot"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.woff"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.woff2"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.ttf"
+= depend_on_asset "grad/Grad-Italic/2FF577_2_0.svg"
+
+*/
+@font-face {
+  font-family: 'BrandonText-Italic';
+  src: font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.eot");
+  src: font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.woff") format("woff"), font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.ttf") format("truetype"), font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'BrandonText-Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.eot");
+  src: font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.woff") format("woff"), font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.ttf") format("truetype"), font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'BrandonText-Bold';
+  font-weight: bold;
+  font-style: normal;
+  src: font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.eot");
+  src: font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.woff") format("woff"), font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.ttf") format("truetype"), font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'BrandonGrotesque-Light';
+  src: font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot");
+  src: font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'BrandonGrotesque-Medium';
+  src: font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot");
+  src: font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'BrandonGrotesque-Regular';
+  src: font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot");
+  src: font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'BrandonGrotesque-Bold';
+  src: font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot");
+  src: font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'Grad-Bold';
+  font-weight: bold;
+  font-style: normal;
+  src: font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.eot");
+  src: font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.woff2") format("woff2"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.woff") format("woff"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.ttf") format("truetype"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'Grad';
+  font-weight: normal;
+  font-style: normal;
+  src: font-url("/webfonts/grad/Grad/2FF577_1_0.eot");
+  src: font-url("/webfonts/grad/Grad/2FF577_1_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/grad/Grad/2FF577_1_0.woff2") format("woff2"), font-url("/webfonts/grad/Grad/2FF577_1_0.woff") format("woff"), font-url("/webfonts/grad/Grad/2FF577_1_0.ttf") format("truetype"), font-url("/webfonts/grad/Grad/2FF577_1_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'Grad-Italic';
+  src: font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.eot");
+  src: font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.woff2") format("woff2"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.woff") format("woff"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.ttf") format("truetype"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.svg#wf") format("svg"); }
+
 header {
   position: fixed;
   z-index: 5;
@@ -693,7 +808,10 @@ header {
   color: #374019;
   background: #fff;
   text-align: left;
-  min-height: 44px; }
+  min-height: 44px;
+  font-family: 'BrandonGrotesque-Regular';
+  letter-spacing: 0.05rem;
+  text-transform: uppercase; }
   header a {
     text-decoration: none !important;
     padding: 0 1rem; }
@@ -842,8 +960,6 @@ nav {
   .nav__style-tips .men-or-women {
     background: #e6e6e6;
     display: none; }
-    .nav__style-tips .men-or-women li {
-      line-height: 1.5rem; }
     .nav__style-tips .men-or-women a {
       line-height: 1.5rem;
       margin: 10px 5px;
@@ -883,8 +999,7 @@ nav {
 .men-or-women {
   display: block !important;
 }
-
-*/
+  */
 header .btn--cta {
   float: right;
   z-index: 10;
@@ -1068,6 +1183,14 @@ footer.opened .below-the-footer-fold {
     font-size: 12px;
     border-top: 1px solid #c9bebe; }
 
+.social-close {
+  border-color: transparent;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  padding: 5px;
+  font-size: 10px; }
+
 .social {
   margin-bottom: 1rem; }
   .social li {
@@ -1106,8 +1229,9 @@ html {
 
 body {
   background: #f7f7f7;
+  background: #fefefe;
   color: #584a49;
-  font-family: arial, sans-serif; }
+  font-family: 'Grad'; }
 
 .page {
   padding-top: 100px;
@@ -1133,7 +1257,7 @@ img {
   display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.8px !important;
+  font-family: 'BrandonGrotesque-Medium';
   color: #ff5c61;
   min-width: inherit !important; }
 
@@ -1145,11 +1269,11 @@ img {
     	background: $sf-pink; 
     }
     .neutral & { 
-    	background: $sf-neutral; 
-    	border-color: $sf-neutral; 
+    	background: $sf-brown; 
+    	border-color: $sf-brown; 
   	  &:Hover {
-  	    background: darken($sf-neutral, 5%);
-  	    border-color: darken($sf-neutral, 5%);
+  	    background: darken($sf-brown, 5%);
+  	    border-color: darken($sf-brown, 5%);
   	  }
     }*/ }
   .btn--cta:Hover {
@@ -1164,7 +1288,7 @@ img {
   color: #584a49;
   /*  .mens & { background: $sf-mens; color: #fff; }
     .womens & { background: $sf-pink; color: #fff; }
-    .neutral & { background: $sf-neutral; color: #fff; }*/ }
+    .neutral & { background: $sf-brown; color: #fff; }*/ }
   .btn--cta-secondary:hover {
     color: #201b1b;
     border-color: #201b1b; }

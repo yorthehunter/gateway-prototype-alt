@@ -12,6 +12,7 @@
 @import "decoration/icons.scss";
 @import "decoration/animation.scss";
 @import "decoration/alerts.scss";
+@import "decoration/webfonts.scss";
  
 @import "modules/nav.scss"; 
 @import "modules/footer.scss";
@@ -32,8 +33,9 @@ html {
 
 body { 
 	background: #f7f7f7; 
-	color: $sf-neutral;
-	font-family: arial, sans-serif;
+	background: lighten(#eeecea, 7%);
+	color: $sf-brown;
+	font-family: 'Grad';
 }
 
 .page {
@@ -62,7 +64,7 @@ img { max-width: 100%; }
   display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.8px !important;
+  font-family: 'BrandonGrotesque-Medium'; 
   color: $sf-pink;
   min-width: inherit !important;
 
@@ -85,11 +87,11 @@ img { max-width: 100%; }
   	background: $sf-pink; 
   }
   .neutral & { 
-  	background: $sf-neutral; 
-  	border-color: $sf-neutral; 
+  	background: $sf-brown; 
+  	border-color: $sf-brown; 
 	  &:Hover {
-	    background: darken($sf-neutral, 5%);
-	    border-color: darken($sf-neutral, 5%);
+	    background: darken($sf-brown, 5%);
+	    border-color: darken($sf-brown, 5%);
 	  }
   }*/
 
@@ -99,18 +101,18 @@ img { max-width: 100%; }
 }
 
 .btn--cta-secondary {
-  	border-color: $sf-neutral;
-  	color: $sf-neutral;
+  	border-color: $sf-brown;
+  	color: $sf-brown;
 
   	&:hover { 
-  		color: darken($sf-neutral, 20%); 
-  		border-color: darken($sf-neutral, 20%); 
+  		color: darken($sf-brown, 20%); 
+  		border-color: darken($sf-brown, 20%); 
   	}
 
 
 /*  .mens & { background: $sf-mens; color: #fff; }
   .womens & { background: $sf-pink; color: #fff; }
-  .neutral & { background: $sf-neutral; color: #fff; }*/
+  .neutral & { background: $sf-brown; color: #fff; }*/
 
 }
 

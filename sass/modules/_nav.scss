@@ -9,6 +9,9 @@ header {
   background: #fff;
   text-align: left;
   min-height: 44px;
+  font-family: 'BrandonGrotesque-Regular'; 
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
 
   a { 
     text-decoration: none !important; 
@@ -206,8 +209,6 @@ nav {
       background: #e6e6e6;
       display: none;
 
-      li { line-height: 1.5rem; }
-
       a {
         line-height: 1.5rem;
         margin: 10px 5px;
@@ -257,8 +258,8 @@ nav {
 .men-or-women {
   display: block !important;
 }
+  */
 
-*/
 
 
 header {
