@@ -68,17 +68,16 @@ footer {
   display: none;
   padding: 15px;
 
-  a { 
-    
-  }
-
-  li { line-height: 44px; }
+  li { line-height: 44px; margin-bottom: 0; }
   .about {
 
   }
 }
 
 .footer-nav {
+
+  a { 
+  }
 
   clear: both;
   @include clear;

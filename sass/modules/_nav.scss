@@ -9,7 +9,8 @@ header {
   background: #fff;
   text-align: left;
   min-height: 44px;
-  font-family: 'BrandonGrotesque-Regular'; 
+  font-family: 'BrandonText-Bold'; 
+  font-size: 14px; 
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 
@@ -31,6 +32,7 @@ header {
   color: $sf-neutral; 
   display: block;
   position: relative;
+  font-family: Arial;
 
   @media screen and (min-width: 650px) { display: none; }
 
@@ -72,7 +74,6 @@ nav {
 
   a {
     display: block;
-    line-height: 44px;
     border: none;
     color: $sf-brown;
     &:hover,
@@ -144,7 +145,6 @@ nav {
       top: 0;
       width: 100%;
       text-align: center;
-      font-size: 15px;
 
       li {
         display: inline-block;

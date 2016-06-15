@@ -40,12 +40,15 @@
                 <li><a href="/logged-in">My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
-                <li><a href="#">Account</a></li>
               {% endif %}
 
               <li>
 
                 <ul class="secondary-nav">
+
+                  {% if page.status == "logged-in" %}
+                    <li><a href="#">Account</a></li>
+                  {% endif %}
 
 
                   {% if page.status == "logged-in" %}

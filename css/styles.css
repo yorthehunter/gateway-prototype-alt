@@ -686,118 +686,63 @@ th, td {
   color: #FF5C61;
   border-color: transparent; }
 
-/*
-= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.eot"
-= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.woff"
-= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.ttf"
-= depend_on_asset "brandon/Text-Italic/2B26E2_0_0.svg"
-
-= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.eot"
-= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.woff"
-= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.ttf"
-= depend_on_asset "brandon/Text-Regular/2B26E2_1_0.svg"
-
-= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.eot"
-= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.woff"
-= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.ttf"
-= depend_on_asset "brandon/Text-Bold/2B26E2_2_0.svg"
-
-= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.eot"
-= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.woff"
-= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.ttf"
-= depend_on_asset "brandon/Grotesque-Medium/2B26E2_3_0.svg"
-
-= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.eot"
-= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.woff"
-= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.ttf"
-= depend_on_asset "brandon/Grotesque-Regular/2B26E2_4_0.svg"
-
-= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.eot"
-= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.woff"
-= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.ttf"
-= depend_on_asset "brandon/Grotesque-Light/2B26E2_5_0.svg"
-
-= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.eot"
-= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.woff"
-= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.ttf"
-= depend_on_asset "brandon/Grotesque-Bold/2B26E2_6_0.svg"
-
-= depend_on_asset "grad/Grad-Bold/2FF577_0_0.eot"
-= depend_on_asset "grad/Grad-Bold/2FF577_0_0.woff"
-= depend_on_asset "grad/Grad-Bold/2FF577_0_0.woff2"
-= depend_on_asset "grad/Grad-Bold/2FF577_0_0.ttf"
-= depend_on_asset "grad/Grad-Bold/2FF577_0_0.svg"
-
-= depend_on_asset "grad/Grad/2FF577_1_0.eot"
-= depend_on_asset "grad/Grad/2FF577_1_0.woff"
-= depend_on_asset "grad/Grad/2FF577_1_0.woff2"
-= depend_on_asset "grad/Grad/2FF577_1_0.ttf"
-= depend_on_asset "grad/Grad/2FF577_1_0.svg"
-
-= depend_on_asset "grad/Grad-Italic/2FF577_2_0.eot"
-= depend_on_asset "grad/Grad-Italic/2FF577_2_0.woff"
-= depend_on_asset "grad/Grad-Italic/2FF577_2_0.woff2"
-= depend_on_asset "grad/Grad-Italic/2FF577_2_0.ttf"
-= depend_on_asset "grad/Grad-Italic/2FF577_2_0.svg"
-
-*/
 @font-face {
   font-family: 'BrandonText-Italic';
-  src: font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.eot");
-  src: font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.woff") format("woff"), font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.ttf") format("truetype"), font-url("/webfonts/brandon/Text-Italic/2B26E2_0_0.svg#wf") format("svg"); }
+  src: url("/webfonts/brandon/Text-Italic/2B26E2_0_0.eot");
+  src: url("/webfonts/brandon/Text-Italic/2B26E2_0_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/brandon/Text-Italic/2B26E2_0_0.woff") format("woff"), url("/webfonts/brandon/Text-Italic/2B26E2_0_0.ttf") format("truetype"), url("/webfonts/brandon/Text-Italic/2B26E2_0_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'BrandonText-Regular';
   font-weight: normal;
   font-style: normal;
-  src: font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.eot");
-  src: font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.woff") format("woff"), font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.ttf") format("truetype"), font-url("/webfonts/brandon/Text-Regular/2B26E2_1_0.svg#wf") format("svg"); }
+  src: url("/webfonts/brandon/Text-Regular/2B26E2_1_0.eot");
+  src: url("/webfonts/brandon/Text-Regular/2B26E2_1_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/brandon/Text-Regular/2B26E2_1_0.woff") format("woff"), url("/webfonts/brandon/Text-Regular/2B26E2_1_0.ttf") format("truetype"), url("/webfonts/brandon/Text-Regular/2B26E2_1_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'BrandonText-Bold';
   font-weight: bold;
   font-style: normal;
-  src: font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.eot");
-  src: font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.woff") format("woff"), font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.ttf") format("truetype"), font-url("/webfonts/brandon/Text-Bold/2B26E2_2_0.svg#wf") format("svg"); }
+  src: url("/webfonts/brandon/Text-Bold/2B26E2_2_0.eot");
+  src: url("/webfonts/brandon/Text-Bold/2B26E2_2_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/brandon/Text-Bold/2B26E2_2_0.woff") format("woff"), url("/webfonts/brandon/Text-Bold/2B26E2_2_0.ttf") format("truetype"), url("/webfonts/brandon/Text-Bold/2B26E2_2_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'BrandonGrotesque-Light';
-  src: font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot");
-  src: font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.svg#wf") format("svg"); }
+  src: url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot");
+  src: url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.woff") format("woff"), url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.ttf") format("truetype"), url("/webfonts/brandon/Grotesque-Light/2B26E2_5_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'BrandonGrotesque-Medium';
-  src: font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot");
-  src: font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.svg#wf") format("svg"); }
+  src: url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot");
+  src: url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.woff") format("woff"), url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.ttf") format("truetype"), url("/webfonts/brandon/Grotesque-Medium/2B26E2_3_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'BrandonGrotesque-Regular';
-  src: font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot");
-  src: font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.svg#wf") format("svg"); }
+  src: url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot");
+  src: url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.woff") format("woff"), url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.ttf") format("truetype"), url("/webfonts/brandon/Grotesque-Regular/2B26E2_4_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'BrandonGrotesque-Bold';
-  src: font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot");
-  src: font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.woff") format("woff"), font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.ttf") format("truetype"), font-url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.svg#wf") format("svg"); }
+  src: url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot");
+  src: url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.woff") format("woff"), url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.ttf") format("truetype"), url("/webfonts/brandon/Grotesque-Bold/2B26E2_6_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'Grad-Bold';
   font-weight: bold;
   font-style: normal;
-  src: font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.eot");
-  src: font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.woff2") format("woff2"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.woff") format("woff"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.ttf") format("truetype"), font-url("/webfonts/grad/Grad-Bold/2FF577_0_0.svg#wf") format("svg"); }
+  src: url("/webfonts/grad/Grad-Bold/2FF577_0_0.eot");
+  src: url("/webfonts/grad/Grad-Bold/2FF577_0_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/grad/Grad-Bold/2FF577_0_0.woff2") format("woff2"), url("/webfonts/grad/Grad-Bold/2FF577_0_0.woff") format("woff"), url("/webfonts/grad/Grad-Bold/2FF577_0_0.ttf") format("truetype"), url("/webfonts/grad/Grad-Bold/2FF577_0_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'Grad';
   font-weight: normal;
   font-style: normal;
-  src: font-url("/webfonts/grad/Grad/2FF577_1_0.eot");
-  src: font-url("/webfonts/grad/Grad/2FF577_1_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/grad/Grad/2FF577_1_0.woff2") format("woff2"), font-url("/webfonts/grad/Grad/2FF577_1_0.woff") format("woff"), font-url("/webfonts/grad/Grad/2FF577_1_0.ttf") format("truetype"), font-url("/webfonts/grad/Grad/2FF577_1_0.svg#wf") format("svg"); }
+  src: url("/webfonts/grad/Grad/2FF577_1_0.eot");
+  src: url("/webfonts/grad/Grad/2FF577_1_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/grad/Grad/2FF577_1_0.woff2") format("woff2"), url("/webfonts/grad/Grad/2FF577_1_0.woff") format("woff"), url("/webfonts/grad/Grad/2FF577_1_0.ttf") format("truetype"), url("/webfonts/grad/Grad/2FF577_1_0.svg#wf") format("svg"); }
 
 @font-face {
   font-family: 'Grad-Italic';
-  src: font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.eot");
-  src: font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.eot?#iefix") format("embedded-opentype"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.woff2") format("woff2"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.woff") format("woff"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.ttf") format("truetype"), font-url("/webfonts/grad/Grad-Italic/2FF577_2_0.svg#wf") format("svg"); }
+  src: url("/webfonts/grad/Grad-Italic/2FF577_2_0.eot");
+  src: url("/webfonts/grad/Grad-Italic/2FF577_2_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/grad/Grad-Italic/2FF577_2_0.woff2") format("woff2"), url("/webfonts/grad/Grad-Italic/2FF577_2_0.woff") format("woff"), url("/webfonts/grad/Grad-Italic/2FF577_2_0.ttf") format("truetype"), url("/webfonts/grad/Grad-Italic/2FF577_2_0.svg#wf") format("svg"); }
 
 header {
   position: fixed;
@@ -808,7 +753,8 @@ header {
   background: #fff;
   text-align: left;
   min-height: 44px;
-  font-family: 'BrandonGrotesque-Regular';
+  font-family: 'BrandonText-Bold';
+  font-size: 14px;
   letter-spacing: 0.05rem;
   text-transform: uppercase; }
   header a {
@@ -826,7 +772,8 @@ header {
   border-bottom: 0;
   color: #584a49;
   display: block;
-  position: relative; }
+  position: relative;
+  font-family: Arial; }
   @media screen and (min-width: 650px) {
     #toggle,
     #secondary-toggle {
@@ -870,7 +817,6 @@ nav {
     list-style: none; }
   nav a {
     display: block;
-    line-height: 44px;
     border: none;
     color: #584a49;
     /*   &.sign-up {
@@ -920,8 +866,7 @@ nav {
     display: block;
     top: 0;
     width: 100%;
-    text-align: center;
-    font-size: 15px; }
+    text-align: center; }
     .logged-in nav li {
       display: inline-block; }
     .logged-in nav a {
@@ -1141,7 +1086,8 @@ footer.opened .below-the-footer-fold {
   display: none;
   padding: 15px; }
   .below-the-footer-fold li {
-    line-height: 44px; }
+    line-height: 44px;
+    margin-bottom: 0; }
 
 .footer-nav {
   clear: both;
@@ -1229,16 +1175,20 @@ html {
 body {
   color: #584a49;
   font-family: 'Grad';
-  background: #f9f9f8; }
+  background: #f9f9f8;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%; }
 
 .page {
   padding-top: 100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 800px; }
   .page.gateway {
     padding-top: 0;
     max-width: 100%; }
   .marketing-page .page {
-    padding-top: 50px; }
+    padding-top: 50px;
+    max-width: 100%; }
 
 a {
   color: #00ada5;
@@ -1261,18 +1211,7 @@ img {
 .btn--cta {
   border: 1px solid #ff5c61;
   color: #fff;
-  background: #ff5c61;
-  /*  .womens & { 
-    	background: $sf-pink; 
-    }
-    .neutral & { 
-    	background: $sf-brown; 
-    	border-color: $sf-brown; 
-  	  &:Hover {
-  	    background: darken($sf-brown, 5%);
-  	    border-color: darken($sf-brown, 5%);
-  	  }
-    }*/ }
+  background: #ff5c61; }
   .btn--cta:Hover {
     background: #ff4348;
     color: #fff; }
@@ -1282,10 +1221,7 @@ img {
 
 .btn--cta-secondary {
   border-color: #584a49;
-  color: #584a49;
-  /*  .mens & { background: $sf-mens; color: #fff; }
-    .womens & { background: $sf-pink; color: #fff; }
-    .neutral & { background: $sf-brown; color: #fff; }*/ }
+  color: #584a49; }
   .btn--cta-secondary:hover {
     color: #201b1b;
     border-color: #201b1b; }
@@ -1298,9 +1234,13 @@ img {
     position: absolute;
     top: 5px;
     right: 5px;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.9); }
+  .splash .logo {
+    max-width: 200px;
+    margin: 0 auto; }
   .splash .pick-a-gender {
-    padding: 20px;
+    padding: 35px;
     text-align: center;
     background: #fff;
     padding-left: calc(50% - 300px/2);
@@ -1348,9 +1288,12 @@ img {
         left: calc(50% - 15px); } }
 
 .how-it-works__steps {
-  padding: 3%;
+  padding: 30px 10px;
   margin: 0 auto;
   max-width: 1000px; }
+  @media screen and (min-width: 800px) {
+    .how-it-works__steps {
+      padding: 3%; } }
 
 .how-it-works__step {
   max-width: 300px;
