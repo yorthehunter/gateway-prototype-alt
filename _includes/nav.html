@@ -37,7 +37,7 @@
 
 
               {% if page.status == "logged-in" %}
-                <li><a href="/logged-in">My fix</a></li>
+                <li><a href="/logged-in"{% if page.active == "my-fix" %}class="active"{% endif %}>My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
               {% endif %}
@@ -52,7 +52,7 @@
 
 
                   {% if page.status == "logged-in" %}
-                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="faq">FAQ</a></li>
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="/logged-in/faq">FAQ</a></li>
                   {% else %}
                     <li {% if page.active == "faq" %}class="active"{% endif %}><a href="/faq">FAQ</a></li>
                   {% endif %}
