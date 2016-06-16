@@ -873,6 +873,18 @@ nav {
     .logged-in nav a {
       padding: 0 0.3rem;
       position: relative; }
+      .logged-in nav a.active:after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        border-right: 1px solid #eeecea;
+        border-bottom: 1px solid #eeecea;
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        left: calc(50% - 7px);
+        transform: rotate(45deg); }
     .logged-in nav .secondary-nav {
       display: none;
       background: rgba(255, 255, 255, 0.95);
@@ -898,19 +910,7 @@ nav {
     left: 0;
     border-bottom: 1px solid #eeecea; }
     .logged-in nav a {
-      padding: 0 0.3rem; }
-      .logged-in nav a.active:after {
-        content: "";
-        width: 14px;
-        height: 14px;
-        background: #fff;
-        border-right: 1px solid #eeecea;
-        border-bottom: 1px solid #eeecea;
-        display: block;
-        position: absolute;
-        bottom: -7px;
-        left: calc(50% - 7px);
-        transform: rotate(45deg); } }
+      padding: 0 0.3rem; } }
 
 .nav__style-tips {
   position: relative; }
@@ -1182,6 +1182,8 @@ footer h5 {
     footer h5 {
       margin-bottom: 0.5rem; } }
 @media screen and (min-width: 650px) {
+  footer a {
+    color: #584a49; }
   footer .nav__style-tips .men-or-women {
     top: 0;
     left: 80px;
@@ -1250,7 +1252,8 @@ body {
 .page {
   padding-top: 100px;
   margin: 0 auto;
-  max-width: 800px; }
+  max-width: 800px;
+  display: block; }
   .page.gateway {
     padding-top: 0;
     max-width: 100%; }

@@ -190,6 +190,11 @@ footer {
 @media screen and (min-width: 650px) { 
 
   footer {
+   
+        a {
+        color: $sf-neutral; 
+      }
+ 
 
     .nav__style-tips {
       .men-or-women {

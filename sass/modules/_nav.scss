@@ -155,6 +155,21 @@ nav {
       a {
         padding: 0 0.3rem;
         position: relative;
+        &.active { 
+          &:after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background:  #fff;
+            border-right: 1px solid $sf-grey;
+            border-bottom: 1px solid $sf-grey;
+            display: block; 
+            position: absolute;
+            bottom: -7px;
+            left: calc(50% - 7px);
+            transform: rotate(45deg);
+          }
+        }
       }
 
       .secondary-nav {
@@ -197,21 +212,6 @@ nav {
 
       a {
         padding: 0 0.3rem;
-        &.active { 
-          &:after {
-            content: "";
-            width: 14px;
-            height: 14px;
-            background:  #fff;
-            border-right: 1px solid $sf-grey;
-            border-bottom: 1px solid $sf-grey;
-            display: block; 
-            position: absolute;
-            bottom: -7px;
-            left: calc(50% - 7px);
-            transform: rotate(45deg);
-          }
-        }
       }
     }
   }
