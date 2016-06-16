@@ -55,8 +55,6 @@ $(function() {
 
 
 
-
-
   $('.footer-toggle').click(function(){
     $('#below-the-footer-fold').slideToggle( "fast" );
     var desiredHeight = $(window).height() - 220;
@@ -65,8 +63,6 @@ $(function() {
     }, 500);
     return false;
   });
-
-
 
 
 

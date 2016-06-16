@@ -26,7 +26,10 @@
   {% else %}
   <a href="/" class="btn btn--cta" id="get-started">Get started</a>
   {% endif %}
-  <a href="/login" class="btn btn--cta-secondary">Sign in</a>
+  {% unless page.active == "login" %}
+    <a href="/login" class="btn btn--cta-secondary">Sign in</a>
+  {% endunless %}
+
 {% endif %}
 
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
