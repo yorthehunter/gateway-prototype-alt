@@ -17,6 +17,7 @@
 @import "modules/nav.scss"; 
 @import "modules/footer.scss";
 @import "modules/social.scss";
+@import "modules/forms.scss"; 
  
 /* developement to toggle overlays */
 
@@ -116,9 +117,15 @@ img { max-width: 100%; }
   border: 1px solid $sf-pink;
   color: #fff;
   background: $sf-pink;
-  &:Hover {
+  &:hover,
+  &:focus {
     background: darken($sf-pink, 5%);
     color: #fff;
+  }
+
+  &:focus {
+    background: darken($sf-pink, 10%);
+    outline: 0;
   }
 
   .mens & { 
@@ -132,9 +139,12 @@ img { max-width: 100%; }
   	border-color: $sf-brown;
   	color: $sf-brown;
 
-  	&:hover { 
+  	&:hover,
+  	&:focus { 
+  		background: #fff; 
   		color: darken($sf-brown, 20%); 
   		border-color: darken($sf-brown, 20%); 
+    	outline: 0;
   	}
 
   	.mens & {
@@ -183,8 +193,6 @@ img { max-width: 100%; }
 			width: 42%; 
 			padding: 1rem;
 			font-size: 1.2rem;
-			background: $sf-pink;
-			border-color: $sf-pink;
 		}
 	}
 
@@ -275,10 +283,20 @@ img { max-width: 100%; }
 
 }
 
-form#new_user, .refer-form {
-	max-width: 450px;
+.get-started-form, .refer-form {
+	max-width: 30rem;
 	margin: 0 auto;
-	padding: 30px 15px;
+	padding: 30px 0;
+	background: #fff; 
+
+	@media screen and (min-width: 30rem) {
+		margin: 2rem auto;
+		border: 1px solid darken($sf-grey, 10%);
+	}
+
+	@media screen and (min-width: 65rem) {
+		margin: 3% 0 3% 50%;
+	}
 
 	h2 {
 		font-family: 'Grad-Bold';
@@ -289,49 +307,50 @@ form#new_user, .refer-form {
 		.flr-wrap {
 			text-align: center;
 			max-width: 200px;
-    	margin: 0 auto;
+    	margin: 0 auto 1rem;
+    	@include clear;
 
 			.btn {
 				width: 50%;
 		    display: block;
 		    float: left;
-				border-color: #ccc;
-				color: #666;
+		    color: $sf-brown;
+		    border-color: lighten($sf-brown, 45%);
+		    &:first-child { border-right: 0;}
+		    &:last-child { border-left: 0;}
+	    	&:hover,
+				&:focus {
+	    		outline: 0;
+	    		border-color: $sf-brown;
+	    		color: darken($sf-brown, 10%);
+				}
 			}
-		}
 
-		.btn-group {
-
-			.btn {
-				border-color: #ccc;
-				color: #666;
+			.btn.active {
+				background: $sf-brown;
+				border-color: $sf-brown;
+				color: #fff;
+				&:hover,
+				&:focus {
+	    		outline: 0;
+	    		border-color: darken($sf-brown, 10%);
+	    		background: darken($sf-brown, 10%);
+				}
 			}
-
-		}
-
-		.btn.active {
-			background: $sf-mint;
-			border-color: $sf-mint;
-			color: #fff;
 		}
 	}
 }
+
+.get-started-container {
+
+	@media screen and (min-width: 65rem) {
+	
+	}
+}
+
 
 .refer-form {
 	text-align: center;
-}
-
-.form-group { 
-	padding: 5px 0; 
-
-	.form-control {
-		display: block;
-    width: calc(100% - 10px);
-    padding: 5px;
-    &[type="radio"] {
-    	display: none;
-    }
-	}
 }
 
 .promo {

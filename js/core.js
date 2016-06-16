@@ -106,6 +106,22 @@ $(function() {
             //});
     return false;
   });
+
+  $('input').focus(
+    function(){
+        $(this).parent('div').addClass('focus');
+    }).blur(
+    function(){
+        $(this).parent('div').removeClass('focus');
+    });
+
+  $('label.btn-default').click(function(){
+      $(this).closest('.btn-group').children('label.btn-default').removeClass('active');
+      $(this).addClass('active')
+    return false;
+  });
+
+
 });
 
 

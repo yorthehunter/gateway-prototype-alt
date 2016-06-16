@@ -140,6 +140,10 @@ nav {
     }
   }
 
+  header {
+      border-bottom: 1px solid $sf-grey;
+  }
+
   nav {
 
     @media screen and (min-width: 375px) {
@@ -209,7 +213,6 @@ nav {
     @media screen and (min-width: 650px) {
 
       left: 0;
-      border-bottom: 1px solid $sf-grey;
 
       a {
         padding: 0 1.3rem;

@@ -142,8 +142,8 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 </div>
 
-
-<form class="" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+<div class="get-started-container">
+<form class="get-started-form" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
 
           <h2 style="text-align: center;" id="get-started">Get started with Stitch Fix</h2>
 
@@ -157,14 +157,19 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
           <a class="button active btn" data-rel="#content-a" href="#">Womens</a> <a class="button btn" data-rel="#content-b" href="#">Mens</a>
           
-                
+        
             
             </div>
 
 
           <div class="form-group" data-validate="presence">
-            <label class="control-label" for="user_first_name">Name</label>
+            <label class="control-label" for="user_first_name">First Name</label>
             <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_first_name">
+          </div>
+
+          <div class="form-group" data-validate="presence">
+            <label class="control-label" for="user_last_name">Last Name</label>
+            <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_last_name">
           </div>
 
 
@@ -197,9 +202,43 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
                     <label class="btn btn-default">
                       <input type="radio" name="" id="_41" value="41" class="form-control">XL</label>
                 </div>
+                <p class="instructional-note">Need sizing help? Consult our <a href="/style/size_chart" rel="modal:open" class="size-chart">Size Chart »</a></p>
+                <p class="instructional-note">We carry sizes 0–14 (XS–XL),
+                  as well as maternity and petite&nbsp;clothing. <a href="/plus" id="plus_get_started">Interested in Plus? »</a></p>
               </div>
 
+              <div id="referred-by-select" class="form-group">
+              <label class="control-label" for="user_client_attributes_referred_by_signup">
+               How did you hear about us? <span>(Optional)</span>
+</label>              <div class="dropdown dropdown-menu">
+                <select class="form-control  input-lg" name="user[client_attributes][referred_by_signup]" id="user_client_attributes_referred_by_signup"><option value="80">-</option>
+<option value="178">Blogger</option>
+<option value="9">Conference / Expo</option>
+<option value="1">Facebook friend</option>
+<option value="3">Facebook ad</option>
+<option value="4">Friend</option>
+<option value="77">Gift Card</option>
+<option value="36">Instagram</option>
+<option value="181">Magazine</option>
+<option value="40">Newspaper</option>
+<option value="8">Online Ad</option>
+<option value="5">Online search</option>
+<option value="6">Other</option>
+<option value="89">Pinterest</option>
+<option value="166">Podcast</option>
+<option value="41">Radio</option>
+<option value="169">Sirius XM Radio</option>
+<option value="179">Stitch Fix Blog</option>
+<option value="180">StyleWatch</option>
+<option value="39">Television</option>
+<option value="10">Twitter</option>
+<option value="20">YouTube</option></select>
+              </div>
+            </div>
+
+            <div class="cta">
 <a name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up...">Take Your Style Quiz</a>
+                  </div>
                   </div>
                   <div class="container mens" id="content-b">
                       
@@ -253,10 +292,44 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
                       <input type="radio" name="" id="_39" value="39" class="form-control">34</label>
                   
                 </div>
+                <p class="instructional-note">Need sizing help? Consult our <a href="/style/size_chart" rel="modal:open" class="size-chart">Size Chart »</a></p>
+                <p class="instructional-note">We currently carry sizes XS-XXL and pant sizes 28-42.</p>
               </div>
+
+
+
+              <div id="referred-by-select" class="form-group">
+              <label class="control-label" for="user_client_attributes_referred_by_signup">
+               How did you hear about us? <span>(Optional)</span>
+</label>              <div class="dropdown dropdown-menu">
+                <select class="form-control  input-lg" name="user[client_attributes][referred_by_signup]" id="user_client_attributes_referred_by_signup"><option value="80">-</option>
+<option value="178">Blogger</option>
+<option value="9">Conference / Expo</option>
+<option value="1">Facebook friend</option>
+<option value="3">Facebook ad</option>
+<option value="4">Friend</option>
+<option value="77">Gift Card</option>
+<option value="36">Instagram</option>
+<option value="181">Magazine</option>
+<option value="40">Newspaper</option>
+<option value="8">Online Ad</option>
+<option value="5">Online search</option>
+<option value="6">Other</option>
+<option value="89">Pinterest</option>
+<option value="166">Podcast</option>
+<option value="41">Radio</option>
+<option value="169">Sirius XM Radio</option>
+<option value="179">Stitch Fix Blog</option>
+<option value="39">Television</option>
+<option value="10">Twitter</option>
+<option value="20">YouTube</option></select>
+              </div>
+            </div>
+
+            <div class="cta">
               <a name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up..." >Take Your Style Quiz</a>
 
-                  </div>
+                  </div></div>
               </div>          </div>
 
 
@@ -265,15 +338,14 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 
 
-          <div class="form-group submission">
-  
             <div class="help-block">Already a member? <a href="/login">Sign In »</a></div>
-            
-          </div>
+
+            <p class="instructional-note">By signing up you accept the<br><a href="#">terms and conditions</a> of Stitch&nbsp;Fix.</p>
+      
 
 </form>
 
-
+</div>
 
 </div>
 

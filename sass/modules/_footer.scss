@@ -58,7 +58,7 @@ footer {
   display: block;
   position: relative;
   height: 10px;
-
+ 
   &:hover  {
     background: lighten($sf-neutral, 30%) !important;
     .bee:after { background: lighten($sf-neutral, 30%);}

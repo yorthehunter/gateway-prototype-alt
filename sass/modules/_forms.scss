@@ -1,0 +1,83 @@
+
+
+.form-group {
+	border-top: 1px solid darken($sf-grey, 10%);
+	display: block;
+	&.focus {
+		background: yellow;
+		input { background: yellow; }
+	} 
+
+	input,
+	.dropdown {
+		border: 0;
+		padding: 5px 10px;
+	}
+
+	label {
+		padding: 5px 10px;
+		margin-bottom: 0;
+	}
+
+	.btn-group {
+		padding: 10px;
+		@include clear;
+	}
+
+	.control-label {
+		clear: both;
+		padding-bottom: 0;
+	}
+
+	label.btn-default {
+		padding:  0;
+		position: relative;
+		border-color: darken($sf-grey, 10%);
+		border-right: 0;
+		color: $sf-brown;
+		margin-bottom: 5px;
+    display: block;
+    float: left;
+    width: 44px;
+    line-height: 44px;
+    text-align: center;
+    &:last-child { border-right: 1px solid darken($sf-grey, 10%);}
+		&:hover, 
+		&:focus,
+		&:active {
+			cursor: pointer;
+			background: $sf-dark-grey;
+			border-color: $sf-dark-grey;
+			color: #fff;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		&.active {
+			background: $sf-dark-grey;
+			color: #fff;
+    	box-shadow: 0;
+    	border-color: $sf-dark-grey;
+    	&:hover,
+    	&:focus,
+    	&:active {		
+				background: $sf-dark-grey;
+			}
+		}
+
+	 [type="radio"] {
+		 	position: absolute;
+		 	top: 0;
+		 	left: 0;
+		 	z-index: -1;
+  	}
+	}
+}
+
+.cta {
+	padding: 10px;
+
+}
+.help-block,
+.instructional-note {
+		padding: 5px 0 0 10px;
+}
