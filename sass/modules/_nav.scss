@@ -2,13 +2,14 @@
 
 header { 
   position:fixed;
+  top: 0;
   z-index:5;
   width: 100%;
   display: block;
   color: #374019;
   background: #fff;
   text-align: left;
-  min-height: 44px;
+  min-height: 50px;
   font-family: 'BrandonText-Bold'; 
   font-size: 14px; 
   letter-spacing: 0.05rem;
@@ -211,7 +212,7 @@ nav {
       border-bottom: 1px solid $sf-grey;
 
       a {
-        padding: 0 0.3rem;
+        padding: 0 1.3rem;
       }
     }
   }

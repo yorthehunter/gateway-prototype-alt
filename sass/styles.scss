@@ -30,6 +30,24 @@
 }
   */
 
+@media screen and (max-width: 500px) {
+
+	.hide-on-small {
+		display: none !important;
+	}
+
+}
+
+
+@media screen and (min-width: 500px) {
+
+	.hide-on-big {
+		display: none !important;
+	}
+
+}
+
+
 /* BY TORUNN SEIM SKROGSTAD
 -------------------------------------*/
 
@@ -50,10 +68,14 @@ body {
 }
 
 .page {
-	padding-top: 100px;
+	padding-top: 50px;
 	margin:  0 auto;
 	max-width: 800px;
 	display: block;
+
+	@media screen and (min-width: 900px) {
+		padding-top: 100px;
+	}
 
 	&.gateway {
 		padding-top: 0;
@@ -136,7 +158,7 @@ img { max-width: 100%; }
 	}
 
 	.logo {
-		max-width: 200px;
+		max-width: 230px;
 		margin: 0 auto 1rem;
 	}
 
@@ -172,7 +194,7 @@ img { max-width: 100%; }
 			position: absolute;
 			top: 30%;
 			right: 30px;
-			padding: 30px;
+			padding: 50px 20px;
 			max-width: 370px;
 		}
 
@@ -191,6 +213,7 @@ img { max-width: 100%; }
 	color: #fff;
 	position: relative;
 	padding: 5% 0;
+	font-family: 'Grad-Bold';
 	@media screen and (min-width: 800px) { padding: 30px 0; }
 	&:after {
 		content: "";
@@ -257,6 +280,10 @@ form#new_user, .refer-form {
 	margin: 0 auto;
 	padding: 30px 15px;
 
+	h2 {
+		font-family: 'Grad-Bold';
+	}
+
 	.pick-a-gender {
 
 		.flr-wrap {
@@ -288,6 +315,10 @@ form#new_user, .refer-form {
 			color: #fff;
 		}
 	}
+}
+
+.refer-form {
+	text-align: center;
 }
 
 .form-group { 

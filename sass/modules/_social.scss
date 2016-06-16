@@ -26,5 +26,19 @@
     span { display: none; }
 
   }
+
+  .social-close {
+
+    border-color: transparent;
+    padding: 20px;
+    font-size: 10px;
+
+    &:hover, &:focus {
+      background-color: transparent;
+      color: darken($sf-neutral, 20%);
+      border-color: transparent;
+    }
+
+  }
 }
 

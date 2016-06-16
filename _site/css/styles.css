@@ -746,13 +746,14 @@ th, td {
 
 header {
   position: fixed;
+  top: 0;
   z-index: 5;
   width: 100%;
   display: block;
   color: #374019;
   background: #fff;
   text-align: left;
-  min-height: 44px;
+  min-height: 50px;
   font-family: 'BrandonText-Bold';
   font-size: 14px;
   letter-spacing: 0.05rem;
@@ -910,7 +911,7 @@ nav {
     left: 0;
     border-bottom: 1px solid #eeecea; }
     .logged-in nav a {
-      padding: 0 0.3rem; } }
+      padding: 0 1.3rem; } }
 
 .nav__style-tips {
   position: relative; }
@@ -1097,6 +1098,10 @@ footer h5 {
   background: #fff;
   display: none;
   padding: 15px; }
+  .below-the-footer-fold a {
+    color: #584a49; }
+    .mens .below-the-footer-fold a {
+      color: #584a49; }
   @media screen and (min-width: 700px) {
     .below-the-footer-fold {
       display: block; } }
@@ -1119,8 +1124,6 @@ footer h5 {
     float: left; }
   .footer-nav .men-or-women {
     left: 0; }
-  .footer-nav a {
-    color: #584a49; }
 
 .social-men-or-women {
   display: none;
@@ -1144,12 +1147,9 @@ footer h5 {
     border-top: 1px solid #c9bebe; }
 
 .social-close {
-  border-color: transparent;
-  top: 5px;
-  right: 5px;
-  position: absolute;
-  padding: 5px;
-  font-size: 10px; }
+  top: 0;
+  right: 0;
+  position: absolute; }
 
 .terms-and-conditions {
   border-top: 1px solid #ccc;
@@ -1184,6 +1184,8 @@ footer h5 {
 @media screen and (min-width: 650px) {
   footer a {
     color: #584a49; }
+    .mens footer a {
+      color: #584a49; }
   footer .nav__style-tips .men-or-women {
     top: 0;
     left: 80px;
@@ -1223,6 +1225,14 @@ footer h5 {
       content: "\e9cb"; }
     .social .icon span {
       display: none; }
+  .social .social-close {
+    border-color: transparent;
+    padding: 20px;
+    font-size: 10px; }
+    .social .social-close:hover, .social .social-close:focus {
+      background-color: transparent;
+      color: #201b1b;
+      border-color: transparent; }
 
 /* developement to toggle overlays */
 /*.social-men-or-women, 
@@ -1234,6 +1244,12 @@ footer h5 {
   display: block !important;
 }
   */
+@media screen and (max-width: 500px) {
+  .hide-on-small {
+    display: none !important; } }
+@media screen and (min-width: 500px) {
+  .hide-on-big {
+    display: none !important; } }
 /* BY TORUNN SEIM SKROGSTAD
 -------------------------------------*/
 html {
@@ -1250,10 +1266,13 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .page {
-  padding-top: 100px;
+  padding-top: 50px;
   margin: 0 auto;
   max-width: 800px;
   display: block; }
+  @media screen and (min-width: 900px) {
+    .page {
+      padding-top: 100px; } }
   .page.gateway {
     padding-top: 0;
     max-width: 100%; }
@@ -1315,7 +1334,7 @@ img {
     font-size: 0.8rem;
     background: rgba(255, 255, 255, 0.9); }
   .splash .logo {
-    max-width: 200px;
+    max-width: 230px;
     margin: 0 auto 1rem; }
   .splash .pick-a-gender {
     padding: 35px;
@@ -1340,7 +1359,7 @@ img {
       position: absolute;
       top: 30%;
       right: 30px;
-      padding: 30px;
+      padding: 50px 20px;
       max-width: 370px; } }
 
 .how-it-works {
@@ -1351,7 +1370,8 @@ img {
   background: #96908c;
   color: #fff;
   position: relative;
-  padding: 5% 0; }
+  padding: 5% 0;
+  font-family: 'Grad-Bold'; }
   @media screen and (min-width: 800px) {
     .section-title {
       padding: 30px 0; } }
@@ -1407,6 +1427,8 @@ form#new_user, .refer-form {
   max-width: 450px;
   margin: 0 auto;
   padding: 30px 15px; }
+  form#new_user h2, .refer-form h2 {
+    font-family: 'Grad-Bold'; }
   form#new_user .pick-a-gender .flr-wrap, .refer-form .pick-a-gender .flr-wrap {
     text-align: center;
     max-width: 200px;
@@ -1424,6 +1446,9 @@ form#new_user, .refer-form {
     background: #00ada5;
     border-color: #00ada5;
     color: #fff; }
+
+.refer-form {
+  text-align: center; }
 
 .form-group {
   padding: 5px 0; }

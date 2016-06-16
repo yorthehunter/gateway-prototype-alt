@@ -74,6 +74,12 @@ footer {
   display: none;
   padding: 15px;
 
+
+  a {
+    color: $sf-neutral; 
+    .mens & { color: $sf-neutral; }
+  }
+
   @media screen and (min-width: 700px) { display: block; }
 
   li { 
@@ -96,10 +102,6 @@ footer {
 
   .men-or-women {
     left: 0;
-  }
-
-    a {
-    color: $sf-neutral; 
   }
 }
 
@@ -128,14 +130,15 @@ footer {
   }
 }
 
+
+
 .social-close {
-  border-color: transparent;
-  top: 5px;
-  right: 5px;
+  top: 0;
+  right: 0;
   position: absolute;
-  padding: 5px;
-  font-size: 10px;
 }
+
+
 
 .terms-and-conditions {
   border-top: 1px solid #ccc;
@@ -174,6 +177,7 @@ footer {
     .below-the-footer-fold {
       padding: 0;
 
+
       li { line-height: inherit; }
     }
 
@@ -193,8 +197,9 @@ footer {
    
         a {
         color: $sf-neutral; 
+        .mens & { color: $sf-neutral; }
       }
- 
+
 
     .nav__style-tips {
       .men-or-women {

@@ -48,10 +48,10 @@ $(function() {
 
 
 
-  $('.gender-toggle').hover(function(){
-    $('.toggle-gender').animate({width: 'toggle'}, {duration: 200});
-    return false;
-  });
+  // $('.gender-toggle').hover(function(){
+  //   $('.toggle-gender').animate({width: 'toggle'}, {duration: 200});
+  //   return false;
+  // });
 
 
 
@@ -96,7 +96,7 @@ $(function() {
   $('#get-started').click(function(){
             //$(this).animate(function(){
                 $('html, body').animate({
-                    scrollTop: $("#get-started-form").offset().top
+                    scrollTop: $("#get-started-form").offset().top - 50
                      }, 700);
             //});
     return false;
@@ -105,7 +105,7 @@ $(function() {
   $('.get-started').click(function(){
             //$(this).animate(function(){
                 $('html, body').animate({
-                    scrollTop: $("#get-started-form").offset().top
+                    scrollTop: $("#get-started-form").offset().top - 50
                      }, 700);
             //});
     return false;

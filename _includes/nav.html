@@ -40,6 +40,7 @@
                 <li><a href="/logged-in"{% if page.active == "my-fix" %}class="active"{% endif %}>My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
+                <li class="hide-on-small show-on-big"><a href="#">Account</a></li>
               {% endif %}
 
               <li>
@@ -47,7 +48,7 @@
                 <ul class="secondary-nav">
 
                   {% if page.status == "logged-in" %}
-                    <li><a href="#">Account</a></li>
+                    <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
                   {% endif %}
 
 
@@ -60,13 +61,13 @@
                   {% if page.skin == "womens" %}
                     <li><a href="http://blog.stitchfix.com" target="_blank">Style Tips</a></li>
                   {% elsif page.skin == "mens" %}
-                    <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
+                    <li><a href="http://blog.stitchfix.com/mens" target="_blank">Style Tips</a></li>
                   {% else %}
                     <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
                    
                         <ul class="men-or-women unstyled">
-                          <li><a href="#">Women</a></li>
-                          <li><a href="#">Men</a></li>
+                          <li><a href="http://blog.stitchfix.com" target="_blank">Women</a></li>
+                          <li><a href="http://blog.stitchfix.com/mens" target="_blank">Men</a></li>
                         </ul>
                       
                     </li>
