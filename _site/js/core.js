@@ -24,9 +24,14 @@ $(function() {
   // });
 
 
-  $('.nav__style-tips').hover(function(){
-    $('.men-or-women').slideToggle( "fast" );
-    $('.nav__style-tips').toggleClass('active');
+  $('footer .nav__style-tips').hover(function(){
+    $('footer .men-or-women').slideToggle( "fast" );
+    return false;
+  });
+
+  $('header .nav__style-tips').hover(function(){
+    $('header .men-or-women').slideToggle( "fast" );
+    $('header .nav__style-tips').toggleClass('active');
     return false;
   });
 
