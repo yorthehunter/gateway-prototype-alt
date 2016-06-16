@@ -228,20 +228,19 @@ nav {
       display: block;
       } 
     }
-    .men-or-women { 
-      background: #e6e6e6;
-      display: none;
+  .men-or-women { 
+    background: #e6e6e6;
+    display: none;
 
-      a {
-        line-height: 1.5rem;
-        margin: 10px 5px;
-        padding: 0 4px;
-        color: $sf-mint;
-        &:hover, &:focus {
-          background: $sf-mint;
-          color: #fff;
-        }
+    a {
+      line-height: 1.5rem;
+      margin: 10px 5px;
+      padding: 0 4px;
+      color: $sf-brown;
+      &:hover, &:focus {
+        color: darken($sf-brown, 20%);
       }
+    }
   }
 }
 

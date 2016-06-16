@@ -54,7 +54,7 @@ $(function() {
 
   $('.footer-toggle').click(function(){
     $('#below-the-footer-fold').slideToggle( "fast" );
-    var desiredHeight = $(window).height() - 120;
+    var desiredHeight = $(window).height() - 220;
     $('html, body').animate({
         scrollTop: $("#below-the-footer-fold").offset().top - desiredHeight
     }, 500);

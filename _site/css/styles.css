@@ -925,10 +925,9 @@ nav {
       line-height: 1.5rem;
       margin: 10px 5px;
       padding: 0 4px;
-      color: #00ada5; }
+      color: #584a49; }
       .nav__style-tips .men-or-women a:hover, .nav__style-tips .men-or-women a:focus {
-        background: #00ada5;
-        color: #fff; }
+        color: #201b1b; }
 
 .men-or-women {
   display: none;
@@ -1067,6 +1066,10 @@ letter-spacing: -3px;*/
       background: #1c453b; }
 footer.opened .below-the-footer-fold {
   display: block; }
+footer h5 {
+  font-family: 'BrandonGrotesque-Bold';
+  text-transform: uppercase;
+  font-size: 1rem; }
 
 .above-the-footer-fold {
   padding: 15px;
@@ -1152,13 +1155,16 @@ footer.opened .below-the-footer-fold {
   font-size: 10px; }
 
 .social {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: center; }
   .social li {
     display: inline-block; }
   .social .icon {
     display: inline-block;
     padding: 11px;
     font-size: 20px;
+    color: #584a49;
     border: 1px solid #bdb1b0; }
     .social .icon:hover, .social .icon:focus {
       background-color: #584a49;
@@ -1242,8 +1248,8 @@ img {
     background: #ff4348;
     color: #fff; }
   .mens .btn--cta {
-    background: #d77f59;
-    border-color: #d77f59;
+    background: #d87e54;
+    border-color: #d87e54;
     color: #fff; }
 
 .btn--cta-secondary {
@@ -1256,7 +1262,9 @@ img {
     color: #584a49; }
 
 .splash {
-  position: relative; }
+  position: relative;
+  width: 100%;
+  display: block; }
   .splash img {
     display: block; }
   .splash .login {
@@ -1303,6 +1311,9 @@ img {
   color: #fff;
   position: relative;
   padding: 5% 0; }
+  @media screen and (min-width: 800px) {
+    .section-title {
+      padding: 30px 0; } }
   .section-title:after {
     content: "";
     width: 20px;
@@ -1383,7 +1394,15 @@ form#new_user, .refer-form {
       display: none; }
 
 .promo {
-  background: #d77f59 !important;
+  background: #d87e54 !important;
   padding: 20px 0 !important; }
   .promo a {
     color: #00e0d6; }
+
+.wireframe {
+  border: 1px solid #ccc;
+  background: #ccc;
+  padding: 100px 0;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 1000px; }
