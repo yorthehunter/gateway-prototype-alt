@@ -536,6 +536,9 @@ th, td {
   .unstyled li {
     list-style: none; }
 
+/* interaction design blue
+color: #009cde;
+*/
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot");
@@ -760,6 +763,9 @@ header {
   header a {
     text-decoration: none !important;
     padding: 0 1rem; }
+  header .btn {
+    line-height: 1rem;
+    padding: 0.6em 0.8em; }
 
 #toggle,
 #secondary-toggle {
@@ -1033,39 +1039,41 @@ i.divet {
     display: block;
     text-align: left; }
 
-footer .bee {
-  font-family: sans-serif;
-  color: #fff;
-  position: absolute;
-  top: -22px;
-  left: calc(50% - 30px);
-  height: 32px;
-  overflow: hidden;
-  text-align: center; }
-  footer .bee:after {
-    content: "... ";
-    content: "MORE";
-    height: 60px;
-    width: 60px;
-    background: #00ada5;
-    border-radius: 50%;
-    display: inline-block;
-    z-index: 1;
+footer {
+  color: #ccc6c0; }
+  footer .bee {
+    font-family: sans-serif;
+    color: #fff;
+    position: absolute;
+    top: -22px;
+    left: calc(50% - 30px);
+    height: 32px;
+    overflow: hidden;
+    text-align: center; }
+    footer .bee:after {
+      content: "... ";
+      content: "MORE";
+      height: 60px;
+      width: 60px;
+      background: #00ada5;
+      border-radius: 50%;
+      display: inline-block;
+      z-index: 1;
            /*
 font-size: 50px;
 line-height: 5px;
 font-family: serif;
 letter-spacing: -3px;*/
-    font-size: 12px;
-    line-height: 35px; }
-    .mens footer .bee:after {
-      background: #1c453b; }
-footer.opened .below-the-footer-fold {
-  display: block; }
-footer h5 {
-  font-family: 'BrandonGrotesque-Bold';
-  text-transform: uppercase;
-  font-size: 1rem; }
+      font-size: 12px;
+      line-height: 35px; }
+      .mens footer .bee:after {
+        background: #1c453b; }
+  footer.opened .below-the-footer-fold {
+    display: block; }
+  footer h5 {
+    font-family: 'BrandonGrotesque-Bold';
+    text-transform: uppercase;
+    font-size: 1rem; }
 
 .above-the-footer-fold {
   padding: 15px;
@@ -1238,16 +1246,13 @@ footer h5 {
   border-top: 1px solid #d7d3ce;
   display: block; }
   .form-group.focus {
-    background: yellow; }
+    background: #fff; }
     .form-group.focus input {
-      background: yellow; }
+      background: #fff; }
   .form-group input,
   .form-group .dropdown {
     border: 0;
     padding: 5px 10px; }
-  .form-group label {
-    padding: 5px 10px;
-    margin-bottom: 0; }
   .form-group .btn-group {
     padding: 10px;
     zoom: 1; }
@@ -1258,21 +1263,28 @@ footer h5 {
       content: "";
       display: table;
       clear: both; }
-  .form-group .control-label {
-    clear: both;
-    padding-bottom: 0; }
+  .form-group label {
+    margin-bottom: 0; }
+    .form-group label.control-label {
+      padding: 5px 10px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05rem;
+      clear: both;
+      padding-bottom: 0; }
   .form-group label.btn-default {
     padding: 0;
     position: relative;
     border-color: #d7d3ce;
-    border-right: 0;
     color: #584a49;
     margin-bottom: 5px;
     display: block;
     float: left;
     width: 44px;
     line-height: 44px;
-    text-align: center; }
+    text-align: center;
+    margin-right: -1px;
+    z-index: 1; }
     .form-group label.btn-default:last-child {
       border-right: 1px solid #d7d3ce; }
     .form-group label.btn-default:hover, .form-group label.btn-default:focus, .form-group label.btn-default:active {
@@ -1280,22 +1292,28 @@ footer h5 {
       background: #96908c;
       border-color: #96908c;
       color: #fff;
+      z-index: 2;
       -webkit-tap-highlight-color: transparent; }
     .form-group label.btn-default.active {
-      background: #96908c;
+      background: #00ada5;
       color: #fff;
       box-shadow: 0;
-      border-color: #96908c; }
+      border-color: #00ada5;
+      z-index: 2; }
       .form-group label.btn-default.active:hover, .form-group label.btn-default.active:focus, .form-group label.btn-default.active:active {
-        background: #96908c; }
+        background: #00ada5; }
+      .mens .form-group label.btn-default.active {
+        background: #1c453b;
+        border-color: #1c453b; }
     .form-group label.btn-default [type="radio"] {
       position: absolute;
       top: 0;
-      left: 0;
+      left: -2000px;
       z-index: -1; }
 
 .cta {
-  padding: 10px; }
+  padding: 10px;
+  border-top: 1px solid #d7d3ce; }
 
 .help-block,
 .instructional-note {
@@ -1327,7 +1345,7 @@ html {
 
 body {
   color: #584a49;
-  font-family: 'Grad';
+  font-family: 'BrandonText-Regular';
   background: #f9f9f8;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -1348,10 +1366,8 @@ body {
     max-width: 100%; }
 
 a {
-  color: #00ada5;
+  color: #0ea1c9;
   text-decoration: none; }
-  .mens a {
-    color: #cb460f; }
 
 img {
   max-width: 100%; }
@@ -1366,11 +1382,16 @@ img {
   text-transform: uppercase;
   font-family: 'BrandonGrotesque-Medium';
   color: #ff5c61; }
+  .mens .btn {
+    color: #d87e54;
+    border-color: #d87e54; }
 
 .btn--cta {
   border: 1px solid #ff5c61;
   color: #fff;
-  background: #ff5c61; }
+  background: #ff5c61;
+  line-height: 2rem;
+  padding: 0.6rem 1.6rem; }
   .btn--cta:hover, .btn--cta:focus {
     background: #ff4348;
     color: #fff; }
@@ -1421,8 +1442,7 @@ img {
     .splash .pick-a-gender .flr-wrap {
       text-align: center; }
     .splash .pick-a-gender .btn {
-      width: 42%;
-      padding: 1rem;
+      width: 49%;
       font-size: 1.2rem; }
   @media screen and (min-width: 800px) {
     .splash .pick-a-gender {
@@ -1488,7 +1508,6 @@ img {
   border-radius: 50%; }
 
 .how-it-works__step__title {
-  font-family: 'BrandonGrotesque-Bold';
   text-transform: uppercase;
   font-size: 1.1rem;
   margin-bottom: 1rem; }
@@ -1496,21 +1515,21 @@ img {
 .get-started-form, .refer-form {
   max-width: 30rem;
   margin: 0 auto;
-  padding: 30px 0;
-  background: #fff; }
+  background: #fcfbfb; }
   @media screen and (min-width: 30rem) {
     .get-started-form, .refer-form {
-      margin: 2rem auto;
+      margin: 0 auto;
       border: 1px solid #d7d3ce; } }
   @media screen and (min-width: 65rem) {
     .get-started-form, .refer-form {
-      margin: 3% 0 3% 50%; } }
+      margin: 0 0 0 50%; } }
   .get-started-form h2, .refer-form h2 {
-    font-family: 'Grad-Bold'; }
+    font-family: 'Grad-Bold';
+    margin: 0 0 0.5rem; }
   .get-started-form .pick-a-gender .flr-wrap, .refer-form .pick-a-gender .flr-wrap {
     text-align: center;
     max-width: 200px;
-    margin: 0 auto 1rem;
+    margin: 0 auto;
     zoom: 1; }
     .get-started-form .pick-a-gender .flr-wrap:before, .refer-form .pick-a-gender .flr-wrap:before {
       content: "";
@@ -1541,9 +1560,39 @@ img {
         outline: 0;
         border-color: #3c3332;
         background: #3c3332; }
+  .get-started-form input, .refer-form input {
+    background: #fcfbfb; }
 
-.refer-form {
-  text-align: center; }
+.get-started-container {
+  background: #f3f1f0;
+  border-top: 2rem solid #f3f1f0;
+  border-bottom: 2rem solid #f3f1f0; }
+  @media screen and (min-width: 65rem) {
+    .get-started-container {
+      border-width: 3rem;
+      background-image: url("/img/form-background.jpg");
+      background-repeat: no-repeat;
+      background-size: 40% auto;
+      background-position: 20% 0; }
+      .get-started-container.mens {
+        background-image: url("/img/form-background-mens.jpg"); }
+      .get-started-container .get-started-form:before,
+      .get-started-container .refer-form:before {
+        content: "";
+        background: #f3f1f0;
+        width: 30px;
+        display: block;
+        position: absolute;
+        top: -1rem;
+        left: -31px;
+        bottom: -1rem; } }
+
+.form__header {
+  text-align: center;
+  padding: 1rem; }
+
+.instructional-note {
+  font-size: 0.8rem; }
 
 .promo {
   background: #d87e54 !important;
@@ -1554,7 +1603,7 @@ img {
 .wireframe {
   background: #ddd;
   padding: 100px 0;
-  margin: 20px auto;
+  margin: 0;
   text-align: center;
                    /*
 max-width: 1000px;*/ }

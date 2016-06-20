@@ -113,6 +113,7 @@ $(function() {
     }).blur(
     function(){
         $(this).parent('div').removeClass('focus');
+        $(this).parent('div').addClass('left');
     });
 
   $('label.btn-default').click(function(){
@@ -120,6 +121,19 @@ $(function() {
       $(this).addClass('active')
     return false;
   });
+
+  $('.mens-signup').click(function(){
+      $('.get-started-form').addClass('mens');
+      $('.get-started-container').addClass('mens');
+    return false;
+  });
+
+  $('.womens-signup').click(function(){
+      $('.get-started-form').removeClass('mens');
+      $('.get-started-container').removeClass('mens');
+    return false;
+  });
+
 
 
 });

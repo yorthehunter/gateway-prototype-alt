@@ -19,6 +19,11 @@ header {
     text-decoration: none !important; 
     padding: 0 1rem;
   }
+
+  .btn {
+    line-height: 1rem;
+    padding: 0.6em 0.8em;
+  }
 } 
 
 #toggle,
@@ -30,7 +35,7 @@ header {
   z-index: 6;
   background: #fff;
   border-bottom: 0;
-  color: $sf-neutral; 
+  color: $sf-brown; 
   display: block;
   position: relative;
   font-family: Arial;
@@ -42,11 +47,11 @@ header {
   &:hover, 
   &:focus { 
       background-color: #fff; 
-      color: darken($sf-neutral, 10%);
+      color: darken($sf-brown, 10%);
       }
       &:active,
       &.active { 
-        background-color: $sf-neutral; 
+        background-color: $sf-brown; 
         color: #fff; 
         i:after { content: "\ea0f"; }
       }

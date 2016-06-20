@@ -14,8 +14,8 @@
     padding: 11px;
     font-size: 20px;
     color: $sf-brown;
-    border: 1px solid lighten($sf-neutral, 40%);
-    &:hover, &:focus { background-color: $sf-neutral; border-color: $sf-neutral; color: #fff;  }
+    border: 1px solid lighten($sf-brown, 40%);
+    &:hover, &:focus { background-color: $sf-brown; border-color: $sf-brown; color: #fff;  }
     
     &.twitter:after   { content: "\ea96"; }
     &.facebook:after  { content: "\ea90"; }
@@ -35,7 +35,7 @@
 
     &:hover, &:focus {
       background-color: transparent;
-      color: darken($sf-neutral, 20%);
+      color: darken($sf-brown, 20%);
       border-color: transparent;
     }
 
