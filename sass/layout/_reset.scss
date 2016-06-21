@@ -3,16 +3,8 @@
  *
  */ 
 
-// AMENDED BY TORUNN SKROGSTAD TO SUIT TDC //
+// AMENDED BY TORUNN SKROGSTAD TO SUIT STITCH FIX //
 
-
-@mixin corners($rounded: 5px) {
-
-  -webkit-border-radius: $rounded;
-  -moz-border-radius: $rounded;
-  -o-border-radius: $rounded;
-  border-radius: $rounded;
-}
 
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; position: relative; }
@@ -98,7 +90,22 @@ h6 { font-size: 1.0rem; line-height: 1.4rem;}
     margin-bottom: 0.5rem;
   }
 }
+
 p { margin: 0 0 1rem; clear: both; }
+
+a {
+
+  border-bottom: 1px solid transparent;
+
+  &:hover, 
+  &:focus {
+      border-color: $sf-link;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; 
+  }
+}
 
 abbr[title], p.required { color: red; font-weight: bold; }
 

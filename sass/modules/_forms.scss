@@ -1,15 +1,22 @@
-
+fieldset {
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid darken($sf-grey, 10%);
+}
 
 .form-group {
 	border-top: 1px solid darken($sf-grey, 10%);
 	display: block;
-	&.focus {
+	&.focus,
+	&:focus {
 		background: #fff;
-		input { background: #fff; }
+		outline: 0;
+		input { }
 	} 
 
 	input,
 	.dropdown {
+		background: transparent;
 		border: 0;
 		padding: 5px 10px;
 	}
@@ -50,26 +57,23 @@
 		&:focus,
 		&:active {
 			cursor: pointer;
-			background: $sf-dark-grey;
-			border-color: $sf-dark-grey;
-			color: #fff;
+	   	background: lighten($sf-grey,2%);
+			color: darken($sf-brown, 20%);
     	z-index: 2;
 			-webkit-tap-highlight-color: transparent;
 		}
 
 		&.active {
-			background: $sf-mint;
+			background: $sf-selected;
 			color: #fff;
     	box-shadow: 0;
-    	border-color: $sf-mint;
+    	border-color: $sf-selected;
     	z-index: 2;
     	&:hover,
     	&:focus,
     	&:active {		
-				background: $sf-mint;
+				background: $sf-selected;
 			}
-
-			.mens & { background: $sf-forest; border-color: $sf-forest; }
 		}
 
 	 [type="radio"] {
@@ -79,14 +83,46 @@
 		 	z-index: -1;
   	}
 	}
+
+
+	&.dropdown {
+
+		padding: 0;
+
+		select {
+		  height: 42px;
+		  padding: 10px;
+		  border-radius: 0;
+	    padding-right: 20px;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    background-image: url("/img/dropdown.svg");
+	    background-size: 20px;
+	    background-repeat: no-repeat;
+	    background-position: 97% 13px;
+	    -webkit-appearance: none;
+	    margin: 0;
+	    border: none;
+	    box-shadow: none;
+	    background-color: transparent;
+	    width: 100%;
+	    &:focus {
+	    	outline: 0;
+	    }
+	  }
+
+	  span { text-transform: capitalize;}
+	}
 }
 
-.cta {
+.form__cta {
 	padding: 10px;
-	border-top: 1px solid darken($sf-grey, 10%);
 
 }
-.help-block,
-.instructional-note {
-		padding: 5px 0 0 10px;
+
+
+.form__header {
+	text-align: center;
+	padding: 1rem;
 }

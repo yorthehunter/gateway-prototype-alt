@@ -1,6 +1,7 @@
 
 #dp_swf_engine { display: none; }
 
+@import "decoration/color.scss";
 @import "layout/reset.scss"; 
 
 @import "layout/mixins.scss"; 
@@ -8,7 +9,6 @@
 @import "layout/cols.scss"; 
 @import "layout/lists.scss";
 
-@import "decoration/color.scss";
 @import "decoration/icons.scss";
 @import "decoration/animation.scss";
 @import "decoration/alerts.scss";
@@ -21,7 +21,7 @@
  
 /* developement to toggle overlays */
 
-/*.social-men-or-women, 
+/*.pick-a-channel, 
 .toggle-gender,
 #below-the-footer-fold, 
 .men-or-women,
@@ -97,7 +97,7 @@ a {
 img { max-width: 100%; }
 
 .btn {
-	border: 1px solid $sf-pink;
+	border: 1px solid $sf-brown;
 	text-decoration: none;
   line-height: 1rem;
   padding: 0.6em 0.8em;
@@ -105,12 +105,7 @@ img { max-width: 100%; }
   font-size: 1rem;
   text-transform: uppercase;
   font-family: 'BrandonGrotesque-Medium'; 
-  color: $sf-pink;
-
-   .mens & { 
-  	color: $sf-mens; 
-  	border-color: $sf-mens; 
-  }
+  color: $sf-brown;
 
 }
 
@@ -135,6 +130,11 @@ img { max-width: 100%; }
   	background: $sf-mens; 
   	border-color: $sf-mens; 
   	color: #fff;
+  	&:hover,
+  	&:focus {
+  		background: darken($sf-mens, 10%);
+  		border-color: darken($sf-mens, 10%);
+  	}
   }
 }
 
@@ -150,8 +150,7 @@ img { max-width: 100%; }
     	outline: 0;
   	}
 
-  	.mens & {
-  		color: $sf-brown;
+  	.mens & {	
   	}
 
 }
@@ -174,42 +173,60 @@ img { max-width: 100%; }
 		max-width: 230px;
 		margin: 0 auto 1rem;
 	}
+}
 
-	.pick-a-gender {
-		padding: 35px;
-		text-align: center;
-		background: #fff;
-		padding-left: calc(50% - 300px/2);
-		padding-right: calc(50% - 300px/2);
+.hero-overlay {
+	@include clear;
+	padding: 35px;
+	text-align: center;
+	background: #fff;
+	padding-left: calc(50% - 300px/2);
+	padding-right: calc(50% - 300px/2);
 
-		h5 {
-			font-family: 'BrandonGrotesque-Bold'; 
-		  letter-spacing: 0.05rem;
-		  text-transform: uppercase;
-		}
-
-		.flr-wrap {
-			text-align: center;
-		}
-
-		.btn { 
-			width: 49%; 
-			font-size: 1.2rem;
-		}
+	h5 {
+		font-family: 'BrandonGrotesque-Bold'; 
+	  letter-spacing: 0.05rem;
+	  text-transform: uppercase;
 	}
 
-	@media screen and (min-width: 800px) {
+	.flr-wrap {
+		text-align: center;
+	}
 
-		.pick-a-gender {
-			position: absolute;
-			top: 30%;
-			right: 30px;
-			padding: 50px 20px;
-			max-width: 370px;
+	.btn { 
+		/*width: 49%; */
+		font-size: 1.2rem;
+		display: block;
+		margin-bottom: 5px;
+
+		.home & {
+			width: 48%;
+			float: left; 
+			margin: 1%;
 		}
-
 	}
 }
+
+@media screen and (min-width: 800px) {
+
+	.hero-overlay {
+		position: absolute;
+		top: 30%;
+		right: 30px;
+		padding: 50px 20px;
+		max-width: 370px;
+
+		.opposite-gender & {
+			right: auto;
+			left: 10%;
+			background: none;
+			top: 20%;
+			color: #fff;
+		}
+	}
+
+}
+
 
 .how-it-works { 
 
@@ -285,17 +302,62 @@ img { max-width: 100%; }
 }
 
 
+.get-started-container {
+	
+	background: lighten(#eeecea, 2%);
+
+	@media screen and (min-width: 32rem) {
+		border-top: 2rem solid lighten(#eeecea, 2%);
+		border-bottom: 2rem solid lighten(#eeecea, 2%);
+	}
+
+	@media screen and (min-width: 50rem) {
+		background-image: url("/img/form-background.jpg");
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: 2rem 0 ;
+
+		.opposite-gender &,
+		.mens &,
+		&.mens { background-image: url("/img/form-background-mens.jpg"); }
+
+		.get-started-form,
+		.refer-form {
+			&:before {
+				content: "";
+				background: lighten(#eeecea, 2%);
+				width: 30px;
+				display: block;
+				position: absolute;
+				top: -1rem;
+				left: -31px;
+				bottom: -1rem;
+			}
+		}
+	}
+	@media screen and (min-width: 70rem) {
+		padding-left: calc(50% - 33rem);
+		padding-right: calc(50% - 33rem);
+		background-position: calc(50% - 13rem) 0;
+	}
+}
+
+
 .get-started-form, .refer-form {
-	max-width: 30rem;
 	margin: 0 auto;
 	background: lighten($sf-grey, 6%); 
 
-	@media screen and (min-width: 30rem) {
-		margin: 0 auto;
+	@media screen and (min-width: 32rem) {
+		max-width: 30rem;
 		border: 1px solid darken($sf-grey, 10%);
 	}
 
-	@media screen and (min-width: 65rem) {
+	@media screen and (min-width: 50rem) {
+		margin: 0 3% 0 50%;
+		max-width: inherit;
+	}
+
+	@media screen and (min-width: 70rem) {
 		margin: 0 0 0 50%;
 	}
 
@@ -317,76 +379,37 @@ img { max-width: 100%; }
 		    display: block;
 		    float: left;
 		    color: $sf-brown;
-		    border-color: lighten($sf-brown, 45%);
+		    border-color: darken($sf-grey, 10%);
 		    &:first-child { border-right: 0;}
 		    &:last-child { border-left: 0;}
 	    	&:hover,
 				&:focus {
-	    		outline: 0;
-	    		border-color: $sf-brown;
-	    		color: darken($sf-brown, 10%);
+		    		outline: 0;
+		    		color: darken($sf-brown, 20%);
+		    		background: lighten($sf-grey, 2%);
 				}
 			}
 
 			.btn.active {
-				background: $sf-brown;
-				border-color: $sf-brown;
+				background: $sf-selected;
+				border-color: $sf-selected;
 				color: #fff;
 				&:hover,
 				&:focus {
 	    		outline: 0;
-	    		border-color: darken($sf-brown, 10%);
-	    		background: darken($sf-brown, 10%);
+	    		border-color: $sf-selected;
+	    		background: $sf-selected;
 				}
 			}
 		}
 	}
-
-	input {
-		background: lighten($sf-grey, 6%); 
-	}
 }
 
 
-
-.get-started-container {
-	
-	background: lighten(#eeecea, 2%);
-	border-top: 2rem solid lighten(#eeecea, 2%);
-	border-bottom: 2rem solid lighten(#eeecea, 2%);
-
-	@media screen and (min-width: 65rem) {
-		border-width: 3rem;
-		background-image: url("/img/form-background.jpg");
-		background-repeat: no-repeat;
-		background-size: 40% auto;
-		background-position: 20% 0 ;
-
-		&.mens { background-image: url("/img/form-background-mens.jpg"); }
-
-		.get-started-form,
-		.refer-form {
-			&:before {
-				content: "";
-				background: lighten(#eeecea, 2%);
-				width: 30px;
-				display: block;
-				position: absolute;
-				top: -1rem;
-				left: -31px;
-				bottom: -1rem;
-			}
-		}
-	}
-}
-
-.form__header {
-	text-align: center;
-	padding: 1rem;
-}
-
+.help-block,
 .instructional-note {
 	font-size: 0.8rem;
+	padding: 0 0 0 10px;
 }
 
 .promo {

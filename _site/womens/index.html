@@ -202,8 +202,10 @@ Current homepage panels
 
 <div id="get-started-form">
 
-	<form class="get-started-form" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+	<div class="get-started-container">
 
+<form class="get-started-form" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+  <fieldset>
         <div class="form__header">
 
           <h2 id="get-started">Get started with Stitch Fix</h2>
@@ -330,11 +332,12 @@ Current homepage panels
 
 
 
-              <div id="referred-by-select" class="form-group">
-              <label class="control-label" for="user_client_attributes_referred_by_signup">
-               How did you hear about us? <span>(Optional)</span>
-</label>              <div class="dropdown dropdown-menu">
-                <select class="form-control  input-lg" name="user[client_attributes][referred_by_signup]" id="user_client_attributes_referred_by_signup"><option value="80">-</option>
+            </div>
+
+              <div id="referred-by-select" class="form-group dropdown dropdown-menu">
+              <label class="control-label" for="dropdown">
+               How did you hear about us? <span>(Optional)</span></label>             
+                <select class="form-control" name="" id="dropdown"><option value="80">-</option>
 <option value="178">Blogger</option>
 <option value="9">Conference / Expo</option>
 <option value="1">Facebook friend</option>
@@ -357,12 +360,10 @@ Current homepage panels
 <option value="20">YouTube</option></select>
               </div>
             </div>
-            </div>
+          
+</fieldset>
 
-            </div>
-
-
-            <div class="cta">
+            <div class="form__cta">
               <a name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up..." >Take Your Style Quiz</a>
 
                   </div>
@@ -374,12 +375,14 @@ Current homepage panels
 
 
 
-            <div class="help-block">Already a member? <a href="/login">Sign In »</a></div>
+            <p class="help-block">Already a member? <a href="/login">Sign In »</a></p>
 
             <p class="instructional-note">By signing up you accept the <a href="#">terms and conditions</a> of Stitch&nbsp;Fix.</p>
       
 
 </form>
+
+</div>
 
 
 </div>
@@ -394,7 +397,7 @@ Current homepage panels
 	<div class="above-the-footer-fold">
 
 
-		<p>Have a question? <a href="/faq">Visit our FAQ</a></p>
+		<p><span>Have a question?</span> <a href="/faq">Visit our FAQ</a></p>
 	
 	</div>
 
@@ -420,9 +423,10 @@ Current homepage panels
 				<li><a class="icon pinterest social-open"><span>Pinterest</span></a></li>
 			</ul>
 
-			<div class="social-men-or-women">
+			<div class="pick-a-channel">
 				<a href="#" class="icon social-close"><span>Close</span></a>
-				<a class="icon twitter"><span>Twitter</span></a>
+				<p class="icon twitter"><span>Twitter</span></p>
+				<h5>Follow us on Twitter</h5>
 				 <ul class="unstyled">
           <li class="choose-women"><a href="#">Women<div class="helper-text">@stitchfix</div></a></li>
           <li><a href="#">Men<div class="helper-text">@stitchfix_men</div></a></li>
@@ -437,6 +441,7 @@ Current homepage panels
 				<h5>About the service</h5>
 				<ul class="unstyled">
 					<li><a href="#">Help Center</a></li>
+					<li><a href="#">Contact us</a></li>
 						
 	            <li><a href="http://blog.stitchfix.com" target="_blank">Style Tips</a></li>
 	          
@@ -457,8 +462,15 @@ Current homepage panels
 			</li>
 		</ul>
 
+		<div  class="copyright">
 
-		<p class="small terms-and-conditions"><a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></p>
+		<p class="terms-and-conditions"><a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></p>
+
+		<p>Stitch Fix and Fix are trademarks of Stitch Fix, Inc.</p>
+
+		</div>
+
+		<a href="http://appstore.com/stitchfix" class="iphone-app-store" data-onclick-event="iPhone Promo,Click Badge - footer,Download iPhone App" title="Download on the App Store"><img alt="Apple App store badge" data-png-src="https://d27bvhtwhzf6pr.cloudfront.net/images/iphone-app/Download_on_the_App_Store_Badge_US-UK_135x40.png" src="https://d27bvhtwhzf6pr.cloudfront.net/assets/iphone-app/Download_on_the_App_Store_Badge_US-UK_135x40-4ab85b442aac6f4d69a0e0da6d4be450.svg"></a>
 
 
 

@@ -37,12 +37,12 @@ $(function() {
 
 
   $('.social-close').click(function(){
-    $('.social-men-or-women').slideToggle( "fast" );
+    $('.pick-a-channel').slideToggle( "fast" );
     return false;
   });
 
   $('.social-open').click(function(){
-    $('.social-men-or-women').slideToggle( "fast" );
+    $('.pick-a-channel').slideToggle( "fast" );
     return false;
   });
 
@@ -109,11 +109,11 @@ $(function() {
 
   $('input').focus(
     function(){
-        $(this).parent('div').addClass('focus');
+        $(this).parent('.form-group').addClass('focus');
     }).blur(
     function(){
-        $(this).parent('div').removeClass('focus');
-        $(this).parent('div').addClass('left');
+        $(this).parent('.form-group').removeClass('focus');
+        $(this).parent('.form-group').addClass('left');
     });
 
   $('label.btn-default').click(function(){
