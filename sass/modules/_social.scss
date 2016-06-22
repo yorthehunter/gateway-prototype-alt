@@ -12,12 +12,12 @@
 
   .icon {
     font-size: 16px;
-    color: $sf-brown;
+    color: $brand_grey_dark;
     &:after {
       border-radius: 50%;
       padding: 7px;
     }
-   /* &:hover, &:focus { background-color: $sf-brown; border-color: $sf-brown; color: #fff;  }*/
+   /* &:hover, &:focus { background-color: $brand_grey_dark; border-color: $brand_grey_dark; color: #fff;  }*/
     
     &.twitter:after   { content: "\ea96"; }
     &.facebook:after  { content: "\ea90"; }
@@ -29,38 +29,31 @@
 
   }
 
-  a.icon {
+  .icon {
     display: block;
     width: 44px;
     line-height: 44px;
     border: 0;
     &:after {
-      border: 1px solid lighten($sf-brown, 40%);
+      border: 1px solid lighten($brand_grey_dark, 40%);
     }
     &:hover,
     &:focus {
-      color: darken($sf-brown, 10%);
+      -webkit-tap-highlight-color: transparent;
+      color: darken($brand_grey_dark, 10%);
       &:after {
-        border-color: lighten($sf-brown, 30%);
-        background: lighten($sf-grey,5%);
+        border-color: lighten($brand_grey_dark, 30%);
+        background: lighten($brand_grey_light,5%);
       }
     }
-  }
 
-  .social-close {
-
-    border-color: transparent;
-    font-size: 10px;
-    top: 0;
-    right: 0;
-    position: absolute;
-
-    &:hover, &:focus {
-      background-color: transparent;
-      color: darken($sf-brown, 20%);
-      border-color: transparent;
+    &.active {
+      &:after {
+        background: $sf-selected;
+        border-color: $sf-selected;
+        color: #fff;
+      }
     }
-
   }
 
   .pick-a-channel {
@@ -69,13 +62,13 @@
       a {
         padding: 0.4rem 0.7rem;
         display: block;
-        background: lighten($sf-grey, 4%);
-        color: darken($sf-brown, 10%);
+        background: lighten($brand_grey_light, 4%);
+        color: darken($brand_grey_dark, 10%);
         border: 0;
         &:hover,
         &:focus {
-          background: $sf-grey;
-          color: darken($sf-brown, 20%);
+          background: $brand_grey_light;
+          color: darken($brand_grey_dark, 20%);
         }
       }
     }

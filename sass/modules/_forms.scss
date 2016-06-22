@@ -1,11 +1,11 @@
 fieldset {
 	padding: 0;
 	margin: 0;
-	border-bottom: 1px solid darken($sf-grey, 10%);
+	border-bottom: 1px solid darken($brand_grey_light, 10%);
 }
 
 .form-group {
-	border-top: 1px solid darken($sf-grey, 10%);
+	border-top: 1px solid darken($brand_grey_light, 10%);
 	display: block;
 	&.focus,
 	&:focus {
@@ -42,8 +42,8 @@ fieldset {
 	label.btn-default {
 		padding:  0;
 		position: relative;
-		border-color: darken($sf-grey, 10%);
-		color: $sf-brown;
+		border-color: darken($brand_grey_light, 10%);
+		color: $brand_grey_dark;
 		margin-bottom: 5px;
     display: block;
     float: left;
@@ -52,14 +52,14 @@ fieldset {
     text-align: center;
     margin-right: -1px;
     z-index: 1;
-    &:last-child { border-right: 1px solid darken($sf-grey, 10%);}
+    &:last-child { border-right: 1px solid darken($brand_grey_light, 10%);}
 		&:hover, 
 		&:focus,
 		&:active {
 			cursor: pointer;
-	   	background: lighten($sf-grey,2%);
-			color: darken($sf-brown, 20%);
-    	z-index: 2;
+	   	background: $sf-hover;
+			color: darken($brand_grey_dark, 20%);
+    	z-index: 1;
 			-webkit-tap-highlight-color: transparent;
 		}
 
@@ -73,6 +73,7 @@ fieldset {
     	&:focus,
     	&:active {		
 				background: $sf-selected;
+				-webkit-tap-highlight-color: transparent;
 			}
 		}
 

@@ -61,9 +61,9 @@ html {
 }
 
 body { 
-	color: $sf-brown;
+	color: $sf-text;
 	font-family: 'BrandonText-Regular';
-	background: lighten(#eeecea, 5%);
+	background: $brand_grey_light;
 	-webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
@@ -71,20 +71,22 @@ body {
 .page {
 	padding-top: 50px;
 	margin:  0 auto;
-	max-width: 800px;
+	padding-left: calc(50% - 20rem);
+	padding-right: calc(50% - 20rem);
 	display: block;
+  background: lighten($brand_grey_light, 5%);
 
 	@media screen and (min-width: 900px) {
 		padding-top: 100px;
 	}
 
 	&.gateway {
-		padding-top: 0;
+		padding: 0;
 		max-width: 100%;
 	}
 
 	.marketing-page & {
-		padding-top: 50px;
+		padding: 0px;
 		max-width: 100%;
 	}
 }
@@ -97,7 +99,7 @@ a {
 img { max-width: 100%; }
 
 .btn {
-	border: 1px solid $sf-brown;
+	border: 1px solid $brand_grey;
 	text-decoration: none;
   line-height: 1rem;
   padding: 0.6em 0.8em;
@@ -105,48 +107,50 @@ img { max-width: 100%; }
   font-size: 1rem;
   text-transform: uppercase;
   font-family: 'BrandonGrotesque-Medium'; 
-  color: $sf-brown;
+  color: $brand_grey;
 
 }
 
 .btn--cta {
-  border: 1px solid $sf-pink;
+  border: 1px solid $brand_watermelon;
   color: #fff;
-  background: $sf-pink;
+  background: $brand_watermelon;
   line-height: 2rem;
   padding: 0.6rem 1.6rem;
   &:hover,
   &:focus {
-    background: darken($sf-pink, 5%);
+    background: darken($brand_watermelon, 5%);
+    border-color: darken($brand_watermelon, 5%);
     color: #fff;
   }
 
   &:focus {
-    background: darken($sf-pink, 10%);
+    background: darken($brand_watermelon, 10%);
+    border-color: darken($brand_watermelon, 5%);
     outline: 0;
   }
 
   .mens & { 
-  	background: $sf-mens; 
-  	border-color: $sf-mens; 
+  	background: $brand_copper; 
+  	border-color: $brand_copper; 
   	color: #fff;
   	&:hover,
   	&:focus {
-  		background: darken($sf-mens, 10%);
-  		border-color: darken($sf-mens, 10%);
+  		background: darken($brand_copper, 10%);
+  		border-color: darken($brand_copper, 10%);
   	}
   }
 }
 
 .btn--cta-secondary {
-  	border-color: $sf-brown;
-  	color: $sf-brown;
+  	border-color: $brand_grey_dark;
+  	color: $brand_grey_dark;
 
   	&:hover,
   	&:focus { 
   		background: #fff; 
-  		color: darken($sf-brown, 20%); 
-  		border-color: darken($sf-brown, 20%); 
+  		color: darken($brand_grey_dark, 20%); 
+  		border-color: darken($brand_grey_dark, 20%); 
     	outline: 0;
   	}
 
@@ -231,12 +235,12 @@ img { max-width: 100%; }
 .how-it-works { 
 
 	text-align: center;
-	background: $sf-grey;
+	background: $brand_grey_light;
 
 }
 
 .section-title {
-	background: $sf-dark-grey;
+	background: $brand_grey;
 	color: #fff;
 	position: relative;
 	padding: 5% 0;
@@ -246,7 +250,7 @@ img { max-width: 100%; }
 		content: "";
 		width: 20px;
 		height: 20px;
-		background:  $sf-dark-grey;
+		background:  $brand_grey;
 		display: block; 
 		position: absolute;
 		bottom: -10px;
@@ -286,7 +290,8 @@ img { max-width: 100%; }
 }
 
 .how-it-works__step__number {
-	border: 1px solid $sf-dark-grey;
+	border: 1px solid $brand_grey_dark;
+	font-family: 'Grad-Bold';
 	display: block;
 	width: 40px;
 	margin: 0 auto 1rem;
@@ -295,6 +300,7 @@ img { max-width: 100%; }
 }
 
 .how-it-works__step__title {
+		font-family: BrandonGrotesque-Bold;
 		text-transform: uppercase;
 		font-size: 1.1rem;
 		margin-bottom: 1rem;
@@ -304,11 +310,16 @@ img { max-width: 100%; }
 
 .get-started-container {
 	
-	background: lighten(#eeecea, 2%);
+	background: lighten($brand_grey_light, 5%);
 
 	@media screen and (min-width: 32rem) {
-		border-top: 2rem solid lighten(#eeecea, 2%);
-		border-bottom: 2rem solid lighten(#eeecea, 2%);
+		border-top: 2rem solid lighten($brand_grey_light, 5%);
+		border-bottom: 2rem solid lighten($brand_grey_light, 5%);
+	}
+
+	@media screen and (min-width: 700px) {
+		border-color: lighten($brand_grey_light, 3%);
+		background: lighten($brand_grey_light, 3%);
 	}
 
 	@media screen and (min-width: 50rem) {
@@ -325,7 +336,7 @@ img { max-width: 100%; }
 		.refer-form {
 			&:before {
 				content: "";
-				background: lighten(#eeecea, 2%);
+				background: lighten($brand_grey_light, 3%);
 				width: 30px;
 				display: block;
 				position: absolute;
@@ -345,11 +356,12 @@ img { max-width: 100%; }
 
 .get-started-form, .refer-form {
 	margin: 0 auto;
-	background: lighten($sf-grey, 6%); 
+	background: lighten($brand_grey_light, 4%);
+	padding-bottom: 1rem; 
 
 	@media screen and (min-width: 32rem) {
 		max-width: 30rem;
-		border: 1px solid darken($sf-grey, 10%);
+		border: 1px solid darken($brand_grey_light, 10%);
 	}
 
 	@media screen and (min-width: 50rem) {
@@ -378,15 +390,15 @@ img { max-width: 100%; }
 				width: 50%;
 		    display: block;
 		    float: left;
-		    color: $sf-brown;
-		    border-color: darken($sf-grey, 10%);
+		    color: $brand_grey_dark;
+		    border-color: darken($brand_grey_light, 10%);
 		    &:first-child { border-right: 0;}
 		    &:last-child { border-left: 0;}
 	    	&:hover,
 				&:focus {
 		    		outline: 0;
-		    		color: darken($sf-brown, 20%);
-		    		background: lighten($sf-grey, 2%);
+		    		color: darken($brand_grey_dark, 20%);
+		    		background: $sf-hover; 
 				}
 			}
 
@@ -413,9 +425,9 @@ img { max-width: 100%; }
 }
 
 .promo {
-	background: $sf-mens !important;
+	background: $brand_copper !important;
 	padding: 20px 0 !important;
-	a { color: lighten($sf-mint, 10%); }
+	a { color: lighten($brand_mint, 10%); }
 }
 
 .wireframe {

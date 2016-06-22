@@ -14,6 +14,7 @@ header {
   font-size: 14px; 
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  border-bottom: 1px solid $brand_grey_light;
 
   a { 
     text-decoration: none !important; 
@@ -35,28 +36,26 @@ header {
   z-index: 6;
   background: #fff;
   border-bottom: 0;
-  color: $sf-brown; 
+  color: $brand_grey_dark; 
   display: block;
   position: relative;
   font-family: Arial;
 
   @media screen and (min-width: 650px) { display: none; }
 
-
-
   &:hover, 
   &:focus { 
       background-color: #fff; 
-      color: darken($sf-brown, 10%);
+      color: darken($brand_grey_dark, 10%);
       }
       &:active,
       &.active { 
-        background-color: $sf-brown; 
+        background-color: $brand_grey_dark; 
         color: #fff; 
         i:after { content: "\ea0f"; }
       }
-  i {
-    &:after   { content: "\e9bd"; }
+    i {
+      &:after   { content: "\e9bd"; }
     }
   span { display: none; }
 }
@@ -76,17 +75,47 @@ nav {
   z-index: 0;
   line-height: 50px;
 
-  ul, li { margin: 0; padding: 0; list-style: none; }
+  ul, 
+  li { 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    position: relative;
+  }
 
   a {
     display: block;
     border: none;
-    color: $sf-brown;
-    .mens & { color: $sf-brown; }
-    &:hover,
-    &:focus { color: #000;   
-    &:active { color: #000; background: #ebe8e8; }
+    color: $brand_grey_dark;
+    position: relative;
+    .mens & { 
+      color: $brand_grey_dark; 
     }
+    &:hover,
+    &:focus { 
+      color: #000;   
+      &:active { 
+        color: #000; 
+        background: #ebe8e8; 
+      }
+    }
+  }
+
+  .active {  
+    &:after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background:  #fff;
+      border-right: 1px solid $brand_grey_light;
+      border-bottom: 1px solid $brand_grey_light;
+      display: block; 
+      position: absolute;
+      bottom: -7px;
+      left: calc(50% - 7px);
+      transform: rotate(45deg);
+  }
+  
 
  /*   &.sign-up {
       background: darken(#e4981b, 5%);
@@ -97,14 +126,6 @@ nav {
       
     }*/
 
-  }
-
-  .active a {  
-    color: #000;
-    &:hover, 
-    &:focus { background-color: #e6e6e6; 
-      &:active { background-color: #e6e6e6; }
-    }
   }
 
 
@@ -128,10 +149,6 @@ nav {
 
 }
 
-.secondary-nav {
-
-}
-
 
 .logged-in  {
 
@@ -143,10 +160,6 @@ nav {
     #toggle {
       display: none;
     }
-  }
-
-  header {
-      border-bottom: 1px solid $sf-grey;
   }
 
   nav {
@@ -164,22 +177,6 @@ nav {
 
       a {
         padding: 0 0.3rem;
-        position: relative;
-        &.active { 
-          &:after {
-            content: "";
-            width: 14px;
-            height: 14px;
-            background:  #fff;
-            border-right: 1px solid $sf-grey;
-            border-bottom: 1px solid $sf-grey;
-            display: block; 
-            position: absolute;
-            bottom: -7px;
-            left: calc(50% - 7px);
-            transform: rotate(45deg);
-          }
-        }
       }
 
       .secondary-nav {
@@ -243,9 +240,9 @@ nav {
 
     a {
       padding: 0 4px;
-      color: $sf-brown;
+      color: $brand_grey_dark;
       &:hover, &:focus {
-        color: darken($sf-brown, 20%);
+        color: darken($brand_grey_dark, 20%);
       }
     }
   }
@@ -336,12 +333,12 @@ header {
     display: inline-block; 
     padding: 0 0.4rem;
     line-height: 1.7rem;
-    color: $sf-brown;
-    .mens & { color: $sf-brown; }
+    color: $brand_grey_dark;
+    .mens & { color: $brand_grey_dark; }
     &.active {
      /* background: rgba(255,255,255,0.5);*/
     }
-    &:hover { cursor: pointer; color: darken($sf-brown, 20%); }
+    &:hover { cursor: pointer; color: darken($brand_grey_dark, 20%); }
   }
 }
 

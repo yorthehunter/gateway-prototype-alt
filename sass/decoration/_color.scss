@@ -1,24 +1,22 @@
+/* Neutrals */
+$brand_grey_light: #F2F1EF;
+$brand_grey: #96908c;
+$brand_grey_dark: #584a49;
 
-$sf-grey: #eeecea;
-$sf-dark-grey: #96908c;
+$brand_mint: #00a19a;
+$brand_watermelon: #f05d61; 
+$ui_blue: #0085c4;
+$ui_turquoise: #1695a3;
+$ui_turquoise_dark: #0c828f;
 
-$sf-brown: #584a49;
+/* Mens */
+$brand_copper: #D77F59; 
+$brand_forest_green: #1C453B;
 
-$sf-mint: #00ada5;
-$sf-pink: #ff5c61; 
+/* UI usage */
+$sf_text: $brand_grey_dark;
+$sf_hover: $brand_grey_light;
+$sf_link: $ui_blue;
+$sf_selected: $ui_turquoise;
+$sf_selected_text: $ui_turquoise_dark;
 
-
-$sf-copper: #d87e54; 
-$sf-link: #0083c4;
-$sf-forest: #1C453B;
-
-$sf-mens: $sf-copper;
-$sf-link-mens: #cb460f;
-
-$sf-selected: #656363;
-$sf-selected: #747373;
-$sf-selected: #1695a3;
-
-/* interaction design blue
-color: #009cde;
-*/

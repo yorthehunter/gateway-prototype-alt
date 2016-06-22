@@ -1,8 +1,8 @@
 
 footer {
 
-  color: darken($sf-grey, 15%); 
   @include clear;
+  background: #fff;
 
 
   li { 
@@ -10,39 +10,10 @@ footer {
     margin-bottom: 0; 
   }
 
-  .bee {
-    font-family: sans-serif;
-    color: #fff;
-    position: absolute;
-    top: -22px;
-    left: calc(50% - 30px);
-    height: 32px;
-    overflow: hidden;
-    text-align: center;
-    &:after {
-      content: "... ";
-      content: "MORE";
-      height: 60px;
-      width: 60px;
-      background: $sf-mint;
-      border-radius: 50%;
-      display: inline-block;
-      z-index: 1;/*
-      font-size: 50px;
-      line-height: 5px;
-      font-family: serif;
-      letter-spacing: -3px;*/
-
-      font-size: 12px;
-      line-height: 35px;
-      .mens & { background: $sf-forest; }
-    }
-  }
-
-  &.opened {
-    .below-the-footer-fold {
-      display: block;
-    }
+  &.is-open {
+      .footer-toggle {
+        background: #fff;
+      }
   }
 
   h5 {
@@ -52,24 +23,25 @@ footer {
   }
 
   .social {
-    margin-bottom: 1rem;
     position: relative;
     text-align: center;
-    border-bottom: 1px solid #ccc; 
-    padding-bottom: 1rem;
+    padding: 20px 10px;
+
+    .social-close {
+      display: none; 
+    }
   }
 
 
-
   a {
-    color: $sf-brown;
+    color: $brand_grey_dark;
     &:hover,
     &:focus {
       color: $sf-link;
       border-bottom: none;
       border-bottom: 1px solid $sf-link; 
     } 
-    .mens & { color: $sf-brown; }
+    .mens & { color: $brand_grey_dark; }
   }
 
   
@@ -79,6 +51,9 @@ footer {
   padding: 15px;
   text-align: center;
   @include clear;
+  background: lighten($brand_grey-light, 4%);
+
+  @media screen and (min-width: 32rem) { background: lighten($brand_grey-light, 5%); }
 
   span {
     font-family: 'BrandonGrotesque-Bold';
@@ -87,36 +62,48 @@ footer {
   }
 }
 
-.footer-toggle {
+a.footer-toggle {
 
-  background: $sf-mint;
+  background: $brand_grey-light;
   display: block;
   position: relative;
-  height: 10px;
- 
-  &:hover  {
-    background: lighten($sf-brown, 30%) !important;
-    .bee:after { background: lighten($sf-brown, 30%);}
-  }
+  border-top: 1px solid darken($brand_grey-light, 10%);
+  text-align: center;
+  padding: 20px;
+  border-bottom: 0px !important;
 
-  .mens & { background: $sf-forest; }
+  &:before {
+    position: absolute;
+    top: -7px;
+    right: 50%;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: lighten($brand_grey-light, 5%);
+    border-right: 1px solid darken($brand_grey-light, 10%);
+    border-bottom: 1px solid darken($brand_grey-light, 10%);
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    left: calc(50% - 7px);
+    transform: rotate(45deg);
+  }
 
   @media screen and (min-width: 700px) { display: none; }
 }
 
 .below-the-footer-fold {
-  background: #fff;
   display: none;
-  padding: 15px;
 
   @media screen and (min-width: 700px) { display: block; }
 
 }
 
 .footer-nav {
-
   clear: both;
   @include clear;
+
+  padding: 20px 10px;
 
   > li {
     width: 50%;
@@ -132,30 +119,32 @@ footer {
 .pick-a-channel {
   display: none;
   padding: 10px 0 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border-bottom: 1px solid lighten($sf-brown, 20%);
+  position: relative;
+  max-width: 16rem;
+  margin: 0 auto;
 
   li {
     text-align: left;
     line-height: 25px;
-    width: 30%;
+    width: 49%;
+    display: block;
+    float: right;
+    &:first-child {
+      float: left;
+    }
   }
 
   .helper-text {
     font-size: 12px;
-    border-top: 1px solid darken($sf-grey, 6%);
+    border-top: 1px solid darken($brand_grey-light, 6%);
   }
 }
 
 .copyright {
+  background: #fff;
   clear: both;
-  border-top: 1px solid #ccc;
-  padding-top: 1rem; 
   font-size: 0.8rem;
+  padding: 20px 10px;
 
   p { display: inline-block;}
 }
@@ -171,68 +160,81 @@ footer {
 
     li { line-height: inherit; }
 
-    .footer-nav {
-      margin-bottom: 1rem; 
+    .below-the-footer-fold,
+    .footer-nav,
+    .copyright,
+    .social {
+      padding: 0;
+      background: none;
     }
 
     .above-the-footer-fold {
       text-align: left; 
       padding: 0;
+      background: none;
+    }
+
+    .pick-a-channel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: #fff;
+      padding: 0;
+
     }
   
     .social {
       float: right; 
-      width: 30%;
+      width: 40%;
+      max-width: 15rem;
       border-bottom: 0;
       text-align: center;
 
-      .pick-a-channel {
-        border-bottom: 0;
+      
+      .social-close {
+        display: block;
+        font-size: 10px;
+        margin: 0 auto;
+
+        &:hover, &:focus {
+          background-color: transparent;
+          color: darken($brand_grey_dark, 20%);
+          border-color: transparent;
+        }
       }
     }
 
     .footer-nav {
       float: left;
       width: 60%; 
-      clear: none; 
-    }
-
-    .below-the-footer-fold {
-      padding: 0;
-
-    }
-
-    .terms-and-conditions {
+      clear: none;
+      margin-bottom: 1rem; 
     }
 
     h5 { margin-bottom: 0.5rem; }
 
-  }
+    a {
+      color: $brand_grey_dark; 
+    }
 
-}
+    a.iphone-app-store {
+      position: absolute;
+      bottom: 130px;
+      right: 13%;
+      border: 0;
+    }
 
-@media screen and (min-width: 650px) { 
+    .terms-and-conditions {
+      float: left;
+    }
 
-  footer {
-   
-        a {
-        color: $sf-brown; 
-        .mens & { color: $sf-brown; }
-      }
-
-      a.iphone-app-store {
-        position: absolute;
-        bottom: 100px;
-        right: 10%;
-      }
-
-      .terms-and-conditions {
-        float: left;
-      }
-
-      .copyright {
-        text-align: right;
-      }
+    .copyright {
+      text-align: right;
+      border-top: 1px solid $brand_grey-light;
+      padding-top: 1rem;
+      margin-bottom: 0;
+    }
 
 
     .nav__style-tips {
@@ -246,6 +248,5 @@ footer {
         }
       }
     }
-
   }
 }

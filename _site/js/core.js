@@ -1,3 +1,5 @@
+document.addEventListener("touchstart", function(){}, true);
+
 
 $(function() {
 
@@ -31,20 +33,32 @@ $(function() {
 
   $('header .nav__style-tips').hover(function(){
     $('header .men-or-women').slideToggle( "fast" );
-    $('header .nav__style-tips').toggleClass('active');
+    $('header .nav__style-tips').toggleClass('is-open');
     return false;
   });
 
 
   $('.social-close').click(function(){
     $('.pick-a-channel').slideToggle( "fast" );
+    $('.social-open').removeClass('active');
     return false;
   });
 
-  $('.social-open').click(function(){
+  // $('.social-open').click(function(){
+  //   $('.pick-a-channel').slideToggle( "fast" );
+  //   $('.social-open').removeClass('active');
+  //   $(this).addClass('active');
+  //   return false;
+  // });
+
+
+
+  $('.social-open.twitter').click(function(){
     $('.pick-a-channel').slideToggle( "fast" );
+    $(this).toggleClass('active');
     return false;
   });
+
 
 
 
@@ -61,6 +75,7 @@ $(function() {
     $('html, body').animate({
         scrollTop: $("#below-the-footer-fold").offset().top - desiredHeight
     }, 500);
+    $('footer').toggleClass('is-open')
     return false;
   });
 
@@ -123,7 +138,7 @@ $(function() {
   });
 
   $('.mens-signup').click(function(){
-      $('.get-started-form').addClass('mens');
+      $('.get-started-form').addClass('mens')
       $('.get-started-container').addClass('mens');
     return false;
   });
