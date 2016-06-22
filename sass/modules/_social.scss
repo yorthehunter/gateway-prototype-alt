@@ -32,10 +32,13 @@
   .icon {
     display: block;
     width: 44px;
+    height: 44px;
     line-height: 44px;
     border: 0;
     &:after {
       border: 1px solid lighten($brand_grey_dark, 40%);
+      display: inline-block;
+      line-height: 1rem;
     }
     &:hover,
     &:focus {

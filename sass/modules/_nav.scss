@@ -80,7 +80,6 @@ nav {
     margin: 0; 
     padding: 0; 
     list-style: none; 
-    position: relative;
   }
 
   a {
@@ -93,16 +92,16 @@ nav {
     }
     &:hover,
     &:focus { 
-      color: #000;   
+      color: $sf-link;   
       &:active { 
         color: #000; 
-        background: #ebe8e8; 
       }
     }
   }
 
   .active {  
-    &:after {
+    a {
+      &:after {
       content: "";
       width: 14px;
       height: 14px;
@@ -114,6 +113,7 @@ nav {
       bottom: -7px;
       left: calc(50% - 7px);
       transform: rotate(45deg);
+    }
   }
   
 
@@ -127,6 +127,12 @@ nav {
     }*/
 
   }
+
+  @media screen and (max-width: 375px) {
+    border-left: 1px solid $brand_grey_light;
+    border-bottom: 1px solid $brand_grey_light;
+  }
+
 
 
   @media screen and (min-width: 650px) {
@@ -183,7 +189,7 @@ nav {
         display: none;
         background: rgba(255,255,255,0.95);
         position: absolute;
-        top:50px;
+        top: 50px;
         right: 0px;
         width: 250px;
         text-align: left;
@@ -197,6 +203,7 @@ nav {
     }
 
     @media screen and (min-width: 480px) {
+
 
       font-size: inherit;
 
@@ -214,11 +221,16 @@ nav {
 
     @media screen and (min-width: 650px) {
 
-      left: 0;
+      text-align: right;
+      padding-right: 120px;
 
       a {
         padding: 0 1.3rem;
       }
+    }
+
+    @media screen and (min-width: 800px) {
+      padding-right: 60px;
     }
   }
 }

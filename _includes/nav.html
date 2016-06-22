@@ -40,7 +40,7 @@
 
 
               {% if page.status == "logged-in" %}
-                <li><a href="/logged-in"{% if page.active == "my-fix" %}class="active"{% endif %}>My fix</a></li>
+                <li{% if page.active == "my-fix" %} class="active"{% endif %}><a href="/logged-in">My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
                 <li class="hide-on-small show-on-big"><a href="#">Account</a></li>
