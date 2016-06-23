@@ -5,15 +5,19 @@ fieldset {
 }
 
 .form-group {
-	border-top: 1px solid darken($brand_grey_light, 10%);
+	border: 1px solid darken($brand_grey_light, 10%);
 	display: block;
 	color: lighten($brand_grey_dark, 10%);
+	margin-top: -1px;
+	position: relative;
+	z-index: 1;
 	&.focus,
 	&:focus {
 		background: #fff;
 		outline: 0;
+		z-index: 2;
 		color: darken($brand_grey_dark, 10%); 
-		input { color: darken($brand_grey_dark, 10%); }
+		input { color: darken($brand_grey_dark, 10%); border-color: darken($brand_grey_light, 10%); }
 	} 
 
 	input,
@@ -22,6 +26,8 @@ fieldset {
 		border: 0;
 		padding: 5px 10px;
 	}
+
+	input { border-bottom: 2px solid #fff; }
 
 	.btn-group {
 		padding: 10px;
@@ -121,11 +127,14 @@ fieldset {
 
 .form__cta {
 	padding: 10px;
+	border: 1px solid darken($brand_grey_light, 10%);
+	border-top: 0;
 
 }
 
 
 .form__header {
+	border: 1px solid darken($brand_grey_light, 10%);
 	text-align: center;
 	padding: 1rem;
 }
