@@ -73,7 +73,7 @@ nav {
   display: none;
   z-index: 0;
   line-height: 50px;
-  border-bottom: 1px solid $brand_grey_light;
+  border-bottom: 1px solid lighten($brand_grey, 30%);
 
   ul, 
   li { 
@@ -107,8 +107,8 @@ nav {
         width: 14px;
         height: 14px;
         background:  #fff;
-        border-right: 1px solid $brand_grey_light;
-        border-bottom: 1px solid $brand_grey_light;
+        border-right: 1px solid lighten($brand_grey, 30%);
+        border-bottom: 1px solid lighten($brand_grey, 30%);
         display: block; 
         position: absolute;
         bottom: -7px;
@@ -130,7 +130,7 @@ nav {
     top: 0; 
     background: transparent;
     width: 100%;
-    left: 70px;
+    padding-left: 60px;
 
     li {
       display: inline-block;
@@ -203,15 +203,12 @@ nav {
 
     @media screen and (min-width: 480px) {
 
-
-      font-size: inherit;
-
       a {
         padding: 0 0.6rem;
       }
     }
 
-    @media screen and (min-width: 600px) {
+/*    @media screen and (min-width: 600px) {
 
       a {
         padding: 0 1rem;
@@ -230,7 +227,7 @@ nav {
 
     @media screen and (min-width: 800px) {
       padding-right: 60px;
-    }
+    }*/
   }
 }
 

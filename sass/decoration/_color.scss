@@ -3,17 +3,20 @@ $brand_grey_light: #F2F1EF;
 $brand_grey: #96908c;
 $brand_grey_dark: #584a49;
 
-$brand_mint: #00a19a;
+$brand_mint: #00bdb4;
+$brand_mint_dark: #00a19a;
 $brand_watermelon: #f05d61; 
+
+/* Mens */
+$brand_copper: #D77F59; 
+$brand_hunter_green: #1C453B;
+
+/* UI */
 $ui_blue: #0085c4;
 $ui_turquoise: #1695a3;
 $ui_turquoise_dark: #0c828f;
 
-/* Mens */
-$brand_copper: #D77F59; 
-$brand_forest_green: #1C453B;
-
-/* UI usage */
+/* Usage */
 $sf_text: $brand_grey_dark;
 $sf_hover: $brand_grey_light;
 $sf_link: $ui_blue;
