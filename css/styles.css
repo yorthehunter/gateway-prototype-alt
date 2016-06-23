@@ -1334,7 +1334,6 @@ fieldset {
   z-index: 1; }
   .form-group.focus, .form-group:focus {
     background: #fff;
-    /*border-color: $brand_grey;*/
     outline: 0;
     z-index: 2;
     color: #3c3332; }
@@ -1429,7 +1428,8 @@ fieldset {
 
 .form__cta {
   padding: 10px;
-  border: 1px solid #dbd8d3; }
+  border: 1px solid #dbd8d3;
+  border-top: 0; }
 
 .form__header {
   border: 1px solid #dbd8d3;

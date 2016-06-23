@@ -14,7 +14,6 @@ fieldset {
 	&.focus,
 	&:focus {
 		background: #fff;
-		/*border-color: $brand_grey;*/
 		outline: 0;
 		z-index: 2;
 		color: darken($brand_grey_dark, 10%); 
@@ -129,6 +128,7 @@ fieldset {
 .form__cta {
 	padding: 10px;
 	border: 1px solid darken($brand_grey_light, 10%);
+	border-top: 0;
 
 }
 
