@@ -182,47 +182,52 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 
 <form class="sign-in-form" id="new_user">
-        <div class="row">
-          <div class="col-xs-12">
-            <legend class="content-headline">Sign In</legend>
-          </div>
+ 
+        <div class="form__header">
+          <h2 class="content-headline">Sign In</h2>
+
         </div>
+
+        <fieldset>
         <div class="row">
-          <div class="col-xs-12 form-group">
+          <div class="form-group">
             <label class="control-label" for="user_login">Email</label>
-            <input autofocus="autofocus" class="form-control input-lg" type="email" value="torunn@stitchfix.com" />
+            <input autofocus="autofocus" id="user_login" class="form-control input-lg" type="email" value="torunn@stitchfix.com" />
           </div>
         </div>
 
         <div class="row">
-          <div class="col-xs-12">
+          <div class="form-group">
             <label class="control-label" for="user_password">Password</label>
-            <input maxlength="75" class="form-control input-lg" size="75" type="password" value="**********" />
+            <input maxlength="75" class="form-control input-lg" id="user_password" size="75" type="password" value="**********" />
 
-      <span class="help-inline-block">Forgot your password?<a title="Forgot your password?"> Reset it now
-</a>            </span>
+     
           </div>
         </div>
-        <br />
-      <div class="row">
-        <div class="col-xs-12">
+
+       </fieldset>
+
+         <span class="help-block">Forgot your password?<a title="Forgot your password?"> Reset it now
+</a>            </span>
+      <div class="form__cta">
+        <div class="">
           <a href="/logged-in" type="submit" name="commit" value="Sign In" class="btn btn--cta ">Sign in</a>
         </div>
       </div>
 </form>
 
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 </div>
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
 
 </div>
 
@@ -239,7 +244,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 	
 		<a href="#" class="footer-toggle">
 
-			Footer?
+			More
 		
 		</a>
 
@@ -284,7 +289,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 				<h5>The service</h5>
 				<ul class="unstyled">
 					<li><a href="#">Help Center »</a></li>
-					<li><a href="#">Contact us »</a></li>
+					<li><a href="#">Contact Us »</a></li>
 					
 			            <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips »</a>
 		           

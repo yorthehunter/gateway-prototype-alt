@@ -769,8 +769,7 @@ header {
   font-family: 'BrandonText-Bold';
   font-size: 14px;
   letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  border-bottom: 1px solid #f2f1ef; }
+  text-transform: uppercase; }
   header a {
     text-decoration: none !important;
     padding: 0 1rem; }
@@ -827,7 +826,8 @@ nav {
   background: rgba(255, 255, 255, 0.95);
   display: none;
   z-index: 0;
-  line-height: 50px; }
+  line-height: 50px;
+  border-bottom: 1px solid #f2f1ef; }
   nav ul,
   nav li {
     margin: 0;
@@ -844,15 +844,8 @@ nav {
       color: #0085c4; }
       nav a:hover:active, nav a:focus:active {
         color: #000; }
-  nav .active {
-    /*   &.sign-up {
-         background: darken(#e4981b, 5%);
-         color: #fff; 
-         &:focus, 
-           &:hover { background: #c70008; }
-           &:active { background: #07b675; color: #fff;  }
-         
-       }*/ }
+  nav .active a {
+    color: #0085c4; }
     nav .active a:after {
       content: "";
       width: 14px;
@@ -868,7 +861,9 @@ nav {
   @media screen and (max-width: 375px) {
     nav {
       border-left: 1px solid #f2f1ef;
-      border-bottom: 1px solid #f2f1ef; } }
+      border-bottom: 1px solid #f2f1ef; }
+      nav .active a:after {
+        display: none; } }
   @media screen and (min-width: 650px) {
     nav {
       display: block;
@@ -892,7 +887,6 @@ nav {
     display: none; } }
 @media screen and (min-width: 375px) {
   .logged-in nav {
-    background: none;
     display: block;
     top: 0;
     width: 100%;
@@ -912,7 +906,9 @@ nav {
       .logged-in nav .secondary-nav li {
         display: block; }
       .logged-in nav .secondary-nav a {
-        padding: 0 1rem; } }
+        padding: 0 1rem; }
+      .logged-in nav .secondary-nav .active a:after {
+        display: none; } }
 @media screen and (min-width: 480px) {
   .logged-in nav {
     font-size: inherit; }
@@ -1331,10 +1327,14 @@ fieldset {
 
 .form-group {
   border-top: 1px solid #dbd8d3;
-  display: block; }
+  display: block;
+  color: #746160; }
   .form-group.focus, .form-group:focus {
     background: #fff;
-    outline: 0; }
+    outline: 0;
+    color: #3c3332; }
+    .form-group.focus input, .form-group:focus input {
+      color: #3c3332; }
   .form-group input,
   .form-group .dropdown {
     background: transparent;
@@ -1458,7 +1458,7 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .page {
-  padding-top: 50px;
+  padding-top: 80px;
   margin: 0 auto;
   padding-left: calc(50% - 20rem);
   padding-right: calc(50% - 20rem);
@@ -1515,12 +1515,12 @@ img {
       border-color: #cc6031; }
 
 .btn--cta-secondary {
-  border-color: #584a49;
-  color: #584a49; }
+  border-color: #96908c;
+  color: #96908c; }
   .btn--cta-secondary:hover, .btn--cta-secondary:focus {
     background: #fff;
-    color: #201b1b;
-    border-color: #201b1b;
+    color: #625d5a;
+    border-color: #625d5a;
     outline: 0; }
 
 .splash {
@@ -1534,7 +1534,9 @@ img {
     top: 5px;
     right: 5px;
     font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.9); }
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #000;
+    color: #000; }
   .splash .logo {
     max-width: 230px;
     margin: 0 auto 1rem; }
@@ -1678,55 +1680,55 @@ img {
       padding-right: calc(50% - 33rem);
       background-position: calc(50% - 13rem) 0; } }
 
-.get-started-form, .refer-form {
+.get-started-form, .refer-form, .sign-in-form {
   margin: 0 auto;
   background: #fbfbfa;
   padding-bottom: 1rem; }
   @media screen and (min-width: 32rem) {
-    .get-started-form, .refer-form {
+    .get-started-form, .refer-form, .sign-in-form {
       max-width: 30rem;
       border: 1px solid #dbd8d3; } }
   @media screen and (min-width: 50rem) {
-    .get-started-form, .refer-form {
+    .get-started-form, .refer-form, .sign-in-form {
       margin: 0 3% 0 50%;
       max-width: inherit; } }
   @media screen and (min-width: 70rem) {
-    .get-started-form, .refer-form {
+    .get-started-form, .refer-form, .sign-in-form {
       margin: 0 0 0 50%; } }
-  .get-started-form h2, .refer-form h2 {
+  .get-started-form h2, .refer-form h2, .sign-in-form h2 {
     font-family: 'Grad-Bold';
     margin: 0 0 0.5rem; }
-  .get-started-form .pick-a-gender .flr-wrap, .refer-form .pick-a-gender .flr-wrap {
+  .get-started-form .pick-a-gender .flr-wrap, .refer-form .pick-a-gender .flr-wrap, .sign-in-form .pick-a-gender .flr-wrap {
     text-align: center;
     max-width: 200px;
     margin: 0 auto;
     zoom: 1; }
-    .get-started-form .pick-a-gender .flr-wrap:before, .refer-form .pick-a-gender .flr-wrap:before {
+    .get-started-form .pick-a-gender .flr-wrap:before, .refer-form .pick-a-gender .flr-wrap:before, .sign-in-form .pick-a-gender .flr-wrap:before {
       content: "";
       display: table; }
-    .get-started-form .pick-a-gender .flr-wrap:after, .refer-form .pick-a-gender .flr-wrap:after {
+    .get-started-form .pick-a-gender .flr-wrap:after, .refer-form .pick-a-gender .flr-wrap:after, .sign-in-form .pick-a-gender .flr-wrap:after {
       content: "";
       display: table;
       clear: both; }
-    .get-started-form .pick-a-gender .flr-wrap .btn, .refer-form .pick-a-gender .flr-wrap .btn {
+    .get-started-form .pick-a-gender .flr-wrap .btn, .refer-form .pick-a-gender .flr-wrap .btn, .sign-in-form .pick-a-gender .flr-wrap .btn {
       width: 50%;
       display: block;
       float: left;
       color: #584a49;
       border-color: #dbd8d3; }
-      .get-started-form .pick-a-gender .flr-wrap .btn:first-child, .refer-form .pick-a-gender .flr-wrap .btn:first-child {
+      .get-started-form .pick-a-gender .flr-wrap .btn:first-child, .refer-form .pick-a-gender .flr-wrap .btn:first-child, .sign-in-form .pick-a-gender .flr-wrap .btn:first-child {
         border-right: 0; }
-      .get-started-form .pick-a-gender .flr-wrap .btn:last-child, .refer-form .pick-a-gender .flr-wrap .btn:last-child {
+      .get-started-form .pick-a-gender .flr-wrap .btn:last-child, .refer-form .pick-a-gender .flr-wrap .btn:last-child, .sign-in-form .pick-a-gender .flr-wrap .btn:last-child {
         border-left: 0; }
-      .get-started-form .pick-a-gender .flr-wrap .btn:hover, .get-started-form .pick-a-gender .flr-wrap .btn:focus, .refer-form .pick-a-gender .flr-wrap .btn:hover, .refer-form .pick-a-gender .flr-wrap .btn:focus {
+      .get-started-form .pick-a-gender .flr-wrap .btn:hover, .get-started-form .pick-a-gender .flr-wrap .btn:focus, .refer-form .pick-a-gender .flr-wrap .btn:hover, .refer-form .pick-a-gender .flr-wrap .btn:focus, .sign-in-form .pick-a-gender .flr-wrap .btn:hover, .sign-in-form .pick-a-gender .flr-wrap .btn:focus {
         outline: 0;
         color: #201b1b;
         background: #f2f1ef; }
-    .get-started-form .pick-a-gender .flr-wrap .btn.active, .refer-form .pick-a-gender .flr-wrap .btn.active {
+    .get-started-form .pick-a-gender .flr-wrap .btn.active, .refer-form .pick-a-gender .flr-wrap .btn.active, .sign-in-form .pick-a-gender .flr-wrap .btn.active {
       background: #1695a3;
       border-color: #1695a3;
       color: #fff; }
-      .get-started-form .pick-a-gender .flr-wrap .btn.active:hover, .get-started-form .pick-a-gender .flr-wrap .btn.active:focus, .refer-form .pick-a-gender .flr-wrap .btn.active:hover, .refer-form .pick-a-gender .flr-wrap .btn.active:focus {
+      .get-started-form .pick-a-gender .flr-wrap .btn.active:hover, .get-started-form .pick-a-gender .flr-wrap .btn.active:focus, .refer-form .pick-a-gender .flr-wrap .btn.active:hover, .refer-form .pick-a-gender .flr-wrap .btn.active:focus, .sign-in-form .pick-a-gender .flr-wrap .btn.active:hover, .sign-in-form .pick-a-gender .flr-wrap .btn.active:focus {
         outline: 0;
         border-color: #1695a3;
         background: #1695a3; }

@@ -69,7 +69,7 @@ body {
 }
 
 .page {
-	padding-top: 50px;
+	padding-top: 80px;
 	margin:  0 auto;
 	padding-left: calc(50% - 20rem);
 	padding-right: calc(50% - 20rem);
@@ -143,14 +143,14 @@ img { max-width: 100%; }
 }
 
 .btn--cta-secondary {
-  	border-color: $brand_grey_dark;
-  	color: $brand_grey_dark;
+  	border-color: $brand_grey;
+  	color: $brand_grey;
 
   	&:hover,
   	&:focus { 
   		background: #fff; 
-  		color: darken($brand_grey_dark, 20%); 
-  		border-color: darken($brand_grey_dark, 20%); 
+  		color: darken($brand_grey, 20%); 
+  		border-color: darken($brand_grey, 20%); 
     	outline: 0;
   	}
 
@@ -171,6 +171,8 @@ img { max-width: 100%; }
 		right: 5px;
 		font-size: 0.8rem;
 		background: rgba(255,255,255,0.9);
+		border: 1px solid #000;
+		color: #000;
 	}
 
 	.logo {
@@ -354,7 +356,7 @@ img { max-width: 100%; }
 }
 
 
-.get-started-form, .refer-form {
+.get-started-form, .refer-form, .sign-in-form {
 	margin: 0 auto;
 	background: lighten($brand_grey_light, 4%);
 	padding-bottom: 1rem; 

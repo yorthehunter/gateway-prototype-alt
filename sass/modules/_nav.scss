@@ -14,7 +14,6 @@ header {
   font-size: 14px; 
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  border-bottom: 1px solid $brand_grey_light;
 
   a { 
     text-decoration: none !important; 
@@ -74,6 +73,7 @@ nav {
   display: none;
   z-index: 0;
   line-height: 50px;
+  border-bottom: 1px solid $brand_grey_light;
 
   ul, 
   li { 
@@ -101,39 +101,29 @@ nav {
 
   .active {  
     a {
+      color: $sf-link;
       &:after {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background:  #fff;
-      border-right: 1px solid $brand_grey_light;
-      border-bottom: 1px solid $brand_grey_light;
-      display: block; 
-      position: absolute;
-      bottom: -7px;
-      left: calc(50% - 7px);
-      transform: rotate(45deg);
+        content: "";
+        width: 14px;
+        height: 14px;
+        background:  #fff;
+        border-right: 1px solid $brand_grey_light;
+        border-bottom: 1px solid $brand_grey_light;
+        display: block; 
+        position: absolute;
+        bottom: -7px;
+        left: calc(50% - 7px);
+        transform: rotate(45deg);
+      }
     }
-  }
-  
-
- /*   &.sign-up {
-      background: darken(#e4981b, 5%);
-      color: #fff; 
-      &:focus, 
-        &:hover { background: #c70008; }
-        &:active { background: #07b675; color: #fff;  }
-      
-    }*/
-
   }
 
   @media screen and (max-width: 375px) {
     border-left: 1px solid $brand_grey_light;
     border-bottom: 1px solid $brand_grey_light;
+
+    .active a:after { display: none; }
   }
-
-
 
   @media screen and (min-width: 650px) {
     display: block;
@@ -144,7 +134,9 @@ nav {
 
     li {
       display: inline-block;
-      a { padding: 0 10px; }
+      a { 
+        padding: 0 10px; 
+      }
     }
   }
 
@@ -171,7 +163,6 @@ nav {
   nav {
 
     @media screen and (min-width: 375px) {
-      background: none;
       display: block;
       top: 0;
       width: 100%;
@@ -198,6 +189,14 @@ nav {
         }
         a {
           padding: 0 1rem;
+        }
+
+        .active {
+          a {
+            &:after {
+              display: none;
+            }
+          }
         }
       }
     }

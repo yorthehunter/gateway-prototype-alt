@@ -91,7 +91,7 @@
 
                   {% else %} -->
 
-                     <li><a href="/logged-in/mens">Mens</a></li>
+                     <li {% if page.active == "mens" %}class="active"{% endif %}><a href="/logged-in/mens">Mens</a></li>
                
                   {% endif %}
 
