@@ -143,14 +143,14 @@ img { max-width: 100%; }
 }
 
 .btn--cta-secondary {
-  	border-color: $brand_grey_dark;
-  	color: $brand_grey_dark;
+  	border-color: $brand_grey;
+  	color: $brand_grey;
 
   	&:hover,
   	&:focus { 
   		background: #fff; 
-  		color: darken($brand_grey_dark, 20%); 
-  		border-color: darken($brand_grey_dark, 20%); 
+  		color: darken($brand_grey, 20%); 
+  		border-color: darken($brand_grey, 20%); 
     	outline: 0;
   	}
 

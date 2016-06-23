@@ -930,6 +930,24 @@ nav {
 @media screen and (min-width: 800px) {
   .logged-in nav {
     padding-right: 60px; } }
+@media screen and (min-width: 1000px) {
+  .logged-in header {
+    height: 100px;
+    position: absolute; }
+  .logged-in nav {
+    top: 50px;
+    padding-right: 0; }
+    .logged-in nav .secondary-nav {
+      display: block;
+      top: -50px;
+      width: auto;
+      text-align: right; }
+      .logged-in nav .secondary-nav li {
+        display: inline; }
+      .logged-in nav .secondary-nav a {
+        float: left; }
+  .logged-in #secondary-toggle {
+    display: none; } }
 
 .nav__style-tips {
   position: relative; }
@@ -1515,12 +1533,12 @@ img {
       border-color: #cc6031; }
 
 .btn--cta-secondary {
-  border-color: #584a49;
-  color: #584a49; }
+  border-color: #96908c;
+  color: #96908c; }
   .btn--cta-secondary:hover, .btn--cta-secondary:focus {
     background: #fff;
-    color: #201b1b;
-    border-color: #201b1b;
+    color: #625d5a;
+    border-color: #625d5a;
     outline: 0; }
 
 .splash {

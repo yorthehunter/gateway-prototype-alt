@@ -233,6 +233,38 @@ nav {
       padding-right: 60px;
     }
   }
+
+  @media screen and (min-width: 1000px) {
+
+
+    header {
+      height: 100px;
+      position: absolute;
+    }
+
+    nav {
+      top: 50px;
+      padding-right: 0;
+
+      .secondary-nav {
+        display: block;
+        top: -50px;
+        width: auto;
+        text-align: right;
+
+        li { display: inline; }
+
+        a {
+          float: left;
+        }
+      }
+    }
+
+    #secondary-toggle {
+      display: none;
+    }
+
+  }
 }
 
 
