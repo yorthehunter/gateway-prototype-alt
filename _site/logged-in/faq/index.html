@@ -92,6 +92,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
   
     
@@ -100,15 +101,30 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
     <nav class="main">
+
+        
+
+        <ul class="account-nav">
+
+          <li><a href="#">Torunn ▾</a>
+            <ul class="sub-nav">
+              <li><a href="#">Account</a><li>
+              <li><a href="#">Credit</a><li>
+              <li><a href="/">Sign out</a></li>
+            </ul> 
+          </li>
+
+        </ul>
+
+        
       
-        <ul>
+        <ul class="primary-nav">
 
 
               
                 <li><a href="/logged-in">My fix</a></li>
                 <li><a href="/logged-in">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
-                <li class="hide-on-small show-on-big"><a href="#">Account</a></li>
               
 
               <li>
@@ -128,26 +144,27 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
                     <li><a href="http://blog.stitchfix.com">Style Tips</a></li>
                   
 
+                  <li>
 
+                    <ul class="tertiary-nav">
 
-                  
-                    <li><a href="#">Reviews</a></li>
-                  
-                  <li><a href="#">Gift cards</a></li>
+                    
+                      <li><a href="#">Reviews</a></li>
+                    
 
-
-                  <!--  -->
-
-                     <li ><a href="/logged-in/mens">Mens</a></li>
-               
-                  
-
+                    <li><a href="#">Gift cards</a></li>
                 
-                  
+                    
 
-                    <li><a href="/">Sign out</a></li>
+                      <li ><a href="/logged-in/mens">Mens</a></li>
 
-                  
+                      <li class="show-on-small hide-on-big"><a href="/">Sign out</a></li>
+
+                    
+
+                  </li>
+
+                </ul>
 
               </li>
 
@@ -311,7 +328,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 	
 		<a href="#" class="footer-toggle">
 
-			More
+			More Info
 		
 		</a>
 

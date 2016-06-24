@@ -18,6 +18,12 @@ $(function() {
     return false;
   });
 
+  $('#tertiary-toggle').click(function(){
+    $('.tertiary-nav').slideToggle( "fast" );
+    $('#tertiary-toggle').toggleClass('active');
+    return false;
+  });
+
 
   // $('#toggle-secondary').click(function(){
   //   $('.secondary-nav').slideToggle( "fast" );
@@ -25,6 +31,11 @@ $(function() {
   //   return false;
   // });
 
+
+  $('.account-nav').hover(function(){
+    $('.account-nav .sub-nav').slideToggle( "fast" );
+    return false;
+  });
 
   $('footer .nav__style-tips').hover(function(){
     $('footer .men-or-women').slideToggle( "fast" );

@@ -31,7 +31,7 @@
 }
   */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 
 	.hide-on-small {
 		display: none !important;
@@ -40,7 +40,7 @@
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
 
 	.hide-on-big {
 		display: none !important;
@@ -420,7 +420,7 @@ img { max-width: 100%; }
 
 .help-block,
 .instructional-note {
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	padding: 10px 0 0;
 	margin-bottom: 0;
 }

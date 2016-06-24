@@ -27,7 +27,8 @@ header {
 } 
 
 #toggle,
-#secondary-toggle {
+#secondary-toggle,
+#tertiary-toggle {
   float: right;
   padding: 0 15px;
   line-height: 49px;
@@ -59,7 +60,8 @@ header {
   span { display: none; }
 }
 
-#secondary-toggle {
+#secondary-toggle,
+#tertiary-toggle {
   display: none;
 }
 
@@ -74,6 +76,8 @@ nav {
   z-index: 0;
   line-height: 50px;
   border-bottom: 1px solid lighten($brand_grey, 30%);
+  padding-left: 60px;
+  padding-right: 60px;
 
   ul, 
   li { 
@@ -123,6 +127,22 @@ nav {
     border-bottom: 1px solid $brand_grey_light;
 
     .active a:after { display: none; }
+
+  }
+
+  @media screen and (min-width: 300px) {
+    a { 
+      font-size: 13px;
+      padding: 0 5px; 
+    }
+  }
+
+
+  @media screen and (min-width: 450px) {
+    a { 
+      font-size: 14px;
+      padding: 0 10px; 
+    }
   }
 
   @media screen and (min-width: 650px) {
@@ -130,13 +150,9 @@ nav {
     top: 0; 
     background: transparent;
     width: 100%;
-    padding-left: 60px;
 
     li {
       display: inline-block;
-      a { 
-        padding: 0 10px; 
-      }
     }
   }
 
@@ -147,10 +163,36 @@ nav {
 
 }
 
+.account-nav {
+  display: none;
+  float: left;
+  .sub-nav {
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    text-align: left;
+    display: none;
+    li {
+      display: block;
+      a {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+ @media screen and (min-width: 550px) {
+  .account-nav {
+    display: block;
+  }
+}
+
 
 .logged-in  {
 
   @media screen and (min-width: 375px) {
+
     #secondary-toggle {
       display: block;
     }
@@ -158,76 +200,115 @@ nav {
     #toggle {
       display: none;
     }
-  }
 
-  nav {
 
-    @media screen and (min-width: 375px) {
+    nav {
+
       display: block;
       top: 0;
       width: 100%;
-      text-align: center;
+      text-align: left;
+    }
 
+    li {
+      display: inline-block;
+    }
+
+    .secondary-nav {
+      display: none;
+      background: rgba(255,255,255,0.95);
+      position: absolute;
+      top: 50px;
+      right: 0px;
+      width: 250px;
+      text-align: left;
+      li { 
+        display: block; 
+      }
+      a {
+        padding: 0 1rem;
+      }
+
+      .active {
+        a {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+
+  @media screen and (min-width: 750px) {
+
+    #secondary-toggle {
+      display: none;
+      background: red;
+    }
+
+    #tertiary-toggle {
+      display: block;
+    }
+
+    .secondary-nav {
+      display: block;
+      position: absolute;
+      width: inherit;
+      top: 0;
+      right: 60px;
       li {
         display: inline-block;
       }
 
       a {
-        padding: 0 0.3rem;
+        padding: 0 10px;
       }
 
-      .secondary-nav {
-        display: none;
-        background: rgba(255,255,255,0.95);
-        position: absolute;
-        top: 50px;
-        right: 0px;
-        width: 250px;
-        text-align: left;
-        li { 
-          display: block; 
-        }
+      .active {
         a {
-          padding: 0 1rem;
-        }
-
-        .active {
-          a {
-            &:after {
-              display: none;
-            }
+          &:after {
+            display: block;
           }
         }
       }
     }
 
-    @media screen and (min-width: 480px) {
-
-      a {
-        padding: 0 0.6rem;
+    .tertiary-nav {
+      display: none;
+      position: absolute;
+      top: 51px;
+      right: -60px;
+      background: #fff;
+      li {
+        display: block;
       }
     }
+  }
 
-/*    @media screen and (min-width: 600px) {
+  @media screen and (min-width: 950px) {
 
-      a {
-        padding: 0 1rem;
-      }
+    #tertiary-toggle { 
+      display: none;
     }
 
-    @media screen and (min-width: 650px) {
-
-      text-align: right;
-      padding-right: 120px;
-
-      a {
-        padding: 0 1.3rem;
-      }
+    .secondary-nav {
+      right: 0;
     }
 
-    @media screen and (min-width: 800px) {
-      padding-right: 60px;
-    }*/
+    .tertiary-nav {
+      display: block;
+      position: relative;
+      display: inline;
+      top: auto;
+      right: auto;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  @media screen and (min-width: 950px) {
   }
 }
 
