@@ -11,25 +11,21 @@ active: login
 <div class="page">
 
 
-<form class="sign-in-form" id="new_user">
+<form class="sign-in-form" id="new_user" style="padding: 10px;">
  
-        <div class="form__header">
           <h2 class="content-headline">Sign In</h2>
-
-        </div>
-
         <fieldset>
         <div class="row">
           <div class="form-group">
             <label class="control-label" for="user_login">Email</label>
-            <input autofocus="autofocus" id="user_login" class="form-control input-lg" type="email" value="torunn@stitchfix.com" />
+            <input autofocus="autofocus" id="user_login" class="form-control input-lg" type="email" value="" />
           </div>
         </div>
 
         <div class="row">
           <div class="form-group">
             <label class="control-label" for="user_password">Password</label>
-            <input maxlength="75" class="form-control input-lg" id="user_password" size="75" type="password" value="**********" />
+            <input maxlength="75" class="form-control input-lg" id="user_password" size="75" type="password" value="" />
 
      
           </div>
@@ -37,13 +33,13 @@ active: login
 
        </fieldset>
 
-         <span class="help-block">Forgot your password?<a title="Forgot your password?"> Reset it now
-</a>            </span>
-      <div class="form__cta">
-        <div class="">
+         <p><span class="help-block">Forgot your password?<a title="Forgot your password?"> Reset it now</a></span></p>
+
           <a href="/logged-in" type="submit" name="commit" value="Sign In" class="btn btn--cta ">Sign in</a>
-        </div>
-      </div>
+
+
+         <p><span class="help-block">Don't have an account? <a href="/#get-started">Get started</a></span></p>
+    
 </form>
 
 

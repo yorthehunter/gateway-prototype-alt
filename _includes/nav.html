@@ -8,6 +8,8 @@
       <a {% if page.active == "womens" %}class="active"{% endif %} href="/womens">Womens</a> 
   </div>
 </div>
+<a href="/" class="link--logo"><img src="/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
+
 
 {% endif %}
 
@@ -41,7 +43,7 @@
 
         <ul class="account-nav">
 
-          <li><a href="#">Torunn ▾</a>
+          <li><a href="#">Kimberly ▾</a>
             <ul class="sub-nav">
               <li><a href="#">Account</a><li>
               <li><a href="#">Credit</a><li>
@@ -58,7 +60,7 @@
 
               {% if page.status == "logged-in" %}
                 <li{% if page.active == "my-fix" %} class="active"{% endif %}><a href="/logged-in">My fix</a></li>
-                <li><a href="/logged-in">Style profile</a></li>
+                <li{% if page.active == "style-profile" %} class="active"{% endif %}><a href="/logged-in/style-profile">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
               {% endif %}
 
@@ -68,6 +70,12 @@
 
                   {% if page.status == "logged-in" %}
                     <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
+                  {% endif %}
+
+                  {% if page.status != "logged-in" %}
+                    {% if page.active == "womens" or page.active == "mens" %}
+                      <li><a href="#" class="how-it-works-link">How it works</a></li>
+                    {% endif %}
                   {% endif %}
 
 

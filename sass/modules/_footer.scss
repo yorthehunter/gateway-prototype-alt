@@ -53,7 +53,7 @@ footer {
   padding: 15px;
   text-align: center;
   @include clear;
-  background: lighten($brand_grey-light, 4%);
+  background: #fff;
 
   @media screen and (min-width: 32rem) { background: lighten($brand_grey-light, 5%); }
 
@@ -67,6 +67,7 @@ footer {
 a.footer-toggle {
 
   background: $brand_grey-light;
+  color: $brand_grey_dark;
   display: block;
   position: relative;
   border-top: 1px solid darken($brand_grey-light, 10%);
@@ -88,7 +89,10 @@ a.footer-toggle {
     position: absolute;
     bottom: -7px;
     left: calc(50% - 7px);
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
     transform: rotate(45deg);
+
   }
 
   @media screen and (min-width: 700px) { display: none; }
@@ -115,10 +119,6 @@ a.footer-toggle {
     float: left;
 
   }
-
-  .men-or-women {
-    left: 0;
-  }
 }
 
 .pick-a-channel {
@@ -140,8 +140,9 @@ a.footer-toggle {
   }
 
   .helper-text {
-    font-size: 12px;
+    font-size: 14px;
     border-top: 1px solid darken($brand_grey-light, 6%);
+    color: $sf-link;
   }
 }
 
@@ -255,19 +256,6 @@ a.footer-toggle {
 
       p { display: inline;}
 
-    }
-
-
-    .nav__style-tips {
-      .men-or-women {
-        top: 0;
-        left: 80px;
-        background: transparent;
-        li {
-          float: left;
-          width: 60px;
-        }
-      }
     }
   }
 }

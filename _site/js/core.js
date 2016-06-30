@@ -124,10 +124,20 @@ $(function() {
     return false;
   });
 
-  $('.get-started').click(function(){
+
+  $('.refer-a-friend').click(function(){
             //$(this).animate(function(){
                 $('html, body').animate({
                     scrollTop: $("#get-started-form").offset().top - 50
+                     }, 700);
+            //});
+    return false;
+  });
+
+  $('.how-it-works-link').click(function(){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#how-it-works").offset().top - 50
                      }, 700);
             //});
     return false;
@@ -159,6 +169,15 @@ $(function() {
       $('.get-started-container').removeClass('mens');
     return false;
   });
+
+  $('.refer-link').click(function(){
+      $('.form-group').addClass('done');
+      $('.form-group-hidden').slideDown('fast');
+      $('.form-group-hidden').removeClass('done');
+      $('.form-group-hidden').removeClass('form-group-hidden');
+    return false;
+  });
+
 
 
 

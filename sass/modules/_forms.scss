@@ -1,23 +1,35 @@
 fieldset {
 	padding: 0;
 	margin: 0;
-	border-bottom: 1px solid darken($brand_grey_light, 10%);
 }
 
 .form-group {
-	border: 1px solid darken($brand_grey_light, 10%);
+	border-color: darken($brand_grey_light, 10%);
+	border-style: solid;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
 	display: block;
 	color: lighten($brand_grey_dark, 10%);
 	margin-top: -1px;
 	position: relative;
 	z-index: 1;
+
+	@media screen and (min-width: 32rem) {
+		border-left-width: 1px;
+		border-right-width: 1px;
+	}
 	&.focus,
 	&:focus {
 		background: #fff;
 		outline: 0;
 		z-index: 2;
 		color: darken($brand_grey_dark, 10%); 
-		input { color: darken($brand_grey_dark, 10%); border-color: darken($brand_grey_light, 10%); }
+		input { 
+			color: darken($brand_grey_dark, 10%); 
+			border-color: darken($brand_grey_light, 10%); 
+		}
 	} 
 
 	input,
@@ -127,14 +139,24 @@ fieldset {
 
 .form__cta {
 	padding: 10px;
-	border: 1px solid darken($brand_grey_light, 10%);
-	border-top: 0;
+	@media screen and (min-width: 32rem) {
+		border: 1px solid darken($brand_grey_light, 10%);
+		border-top: 0;
+	}
 
 }
 
 
 .form__header {
-	border: 1px solid darken($brand_grey_light, 10%);
 	text-align: center;
 	padding: 1rem;
+	@media screen and (min-width: 32rem) {
+		border: 1px solid darken($brand_grey_light, 10%);
+	}
+}
+
+.form-group.done {
+	background: red;
+	background: url("/img/check.png") right 20px bottom 10px no-repeat;
+	background-size: 40px;
 }

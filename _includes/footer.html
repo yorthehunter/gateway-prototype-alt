@@ -67,14 +67,17 @@
 			            <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips »</a>
 		           
 		                <ul class="men-or-women unstyled">
-		                  <li><a href="http://blog.stitchfix.com/">Women</a></li>
-		                  <li><a href="http://blog.stitchfix.com/mens">Men</a></li>
+		                  <li><a href="http://blog.stitchfix.com/">Women »</a></li>
+		                  <li><a href="http://blog.stitchfix.com/mens">Men »</a></li>
 		                </ul>
 	              
 	            	</li>
 	          		{% endif %}
+	          		
 					<li><a href="#">Gift Cards »</a></li>
+					{% unless page.skin == "mens" %}
 					<li><a href="#">iPhone App »</a></li>
+					{% endunless %}
 					<li><a href="#">Plus Sizes »</a></li>
 				</ul>
 			</li>
@@ -108,7 +111,7 @@
 
 	</div>
 
-
+<div class="safari_only">&nbsp;</div>
 </footer>
 
 </body>

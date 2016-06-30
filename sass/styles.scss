@@ -18,6 +18,7 @@
 @import "modules/footer.scss";
 @import "modules/social.scss";
 @import "modules/forms.scss"; 
+@import "browsers/browser-hacks.scss"; 
  
 /* developement to toggle overlays */
 
@@ -52,7 +53,6 @@
 /* BY TORUNN SEIM SKROGSTAD
 -------------------------------------*/
 
-
 html {
   box-sizing: border-box;
 }
@@ -74,7 +74,7 @@ body {
 	padding-left: calc(50% - 20rem);
 	padding-right: calc(50% - 20rem);
 	display: block;
-  background: lighten($brand_grey_light, 5%);
+	background: #fff;
 
 	@media screen and (min-width: 900px) {
 		padding-top: 100px;
@@ -143,8 +143,8 @@ img { max-width: 100%; }
 }
 
 .btn--cta-secondary {
-  	border-color: $brand_grey;
-  	color: $brand_grey;
+
+	color: $brand_grey_dark;
 
   	&:hover,
   	&:focus { 
@@ -163,20 +163,28 @@ img { max-width: 100%; }
 	position: relative;
 	width: 100%;
 	display: block;
-	img { display: block; }
+
+	img,
+	.get-started {
+		width: 100%;
+		display: block;
+		border-bottom: 0;
+	}
 
 	.login {
 		position: absolute;
 		top: 5px;
 		right: 5px;
-		font-size: 0.8rem;
 		background: rgba(255,255,255,0.9);
 		border: 1px solid #000;
 		color: #000;
+		@media screen and (min-width: 1000px) {
+			top: 30px;
+			right: 30px;
+		}
 	}
 
 	.logo {
-		max-width: 230px;
 		margin: 0 auto 1rem;
 	}
 }
@@ -204,11 +212,26 @@ img { max-width: 100%; }
 		font-size: 1.2rem;
 		display: block;
 		margin-bottom: 5px;
+		line-height: 2rem;
 
 		.home & {
 			width: 48%;
 			float: left; 
 			margin: 1%;
+		}
+	}
+
+	.opposite-gender & {
+		background: $brand_hunter_green;
+		color: #fff;
+		.btn--cta-secondary {
+			border-color: darken(#fff, 15%);
+			color: darken(#fff, 15%);
+			&:focus, &:hover {
+				background: transparent;
+				border-color: #fff;
+				color: #fff;
+			}
 		}
 	}
 }
@@ -219,7 +242,7 @@ img { max-width: 100%; }
 		position: absolute;
 		top: 30%;
 		right: 30px;
-		padding: 50px 20px;
+		padding: 40px;
 		max-width: 370px;
 
 		.opposite-gender & {
@@ -256,7 +279,9 @@ img { max-width: 100%; }
 		display: block; 
 		position: absolute;
 		bottom: -10px;
-		left: calc(50% - 10px);
+		left: calc(50% - 10px); 
+		-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
 		transform: rotate(45deg);
 
 		@media screen and (min-width: 800px) {
@@ -334,8 +359,11 @@ img { max-width: 100%; }
 		.mens &,
 		&.mens { background-image: url("/img/form-background-mens.jpg"); }
 
-		.get-started-form,
-		.refer-form {
+		.opposite-gender & {
+			background: none;
+		}
+
+		.get-started-form {
 			&:before {
 				content: "";
 				background: #fff;
@@ -356,7 +384,7 @@ img { max-width: 100%; }
 }
 
 
-.get-started-form, .refer-form, .sign-in-form {
+.get-started-form {
 	margin: 0 auto;
 	background: #fff;
 
@@ -383,8 +411,8 @@ img { max-width: 100%; }
 		.flr-wrap {
 			text-align: center;
 			max-width: 200px;
-    	margin: 0 auto;
-    	@include clear;
+	    	margin: 0 auto;
+	    	@include clear;
 
 			.btn {
 				width: 50%;
@@ -417,6 +445,17 @@ img { max-width: 100%; }
 	}
 }
 
+.refer-form,
+.sign-in-form {
+	max-width: 40rem;
+	margin:  0 auto;
+
+	h2 {
+		font-family: 'Grad-Bold';
+		margin: 0 0 0.5rem;
+	}
+}
+
 
 .help-block,
 .instructional-note {
@@ -437,4 +476,9 @@ img { max-width: 100%; }
 	margin: 0;
 	text-align: center;/*
 	max-width: 1000px;*/
+}
+
+.style-profile-navigation {
+	background: #f5f4f2;
+	height: 200px;
 }
