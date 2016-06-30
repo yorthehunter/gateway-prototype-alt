@@ -14,7 +14,7 @@
 
 <head>
 
-	<title>Prototype</title>	
+	<title>Style Quiz</title>	
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -81,12 +81,21 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 </head>
 
 
-<body class="womens  logged-in">
+<body class="style-quiz neutral logged-out">
 
 <header> 
     
     
-<a href="/logged-in" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<div class="gender-toggle">
+<a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+  <div class="toggle-gender">
+      <a  href="/mens">Mens</a>
+      <a  href="/womens">Womens</a> 
+  </div>
+</div>
+<a href="/" class="link--logo"><img src="/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
+
+
 
 
 
@@ -94,8 +103,15 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
+
+
   
-    
+  <a href="/#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  
+  
+    <a href="/login" class="btn btn--cta-secondary">Sign in</a>
+  
+
 
 
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
@@ -103,28 +119,10 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
     <nav class="main">
 
         
-
-        <ul class="account-nav">
-
-          <li><a href="#">Kimberly ▾</a>
-            <ul class="sub-nav">
-              <li><a href="#">Account</a><li>
-              <li><a href="#">Credit</a><li>
-              <li><a href="/">Sign out</a></li>
-            </ul> 
-          </li>
-
-        </ul>
-
-        
       
         <ul class="primary-nav">
 
 
-              
-                <li><a href="/logged-in">My fix</a></li>
-                <li><a href="/logged-in/style-profile">Style profile</a></li>
-                <li><a href="#">Referrals</a></li>
               
 
               <li>
@@ -132,14 +130,14 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
                 <ul class="secondary-nav">
 
                   
-                    <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
-                  
 
                   
+                    
+                  
 
 
                   
-                    <li ><a href="/logged-in/faq">FAQ</a></li>
+                    <li ><a href="/faq">FAQ</a></li>
                   
 
                   
@@ -158,17 +156,9 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
                     <ul class="tertiary-nav">
 
                     
-                      <li><a href="#">Reviews</a></li>
-                    
 
                     <li><a href="#">Gift cards</a></li>
                 
-                    
-
-                      <li ><a href="/logged-in/mens">Mens</a></li>
-
-                      <li class="show-on-small hide-on-big"><a href="/">Sign out</a></li>
-
                     
 
                   </li>
@@ -199,59 +189,35 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 
 <div class="page">
 
-<img src="/img/womens-loggedin.jpg" />
+	<div class="article-content" style="padding: 10px;">
 
-<center>targetted marketing messages to a logged in customer <center>
+	<h1>Placeholder for Style Quiz</h1>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+	<br />
+	Go to the next task
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+            
 </div>
-
-<div id="get-started-form">
-
-	<h2 style="text-align: center;">Refer a friend to Stitch Fix</h2>
-	
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<div>
 
 
 </div>
@@ -262,8 +228,11 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 	<div class="above-the-footer-fold">
 
 
-		<p><span>Have a question?</span> <a href="/faq">Visit our FAQ »</a></p>
-	
+		<p><span>Have a question?</span> 
+
+				
+          <a href="/faq">Visit our FAQ »</a>
+        
 	</div>
 
 	
@@ -292,8 +261,8 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 		
 				<a href="#" class="icon social-close"><span>Close</span></a>
 				 <ul class="unstyled">
-		          <li class="choose-women"><a href="#">Women<div class="helper-text">@stitchfix</div></a></li>
-		          <li><a href="#">Men<div class="helper-text">@stitchfixmen</div></a></li>
+		          <li class="choose-women"><a>Women<div class="helper-text">@stitchfix</div></a></li>
+		          <li><a>Men<div class="helper-text">@stitchfixmen</div></a></li>
         </ul>
 
 			</div>
@@ -313,34 +282,38 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 			<li>
 				<h5>The service</h5>
 				<ul class="unstyled">
-					<li><a href="#">Help Center »</a></li>
-					<li><a href="#">Contact Us »</a></li>
+					<li><a>Help Center »</a></li>
+					<li><a>Contact Us »</a></li>
+
 					
-			            <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips »</a>
-		           
-		                <ul class="men-or-women unstyled">
-		                  <li><a href="http://blog.stitchfix.com/">Women »</a></li>
-		                  <li><a href="http://blog.stitchfix.com/mens">Men »</a></li>
-		                </ul>
-	              
-	            	</li>
+
+						
+	            <li class="nav__style-tips"><a  href="#" class="style-tips-toggle">Style Tips »</a>
+	         
+	              <ul class="men-or-women unstyled">
+	                <li><a href="/style-tips">Women »</a></li>
+	                <li><a href="/style-tips">Men »</a></li>
+	              </ul>
+	          
+	        	</li>
+		        
+	        
 	          		
-	          		
-					<li><a href="#">Gift Cards »</a></li>
+					<li><a>Gift Cards »</a></li>
 					
-					<li><a href="#">iPhone App »</a></li>
+					<li><a>iPhone App »</a></li>
 					
-					<li><a href="#">Plus Sizes »</a></li>
+					<li><a>Plus Sizes »</a></li>
 				</ul>
 			</li>
 			<li>
 				<h5>The company</h5>
 				<ul class="unstyled">
-					<li><a href="#">About Us »</a></li>
-					<li><a href="#">Press »</a></li>
-					<li><a href="#">Affiliate Program »</a></li>
-					<li><a href="#">Careers »</a></li>
-					<li><a href="#">Tech Blog »</a></li>
+					<li><a>About Us »</a></li>
+					<li><a>Press »</a></li>
+					<li><a>Affiliate Program »</a></li>
+					<li><a>Careers »</a></li>
+					<li><a>Tech Blog »</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -354,7 +327,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 
 		<div class="copyright">
 
-		<p class="terms-and-conditions"><a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></p>
+		<p class="terms-and-conditions"><a>Terms of Use</a> &amp; <a>Privacy Policy</a></p>
 
 		<p>Stitch Fix and Fix are trademarks of Stitch Fix, Inc.</p>
 
