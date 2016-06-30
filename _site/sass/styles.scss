@@ -357,7 +357,7 @@ img { max-width: 100%; }
 
 		.opposite-gender &,
 		.mens &,
-		&.mens { background-image: url("/img/form-background-mens.jpg"); }
+		&.mens { background-image: url("{{ site.baseurl }}/img/form-background-mens.jpg"); }
 
 		.opposite-gender & {
 			background: none;

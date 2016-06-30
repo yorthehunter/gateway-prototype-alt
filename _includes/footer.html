@@ -9,9 +9,9 @@
 		<p><span>Have a question?</span> 
 
 				{% if page.status == "logged-in" %}
-          {% if page.active == "faq" %}class="active"{% endif %}<a href="/logged-in/faq">Visit our FAQ »</a>
+          <a href="{{ site.baseurl }}/logged-in/faq">Visit our FAQ »</a>
         {% else %}
-          {% if page.active == "faq" %}class="active"{% endif %}<a href="/faq">Visit our FAQ »</a>
+          <a href="{{ site.baseurl }}/faq">Visit our FAQ »</a>
         {% endif %}
 	</div>
 
@@ -54,7 +54,7 @@
 <!-- 			<li>
 				<ul class="unstyled">
 		<h5>Have a question?</h5> 
-			<li><a href="/faq">Visit our FAQ »</a></li>
+			<li><a href="{{ site.baseurl }}/faq">Visit our FAQ »</a></li>
 			</ul>
 		</li>
  -->
@@ -68,13 +68,13 @@
 					{% if page.status == "logged-out" %}
 
 						{% if page.skin == "womens" or page.skin == "mens" %}
-	          	<li><a href="/style-tips">Style Tips »</a></li>
+	          	<li><a href="{{ site.baseurl }}/style-tips">Style Tips »</a></li>
 	        	{% else %}
 	            <li class="nav__style-tips"><a  href="#" class="style-tips-toggle">Style Tips »</a>
 	         
 	              <ul class="men-or-women unstyled">
-	                <li><a href="/style-tips">Women »</a></li>
-	                <li><a href="/style-tips">Men »</a></li>
+	                <li><a href="{{ site.baseurl }}/style-tips">Women »</a></li>
+	                <li><a href="{{ site.baseurl }}/style-tips">Men »</a></li>
 	              </ul>
 	          
 	        	</li>
