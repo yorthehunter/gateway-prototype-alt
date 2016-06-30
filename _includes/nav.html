@@ -2,13 +2,13 @@
 <a href="{{ site.baseurl }}/logged-in" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 {% else %}
 <div class="gender-toggle">
-<a href="{{ site.baseurl }}/" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="{{ site.baseurl }}" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
   <div class="toggle-gender">
       <a {% if page.active == "mens" %}class="active"{% endif %} href="{{ site.baseurl }}/mens">Mens</a>
       <a {% if page.active == "womens" %}class="active"{% endif %} href="{{ site.baseurl }}/womens">Womens</a> 
   </div>
 </div>
-<a href="{{ site.baseurl }}/" class="link--logo"><img src="{{ site.baseurl }}/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
+<a href="{{ site.baseurl }}" class="link--logo"><img src="{{ site.baseurl }}/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
 
 
 {% endif %}
