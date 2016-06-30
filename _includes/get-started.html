@@ -1,34 +1,46 @@
-<form class="" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+<div class="get-started-container">
 
-          <h2 style="text-align: center;" id="get-started">Get started with Stitch Fix</h2>
+<form class="get-started-form" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+
+        <div class="form__header">
+
+          <h2 id="get-started">Get started with Stitch Fix</h2>
 
             <div class="pick-a-gender">            
 
               <div class="flr-wrap">
 
+              {% if page.active == "mens"%}
+              
+              <a class="button btn" data-rel="#content-a" href="#" style="display:none">Women</a> <a class="button active btn" data-rel="#content-b" href="#" style="display:none">Men</a>
+
+              {% elsif page.active == "womens"%}
 
 
-          {% if page.active == "mens"%}
-          
-          <a class="button btn" data-rel="#content-a" href="#" style="display:none">Womens</a> <a class="button active btn" data-rel="#content-b" href="#" style="display:none">Mens</a>
+              <a class="button active btn" data-rel="#content-a" href="#" style="display:none">Women</a> <a class="button btn" data-rel="#content-b" href="#" style="display:none">Men</a>
 
-          {% elsif page.active == "womens"%}
+              {% else %}
 
+              <a class="button active btn womens-signup" data-rel="#content-a" href="#">Women</a> <a class="button btn mens-signup" data-rel="#content-b" href="#">Men</a>
 
-          <a class="button active btn" data-rel="#content-a" href="#" style="display:none">Womens</a> <a class="button btn" data-rel="#content-b" href="#" style="display:none">Mens</a>
-
-          {% else %}
-
-          <a class="button active btn" data-rel="#content-a" href="#">Womens</a> <a class="button btn" data-rel="#content-b" href="#">Mens</a>
-          {% endif %}
-                
+              {% endif %}
+            
             
             </div>
 
+          </div>
+
+        </div>
+
 
           <div class="form-group" data-validate="presence">
-            <label class="control-label" for="user_first_name">Name</label>
+            <label class="control-label" for="user_first_name">First Name</label>
             <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_first_name">
+          </div>
+
+          <div class="form-group" data-validate="presence">
+            <label class="control-label" for="user_last_name">Last Name</label>
+            <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_last_name">
           </div>
 
 
@@ -43,29 +55,30 @@
             </div>
 
               <div class="flr-inner">
-                  <div class="container womens" id="content-a">
+                  <div class="container" id="content-a">
                       
               <div class="form-group womens-size" data-validate="presence">
                 <label class="control-label" for="">
                   Dress Size
 </label>
-                <div class="btn-group" data-toggle="buttons">
+                <div class="btn-group" data-toggle="buttons" type="radio">
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_37" value="37" class="form-control">XS</label>
+                      <input type="radio" name="dress-size" id="_37" value="37" class="form-control">XS</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_38" value="38" class="form-control">S</label>
+                      <input type="radio" name="dress-size" id="_38" value="38" class="form-control">S</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_39" value="39" class="form-control">M</label>
+                      <input type="radio" name="dress-size" id="_39" value="39" class="form-control">M</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_40" value="40" class="form-control">L</label>
+                      <input type="radio" name="dress-size" id="_40" value="40" class="form-control">L</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_41" value="41" class="form-control">XL</label>
-                </div>
-              </div>
-
-<a name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up...">Take Your Style Quiz</a>
+                      <input type="radio" name="dress-size" id="_41" value="41" class="form-control">XL</label>
+               
+                <p class="instructional-note">Need sizing help? Consult our <a href="/style/size_chart" rel="modal:open" class="size-chart">Size Chart »</a></p>
+                <p class="instructional-note">We carry sizes 0–14 (XS–XL),
+                  as well as maternity and petite&nbsp;clothing. <a href="/plus" id="plus_get_started">Interested in Plus? »</a></p>
+              </div>  </div> 
                   </div>
-                  <div class="container mens" id="content-b">
+                  <div class="container" id="content-b">
                       
               <div class="form-group mens-size" data-validate="presence">
                 <label class="control-label" for="">
@@ -116,23 +129,60 @@
                     <label class="btn btn-default">
                       <input type="radio" name="" id="_39" value="39" class="form-control">34</label>
                   
-                </div>
+                <p class="instructional-note">Need sizing help? Consult our <a href="/style/size_chart" rel="modal:open" class="size-chart">Size Chart »</a></p>
+                <p class="instructional-note">We currently carry sizes XS-XXL and pant sizes 28-42.</p>
               </div>
-              <a name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up..." >Take Your Style Quiz</a>
+
+
+                </div>
+
+            </div>
+
+              <div id="referred-by-select" class="form-group dropdown dropdown-menu">
+              <label class="control-label" for="dropdown">
+               How did you hear about us? <span>(Optional)</span></label>             
+                <select class="form-control" name="" id="dropdown"><option value="80">-</option>
+<option value="178">Blogger</option>
+<option value="9">Conference / Expo</option>
+<option value="1">Facebook friend</option>
+<option value="3">Facebook ad</option>
+<option value="4">Friend</option>
+<option value="77">Gift Card</option>
+<option value="36">Instagram</option>
+<option value="181">Magazine</option>
+<option value="40">Newspaper</option>
+<option value="8">Online Ad</option>
+<option value="5">Online search</option>
+<option value="6">Other</option>
+<option value="89">Pinterest</option>
+<option value="166">Podcast</option>
+<option value="41">Radio</option>
+<option value="169">Sirius XM Radio</option>
+<option value="179">Stitch Fix Blog</option>
+<option value="39">Television</option>
+<option value="10">Twitter</option>
+<option value="20">YouTube</option></select>
+              </div>
+            </div>
+
+
+            <div class="form__cta">
+              <a href="/style-quiz" name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up..." >Take Your Style Quiz</a>
+
+               
+
+
+
+            
+
+
+
+            <p class="help-block">Already have an account? <a href="/login">Sign In »</a></p>
+
+            <p class="instructional-note">By signing up you accept the <a href="#">terms and conditions</a> of Stitch&nbsp;Fix.</p>
+      
 
                   </div>
-              </div>          </div>
-
-
-
-            
-
-
-
-          <div class="form-group submission">
-  
-            <div class="help-block">Already a member? <a href="/login">Sign In »</a></div>
-            
-          </div>
-
 </form>
+
+</div>

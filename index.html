@@ -1,7 +1,8 @@
 ---
 body_class: home
 status: logged-out
-title: Prototype
+title: Stitch Fix
+skin: neutral
 ---
 
 {% include html.html %}
@@ -21,33 +22,29 @@ title: Prototype
 </head>
 
 
-<body class="{{ page.body_class }}">
+<body class="{{ page.body_class }} neutral">
 
 <div class="page gateway">
 
 <div class="splash">
-<img src="img/gateway.jpg" alt="" />
 
-<div class="pick-a-gender">
-  <h4 style="margin-bottom: 5px;">Get started with Stitch Fix</h4>
-  <a href="womens" class="btn">Womens</a>
-  <a href="mens" class="btn mens">Mens</a>
+<a href="/login" class="btn btn--cta-secondary login">Sign in</a>
+
+  <img data-src="img/gateway.jpg" alt="Man and Woman" />
+
+
+<div class="hero-overlay">
+  <img src="/img/stitchfix.svg" alt="logo" class="logo"/>
+  <h5>Always my style</h5>
+  	<p>Stitch Fix is the personal style service that evolves with your tastes, needs and lifestyle.</p>
+  <a href="womens" class="btn btn--cta">Women</a>
+  <a href="mens" class="btn btn--cta">Men</a>
 </div>
 
 </div>
 
-<div class="how-it-works">
 
-	<center>
-
-
-
-<br /><br /><br />
-<h2>This is what we're about</h2>
-<p>Placeholder for value proposition</p>
-<br /><br /><br />
-</center>
-</div>
+{% include how-it-works.html %}
 
 
 {% include get-started.html %}

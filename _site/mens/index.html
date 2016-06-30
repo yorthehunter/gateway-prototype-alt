@@ -14,7 +14,7 @@
 
 <head>
 
-	<title>Prototype</title>	
+	<title>Mens</title>	
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -38,8 +38,17 @@
 <script type="text/javascript" src="/js/core.js"></script>
 <script type="text/javascript" src="/js/fitvids.js"></script>
 
+
+<script>
+var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w 1x'};
+</script>
+
+<script src="/js/rimg.min.js"></script>
+
 <!--- For Facebook -->
 <link rel="image_src" href="/img/prototype.jpg" />
+
+
 
 
 <!-- For iPhone 4 -->
@@ -72,73 +81,88 @@
 </head>
 
 
-<body class="mens">
-
-
+<body class="mens marketing-page mens logged-out">
 
 <header> 
     
     
+<div class="gender-toggle">
 <a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
-
-
-<!-- <div class="gender">
-
-   / Mens <a href="#" class="divet-link"><i aria-hidden="true" class="icon divet" data-icon="e602"></i></a>
-
-</div> -->
-
-<div class="toggle-gender">
-  <div class="toggleable-gender">
-    <a href="/mens">Mens</a>
-    <a href="/womens">Womens</a> 
+  <div class="toggle-gender">
+      <a class="active" href="/mens">Mens</a>
+      <a  href="/womens">Womens</a> 
   </div>
 </div>
+<a href="/" class="link--logo"><img src="/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
+
+
+
+
+
+  <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+
+
 
   
   <a href="/" class="btn btn--cta" id="get-started">Get started</a>
   
+  
+    <a href="/login" class="btn btn--cta-secondary">Sign in</a>
+  
 
-  <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+
+
+  <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
     <nav class="main">
+
+        
       
-        <ul>
+        <ul class="primary-nav">
 
 
               
-              <li><a href="/login">Sign in</a></li>
 
-              
+              <li>
 
-              <ul class="secondary-nav">
+                <ul class="secondary-nav">
 
-
-                
-                  <li><a href="/faq">FAQ</a></li>
-                
-
-
-                
-                <li><a href="#">Style Tips</a></li>
-                
-                <li><a href="#">Gift cards</a></li>
-
-                
-
-    
                   
 
-    
                   
-                    <li><a href="/womens">Women</a></li>
+                    
+                      <li><a href="#" class="how-it-works-link">How it works</a></li>
+                    
                   
 
+
+                  
+                    <li ><a href="/faq">FAQ</a></li>
+                  
+
+                  
+                    <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
+                  
+
+                  <li>
+
+                    <ul class="tertiary-nav">
+
+                    
+
+                    <li><a href="#">Gift cards</a></li>
                 
+                    
+
+                  </li>
+
+                </ul>
+
+              </li>
 
               </ul>
-              
-              
 
               
 
@@ -160,68 +184,101 @@
 
 <div class="page">
 
-<a href="#get-started" class="get-started"><img src="/img/mens.jpg" /></a>
-
-<center>placeholder for mens marketing messages <center>
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<div class="splash">
+	<a href="#get-started" class="get-started">
+	  <img data-src="/img/mens.jpg" alt="Mens" />
+	</a>
 </div>
+
+
+<div class="how-it-works" id="how-it-works">
+
+	<h2 class="section-title">How It Works</h2>
+
+
+
+		<ul class="unstyled how-it-works__steps">
+
+			<li class="how-it-works__step">
+
+				<span class="how-it-works__step__number">1</span>
+
+				<h3 class="how-it-works__step__title">Fill Out A Style Profile</h3>
+
+				<p>Share your style, size and price preferences with your personal stylist.</p>
+
+			</li>
+			<li class="how-it-works__step">
+
+				<span class="how-it-works__step__number">2</span>
+
+				<h3 class="how-it-works__step__title">Receive Your Fix Delivery</h3>
+
+				<p>Get 5 hand-selected pieces of clothing delivered to your door—no subscription required.</p>
+
+			</li>
+			<li class="how-it-works__step">
+
+				<span class="how-it-works__step__number">3</span>
+
+				<h3 class="how-it-works__step__title">Keep What You Want</h3>
+
+				<p>Only pay for what you keep. Returns are easy (and free) with a prepaid envelope.</p>
+
+		</li>
+
+	</ul>
+
+</div>
+
+<!-- 
+<h5 class="wireframe" id="how-it-works">
+
+TBD: targetted marketing messages 
+
+</h5>
+
+<h5 class="wireframe">
+TBD: service description
+</h5>
+ -->
 
 <div id="get-started-form">
 
-	<form class="" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+	<div class="get-started-container">
 
-          <h2 style="text-align: center;" id="get-started">Get started with Stitch Fix</h2>
+<form class="get-started-form" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+
+        <div class="form__header">
+
+          <h2 id="get-started">Get started with Stitch Fix</h2>
 
             <div class="pick-a-gender">            
 
               <div class="flr-wrap">
 
+              
+              
+              <a class="button btn" data-rel="#content-a" href="#" style="display:none">Women</a> <a class="button active btn" data-rel="#content-b" href="#" style="display:none">Men</a>
 
-
-          
-          
-          <a class="button btn" data-rel="#content-a" href="#" style="display:none">Womens</a> <a class="button active btn" data-rel="#content-b" href="#" style="display:none">Mens</a>
-
-          
-                
+              
+            
             
             </div>
 
+          </div>
+
+        </div>
+
 
           <div class="form-group" data-validate="presence">
-            <label class="control-label" for="user_first_name">Name</label>
+            <label class="control-label" for="user_first_name">First Name</label>
             <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_first_name">
+          </div>
+
+          <div class="form-group" data-validate="presence">
+            <label class="control-label" for="user_last_name">Last Name</label>
+            <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_last_name">
           </div>
 
 
@@ -236,29 +293,30 @@
             </div>
 
               <div class="flr-inner">
-                  <div class="container womens" id="content-a">
+                  <div class="container" id="content-a">
                       
               <div class="form-group womens-size" data-validate="presence">
                 <label class="control-label" for="">
                   Dress Size
 </label>
-                <div class="btn-group" data-toggle="buttons">
+                <div class="btn-group" data-toggle="buttons" type="radio">
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_37" value="37" class="form-control">XS</label>
+                      <input type="radio" name="dress-size" id="_37" value="37" class="form-control">XS</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_38" value="38" class="form-control">S</label>
+                      <input type="radio" name="dress-size" id="_38" value="38" class="form-control">S</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_39" value="39" class="form-control">M</label>
+                      <input type="radio" name="dress-size" id="_39" value="39" class="form-control">M</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_40" value="40" class="form-control">L</label>
+                      <input type="radio" name="dress-size" id="_40" value="40" class="form-control">L</label>
                     <label class="btn btn-default">
-                      <input type="radio" name="" id="_41" value="41" class="form-control">XL</label>
-                </div>
-              </div>
-
-<a name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up...">Take Your Style Quiz</a>
+                      <input type="radio" name="dress-size" id="_41" value="41" class="form-control">XL</label>
+               
+                <p class="instructional-note">Need sizing help? Consult our <a href="/style/size_chart" rel="modal:open" class="size-chart">Size Chart »</a></p>
+                <p class="instructional-note">We carry sizes 0–14 (XS–XL),
+                  as well as maternity and petite&nbsp;clothing. <a href="/plus" id="plus_get_started">Interested in Plus? »</a></p>
+              </div>  </div> 
                   </div>
-                  <div class="container mens" id="content-b">
+                  <div class="container" id="content-b">
                       
               <div class="form-group mens-size" data-validate="presence">
                 <label class="control-label" for="">
@@ -309,30 +367,68 @@
                     <label class="btn btn-default">
                       <input type="radio" name="" id="_39" value="39" class="form-control">34</label>
                   
-                </div>
+                <p class="instructional-note">Need sizing help? Consult our <a href="/style/size_chart" rel="modal:open" class="size-chart">Size Chart »</a></p>
+                <p class="instructional-note">We currently carry sizes XS-XXL and pant sizes 28-42.</p>
               </div>
-              <a name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up..." >Take Your Style Quiz</a>
+
+
+                </div>
+
+            </div>
+
+              <div id="referred-by-select" class="form-group dropdown dropdown-menu">
+              <label class="control-label" for="dropdown">
+               How did you hear about us? <span>(Optional)</span></label>             
+                <select class="form-control" name="" id="dropdown"><option value="80">-</option>
+<option value="178">Blogger</option>
+<option value="9">Conference / Expo</option>
+<option value="1">Facebook friend</option>
+<option value="3">Facebook ad</option>
+<option value="4">Friend</option>
+<option value="77">Gift Card</option>
+<option value="36">Instagram</option>
+<option value="181">Magazine</option>
+<option value="40">Newspaper</option>
+<option value="8">Online Ad</option>
+<option value="5">Online search</option>
+<option value="6">Other</option>
+<option value="89">Pinterest</option>
+<option value="166">Podcast</option>
+<option value="41">Radio</option>
+<option value="169">Sirius XM Radio</option>
+<option value="179">Stitch Fix Blog</option>
+<option value="39">Television</option>
+<option value="10">Twitter</option>
+<option value="20">YouTube</option></select>
+              </div>
+            </div>
+
+
+            <div class="form__cta">
+              <a href="/style-quiz" name="commit" value="Take Your Style Quiz" class="btn btn--cta" data-disable-with="Signing up..." >Take Your Style Quiz</a>
+
+               
+
+
+
+            
+
+
+
+            <p class="help-block">Already have an account? <a href="/login">Sign In »</a></p>
+
+            <p class="instructional-note">By signing up you accept the <a href="#">terms and conditions</a> of Stitch&nbsp;Fix.</p>
+      
 
                   </div>
-              </div>          </div>
-
-
-
-            
-
-
-
-          <div class="form-group submission">
-  
-            <div class="help-block">Already a member? <a href="/login">Sign In »</a></div>
-            
-          </div>
-
 </form>
+
+</div>
 
 
 </div>
 
+</div>
 
 </div>
 
@@ -341,61 +437,107 @@
 
 	<div class="above-the-footer-fold">
 
-		<div class="style-tips">
 
-			<h5>Want Style tips?</h5>
-			<p><a href="#">Read our blog</a></p>
+		<p><span>Have a question?</span> 
 
-			<ul class="social unstyled">
-				<li><a class="icon facebook"><span>Facebook</span></a></li>
-				<li><a class="icon twitter"><span>Twitter</span></a></li>
-				<li><a class="icon instagram"><span>Instagram</span></a></li>
-				<li><a class="icon pinterest"><span>Pinterest</span></a></li>
-			</ul>
-
-		</div>
-
-		<div class="questions">
-
-			<h5>Have a question?</h5>
-
-			<ul class="unstyled">
-				<li><a href="#">FAQ</a></li>
-				<li><a href="#">Help Center</a></li>
-			</ul>
-
-		</div>
-	
+				
+          <a href="/faq">Visit our FAQ »</a>
+        
 	</div>
 
 	
 		<a href="#" class="footer-toggle">
 
-			<i aria-hidden="true" class="icon bee" data-icon="e602"></i>
+			More Info
 		
 		</a>
 
 
 	
 	<div id="below-the-footer-fold" class="below-the-footer-fold">
-		<ul class="unstyled">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Gift Cards</a></li>
-			<li><a href="#">iPhone App</a></li>
-			<li><a href="#">Men</a></li>
-			<li><a href="#">Plus Sizes</a></li>
-			<li><a href="#">Press</a></li>
-			<li><a href="#">Affiliate Program</a></li>
-			<li><a href="#">Careers</a></li>
-			<li><a href="#">Tech Blog</a></li>
-			<li><a href="#">Terms of Use</a></li>
-			<li><a href="#">Privacy Policy</a></li>
+
+		<div class="social">
+
+			<h5>Follow us</h5>
+
+			<ul class="unstyled">
+				<li><a class="icon facebook social-open"><span>Facebook</span></a></li>
+				<li><a class="icon twitter social-open"><span>Twitter</span></a></li>
+				<li><a class="icon instagram social-open"><span>Instagram</span></a></li>
+				<li><a class="icon pinterest social-open"><span>Pinterest</span></a></li>
+			</ul>
+
+			<div class="pick-a-channel">
+		
+				<a href="#" class="icon social-close"><span>Close</span></a>
+				 <ul class="unstyled">
+		          <li class="choose-women"><a>Women<div class="helper-text">@stitchfix</div></a></li>
+		          <li><a>Men<div class="helper-text">@stitchfixmen</div></a></li>
+        </ul>
+
+			</div>
+
+		</div>
+
+		<ul class="unstyled footer-nav">
+
+<!-- 			<li>
+				<ul class="unstyled">
+		<h5>Have a question?</h5> 
+			<li><a href="/faq">Visit our FAQ »</a></li>
+			</ul>
+		</li>
+ -->
+
+			<li>
+				<h5>The service</h5>
+				<ul class="unstyled">
+					<li><a>Help Center »</a></li>
+					<li><a>Contact Us »</a></li>
+
+					
+
+						
+	          	<li><a href="/style-tips">Style Tips »</a></li>
+	        	
+	        
+	          		
+					<li><a>Gift Cards »</a></li>
+					
+					<li><a>Plus Sizes »</a></li>
+				</ul>
+			</li>
+			<li>
+				<h5>The company</h5>
+				<ul class="unstyled">
+					<li><a>About Us »</a></li>
+					<li><a>Press »</a></li>
+					<li><a>Affiliate Program »</a></li>
+					<li><a>Careers »</a></li>
+					<li><a>Tech Blog »</a></li>
+				</ul>
+			</li>
 		</ul>
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Less important footer links live here<br />Probably quite a long list -- a structured one!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Hi. What's up?
+
+		<div class="download">
+
+				<a href="http://appstore.com/stitchfix" class="iphone-app-store" data-onclick-event="iPhone Promo,Click Badge - footer,Download iPhone App" title="Download on the App Store"><img alt="Apple App store badge" data-png-src="https://d27bvhtwhzf6pr.cloudfront.net/images/iphone-app/Download_on_the_App_Store_Badge_US-UK_135x40.png" src="https://d27bvhtwhzf6pr.cloudfront.net/assets/iphone-app/Download_on_the_App_Store_Badge_US-UK_135x40-4ab85b442aac6f4d69a0e0da6d4be450.svg"></a>
+
+		</div>
+
+
+		<div class="copyright">
+
+		<p class="terms-and-conditions"><a>Terms of Use</a> &amp; <a>Privacy Policy</a></p>
+
+		<p>Stitch Fix and Fix are trademarks of Stitch Fix, Inc.</p>
+
+		</div>
+
 
 	</div>
 
-
+<div class="safari_only">&nbsp;</div>
 </footer>
 
 </body>

@@ -1,3 +1,5 @@
+document.addEventListener("touchstart", function(){}, true);
+
 
 $(function() {
 
@@ -10,14 +12,81 @@ $(function() {
   });
 
 
+  $('#secondary-toggle').click(function(){
+    $('.secondary-nav').slideToggle( "fast" );
+    $('#secondary-toggle').toggleClass('active');
+    return false;
+  });
+
+  $('#tertiary-toggle').click(function(){
+    $('.tertiary-nav').slideToggle( "fast" );
+    $('#tertiary-toggle').toggleClass('active');
+    return false;
+  });
+
+
+  // $('#toggle-secondary').click(function(){
+  //   $('.secondary-nav').slideToggle( "fast" );
+  //   $('#toggle-secondary').toggleClass('active');
+  //   return false;
+  // });
+
+
+  $('.account-nav').hover(function(){
+    $('.account-nav .sub-nav').slideToggle( "fast" );
+    return false;
+  });
+
+  $('footer .nav__style-tips').hover(function(){
+    $('footer .men-or-women').slideToggle( "fast" );
+    return false;
+  });
+
+  $('header .nav__style-tips').hover(function(){
+    $('header .men-or-women').slideToggle( "fast" );
+    $('header .nav__style-tips').toggleClass('is-open');
+    return false;
+  });
+
+
+  $('.social-close').click(function(){
+    $('.pick-a-channel').slideToggle( "fast" );
+    $('.social-open').removeClass('active');
+    return false;
+  });
+
+  // $('.social-open').click(function(){
+  //   $('.pick-a-channel').slideToggle( "fast" );
+  //   $('.social-open').removeClass('active');
+  //   $(this).addClass('active');
+  //   return false;
+  // });
+
+
+
+  $('.social-open.twitter').click(function(){
+    $('.pick-a-channel').slideToggle( "fast" );
+    $(this).toggleClass('active');
+    return false;
+  });
+
+
+
+
+  // $('.gender-toggle').hover(function(){
+  //   $('.toggle-gender').animate({width: 'toggle'}, {duration: 200});
+  //   return false;
+  // });
+
 
 
   $('.footer-toggle').click(function(){
     $('#below-the-footer-fold').slideToggle( "fast" );
-    var desiredHeight = $(window).height() - 120;
+    var desiredHeight = $(window).height() - 220;
     $('html, body').animate({
         scrollTop: $("#below-the-footer-fold").offset().top - desiredHeight
     }, 500);
+    $('footer').toggleClass('is-open')
     return false;
   });
 
@@ -49,20 +118,69 @@ $(function() {
   $('#get-started').click(function(){
             //$(this).animate(function(){
                 $('html, body').animate({
-                    scrollTop: $("#get-started-form").offset().top
+                    scrollTop: $("#get-started-form").offset().top - 50
                      }, 700);
             //});
     return false;
   });
 
-  $('.get-started').click(function(){
+
+  $('.refer-a-friend').click(function(){
             //$(this).animate(function(){
                 $('html, body').animate({
-                    scrollTop: $("#get-started-form").offset().top
+                    scrollTop: $("#get-started-form").offset().top - 50
                      }, 700);
             //});
     return false;
   });
+
+  $('.how-it-works-link').click(function(){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#how-it-works").offset().top - 50
+                     }, 700);
+            //});
+    return false;
+  });
+
+  $('input').focus(
+    function(){
+        $(this).parent('.form-group').addClass('focus');
+    }).blur(
+    function(){
+        $(this).parent('.form-group').removeClass('focus');
+        $(this).parent('.form-group').addClass('left');
+    });
+
+  $('label.btn-default').click(function(){
+      $(this).closest('.btn-group').children('label.btn-default').removeClass('active');
+      $(this).addClass('active')
+    return false;
+  });
+
+  $('.mens-signup').click(function(){
+      $('.get-started-form').addClass('mens')
+      $('.get-started-container').addClass('mens');
+    return false;
+  });
+
+  $('.womens-signup').click(function(){
+      $('.get-started-form').removeClass('mens');
+      $('.get-started-container').removeClass('mens');
+    return false;
+  });
+
+  $('.refer-link').click(function(){
+      $('.form-group').addClass('done');
+      $('.form-group-hidden').slideDown('fast');
+      $('.form-group-hidden').removeClass('done');
+      $('.form-group-hidden').removeClass('form-group-hidden');
+    return false;
+  });
+
+
+
+
 });
 
 

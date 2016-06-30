@@ -2,106 +2,445 @@
 
 header { 
   position:fixed;
+  top: 0;
   z-index:5;
   width: 100%;
   display: block;
   color: #374019;
   background: #fff;
-  text-align: center;
-  min-height: 44px;
-  padding-top: 10px;
-  max-width: 420px;
+  text-align: left;
+  min-height: 51px;
+  font-family: 'BrandonText-Bold'; 
+  font-size: 14px; 
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  background: lighten($brand_grey_light, 3%);
+  border-bottom: 1px solid lighten($brand_grey, 30%);
 
-  a { text-decoration: none !important; }
+  .opposite-gender & { 
+    border-color: lighten($brand_grey_light, 3%); 
+    .secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }
+  }
+
+  a { 
+    text-decoration: none !important; 
+    padding: 0 1rem;
+  }
+
+  .btn {
+    line-height: 1rem;
+    padding: 0.6em 0.8em;
+  }
 } 
 
-
-
-nav {
-
-  position: absolute;
-  left: 0;
-  right: 0;    
-  top: 50px;
-  background: #f0f0f0;
-  overflow: hidden; 
-  display: none;
-
-  ul, li { margin: 0; padding: 0; list-style: none; }
-
-  a {
-    display: block;
-    line-height: 44px;
-    border: none;
-    color: $sf-link;
-    &:hover,
-    &:focus { color: #000; background: #ebe8e8;  
-    &:active { color: #000; background: #ebe8e8; }
-    }
-
-    &.sign-up {
-      background: darken(#e4981b, 5%);
-      color: #fff; 
-      &:focus, 
-        &:hover { background: #c70008; }
-        &:active { background: #07b675; color: #fff;  }
-      
-    }
-
-  }
-
-  .active a { background-color: #dff86b; color: #000;
-    &:hover, 
-    &:focus { background-color: #eafaa1; 
-      &:active { background-color: #fbfeee; }
-    }
-  }
-
-  .secondary-nav {
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-  }
-
-}
-
-#toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
+#toggle,
+#secondary-toggle,
+#tertiary-toggle {
+  float: right;
   padding: 0 15px;
-  line-height: 49px;
+  line-height: 50px;
   font-size: 22px;
   z-index: 6;
-  background: #fff;
   border-bottom: 0;
-  color: $sf-neutral; 
-  display: inline-block;
+  color: $brand_grey_dark; 
+  display: block;
+  position: relative;
+  font-family: Arial;
+
+  @media screen and (min-width: 650px) { display: none; }
+
   &:hover, 
   &:focus { 
-      background-color: #fff; 
-      color: darken($sf-neutral, 10%);
+      color: darken($brand_grey_dark, 10%);
       }
       &:active,
       &.active { 
-        background-color: $sf-neutral; 
-        color: #fff; 
         i:after { content: "\ea0f"; }
       }
-  i {
-    &:after   { content: "\e9bd"; }
+    i {
+      &:after   { content: "\e9bd"; }
     }
   span { display: none; }
 }
 
+#secondary-toggle,
+#tertiary-toggle {
+  display: none;
+}
+
+
+nav {
+  position: absolute;
+  width: 250px;
+  right: 0;    
+  top: 50px;
+  display: none;
+  z-index: 0;
+  line-height: 50px;
+  background: lighten($brand_grey_light, 3%);
+  border-top: 1px solid lighten($brand_grey, 30%);
+
+  font-family: 'BrandonText-Bold';
+
+  ul, 
+  li { 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+  }
+
+  a {
+    display: block;
+    border: none;
+    color: $brand_grey_dark;
+    position: relative;
+    .mens & { 
+      color: $brand_grey_dark; 
+    }
+    &:hover,
+    &:focus { 
+      color: $sf-link; 
+      &:active { 
+        color: #000; 
+      }
+    }
+  }
+
+  .secondary-nav {
+    a {
+      padding: 0 1rem;
+    }
+  }
+
+  @media screen and (max-width: 365px) {
+    border-left: 1px solid $brand_grey_light;
+    border-bottom: 1px solid $brand_grey_light;
+  }
+
+  @media screen and (min-width: 300px) {
+    a { 
+      font-size: 14px;
+      padding: 0 3px; 
+    }
+  }
+
+
+  @media screen and (min-width: 400px) {
+    a { 
+      padding: 0 5px; 
+    }
+  }
+
+  @media screen and (min-width: 450px) {
+    a { 
+      font-size: 14px;
+      padding: 0 10px; 
+    }
+  }
+
+  @media screen and (min-width: 650px) {
+    display: block;
+    top: 0; 
+    background: transparent;
+    width: 100%;   
+    padding-left: 50px;
+    padding-right: 50px;
+    border-top: 0;
+    .active {  
+      a {
+        color: darken($brand_grey_dark, 25%);
+        &:after {
+          content: "";
+          width: 14px;
+          height: 14px;
+          background:  lighten($brand_grey_light, 3%);
+          border-right: 1px solid lighten($brand_grey, 30%);
+          border-bottom: 1px solid lighten($brand_grey, 30%);
+          display: block; 
+          position: absolute;
+          bottom: -8px;
+          left: calc(50% - 7px);
+          -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg);
+
+        }
+      }
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    text-align: center;
+    left: 0;
+  }
+
+}
+
+.account-nav {
+  display: none;
+  float: left;
+  .sub-nav {
+    background: lighten($brand_grey_light, 3%);
+    position: absolute;
+    top: 51px;
+    left: 50px;
+    text-align: left;
+    display: none;
+    li {
+      display: block;
+      a {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+ @media screen and (min-width: 550px) {
+  .account-nav {
+    display: block;
+  }
+}
+
+
+.logged-in  {
+
+  header {
+    position: absolute;
+
+    @media screen and (min-width: 365px) {
+
+      #secondary-toggle {
+        display: block;
+      }
+
+      #toggle {
+        display: none;
+      }
+
+
+      nav {
+        display: block;
+        top: 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-top: 0;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      .active {  
+        a {
+          color: darken($brand_grey_dark, 25%);
+          &:after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background:  lighten($brand_grey_light, 3%);
+            border-right: 1px solid lighten($brand_grey, 30%);
+            border-bottom: 1px solid lighten($brand_grey, 30%);
+            display: block; 
+            position: absolute;
+            bottom: -8px;
+            left: calc(50% - 7px);
+            -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg);
+
+          }
+        }
+      }
+
+      .secondary-nav {
+        display: none;
+        background: lighten($brand_grey_light, 3%);
+        position: absolute;
+        top: 51px;
+        right: 0px;
+        width: 250px;
+        text-align: left;
+        li { 
+          display: block; 
+        }
+        a {
+          padding: 0 1rem;
+          color: $brand_grey;
+          &:hover, &:focus {
+            color: darken($brand_grey, 15%);
+          }
+        }
+
+        .active {
+          a {
+            color: $brand_grey_dark;
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+  
+
+    @media screen and (min-width: 750px) {
+
+      #secondary-toggle {
+        display: none;
+      }
+
+      #tertiary-toggle {
+        display: block;
+      }
+
+      .secondary-nav {
+        display: block;
+        position: absolute;
+        width: inherit;
+        top: 0;
+        right: 60px;
+        background: transparent;
+        li {
+          display: inline-block;
+        }
+
+        a {
+          padding: 0 10px;
+        }
+
+        .active {
+          a {
+            &:after {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .tertiary-nav {
+        display: none;
+        position: absolute;
+        top: 51px;
+        right: -60px;
+        background: lighten($brand_grey_light, 3%);
+        li {
+          display: block;
+        }
+
+        a {
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    @media screen and (min-width: 950px) {
+
+      #tertiary-toggle { 
+        display: none;
+      }
+
+      .secondary-nav {
+        right: 1rem;
+      }
+
+      .tertiary-nav {
+        display: block;
+        position: relative;
+        display: inline;
+        top: auto;
+        right: auto;
+        background: transparent;
+        li {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+
+.nav__style-tips {
+  position: relative;
+  
+  &.is-open {
+    a { 
+      color: darken($brand_grey_dark, 15%);
+    } 
+  }
+}
+
+.men-or-women {
+  background: lighten($brand_grey_light, 3%);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  right: 0;
+  li {
+    display: block;
+    float: left;
+    width: 50%;
+    a { 
+      padding: 0 1rem; 
+      &:hover, &:focus {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  footer & { 
+    left: -1rem; 
+    li {
+      width: auto;
+    }
+    @media screen and (min-width: 650px) {
+      left: 75px;
+      a {
+        padding: 2px;
+      }
+    }
+  }
+
+  header & {
+    background: lighten($brand_grey_light, 5%);
+    @media screen and (min-width: 650px) {
+      background: lighten($brand_grey_light, 3%);
+      top: 50px;
+      left: 0;       
+      border-top: 1px solid lighten($brand_grey, 30%);
+      li {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+}
+
 
 header {
-  height: 50px;
 
   .btn--cta { 
-    position: absolute;
-    top: 6px;
-    right: 60px;
+    float: right;
+    z-index: 10;
+    margin: 6px;
+    position: relative;
 
+  }
+
+  .btn--cta-secondary {
+    float: right;
+    z-index: 10;
+    margin: 6px 0;
+    position: relative;
   }
 }
 
@@ -111,32 +450,72 @@ header {
   width: 50px;
   padding: 10px;
   position: relative;
-  z-index: 2;
+  z-index: 12;
   position: absolute;
   top: 0px;
   left: 0px;
 
   a { display: block; }
 
+
+
+}  
+.logged-out {
+
+  .link--logo {
+    display: none;
+  }
+
+  @media screen and (min-width: 900px) {
+
+    .link--logo {
+      display: block;
+      width: 190px;
+      float: left;
+      padding-top: 15px;
+      position: relative;
+      z-index: 5;
+      height: 50px;
+      &:hover, &:focus { border-bottom: 0; }
+
+    }
+
+    .gender-toggle {
+      display: none;
+    } 
+  }
 }
 
-.gender {
-  position: absolute;
-  top: 0px;
-  line-height: 50px;
-  left: 0;
-  padding-left:  50px;
-  z-index: 0;
-
+.gender-toggle {
+  height: 50px;
+  width: 54px;
+  float: left;
+  &:hover  {
+  background: #eee;
+  }
 }
 
 .toggle-gender {
+  display: none;
+  height: 50px;
+  background: #eee;
   position: absolute;
   top: 0px;
   line-height: 50px;
-  left: 0;
-  padding-left:  50px;
-  z-index: 1;
+  left: 50px;
+  z-index: 11;
+  padding-right: 1rem;
+  a { 
+    display: inline-block; 
+    padding: 0 0.4rem;
+    line-height: 1.7rem;
+    color: $brand_grey_dark;
+    .mens & { color: $brand_grey_dark; }
+    &.active {
+     /* background: rgba(255,255,255,0.5);*/
+    }
+    &:hover { cursor: pointer; color: darken($brand_grey_dark, 20%); }
+  }
 }
 
 .divet-link {

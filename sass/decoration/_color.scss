@@ -1,11 +1,25 @@
-$color-default: #847D78;
+/* Neutrals */
+$brand_grey_light: #F2F1EF;
+$brand_grey: #96908c;
+$brand_grey_dark: #2F3237;
 
-$sf-mint: #69bdb0;
-$sf-pink: #ff5c61; 
+$brand_mint: #00bdb4;
+$brand_mint_dark: #00a19a;
+$brand_watermelon: #f05d61; 
 
+/* Mens */
+$brand_copper: #D77F59; 
+$brand_hunter_green: #1C453B;
 
-$sf-orange: #d87e54; 
-$sf-neutral: #666;
-$sf-link: #4b74d1;
+/* UI */
+$ui_blue: #0085c4;
+$ui_turquoise: #1695a3;
+$ui_turquoise_dark: #0c828f;
 
-$sf-mens: $sf-orange;
+/* Usage */
+$sf_text: $brand_grey_dark;
+$sf_hover: $brand_grey_light;
+$sf_link: $ui_blue;
+$sf_selected: $ui_turquoise;
+$sf_selected_text: $ui_turquoise_dark;
+

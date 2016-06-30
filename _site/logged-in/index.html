@@ -14,7 +14,7 @@
 
 <head>
 
-	<title>Prototype</title>	
+	<title>My Fix</title>	
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -38,8 +38,17 @@
 <script type="text/javascript" src="/js/core.js"></script>
 <script type="text/javascript" src="/js/fitvids.js"></script>
 
+
+<script>
+var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w 1x'};
+</script>
+
+<script src="/js/rimg.min.js"></script>
+
 <!--- For Facebook -->
 <link rel="image_src" href="/img/prototype.jpg" />
+
+
 
 
 <!-- For iPhone 4 -->
@@ -72,25 +81,7 @@
 </head>
 
 
-<body class="womens">
-
-
-<div class="bootstrap alert-outer-container">
-  <div id="alerts">
-    <!-- <div class="alert alert-info alert-dismissable promo">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">        
-            <div class="alert-msg"><a href="mens">We just launched Stitch Fix Men!  </a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-  </div>
-</div>
-
+<body class="home womens logged-in">
 
 <header> 
     
@@ -98,64 +89,88 @@
 <a href="/logged-in" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 
 
-<!-- <div class="gender">
 
-</div> -->
+  <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
-<div class="toggle-gender">
-  <div class="toggleable-gender">
-    <a href="/mens">Mens</a>
-    <a href="/womens">Womens</a> 
-  </div>
-</div>
   
     
 
-  <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+
+  <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
     <nav class="main">
+
+        
+
+        <ul class="account-nav">
+
+          <li><a href="#">Kimberly ▾</a>
+            <ul class="sub-nav">
+              <li><a href="#">Account</a><li>
+              <li><a href="#">Credit</a><li>
+              <li><a href="/">Sign out</a></li>
+            </ul> 
+          </li>
+
+        </ul>
+
+        
       
-        <ul>
+        <ul class="primary-nav">
 
 
               
-
-                <li><a href="/logged-in">My fix</a></li>
-                <li><a href="/logged-in">Style profile</a></li>
+                <li class="active"><a href="/logged-in">My fix</a></li>
+                <li><a href="/logged-in/style-profile">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
-                <li><a href="#">Account</a></li>
               
 
-              <ul class="secondary-nav">
+              <li>
 
-
-                
-                  <li><a href="#">FAQ</a></li>
-                
-
-
-                
-                <li><a href="#">Style Tips</a></li>
-                
-                  <li><a href="#">Reviews</a></li>
-                
-                <li><a href="#">Gift cards</a></li>
-
-                
+                <ul class="secondary-nav">
 
                   
-                    <li><a href="/logged-in/mens">Stitch Fix Mens</a></li>
+                    <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
                   
 
+                  
+
+
+                  
+                    <li ><a href="/logged-in/faq">FAQ</a></li>
+                  
+
+                  
+                    <li><a href="http://blog.stitchfix.com">Style Tips</a></li>
+                  
+
+                  <li>
+
+                    <ul class="tertiary-nav">
+
+                    
+                      <li><a href="#">Reviews</a></li>
+                    
+
+                    <li><a href="#">Gift cards</a></li>
                 
+                    
+
+                      <li ><a href="/logged-in/mens">Mens</a></li>
+
+                      <li class="show-on-small hide-on-big"><a href="/">Sign out</a></li>
+
+                    
+
+                  </li>
+
+                </ul>
+
+              </li>
 
               </ul>
-              
-              
-
-                <li><a href="/">Sign out</a></li>
-
-              
 
               
 
@@ -176,7 +191,10 @@
 
 
 <div class="page">
-	<img src="/img/calendar.png" style="max-width: 340px; margin: 0 auto;" />
+
+<div class="calendar" style="width: 100%; position: relative; display: block;">
+	<img data-src="/img/calendar.png" alt="Calendar" style="display:block; width: 100%;" />
+</div>
 </div>
 
 
@@ -187,61 +205,108 @@
 
 	<div class="above-the-footer-fold">
 
-		<div class="style-tips">
 
-			<h5>Want Style tips?</h5>
-			<p><a href="#">Read our blog</a></p>
+		<p><span>Have a question?</span> 
 
-			<ul class="social unstyled">
-				<li><a class="icon facebook"><span>Facebook</span></a></li>
-				<li><a class="icon twitter"><span>Twitter</span></a></li>
-				<li><a class="icon instagram"><span>Instagram</span></a></li>
-				<li><a class="icon pinterest"><span>Pinterest</span></a></li>
-			</ul>
-
-		</div>
-
-		<div class="questions">
-
-			<h5>Have a question?</h5>
-
-			<ul class="unstyled">
-				<li><a href="#">FAQ</a></li>
-				<li><a href="#">Help Center</a></li>
-			</ul>
-
-		</div>
-	
+				
+          <a href="/logged-in/faq">Visit our FAQ »</a>
+        
 	</div>
 
 	
 		<a href="#" class="footer-toggle">
 
-			<i aria-hidden="true" class="icon bee" data-icon="e602"></i>
+			More Info
 		
 		</a>
 
 
 	
 	<div id="below-the-footer-fold" class="below-the-footer-fold">
-		<ul class="unstyled">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Gift Cards</a></li>
-			<li><a href="#">iPhone App</a></li>
-			<li><a href="#">Men</a></li>
-			<li><a href="#">Plus Sizes</a></li>
-			<li><a href="#">Press</a></li>
-			<li><a href="#">Affiliate Program</a></li>
-			<li><a href="#">Careers</a></li>
-			<li><a href="#">Tech Blog</a></li>
-			<li><a href="#">Terms of Use</a></li>
-			<li><a href="#">Privacy Policy</a></li>
+
+		<div class="social">
+
+			<h5>Follow us</h5>
+
+			<ul class="unstyled">
+				<li><a class="icon facebook social-open"><span>Facebook</span></a></li>
+				<li><a class="icon twitter social-open"><span>Twitter</span></a></li>
+				<li><a class="icon instagram social-open"><span>Instagram</span></a></li>
+				<li><a class="icon pinterest social-open"><span>Pinterest</span></a></li>
+			</ul>
+
+			<div class="pick-a-channel">
+		
+				<a href="#" class="icon social-close"><span>Close</span></a>
+				 <ul class="unstyled">
+		          <li class="choose-women"><a>Women<div class="helper-text">@stitchfix</div></a></li>
+		          <li><a>Men<div class="helper-text">@stitchfixmen</div></a></li>
+        </ul>
+
+			</div>
+
+		</div>
+
+		<ul class="unstyled footer-nav">
+
+<!-- 			<li>
+				<ul class="unstyled">
+		<h5>Have a question?</h5> 
+			<li><a href="/faq">Visit our FAQ »</a></li>
+			</ul>
+		</li>
+ -->
+
+			<li>
+				<h5>The service</h5>
+				<ul class="unstyled">
+					<li><a>Help Center »</a></li>
+					<li><a>Contact Us »</a></li>
+
+					
+
+	        	<li><a>Style Tips »</a></li>
+
+	        
+	          		
+					<li><a>Gift Cards »</a></li>
+					
+					<li><a>iPhone App »</a></li>
+					
+					<li><a>Plus Sizes »</a></li>
+				</ul>
+			</li>
+			<li>
+				<h5>The company</h5>
+				<ul class="unstyled">
+					<li><a>About Us »</a></li>
+					<li><a>Press »</a></li>
+					<li><a>Affiliate Program »</a></li>
+					<li><a>Careers »</a></li>
+					<li><a>Tech Blog »</a></li>
+				</ul>
+			</li>
 		</ul>
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Less important footer links live here<br />Probably quite a long list -- a structured one!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Hi. What's up?
+
+		<div class="download">
+
+				<a href="http://appstore.com/stitchfix" class="iphone-app-store" data-onclick-event="iPhone Promo,Click Badge - footer,Download iPhone App" title="Download on the App Store"><img alt="Apple App store badge" data-png-src="https://d27bvhtwhzf6pr.cloudfront.net/images/iphone-app/Download_on_the_App_Store_Badge_US-UK_135x40.png" src="https://d27bvhtwhzf6pr.cloudfront.net/assets/iphone-app/Download_on_the_App_Store_Badge_US-UK_135x40-4ab85b442aac6f4d69a0e0da6d4be450.svg"></a>
+
+		</div>
+
+
+		<div class="copyright">
+
+		<p class="terms-and-conditions"><a>Terms of Use</a> &amp; <a>Privacy Policy</a></p>
+
+		<p>Stitch Fix and Fix are trademarks of Stitch Fix, Inc.</p>
+
+		</div>
+
 
 	</div>
 
-
+<div class="safari_only">&nbsp;</div>
 </footer>
 
 </body>

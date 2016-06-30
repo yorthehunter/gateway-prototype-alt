@@ -1,68 +1,121 @@
 ---
-body_class: mens
+body_class: marketing-page opposite-gender
 status: logged-in
-title: Prototype
-active: 
+title: Refer a friend!
+active: mens
+skin: womens
 ---
 
 {% include header.html %}
 
-<div class="page">
+<div class="page mens">
 
-<img src="/img/mens-loggedin.jpg" />
+<div class="splash">
 
-<center>targetted marketing messages <center>
+	<img data-src="/img/mens-lio.jpg" alt="Mens" />
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
+<div class="hero-overlay">
+
+	<h5>Introducing</h5>
+  <img src="/img/stitchfix-inverse.svg" alt="logo" class="logo"/>
+  <h5>Men</h5>
+  <p>We can now style all the men in your life!</p>
+	  <a href="#get-started" class="refer-a-friend btn btn--cta">Refer a friend</a><br />
+	</p>
+	<p>To sign up for Stitch Fix Men you'll have to sign out of your account</p>
+
+  
 </div>
 
-<div id="get-started-form">
+</div>
 
-	<h2 style="text-align: center;">Refer a friend to Stitch Fix</h2>
-	
+
+<h5 class="wireframe">
+
+Placeholder for value proposition
+
+</h5>
+
+
+<div class="get-started-container">
+
+<form id="get-started-form" class="refer-form" >
+
+	<div class="" style="padding: 10px;">
+
+		<h2>Refer a friend to Stitch Fix Men <br />and get $25</h2>
+
+
+	</div>
+
+	<fieldset>
+
+	<div class="form-group">
+
+	    <label class="control-label" for="referee-email">Email</label>
+	    <input maxlength="75" class="form-control input-lg" size="75" type="email" name="user[email]" id="referee-email" value="" >
+
+	</div>
+
+	<div class="form-group form-group-hidden" style="display:none;">
+
+	    <label class="control-label" for="referee-email">Email</label>
+	    <input maxlength="75" class="form-control input-lg" size="75" type="email" name="user[email]" id="referee-email" value="" >
+
+	</div>
+
+<div class="form__cta">
+
+		<a href="#" class="btn btn--cta refer-link">Refer</a>
+
+</div>
+
+
+</fieldset>
 
 <br />
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<div>
+ 
+<div class="" style="padding: 20px; text-align: center; background: #efefef">
 
+	<h5>Share your referral link<br />and get $25</h5>
+
+	<ul class="social unstyled">
+
+	<li><i class="icon facebook"><span>Facebook</span></i></li>
+	<li><i class="icon twitter"><span>Twitter</span></i></li>
+	<li><i class="icon email"><span>Email</span></i></li>
+	<li><i class="icon link"><span>Copy link</span></i></li>
+
+	</ul>
+
+</div>
+
+<br /><br />
+
+
+<div class="" style="padding: 20px; text-align: center; background: #efefef">
+
+	<p>
+		<a href="/mens/#get-started-form" class="btn">Sign up for a Mens account</a>
+		<br/>
+		(We'll have to sign you out of your account)
+	</p>
+
+</div>
+
+<br /><br />
+
+<div class="" style="padding: 20px; text-align: center; background: #efefef">
+
+	<p><a href="#" class="btn">Buy a gift card</a></p>
+
+</div>
+
+</form>
+
+</div>
 
 {% include footer.html %}
 

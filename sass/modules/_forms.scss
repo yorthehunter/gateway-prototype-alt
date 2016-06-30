@@ -1,0 +1,162 @@
+fieldset {
+	padding: 0;
+	margin: 0;
+}
+
+.form-group {
+	border-color: darken($brand_grey_light, 10%);
+	border-style: solid;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	display: block;
+	color: lighten($brand_grey_dark, 10%);
+	margin-top: -1px;
+	position: relative;
+	z-index: 1;
+
+	@media screen and (min-width: 32rem) {
+		border-left-width: 1px;
+		border-right-width: 1px;
+	}
+	&.focus,
+	&:focus {
+		background: #fff;
+		outline: 0;
+		z-index: 2;
+		color: darken($brand_grey_dark, 10%); 
+		input { 
+			color: darken($brand_grey_dark, 10%); 
+			border-color: darken($brand_grey_light, 10%); 
+		}
+	} 
+
+	input,
+	.dropdown {
+		background: transparent;
+		border: 0;
+		padding: 5px 10px;
+	}
+
+	input { border-bottom: 2px solid #fff; }
+
+	.btn-group {
+		padding: 10px;
+		@include clear;
+	}
+
+	label {
+		margin-bottom: 0;
+
+		&.control-label {
+			padding: 5px 10px;
+			text-transform: uppercase;
+			font-size: 0.8rem;
+			letter-spacing: 0.05rem;
+			clear: both;
+			padding-bottom: 0;
+		}
+	}
+
+	label.btn-default {
+		padding:  0;
+		position: relative;
+		border-color: darken($brand_grey_light, 10%);
+		color: $brand_grey_dark;
+		margin-bottom: 5px;
+    display: block;
+    float: left;
+    width: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin-right: -1px;
+    z-index: 1;
+    &:last-child { border-right: 1px solid darken($brand_grey_light, 10%);}
+		&:hover, 
+		&:focus,
+		&:active {
+			cursor: pointer;
+	   	background: $sf-hover;
+			color: darken($brand_grey_dark, 20%);
+    	z-index: 1;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		&.active {
+			background: $sf-selected;
+			color: #fff;
+    	box-shadow: 0;
+    	border-color: $sf-selected;
+    	z-index: 2;
+    	&:hover,
+    	&:focus,
+    	&:active {		
+				background: $sf-selected;
+				-webkit-tap-highlight-color: transparent;
+			}
+		}
+
+	 [type="radio"] {
+		 	position: absolute;
+		 	top: 0;
+		 	left: -2000px;
+		 	z-index: -1;
+  	}
+	}
+
+
+	&.dropdown {
+
+		padding: 0;
+
+		select {
+		  height: 42px;
+		  padding: 10px;
+		  border-radius: 0;
+	    padding-right: 20px;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    background-image: url("/img/dropdown.svg");
+	    background-size: 20px;
+	    background-repeat: no-repeat;
+	    background-position: 97% 13px;
+	    -webkit-appearance: none;
+	    margin: 0;
+	    border: none;
+	    box-shadow: none;
+	    background-color: transparent;
+	    width: 100%;
+	    &:focus {
+	    	outline: 0;
+	    }
+	  }
+
+	  span { text-transform: capitalize;}
+	}
+}
+
+.form__cta {
+	padding: 10px;
+	@media screen and (min-width: 32rem) {
+		border: 1px solid darken($brand_grey_light, 10%);
+		border-top: 0;
+	}
+
+}
+
+
+.form__header {
+	text-align: center;
+	padding: 1rem;
+	@media screen and (min-width: 32rem) {
+		border: 1px solid darken($brand_grey_light, 10%);
+	}
+}
+
+.form-group.done {
+	background: red;
+	background: url("/img/check.png") right 20px bottom 10px no-repeat;
+	background-size: 40px;
+}
