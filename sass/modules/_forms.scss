@@ -118,7 +118,7 @@ fieldset {
 	    -webkit-appearance: none;
 	    -moz-appearance: none;
 	    appearance: none;
-	    background-image: url("/img/dropdown.svg");
+	    background-image: url("../img/dropdown.svg");
 	    background-size: 20px;
 	    background-repeat: no-repeat;
 	    background-position: 97% 13px;
@@ -157,6 +157,6 @@ fieldset {
 
 .form-group.done {
 	background: red;
-	background: url("/img/check.png") right 20px bottom 10px no-repeat;
+	background: url("../img/check.png") right 20px bottom 10px no-repeat;
 	background-size: 40px;
 }

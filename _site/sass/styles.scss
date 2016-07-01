@@ -350,14 +350,14 @@ img { max-width: 100%; }
 	}
 
 	@media screen and (min-width: 50rem) {
-		background-image: url("/img/form-background.jpg");
+		background-image: url("../img/form-background.jpg");
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: 2rem 0 ;
 
 		.opposite-gender &,
 		.mens &,
-		&.mens { background-image: url("{{ site.baseurl }}/img/form-background-mens.jpg"); }
+		&.mens { background-image: url("../img/form-background-mens.jpg"); }
 
 		.opposite-gender & {
 			background: none;

@@ -1534,7 +1534,7 @@ fieldset {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      background-image: url("/img/dropdown.svg");
+      background-image: url("../img/dropdown.svg");
       background-size: 20px;
       background-repeat: no-repeat;
       background-position: 97% 13px;
@@ -1565,7 +1565,7 @@ fieldset {
 
 .form-group.done {
   background: red;
-  background: url("/img/check.png") right 20px bottom 10px no-repeat;
+  background: url("../img/check.png") right 20px bottom 10px no-repeat;
   background-size: 40px; }
 
 .safari_only {
@@ -1829,12 +1829,12 @@ img {
       background: #fff; } }
   @media screen and (min-width: 50rem) {
     .get-started-container {
-      background-image: url("/img/form-background.jpg");
+      background-image: url("../img/form-background.jpg");
       background-repeat: no-repeat;
       background-size: auto 100%;
       background-position: 2rem 0; }
       .opposite-gender .get-started-container, .mens .get-started-container, .get-started-container.mens {
-        background-image: url("{{ site.baseurl }}/img/form-background-mens.jpg"); }
+        background-image: url("../img/form-background-mens.jpg"); }
       .opposite-gender .get-started-container {
         background: none; }
       .get-started-container .get-started-form:before {
