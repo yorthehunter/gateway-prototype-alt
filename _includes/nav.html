@@ -85,19 +85,27 @@
                     <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/faq">FAQ</a></li>
                   {% endif %}
 
-                  {% if page.skin == "womens" %}
-                    <li><a href="{{ site.baseurl }}/style-tips">Style Tips</a></li>
-                  {% elsif page.skin == "mens" %}
-                    <li><a href="{{ site.baseurl }}/style-tips">Style Tips</a></li>
+                  {% if page.status == "logged-in" %}
+
+                    <li><a href="#">Style Tips</a></li>
+
                   {% else %}
-                    <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
-                   
-                        <ul class="men-or-women unstyled">
-                          <li><a href="{{ site.baseurl }}/style-tips">Women</a></li>
-                          <li><a href="{{ site.baseurl }}/style-tips">Men</a></li>
-                        </ul>
-                      
-                    </li>
+
+                    {% if page.skin == "womens" %}
+                      <li><a href="{{ site.baseurl }}/style-tips">Style Tips</a></li>
+                    {% elsif page.skin == "mens" %}
+                      <li><a href="{{ site.baseurl }}/style-tips">Style Tips</a></li>
+                    {% else %}
+                      <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
+                     
+                          <ul class="men-or-women unstyled">
+                            <li><a href="{{ site.baseurl }}/style-tips">Women</a></li>
+                            <li><a href="{{ site.baseurl }}/style-tips">Men</a></li>
+                          </ul>
+                        
+                      </li>
+                    {% endif %}
+
                   {% endif %}
 
                   <li>
