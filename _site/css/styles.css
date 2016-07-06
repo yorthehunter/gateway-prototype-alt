@@ -1046,14 +1046,19 @@ width: 50%;*/ }
       .men-or-women li a:hover, .men-or-women li a:focus {
         border-bottom: 0; }
   footer .men-or-women {
-    left: -1rem; }
+    left: -1rem;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    background: #f2f1ef;
+    padding: 5px; }
     footer .men-or-women li {
-      width: auto; }
+      display: inline; }
+      footer .men-or-women li a {
+        padding: 0 0.5rem; }
     @media screen and (min-width: 650px) {
       footer .men-or-women {
-        left: 75px; }
-        footer .men-or-women a {
-          padding: 2px; } }
+        top: 1.5rem; } }
   @media screen and (min-width: 650px) {
     header .men-or-women {
       position: absolute;
@@ -1309,6 +1314,9 @@ a.footer-toggle {
     display: block;
     margin-bottom: 0.5rem; }
 
+.footer__logo {
+  display: none; }
+
 @media screen and (min-width: 700px) {
   footer {
     padding: 2rem;
@@ -1363,18 +1371,21 @@ a.footer-toggle {
       right: 0;
       padding-bottom: 10px; } }
 @media screen and (min-width: 1100px) {
-  footer {
-   /* .download {
-
-      position: absolute;
-      top: 20px;
-      left: 2%;
-    }*/ }
-    footer .footer-nav {
-      width: 50%;
-      margin-left: 20%; }
-    footer .social {
-      width: 30%; } }
+  footer .footer-nav {
+    width: 50%; }
+  footer .social {
+    width: 25%; }
+  footer .download {
+    float: left;
+    clear: both;
+    top: -30px;
+    position: relative; }
+  footer .footer__logo {
+    display: block;
+    float: left;
+    width: 25%; }
+    footer .footer__logo img {
+      max-width: 200px; } }
 @media screen and (min-width: 70rem) {
   footer {
     padding: 2rem calc(50% - 37rem); } }
@@ -1578,7 +1589,8 @@ fieldset {
     background: #fff;
     display: none; } }
 /* developement to toggle overlays */
-/*.pick-a-channel, 
+/*
+.pick-a-channel, 
 .toggle-gender,
 #below-the-footer-fold, 
 .men-or-women,

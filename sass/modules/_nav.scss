@@ -404,13 +404,19 @@ nav {
 
   footer & { 
     left: -1rem; 
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    background: $brand_grey_light;
+    padding: 5px;
+
     li {
-      width: auto;
+      display: inline;
+      a { padding: 0 0.5rem ; }
     }
     @media screen and (min-width: 650px) {
-      left: 75px;
+      top: 1.5rem;
       a {
-        padding: 2px;
       }
     }
   }

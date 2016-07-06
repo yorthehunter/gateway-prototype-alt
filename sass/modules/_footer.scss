@@ -164,6 +164,10 @@ a.footer-toggle {
   }
 }
 
+.footer__logo {
+  display: none;
+}
+
 @media screen and (min-width: 700px) { 
 
   footer {
@@ -261,19 +265,27 @@ a.footer-toggle {
 
     .footer-nav {
       width: 50%;
-      margin-left: 20%;
     }
 
     .social {
-      width: 30%;
+      width: 25%;
     }
 
-   /* .download {
+    .download {
 
-      position: absolute;
-      top: 20px;
-      left: 2%;
-    }*/
+      float: left;
+      clear: both;
+      top: -30px;
+      position: relative;
+    }
+
+    .footer__logo {
+      display: block;
+      float: left;
+      width: 25%;
+      img { max-width: 200px; }
+    }
+
   }
 
 }

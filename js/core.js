@@ -37,12 +37,12 @@ $(function() {
     return false;
   });
 
-  $('footer .nav__style-tips').hover(function(){
+  $('footer .nav__style-tips').click(function(){
     $('footer .men-or-women').slideToggle( "fast" );
     return false;
   });
 
-  $('header .nav__style-tips').hover(function(){
+  $('header .nav__style-tips').click(function(){
     $('header .men-or-women').slideToggle( "fast" );
     $('header .nav__style-tips').toggleClass('is-open');
     return false;
