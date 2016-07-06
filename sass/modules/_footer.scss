@@ -210,11 +210,11 @@ a.footer-toggle {
     }
 
     .terms-and-conditions {
-      float: left;
+      float: right;
     }
 
     .copyright {
-      text-align: right;
+      text-align: left;
       border-top: 1px solid $brand_grey-light;
       padding-top: 1rem;
       margin-bottom: 0;
@@ -242,6 +242,15 @@ a.footer-toggle {
       background: none;
       border: 0;
       padding: 0;
+
+      .pick-a-channel {
+        background: #fff;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        padding-bottom: 10px;
+      }
     }
   }
 }
@@ -259,24 +268,20 @@ a.footer-toggle {
       width: 30%;
     }
 
-    .download {
+   /* .download {
 
       position: absolute;
       top: 20px;
       left: 2%;
-    }
+    }*/
   }
 
 }
 
-/*@media screen and (min-width: 70rem) { 
+@media screen and (min-width: 70rem) { 
 
   footer {
-    padding: 2rem calc(50% - 32rem);
-    
-     a.iphone-app-store {
-      right: calc(50% - 27.6rem);
-    }
+    padding: 2rem calc(50% - 37rem);
   }
 
-}*/
+}

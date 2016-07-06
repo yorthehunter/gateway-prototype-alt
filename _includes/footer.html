@@ -41,9 +41,14 @@
 			<li>
 				<h5>The service</h5>
 				<ul class="unstyled">
-					<li><a>Help Center »</a></li>
-					<li><a>Contact Us »</a></li>
-
+					<li class="hide-on-big"><a>Help Center »</a></li>
+					<li class="hide-on-big"><a>Contact Us »</a></li>	          		
+					<li><a>Gift Cards »</a></li>
+					<!-- {% unless page.skin == "mens" %} -->
+					<li><a>iPhone App »</a></li>
+					<!-- {% endunless %} -->
+					<li><a>Plus Sizes »</a></li>
+					
 					{% if page.status == "logged-out" %}
 
 						{% if page.skin == "womens" or page.skin == "mens" %}
@@ -63,12 +68,6 @@
 	        	<li><a>Style Tips »</a></li>
 
 	        {% endif %}
-	          		
-					<li><a>Gift Cards »</a></li>
-					{% unless page.skin == "mens" %}
-					<li><a>iPhone App »</a></li>
-					{% endunless %}
-					<li><a>Plus Sizes »</a></li>
 				</ul>
 			</li>
 			<li>
@@ -84,9 +83,10 @@
 			<li class="hide-on-small">
 				<h5>Have a question?</h5>
 				<ul class="unstyled">
-					<li><a>About Us »</a></li>
-					<li><a>Press »</a></li>
-					<li><a>Affiliate Program »</a></li>
+					
+					<li><a href="{{ site.baseurl }}/faq">FAQ »</a></li>
+					<li><a>Help Center »</a></li>
+					<li><a>Contact Us »</a></li>
 				</ul>
 			</li>
 		</ul>

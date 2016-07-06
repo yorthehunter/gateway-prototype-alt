@@ -771,7 +771,7 @@ header {
   font-size: 14px;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  background: #f9f8f7;
+  background: #fff;
   border-bottom: 1px solid #dfdddc; }
   .home header {
     background: transparent;
@@ -782,6 +782,8 @@ header {
     border-color: #f9f8f7; }
     .opposite-gender header .secondary-nav .active a:after {
       border-color: #f9f8f7; }
+  .logged-in header {
+    background: #f9f8f7; }
   header a {
     text-decoration: none !important;
     padding: 0 1rem; }
@@ -891,7 +893,8 @@ nav {
           content: "";
           width: 14px;
           height: 14px;
-          background: #f9f8f7;
+          /*       background:  lighten($brand_grey_light, 3%);*/
+          background: #fff;
           border-right: 1px solid #dfdddc;
           border-bottom: 1px solid #dfdddc;
           display: block;
@@ -1031,7 +1034,7 @@ nav {
     color: #0c0d0e; }
 
 .men-or-women {
-  background: #f9f8f7;
+  background: #fff;
   display: none; }
   .men-or-women li {
     display: block;
@@ -1051,18 +1054,16 @@ width: 50%;*/ }
         left: 75px; }
         footer .men-or-women a {
           padding: 2px; } }
-  header .men-or-women {
-    background: #fdfdfd; }
-    @media screen and (min-width: 650px) {
-      header .men-or-women {
-        background: #f9f8f7;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        border-top: 1px solid #dfdddc; }
-        header .men-or-women li {
-          display: block;
-          width: 100%; } }
+  @media screen and (min-width: 650px) {
+    header .men-or-women {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      border: 1px solid #dfdddc;
+      border-top: #fff; }
+      header .men-or-women li {
+        display: block;
+        width: 100%; } }
 
 header .btn--cta {
   float: right;
@@ -1335,9 +1336,9 @@ a.footer-toggle {
     footer a {
       color: #2f3237; }
     footer .terms-and-conditions {
-      float: left; }
+      float: right; }
     footer .copyright {
-      text-align: right;
+      text-align: left;
       border-top: 1px solid #f2f1ef;
       padding-top: 1rem;
       margin-bottom: 0; }
@@ -1353,28 +1354,30 @@ a.footer-toggle {
     clear: none;
     background: none;
     border: 0;
-    padding: 0; } }
+    padding: 0; }
+    footer .social .pick-a-channel {
+      background: #fff;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      padding-bottom: 10px; } }
 @media screen and (min-width: 1100px) {
-  footer .footer-nav {
-    width: 50%;
-    margin-left: 20%; }
-  footer .social {
-    width: 30%; }
-  footer .download {
-    position: absolute;
-    top: 20px;
-    left: 2%; } }
-/*@media screen and (min-width: 70rem) { 
-
   footer {
-    padding: 2rem calc(50% - 32rem);
-    
-     a.iphone-app-store {
-      right: calc(50% - 27.6rem);
-    }
-  }
+   /* .download {
 
-}*/
+      position: absolute;
+      top: 20px;
+      left: 2%;
+    }*/ }
+    footer .footer-nav {
+      width: 50%;
+      margin-left: 20%; }
+    footer .social {
+      width: 30%; } }
+@media screen and (min-width: 70rem) {
+  footer {
+    padding: 2rem calc(50% - 37rem); } }
 .social ul {
   text-align: center;
   margin: 0 auto; }
