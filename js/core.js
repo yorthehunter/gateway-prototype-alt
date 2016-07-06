@@ -32,8 +32,8 @@ $(function() {
   // });
 
 
-  $('.account-nav').hover(function(){
-    $('.account-nav .sub-nav').slideToggle( "fast" );
+  $('.account-toggle').hover(function(){
+    $('.account-nav').slideToggle( "fast" );
     return false;
   });
 

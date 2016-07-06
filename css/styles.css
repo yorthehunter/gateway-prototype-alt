@@ -863,14 +863,6 @@ nav {
         color: #000; }
   nav .secondary-nav a {
     padding: 0 1rem; }
-  @media screen and (max-width: 365px) {
-    nav {
-      border-left: 1px solid #f2f1ef;
-      border-bottom: 1px solid #f2f1ef; } }
-  @media screen and (min-width: 300px) {
-    nav a {
-      font-size: 14px;
-      padding: 0 3px; } }
   @media screen and (min-width: 400px) {
     nav a {
       padding: 0 5px; } }
@@ -915,24 +907,26 @@ nav {
 
 .account-nav {
   display: none;
-  float: left; }
-  .account-nav .sub-nav {
-    background: #f9f8f7;
-    position: absolute;
-    top: 51px;
-    left: 50px;
-    text-align: left;
-    display: none; }
-    .account-nav .sub-nav li {
-      display: block; }
-      .account-nav .sub-nav li a {
-        padding: 0 1rem; }
+  background: #f9f8f7;
+  border: 1px solid #dfdddc;
+  border-top: #f9f8f7;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  text-align: left; }
+  .account-nav li {
+    display: block; }
+    .account-nav li a {
+      padding: 0 1rem; }
 
-@media screen and (min-width: 550px) {
-  .account-nav {
-    display: block; } }
 .logged-in header {
   position: absolute; }
+  .logged-in header li.account-toggle {
+    position: relative;
+    display: none; }
+    @media screen and (min-width: 550px) {
+      .logged-in header li.account-toggle {
+        display: inline-block; } }
   @media screen and (min-width: 365px) {
     .logged-in header #secondary-toggle {
       display: block; }

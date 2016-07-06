@@ -39,21 +39,7 @@
 
     <nav class="main">
 
-        {% if page.status == "logged-in" %}
-
-        <ul class="account-nav">
-
-          <li><a href="#">Kimberly ▾</a>
-            <ul class="sub-nav">
-              <li><a href="#">Account</a><li>
-              <li><a href="#">Credit</a><li>
-              <li><a href="{{ site.baseurl }}">Sign out</a></li>
-            </ul> 
-          </li>
-
-        </ul>
-
-        {% endif %}
+       
       
         <ul class="primary-nav">
 
@@ -62,6 +48,17 @@
                 <li{% if page.active == "my-fix" %} class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in">My fix</a></li>
                 <li{% if page.active == "style-profile" %} class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/style-profile">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
+
+             
+
+
+                <li class="account-toggle"><a href="#">Kimberly ▾</a>
+                  <ul class="account-nav">
+                      <li><a href="#">Account</a><li>
+                      <li><a href="#">Credit</a><li>
+                      <li><a href="{{ site.baseurl }}">Sign out</a></li>
+                  </ul>
+                </li>
               {% endif %}
 
               <li>
