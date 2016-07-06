@@ -199,8 +199,6 @@ a.footer-toggle {
     }
   
     .social {
-      float: right; 
-      width: 17rem;
       border-bottom: 0;
       text-align: center;
 
@@ -223,27 +221,21 @@ a.footer-toggle {
     }
 
     .footer-nav {
-      float: left;
-      width: 60%; 
       clear: none;
       margin-bottom: 1rem; 
       border: 0;
-      max-width: 25rem;
-    }
+
+      > li {
+        width: 33%;
+        }    
+      }
 
     h5 { margin-bottom: 0.5rem; }
 
     a {
       color: $brand_grey_dark; 
     }
-
-    a.iphone-app-store {
-      position: absolute;
-      bottom: 5.5rem;
-      right: 6.2rem;
-      border: 0;
-    }
-
+    
     .terms-and-conditions {
       float: left;
     }
@@ -257,6 +249,19 @@ a.footer-toggle {
       p { display: inline;}
 
     }
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .footer-nav {
+
+    width: 60%;
+  } 
+
+  .social {
+    float: right;
+    width: 40%;
   }
 }
 

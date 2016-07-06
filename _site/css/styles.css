@@ -1332,8 +1332,6 @@ a.footer-toggle {
       background: #fff;
       padding: 0; }
     footer .social {
-      float: right;
-      width: 17rem;
       border-bottom: 0;
       text-align: center; }
       footer .social .social-close {
@@ -1347,21 +1345,15 @@ a.footer-toggle {
           color: black;
           border-color: transparent; }
     footer .footer-nav {
-      float: left;
-      width: 60%;
       clear: none;
       margin-bottom: 1rem;
-      border: 0;
-      max-width: 25rem; }
+      border: 0; }
+      footer .footer-nav > li {
+        width: 33%; }
     footer h5 {
       margin-bottom: 0.5rem; }
     footer a {
       color: #2f3237; }
-    footer a.iphone-app-store {
-      position: absolute;
-      bottom: 5.5rem;
-      right: 6.2rem;
-      border: 0; }
     footer .terms-and-conditions {
       float: left; }
     footer .copyright {
@@ -1371,6 +1363,13 @@ a.footer-toggle {
       margin-bottom: 0; }
       footer .copyright p {
         display: inline; } }
+@media screen and (min-width: 900px) {
+  .footer-nav {
+    width: 60%; }
+
+  .social {
+    float: right;
+    width: 40%; } }
 /*@media screen and (min-width: 70rem) { 
 
   footer {
@@ -1591,10 +1590,11 @@ fieldset {
   display: block !important;
 }
   */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .hide-on-small {
-    display: none !important; } }
-@media screen and (min-width: 550px) {
+    display: none !important;
+    background: red; } }
+@media screen and (min-width: 700px) {
   .hide-on-big {
     display: none !important; } }
 /* BY TORUNN SEIM SKROGSTAD
