@@ -773,6 +773,11 @@ header {
   text-transform: uppercase;
   background: #f9f8f7;
   border-bottom: 1px solid #dfdddc; }
+  .home header {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    padding-right: 6px; }
   .opposite-gender header {
     border-color: #f9f8f7; }
     .opposite-gender header .secondary-nav .active a:after {
@@ -1027,15 +1032,12 @@ nav {
 
 .men-or-women {
   background: #f9f8f7;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  right: 0; }
+  display: none; }
   .men-or-women li {
     display: block;
-    float: left;
-    width: 50%; }
+               /*
+float: left;
+width: 50%;*/ }
     .men-or-women li a {
       padding: 0 1rem; }
       .men-or-women li a:hover, .men-or-women li a:focus {
@@ -1054,6 +1056,7 @@ nav {
     @media screen and (min-width: 650px) {
       header .men-or-women {
         background: #f9f8f7;
+        position: absolute;
         top: 50px;
         left: 0;
         border-top: 1px solid #dfdddc; }

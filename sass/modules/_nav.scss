@@ -17,6 +17,13 @@ header {
   background: lighten($brand_grey_light, 3%);
   border-bottom: 1px solid lighten($brand_grey, 30%);
 
+  .home & {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    padding-right: 6px;
+  }
+
   .opposite-gender & { 
     border-color: lighten($brand_grey_light, 3%); 
     .secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }
@@ -79,7 +86,6 @@ nav {
   line-height: 50px;
   background: lighten($brand_grey_light, 3%);
   border-top: 1px solid lighten($brand_grey, 30%);
-
   font-family: 'BrandonText-Bold';
 
   ul, 
@@ -380,14 +386,10 @@ nav {
 .men-or-women {
   background: lighten($brand_grey_light, 3%);
   display: none;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  right: 0;
   li {
-    display: block;
+    display: block;/*
     float: left;
-    width: 50%;
+    width: 50%;*/
     a { 
       padding: 0 1rem; 
       &:hover, &:focus {
@@ -413,6 +415,7 @@ nav {
     background: lighten($brand_grey_light, 5%);
     @media screen and (min-width: 650px) {
       background: lighten($brand_grey_light, 3%);
+      position: absolute;
       top: 50px;
       left: 0;       
       border-top: 1px solid lighten($brand_grey, 30%);
