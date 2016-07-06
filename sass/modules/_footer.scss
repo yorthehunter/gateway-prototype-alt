@@ -27,7 +27,11 @@ footer {
   .social {
     position: relative;
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 10px;   
+    border-top: 1px solid $brand_grey-light;
+    border-bottom: 1px solid $brand_grey-light;
+    background: lighten($brand_grey-light, 5%);
+    margin-bottom: 1rem;
 
     .social-close {
       display: none; 
@@ -108,9 +112,6 @@ a.footer-toggle {
 .footer-nav {
   clear: both;
   @include clear;
-  border-top: 1px solid $brand_grey-light;
-  border-bottom: 1px solid $brand_grey-light;
-  background: lighten($brand_grey-light, 5%);
   margin-bottom: 1rem;
   padding: 20px calc(50% - 10rem);
 
@@ -235,7 +236,7 @@ a.footer-toggle {
     a {
       color: $brand_grey_dark; 
     }
-    
+
     .terms-and-conditions {
       float: left;
     }

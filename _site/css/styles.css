@@ -1186,7 +1186,11 @@ footer {
   footer .social {
     position: relative;
     text-align: center;
-    padding: 20px 10px; }
+    padding: 20px 10px;
+    border-top: 1px solid #f2f1ef;
+    border-bottom: 1px solid #f2f1ef;
+    background: #fdfdfd;
+    margin-bottom: 1rem; }
     footer .social .social-close {
       display: none; }
   footer a {
@@ -1259,9 +1263,6 @@ a.footer-toggle {
 .footer-nav {
   clear: both;
   zoom: 1;
-  border-top: 1px solid #f2f1ef;
-  border-bottom: 1px solid #f2f1ef;
-  background: #fdfdfd;
   margin-bottom: 1rem;
   padding: 20px calc(50% - 10rem); }
   .footer-nav:before {
