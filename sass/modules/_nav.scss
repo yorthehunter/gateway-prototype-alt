@@ -370,10 +370,31 @@ nav {
   position: relative;
   
   &.is-open {
+    background: lighten($brand_grey_light, 4%);
     a { 
       color: darken($brand_grey_dark, 15%);
     } 
   }
+
+  footer & {
+    padding: 5px 10px;
+    margin-left: -10px;
+
+    .men-or-women {
+      padding: 0;
+      background: lighten($brand_grey_light, 4%);
+      width: 100%;
+      z-index: 5;
+      top: 40px;
+      a {
+        padding: 10px;
+      }
+    }
+    @media screen and (min-width: 700px) {
+      margin-top: -5px;
+    }
+  }
+
 }
 
 .men-or-women {
@@ -400,7 +421,6 @@ nav {
     padding: 5px;
 
     li {
-      display: inline;
       a { padding: 0 0.5rem ; }
     }
     @media screen and (min-width: 650px) {
@@ -423,7 +443,6 @@ nav {
       }
     }
   }
-
 }
 
 

@@ -39,6 +39,7 @@ $(function() {
 
   $('footer .nav__style-tips').click(function(){
     $('footer .men-or-women').slideToggle( "fast" );
+    $('.nav__style-tips').toggleClass('is-open')
     return false;
   });
 

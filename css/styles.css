@@ -1024,8 +1024,24 @@ nav {
 
 .nav__style-tips {
   position: relative; }
-  .nav__style-tips.is-open a {
-    color: #0c0d0e; }
+  .nav__style-tips.is-open {
+    background: #fbfbfa; }
+    .nav__style-tips.is-open a {
+      color: #0c0d0e; }
+  footer .nav__style-tips {
+    padding: 5px 10px;
+    margin-left: -10px; }
+    footer .nav__style-tips .men-or-women {
+      padding: 0;
+      background: #fbfbfa;
+      width: 100%;
+      z-index: 5;
+      top: 40px; }
+      footer .nav__style-tips .men-or-women a {
+        padding: 10px; }
+    @media screen and (min-width: 700px) {
+      footer .nav__style-tips {
+        margin-top: -5px; } }
 
 .men-or-women {
   background: #fff;
@@ -1046,10 +1062,8 @@ width: 50%;*/ }
     left: 0;
     background: #f2f1ef;
     padding: 5px; }
-    footer .men-or-women li {
-      display: inline; }
-      footer .men-or-women li a {
-        padding: 0 0.5rem; }
+    footer .men-or-women li a {
+      padding: 0 0.5rem; }
     @media screen and (min-width: 650px) {
       footer .men-or-women {
         top: 1.5rem; } }
@@ -1175,6 +1189,7 @@ footer {
     clear: both; }
   footer li {
     line-height: 44px;
+    padding-right: 5px;
     margin-bottom: 0; }
   footer.is-open .footer-toggle {
     background: #fff; }
@@ -1193,6 +1208,8 @@ footer {
     margin-bottom: 1rem; }
     footer .social .social-close {
       display: none; }
+    footer .social li {
+      padding-right: 0px; }
   footer a {
     color: #2f3237; }
     footer a:hover, footer a:focus {
@@ -1318,7 +1335,7 @@ a.footer-toggle {
     text-align: left;
     font-size: 0.9rem; }
     footer li {
-      line-height: inherit; }
+      line-height: 2rem; }
     footer .below-the-footer-fold,
     footer .footer-nav,
     footer .copyright {
@@ -1336,7 +1353,7 @@ a.footer-toggle {
       footer .footer-nav > li {
         width: 33%; }
     footer h5 {
-      margin-bottom: 0.5rem; }
+      margin-bottom: 0; }
     footer a {
       color: #2f3237; }
     footer .terms-and-conditions {
@@ -1376,8 +1393,9 @@ a.footer-toggle {
   footer .download {
     float: left;
     clear: both;
-    top: -30px;
-    position: relative; }
+    top: -140px;
+    position: relative;
+    margin-bottom: 0; }
   footer .footer__logo {
     display: block;
     float: left;
@@ -1607,7 +1625,8 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
     background: #fff;
     display: none; } }
 /* developement to toggle overlays */
-/*.pick-a-channel, 
+/*
+.pick-a-channel, 
 .toggle-gender,
 #below-the-footer-fold, 
 .men-or-women,
