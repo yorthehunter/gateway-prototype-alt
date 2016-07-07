@@ -1,4 +1,4 @@
-<div class="get-started-container">
+<div class="get-started-container" id="get-started">
 
 <form class="get-started-form" novalidate="novalidate" data-init-batch-form-validation="true" data-init-blur-form-validation="true" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
 
@@ -12,7 +12,12 @@
 
               {% if page.active == "mens"%}
               
-              <a class="button btn" data-rel="#content-a" href="#" >Women</a> <a class="button active btn" data-rel="#content-b" href="#" >Men</a>
+              <a class="button btn" data-rel="#content-a" href="#" style="display:none">Women</a> <a class="button active btn" data-rel="#content-b" href="#" style="display:none">Men</a>
+
+              {% elsif page.active == "womens"%}
+
+
+              <a class="button active btn" data-rel="#content-a" href="#" style="display:none">Women</a> <a class="button btn" data-rel="#content-b" href="#" style="display:none">Men</a>
 
               {% else %}
 
@@ -28,12 +33,12 @@
         </div>
 
 
-          <div class="form-group" data-validate="presence">
+          <div class="form-group first-name" data-validate="presence">
             <label class="control-label" for="user_first_name">First Name</label>
             <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_first_name">
           </div>
 
-          <div class="form-group" data-validate="presence">
+          <div class="form-group last-name" data-validate="presence">
             <label class="control-label" for="user_last_name">Last Name</label>
             <input maxlength="30" class="form-control input-lg" size="30" type="text" name="user[first_name]" id="user_last_name">
           </div>
@@ -67,11 +72,11 @@
                       <input type="radio" name="dress-size" id="_40" value="40" class="form-control">L</label>
                     <label class="btn btn-default">
                       <input type="radio" name="dress-size" id="_41" value="41" class="form-control">XL</label>
-               
-                <p class="instructional-note">Need sizing help? Consult our <a>Size Chart »</a></p>
-                <p class="instructional-note">We carry sizes 0–14 (XS–XL),
+               <p class="instructional-note">We carry sizes 0–14 (XS–XL),
                   as well as maternity and petite&nbsp;clothing. <a>Interested in Plus? »</a></p>
-              </div>  </div> 
+              </div>  
+                <p class="instructional-note size-chart"><a>Size Chart »</a></p>
+                </div> 
                   </div>
                   <div class="container" id="content-b">
                       
@@ -124,9 +129,9 @@
                     <label class="btn btn-default">
                       <input type="radio" name="" id="_39" value="39" class="form-control">34</label>
                   
-                <p class="instructional-note">Need sizing help? Consult our <a>Size Chart »</a></p>
                 <p class="instructional-note">We currently carry sizes XS-XXL and pant sizes 28-42.</p>
               </div>
+                <p class="instructional-note size-chart"><a>Size Chart »</a></p>
 
 
                 </div>
@@ -174,7 +179,7 @@
 
             <p class="help-block">Already have an account? <a href="{{ site.baseurl }}/login">Sign In »</a></p>
 
-            <p class="instructional-note">By signing up you accept the <a>terms and conditions</a> of Stitch&nbsp;Fix.</p>
+            <p class="fine-print">By signing up you accept the <a>terms and conditions</a> of Stitch&nbsp;Fix.</p>
       
 
                   </div>

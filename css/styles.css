@@ -1498,24 +1498,30 @@ fieldset {
     position: relative;
     border-color: #dbd8d3;
     color: #2f3237;
-    margin-bottom: 5px;
     display: block;
     float: left;
-    width: 44px;
+    width: 48px;
     line-height: 44px;
     text-align: center;
     margin-right: -1px;
-    z-index: 1; }
+    margin-top: -1px;
+    z-index: 1;
+           /*
+background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
     .form-group label.btn-default:last-child {
       border-right: 1px solid #dbd8d3; }
     .form-group label.btn-default:hover, .form-group label.btn-default:focus, .form-group label.btn-default:active {
       cursor: pointer;
       background: #f2f1ef;
+                      /*
+background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
       color: black;
       z-index: 1;
       -webkit-tap-highlight-color: transparent; }
     .form-group label.btn-default.active {
       background: #1695a3;
+      		                         /*
+         	background-image: linear-gradient($sf-selected, darken($sf-selected, 5%));*/
       color: #fff;
       box-shadow: 0;
       border-color: #1695a3;
@@ -1571,6 +1577,20 @@ fieldset {
   background: red;
   background: url("../img/check.png") right 20px bottom 10px no-repeat;
   background-size: 40px; }
+
+.first-name {
+  float: left;
+  width: 50%;
+  border-right-width: 1px;
+  border-bottom-width: 0; }
+  @media screen and (min-width: 32rem) {
+    .first-name {
+      border-right-width: 0px; } }
+
+.last-name {
+  float: right;
+  width: 50%;
+  clear: none; }
 
 .safari_only {
   height: 44px;

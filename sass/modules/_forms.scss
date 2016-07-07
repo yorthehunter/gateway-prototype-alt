@@ -64,27 +64,30 @@ fieldset {
 		position: relative;
 		border-color: darken($brand_grey_light, 10%);
 		color: $brand_grey_dark;
-		margin-bottom: 5px;
     display: block;
     float: left;
-    width: 44px;
+    width: 48px;
     line-height: 44px;
     text-align: center;
     margin-right: -1px;
-    z-index: 1;
+    margin-top: -1px;
+    z-index: 1;/*
+    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/
     &:last-child { border-right: 1px solid darken($brand_grey_light, 10%);}
 		&:hover, 
 		&:focus,
 		&:active {
 			cursor: pointer;
-	   	background: $sf-hover;
+	   	background: $sf-hover;/*
+	   	background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
 			color: darken($brand_grey_dark, 20%);
     	z-index: 1;
 			-webkit-tap-highlight-color: transparent;
 		}
 
 		&.active {
-			background: $sf-selected;
+			background: $sf-selected;/*
+	   	background-image: linear-gradient($sf-selected, darken($sf-selected, 5%));*/
 			color: #fff;
     	box-shadow: 0;
     	border-color: $sf-selected;
@@ -160,3 +163,15 @@ fieldset {
 	background: url("../img/check.png") right 20px bottom 10px no-repeat;
 	background-size: 40px;
 }
+
+.first-name {
+	float: left; width: 50%; border-right-width: 1px; border-bottom-width: 0;
+	@media screen and (min-width: 32rem) {
+		border-right-width: 0px;
+	}
+}
+
+.last-name {
+	float: right; width: 50%; clear: none;
+}
+
