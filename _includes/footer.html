@@ -83,8 +83,12 @@
 			<li class="hide-on-small">
 				<h5>Have a question?</h5>
 				<ul class="unstyled">
-					
+
+				{% if page.skin == "womens" or page.skin == "mens" %}
+	          	<li><a href="{{ site.baseurl }}{{ page.skin }}/faq">FAQ »</a></li>
+	        	{% else %}	
 					<li><a href="{{ site.baseurl }}/faq">FAQ »</a></li>
+					{% endif %}
 					<li><a>Help Center »</a></li>
 					<li><a>Contact Us »</a></li>
 				</ul>
