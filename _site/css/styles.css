@@ -767,11 +767,11 @@ header {
   background: #fff;
   text-align: left;
   min-height: 51px;
-  font-family: 'BrandonText-Bold';
+  font-family: 'BrandonText-Regular';
   font-size: 14px;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  background: #fff;
+  background: #f9f8f7;
   border-bottom: 1px solid #dfdddc; }
   .home header {
     background: transparent;
@@ -782,11 +782,32 @@ header {
     border-color: #f9f8f7; }
     .opposite-gender header .secondary-nav .active a:after {
       border-color: #f9f8f7; }
-  .logged-in header {
-    background: #f9f8f7; }
   header a {
     text-decoration: none !important;
     padding: 0 1rem; }
+  header .active {
+       /*
+background: red; */ }
+    header .active a {
+      color: black;
+      position: relative;
+      /*      background: blue;*/ }
+      header .active a:after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: #f9f8f7;
+        border-right: 1px solid #dfdddc;
+        border-bottom: 1px solid #dfdddc;
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: calc(50% - 7px);
+        -ms-transform: rotate(45deg);
+        /* IE 9 */
+        -webkit-transform: rotate(45deg);
+        /* Safari */
+        transform: rotate(45deg); }
   header .btn {
     line-height: 1rem;
     padding: 0.6em 0.8em; }
@@ -815,11 +836,11 @@ header {
   #tertiary-toggle:hover,
   #tertiary-toggle:focus {
     color: #18191c; }
-  #toggle:active i:after, #toggle.active i:after,
+  #toggle:active i:after, #toggle.open i:after,
   #secondary-toggle:active i:after,
-  #secondary-toggle.active i:after,
+  #secondary-toggle.open i:after,
   #tertiary-toggle:active i:after,
-  #tertiary-toggle.active i:after {
+  #tertiary-toggle.open i:after {
     content: "\ea0f"; }
   #toggle i:after,
   #secondary-toggle i:after,
@@ -843,8 +864,7 @@ nav {
   z-index: 0;
   line-height: 50px;
   background: #f9f8f7;
-  border-top: 1px solid #dfdddc;
-  font-family: 'BrandonText-Bold'; }
+  border-top: 1px solid #dfdddc; }
   nav ul,
   nav li {
     margin: 0;
@@ -853,8 +873,7 @@ nav {
   nav a {
     display: block;
     border: none;
-    color: #2f3237;
-    position: relative; }
+    color: #2f3237; }
     .mens nav a {
       color: #2f3237; }
     nav a:hover, nav a:focus {
@@ -863,6 +882,18 @@ nav {
         color: #000; }
   nav .secondary-nav a {
     padding: 0 1rem; }
+  @media screen and (max-width: 365px) {
+    nav {
+      border-left: 1px solid #f2f1ef;
+      border-bottom: 1px solid #f2f1ef; } }
+  @media screen and (min-width: 300px) {
+    nav {
+      /*   .active a:after {
+           display: none;
+         }*/ }
+      nav a {
+        font-size: 14px;
+        padding: 0 3px; } }
   @media screen and (min-width: 400px) {
     nav a {
       padding: 0 5px; } }
@@ -879,25 +910,6 @@ nav {
       padding-left: 50px;
       padding-right: 50px;
       border-top: 0; }
-      nav .active a {
-        color: black; }
-        nav .active a:after {
-          content: "";
-          width: 14px;
-          height: 14px;
-          /*       background:  lighten($brand_grey_light, 3%);*/
-          background: #fff;
-          border-right: 1px solid #dfdddc;
-          border-bottom: 1px solid #dfdddc;
-          display: block;
-          position: absolute;
-          bottom: -8px;
-          left: calc(50% - 7px);
-          -ms-transform: rotate(45deg);
-          /* IE 9 */
-          -webkit-transform: rotate(45deg);
-          /* Safari */
-          transform: rotate(45deg); }
       nav li {
         display: inline-block; } }
   @media screen and (min-width: 800px) {
@@ -907,26 +919,24 @@ nav {
 
 .account-nav {
   display: none;
-  background: #f9f8f7;
-  border: 1px solid #dfdddc;
-  border-top: #f9f8f7;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  text-align: left; }
-  .account-nav li {
-    display: block; }
-    .account-nav li a {
-      padding: 0 1rem; }
+  float: left; }
+  .account-nav .sub-nav {
+    background: #f9f8f7;
+    position: absolute;
+    top: 51px;
+    left: 50px;
+    text-align: left;
+    display: none; }
+    .account-nav .sub-nav li {
+      display: block; }
+      .account-nav .sub-nav li a {
+        padding: 0 1rem; }
 
+@media screen and (min-width: 550px) {
+  .account-nav {
+    display: block; } }
 .logged-in header {
   position: absolute; }
-  .logged-in header li.account-toggle {
-    position: relative;
-    display: none; }
-    @media screen and (min-width: 550px) {
-      .logged-in header li.account-toggle {
-        display: inline-block; } }
   @media screen and (min-width: 365px) {
     .logged-in header #secondary-toggle {
       display: block; }
@@ -956,9 +966,7 @@ nav {
         bottom: -8px;
         left: calc(50% - 7px);
         -ms-transform: rotate(45deg);
-        /* IE 9 */
         -webkit-transform: rotate(45deg);
-        /* Safari */
         transform: rotate(45deg); }
     .logged-in header .secondary-nav {
       display: none;
@@ -976,9 +984,10 @@ nav {
         .logged-in header .secondary-nav a:hover, .logged-in header .secondary-nav a:focus {
           color: #706a66; }
       .logged-in header .secondary-nav .active a {
-        color: #2f3237; }
-        .logged-in header .secondary-nav .active a:after {
-          display: none; } }
+        color: #2f3237;
+        /*  &:after {
+            display: none;
+          }*/ } }
   @media screen and (min-width: 750px) {
     .logged-in header #secondary-toggle {
       display: none; }
@@ -995,8 +1004,10 @@ nav {
         display: inline-block; }
       .logged-in header .secondary-nav a {
         padding: 0 10px; }
-      .logged-in header .secondary-nav .active a:after {
-        display: block; }
+      .logged-in header .secondary-nav .active a {
+        /*&:after {
+          display: block;
+        }*/ }
     .logged-in header .tertiary-nav {
       display: none;
       position: absolute;
@@ -1024,27 +1035,11 @@ nav {
 
 .nav__style-tips {
   position: relative; }
-  .nav__style-tips.is-open {
-    background: #fbfbfa; }
-    .nav__style-tips.is-open a {
-      color: #0c0d0e; }
-  footer .nav__style-tips {
-    padding: 5px 10px;
-    margin-left: -10px; }
-    footer .nav__style-tips .men-or-women {
-      padding: 0;
-      background: #fbfbfa;
-      width: 100%;
-      z-index: 5;
-      top: 40px; }
-      footer .nav__style-tips .men-or-women a {
-        padding: 10px; }
-    @media screen and (min-width: 700px) {
-      footer .nav__style-tips {
-        margin-top: -5px; } }
+  .nav__style-tips.is-open a {
+    color: #0c0d0e; }
 
 .men-or-women {
-  background: #fff;
+  background: #f9f8f7;
   display: none; }
   .men-or-women li {
     display: block;
@@ -1056,27 +1051,26 @@ width: 50%;*/ }
       .men-or-women li a:hover, .men-or-women li a:focus {
         border-bottom: 0; }
   footer .men-or-women {
-    left: -1rem;
-    position: absolute;
-    top: 2rem;
-    left: 0;
-    background: #f2f1ef;
-    padding: 5px; }
-    footer .men-or-women li a {
-      padding: 0 0.5rem; }
+    left: -1rem; }
+    footer .men-or-women li {
+      width: auto; }
     @media screen and (min-width: 650px) {
       footer .men-or-women {
-        top: 1.5rem; } }
-  @media screen and (min-width: 650px) {
-    header .men-or-women {
-      position: absolute;
-      top: 50px;
-      left: 0;
-      border: 1px solid #dfdddc;
-      border-top: #fff; }
-      header .men-or-women li {
-        display: block;
-        width: 100%; } }
+        left: 75px; }
+        footer .men-or-women a {
+          padding: 2px; } }
+  header .men-or-women {
+    background: #fdfdfd; }
+    @media screen and (min-width: 650px) {
+      header .men-or-women {
+        background: #f9f8f7;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        border-top: 1px solid #dfdddc; }
+        header .men-or-women li {
+          display: block;
+          width: 100%; } }
 
 header .btn--cta {
   float: right;
@@ -1096,15 +1090,15 @@ header .btn--cta-secondary {
   padding: 10px;
   position: relative;
   z-index: 12;
-  position: absolute;
-  top: 0px;
-  left: 0px; }
+  float: left; }
   .link--avatar a {
     display: block; }
 
 .logged-out .link--logo {
   display: none; }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1100px) {
+  .logged-out .link--avatar {
+    display: none; }
   .logged-out .link--logo {
     display: block;
     width: 190px;
@@ -1114,39 +1108,7 @@ header .btn--cta-secondary {
     z-index: 5;
     height: 50px; }
     .logged-out .link--logo:hover, .logged-out .link--logo:focus {
-      border-bottom: 0; }
-  .logged-out .gender-toggle {
-    display: none; } }
-
-.gender-toggle {
-  height: 50px;
-  width: 54px;
-  float: left; }
-  .gender-toggle:hover {
-    background: #eee; }
-
-.toggle-gender {
-  display: none;
-  height: 50px;
-  background: #eee;
-  position: absolute;
-  top: 0px;
-  line-height: 50px;
-  left: 50px;
-  z-index: 11;
-  padding-right: 1rem; }
-  .toggle-gender a {
-    display: inline-block;
-    padding: 0 0.4rem;
-    line-height: 1.7rem;
-    color: #2f3237; }
-    .mens .toggle-gender a {
-      color: #2f3237; }
-    .toggle-gender a.active {
-      /* background: rgba(255,255,255,0.5);*/ }
-    .toggle-gender a:hover {
-      cursor: pointer;
-      color: black; }
+      border-bottom: 0; } }
 
 .divet-link {
   position: absolute;
@@ -1175,6 +1137,17 @@ i.divet {
     background: #fff;
     display: block;
     text-align: left; }
+
+.cookie a {
+  position: relative;
+  display: block;
+  border-bottom: 0;
+  color: #2f3237; }
+
+.cookie a {
+  line-height: 50px;
+  float: left;
+  z-index: 10; }
 
 footer {
   zoom: 1;
