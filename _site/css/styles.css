@@ -782,34 +782,32 @@ header {
     border-color: #f9f8f7; }
     .opposite-gender header .secondary-nav .active a:after {
       border-color: #f9f8f7; }
-  header .logged-in {
-    background: #f9f8f7; }
   header a {
     text-decoration: none !important;
     padding: 0 1rem; }
-  header .active {
-       /*
-background: red; */ }
-    header .active a {
-      color: black;
-      position: relative;
-      /*      background: blue;*/ }
-      header .active a:after {
-        content: "";
-        width: 14px;
-        height: 14px;
-        background: #f9f8f7;
-        border-right: 1px solid #dfdddc;
-        border-bottom: 1px solid #dfdddc;
-        display: block;
-        position: absolute;
-        bottom: -8px;
-        left: calc(50% - 7px);
-        -ms-transform: rotate(45deg);
-        /* IE 9 */
-        -webkit-transform: rotate(45deg);
-        /* Safari */
-        transform: rotate(45deg); }
+  header .active a {
+    color: black;
+    position: relative; }
+    header .active a:after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-right: 1px solid #dfdddc;
+      border-bottom: 1px solid #dfdddc;
+      display: block;
+      position: absolute;
+      bottom: -8px;
+      left: calc(50% - 7px);
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      /* Safari */
+      transform: rotate(45deg); }
+  header .logged-in {
+    background: #f9f8f7; }
+    header .logged-in .active a:after {
+      background: #f9f8f7; }
   header .btn {
     line-height: 1rem;
     padding: 0.6em 0.8em; }

@@ -29,26 +29,20 @@ header {
     .secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }
   }
 
-  .logged-in {
-    background: lighten($brand_grey_light, 3%);
-  }
-
   a { 
     text-decoration: none !important; 
     padding: 0 1rem;
   }
 
-  .active {/*
-    background: red; */ 
+  .active {
     a {
       color: darken($brand_grey_dark, 25%);    
-    position: relative;
-/*      background: blue;*/
+      position: relative;
       &:after {
         content: "";
         width: 14px;
         height: 14px;
-        background:  lighten($brand_grey_light, 3%);
+        background:  #fff;
         border-right: 1px solid lighten($brand_grey, 30%);
         border-bottom: 1px solid lighten($brand_grey, 30%);
         display: block; 
@@ -59,6 +53,17 @@ header {
         -webkit-transform: rotate(45deg); /* Safari */
         transform: rotate(45deg);
       }    
+    }
+  }
+
+  .logged-in {
+    background: lighten($brand_grey_light, 3%);
+    .active {
+      a {
+        &:after {
+          background: lighten($brand_grey_light, 3%);
+        }
+      }
     }
   }
 
