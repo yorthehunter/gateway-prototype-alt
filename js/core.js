@@ -39,7 +39,7 @@ $(function() {
 
   $('footer .nav__style-tips').click(function(){
     $('footer .men-or-women').slideToggle( "fast" );
-    $('.nav__style-tips').toggleClass('is-open')
+    $('footer .nav__style-tips').toggleClass('is-open')
     return false;
   });
 
@@ -66,7 +66,7 @@ $(function() {
 
 
   $('.social-open.twitter').click(function(){
-    $('.pick-a-channel').slideToggle( "fast" );
+    $('.footer__social__select').slideToggle( "fast" );
     $(this).toggleClass('active');
     return false;
   });
@@ -81,11 +81,11 @@ $(function() {
 
 
 
-  $('.footer-toggle').click(function(){
-    $('#below-the-footer-fold').slideToggle( "fast" );
+  $('.footer__toggle').click(function(){
+    $('.footer__content').slideToggle( "fast" );
     var desiredHeight = $(window).height() - 220;
     $('html, body').animate({
-        scrollTop: $("#below-the-footer-fold").offset().top - desiredHeight
+        scrollTop: $(".footer__content").offset().top - desiredHeight
     }, 500);
     $('footer').toggleClass('is-open')
     return false;

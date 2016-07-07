@@ -14,7 +14,7 @@ header {
   font-size: 14px; 
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  background: lighten($brand_grey_light, 3%);
+  background: #fff;
   border-bottom: 1px solid lighten($brand_grey, 30%);
 
   .home & {
@@ -27,6 +27,10 @@ header {
   .opposite-gender & { 
     border-color: lighten($brand_grey_light, 3%); 
     .secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }
+  }
+
+  .logged-in {
+    background: lighten($brand_grey_light, 3%);
   }
 
   a { 
@@ -377,63 +381,6 @@ nav {
 }
 
 
-
-.nav__style-tips {
-  position: relative;
-  
-  &.is-open {
-    a { 
-      color: darken($brand_grey_dark, 15%);
-    } 
-  }
-}
-
-.men-or-women {
-  background: lighten($brand_grey_light, 3%);
-  display: none;
-  li {
-    display: block;/*
-    float: left;
-    width: 50%;*/
-    a { 
-      padding: 0 1rem; 
-      &:hover, &:focus {
-        border-bottom: 0;
-      }
-    }
-  }
-
-  footer & { 
-    left: -1rem; 
-    li {
-      width: auto;
-    }
-    @media screen and (min-width: 650px) {
-      left: 75px;
-      a {
-        padding: 2px;
-      }
-    }
-  }
-
-  header & {
-    background: lighten($brand_grey_light, 5%);
-    @media screen and (min-width: 650px) {
-      background: lighten($brand_grey_light, 3%);
-      position: absolute;
-      top: 50px;
-      left: 0;       
-      border-top: 1px solid lighten($brand_grey, 30%);
-      li {
-        display: block;
-        width: 100%;
-      }
-    }
-  }
-
-}
-
-
 header {
 
   .btn--cta { 
@@ -450,6 +397,45 @@ header {
     margin: 6px 0;
     position: relative;
   }
+
+
+  .nav__style-tips {
+    position: relative;
+    
+    &.is-open {
+      a { 
+        color: darken($brand_grey_dark, 15%);
+      } 
+    }
+  }
+
+  .men-or-women {
+    background: #fff;
+    display: none;
+    li {
+      display: block;
+      a { 
+        padding: 0 1rem; 
+        &:hover, &:focus {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: 650px) {
+      position: absolute;
+      top: 50px;
+      left: 0; 
+      right: 0;     
+      border: 1px solid lighten($brand_grey, 30%);
+      border-top: #fff;
+      li {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
 }
 
 .link--avatar {
@@ -462,10 +448,8 @@ header {
   float: left;
 
   a { display: block; }
-
-
-
 }  
+
 .logged-out {
 
   .link--logo {

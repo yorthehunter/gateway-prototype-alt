@@ -3,7 +3,7 @@
 <footer>
 
 
-	<div class="above-the-footer-fold">
+	<div class="footer__header">
 
 		<p class="hide-on-big"><span>Have a question?</span> 
 				{% if page.status == "logged-in" %}
@@ -16,7 +16,7 @@
 	</div>
 
 	
-		<a href="#" class="footer-toggle">
+		<a href="#" class="footer__toggle">
 
 			More about Stitch Fix
 		
@@ -24,13 +24,13 @@
 
 
 	
-	<div id="below-the-footer-fold" class="below-the-footer-fold">
+	<div class="footer__content">
 
 		<div class="footer__logo">
 			<img alt="Stitch Fix Logo" data-png-src="https://d27bvhtwhzf6pr.cloudfront.net/assets/branding/logo_w_tagline_left_aligned-3e569ab79718532cb329320202481374.png" src="https://d27bvhtwhzf6pr.cloudfront.net/assets/branding/logo_w_tagline_left_aligned-b3878c8a7116e8f78ac8809de9888559.svg">
 		</div>
 
-		<ul class="unstyled footer-nav">
+		<ul class="unstyled footer__nav">
 
 <!-- 			<li>
 				<ul class="unstyled">
@@ -46,15 +46,13 @@
 					<li class="hide-on-big"><a>Help Center »</a></li>
 					<li class="hide-on-big"><a>Contact Us »</a></li>	          		
 					<li><a>Gift Cards »</a></li>
-					<!-- {% unless page.skin == "mens" %} -->
 					<li><a>iPhone App »</a></li>
-					<!-- {% endunless %} -->
 					<li><a>Plus Sizes »</a></li>
 					
 					{% if page.status == "logged-out" %}
 
 						{% if page.skin == "womens" or page.skin == "mens" %}
-	          	<li><a href="{{ site.baseurl }}/style-tips">Style Tips »</a></li>
+	          	<li><a>Style Tips »</a></li>
 	        	{% else %}
 	            <li class="nav__style-tips"><a  href="#" class="style-tips-toggle">Style Tips »</a>
 	         
@@ -93,7 +91,7 @@
 			</li>
 		</ul>
 
-		<div class="social">
+		<div class="footer__social">
 
 			<h5>Follow us</h5>
 
@@ -104,15 +102,19 @@
 				<li><a class="icon pinterest social-open"><span>Pinterest</span></a></li>
 			</ul>
 
-			<div class="pick-a-channel">
+			{% unless page.skin == "womens" or page.skin == "mens"  %}
+
+			<div class="footer__social__select">
 		
 				 <ul class="unstyled">
 		          <li class="choose-women"><a>Women<div class="helper-text">@stitchfix</div></a></li>
 		          <li><a>Men<div class="helper-text">@stitchfixmen</div></a></li>
         </ul>
 
+
 			</div>
 
+       {% endunless %}
 		</div>
 
 		<div class="download">
