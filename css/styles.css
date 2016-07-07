@@ -1315,7 +1315,8 @@ a.footer-toggle {
   footer {
     padding: 2rem;
     background: #fff;
-    text-align: left; }
+    text-align: left;
+    font-size: 0.9rem; }
     footer li {
       line-height: inherit; }
     footer .below-the-footer-fold,
@@ -1329,8 +1330,9 @@ a.footer-toggle {
       background: none; }
     footer .footer-nav {
       clear: none;
-      margin-bottom: 1rem;
-      border: 0; }
+      border: 0;
+      max-width: 35rem;
+      margin: 0 auto 1rem; }
       footer .footer-nav > li {
         width: 33%; }
     footer h5 {
@@ -1345,7 +1347,9 @@ a.footer-toggle {
       padding-top: 1rem;
       margin-bottom: 0; }
       footer .copyright p {
-        display: inline; } }
+        display: inline; }
+    footer .download {
+      margin-bottom: 1rem; } }
 @media screen and (min-width: 900px) {
   footer .footer-nav {
     width: 60%;
@@ -1382,7 +1386,7 @@ a.footer-toggle {
       max-width: 200px; } }
 @media screen and (min-width: 70rem) {
   footer {
-    padding: 2rem calc(50% - 37rem); } }
+    padding: 2rem calc(50% - 32rem); } }
 .social ul {
   text-align: center;
   margin: 0 auto; }
@@ -1603,8 +1607,7 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
     background: #fff;
     display: none; } }
 /* developement to toggle overlays */
-/*
-.pick-a-channel, 
+/*.pick-a-channel, 
 .toggle-gender,
 #below-the-footer-fold, 
 .men-or-women,
@@ -1615,8 +1618,7 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
   */
 @media screen and (max-width: 700px) {
   .hide-on-small {
-    display: none !important;
-    background: red; } }
+    display: none !important; } }
 @media screen and (min-width: 700px) {
   .hide-on-big {
     display: none !important; } }
@@ -1667,7 +1669,7 @@ img {
   display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: 'BrandonGrotesque-Medium';
+  font-family: 'BrandonText-Bold';
   color: #96908c; }
 
 .btn--cta {
@@ -1700,6 +1702,11 @@ img {
     border-color: #625d5a;
     outline: 0; }
 
+.login {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #000;
+  color: #000; }
+
 .splash {
   position: relative;
   width: 100%;
@@ -1709,17 +1716,6 @@ img {
     width: 100%;
     display: block;
     border-bottom: 0; }
-  .splash .login {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #000;
-    color: #000; }
-    @media screen and (min-width: 1000px) {
-      .splash .login {
-        top: 30px;
-        right: 30px; } }
   .splash .logo {
     margin: 0 auto 1rem; }
 
@@ -1738,7 +1734,7 @@ img {
     display: table;
     clear: both; }
   .hero-overlay h5 {
-    font-family: 'BrandonGrotesque-Bold';
+    font-family: 'BrandonText-Bold';
     letter-spacing: 0.05rem;
     text-transform: uppercase; }
   .hero-overlay .flr-wrap {
@@ -1838,7 +1834,7 @@ img {
   border-radius: 50%; }
 
 .how-it-works__step__title {
-  font-family: BrandonGrotesque-Bold;
+  font-family: BrandonText-Bold;
   text-transform: uppercase;
   font-size: 1.1rem;
   margin-bottom: 1rem; }
@@ -1911,7 +1907,11 @@ img {
       display: block;
       float: left;
       color: #2f3237;
-      border-color: #dbd8d3; }
+      border-color: #dbd8d3;
+                                             /*
+background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
+      .get-started-form .pick-a-gender .flr-wrap .btn:last-child {
+        border-right: 1px solid #dbd8d3; }
       .get-started-form .pick-a-gender .flr-wrap .btn:first-child {
         border-right: 0; }
       .get-started-form .pick-a-gender .flr-wrap .btn:last-child {
@@ -1919,7 +1919,10 @@ img {
       .get-started-form .pick-a-gender .flr-wrap .btn:hover, .get-started-form .pick-a-gender .flr-wrap .btn:focus {
         outline: 0;
         color: black;
-        background: #f2f1ef; }
+        background: #f2f1ef;
+        	    		                       /*
+           				background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
+        -webkit-tap-highlight-color: transparent; }
     .get-started-form .pick-a-gender .flr-wrap .btn.active {
       background: #1695a3;
       border-color: #1695a3;
@@ -1943,12 +1946,16 @@ img {
   font-size: 0.9rem;
   padding: 10px 0 0;
   margin-bottom: 0; }
+  .help-block.size-chart,
+  .instructional-note.size-chart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px; }
 
-.promo {
-  background: #d77f59 !important;
-  padding: 20px 0 !important; }
-  .promo a {
-    color: #00f0e5; }
+.fine-print {
+  font-size: 0.8rem;
+  margin: 5px 0 0; }
 
 .wireframe {
   background: #ddd;

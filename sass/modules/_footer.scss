@@ -175,6 +175,7 @@ a.footer-toggle {
     padding: 2rem;
     background: #fff;
     text-align: left;
+    font-size: 0.9rem;
 
 
     li { line-height: inherit; }
@@ -199,8 +200,9 @@ a.footer-toggle {
 
     .footer-nav {
       clear: none;
-      margin-bottom: 1rem; 
       border: 0;
+      max-width: 35rem;
+      margin: 0 auto 1rem;
 
       > li {
         width: 33%;
@@ -225,6 +227,10 @@ a.footer-toggle {
 
       p { display: inline;}
 
+    }
+
+    .download {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -293,7 +299,7 @@ a.footer-toggle {
 @media screen and (min-width: 70rem) { 
 
   footer {
-    padding: 2rem calc(50% - 37rem);
+    padding: 2rem calc(50% - 32rem);
   }
 
 }

@@ -21,8 +21,8 @@
 @import "browsers/browser-hacks.scss"; 
  
 /* developement to toggle overlays */
-/*
-.pick-a-channel, 
+
+/*.pick-a-channel, 
 .toggle-gender,
 #below-the-footer-fold, 
 .men-or-women,
@@ -36,7 +36,6 @@
 
 	.hide-on-small {
 		display: none !important;
-		background: red;
 	}
 
 }
@@ -107,7 +106,7 @@ img { max-width: 100%; }
   display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: 'BrandonGrotesque-Medium'; 
+  font-family: 'BrandonText-Bold'; 
   color: $brand_grey;
 
 }
@@ -154,9 +153,14 @@ img { max-width: 100%; }
   		border-color: darken($brand_grey, 20%); 
     	outline: 0;
   	}
+}
 
-  	.mens & {	
-  	}
+
+
+.login {
+	background: rgba(255,255,255,0.9);
+	border: 1px solid #000;
+	color: #000;
 
 }
 
@@ -170,19 +174,6 @@ img { max-width: 100%; }
 		width: 100%;
 		display: block;
 		border-bottom: 0;
-	}
-
-	.login {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		background: rgba(255,255,255,0.9);
-		border: 1px solid #000;
-		color: #000;
-		@media screen and (min-width: 1000px) {
-			top: 30px;
-			right: 30px;
-		}
 	}
 
 	.logo {
@@ -199,7 +190,7 @@ img { max-width: 100%; }
 	padding-right: calc(50% - 300px/2);
 
 	h5 {
-		font-family: 'BrandonGrotesque-Bold'; 
+		font-family: 'BrandonText-Bold'; 
 	  letter-spacing: 0.05rem;
 	  text-transform: uppercase;
 	}
@@ -328,7 +319,7 @@ img { max-width: 100%; }
 }
 
 .how-it-works__step__title {
-		font-family: BrandonGrotesque-Bold;
+		font-family: BrandonText-Bold;
 		text-transform: uppercase;
 		font-size: 1.1rem;
 		margin-bottom: 1rem;
@@ -420,14 +411,19 @@ img { max-width: 100%; }
 		    display: block;
 		    float: left;
 		    color: $brand_grey_dark;
-		    border-color: darken($brand_grey_light, 10%);
+		    border-color: darken($brand_grey_light, 10%);/*
+		    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/
+    		&:last-child { border-right: 1px solid darken($brand_grey_light, 10%);}
+
 		    &:first-child { border-right: 0;}
 		    &:last-child { border-left: 0;}
 	    	&:hover,
 				&:focus {
 		    		outline: 0;
 		    		color: darken($brand_grey_dark, 20%);
-		    		background: $sf-hover; 
+		    		background: $sf-hover; /*
+	   				background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
+						-webkit-tap-highlight-color: transparent;
 				}
 			}
 
@@ -458,17 +454,23 @@ img { max-width: 100%; }
 }
 
 
-.help-block,
+.help-block, 
 .instructional-note {
 	font-size: 0.9rem;
 	padding: 10px 0 0;
 	margin-bottom: 0;
+	&.size-chart {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 5px;
+	}
 }
 
-.promo {
-	background: $brand_copper !important;
-	padding: 20px 0 !important;
-	a { color: lighten($brand_mint, 10%); }
+
+.fine-print {
+	font-size: 0.8rem;
+	margin: 5px 0 0;
 }
 
 .wireframe {
