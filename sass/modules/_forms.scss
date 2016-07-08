@@ -1,17 +1,35 @@
 fieldset {
 	padding: 0;
 	margin: 0;
-	border-bottom: 1px solid darken($brand_grey_light, 10%);
 }
 
 .form-group {
-	border-top: 1px solid darken($brand_grey_light, 10%);
+	border-color: darken($brand_grey_light, 10%);
+	border-style: solid;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
 	display: block;
+	color: lighten($brand_grey_dark, 10%);
+	margin-top: -1px;
+	position: relative;
+	z-index: 1;
+
+	@media screen and (min-width: 32rem) {
+		border-left-width: 1px;
+		border-right-width: 1px;
+	}
 	&.focus,
 	&:focus {
 		background: #fff;
 		outline: 0;
-		input { }
+		z-index: 2;
+		color: darken($brand_grey_dark, 10%); 
+		input { 
+			color: darken($brand_grey_dark, 10%); 
+			border-color: darken($brand_grey_light, 10%); 
+		}
 	} 
 
 	input,
@@ -20,6 +38,8 @@ fieldset {
 		border: 0;
 		padding: 5px 10px;
 	}
+
+	input { border-bottom: 2px solid #fff; }
 
 	.btn-group {
 		padding: 10px;
@@ -44,27 +64,30 @@ fieldset {
 		position: relative;
 		border-color: darken($brand_grey_light, 10%);
 		color: $brand_grey_dark;
-		margin-bottom: 5px;
     display: block;
     float: left;
-    width: 44px;
+    width: 48px;
     line-height: 44px;
     text-align: center;
     margin-right: -1px;
-    z-index: 1;
+    margin-top: -1px;
+    z-index: 1;/*
+    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/
     &:last-child { border-right: 1px solid darken($brand_grey_light, 10%);}
 		&:hover, 
 		&:focus,
 		&:active {
 			cursor: pointer;
-	   	background: $sf-hover;
+	   	background: $sf-hover;/*
+	   	background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
 			color: darken($brand_grey_dark, 20%);
     	z-index: 1;
 			-webkit-tap-highlight-color: transparent;
 		}
 
 		&.active {
-			background: $sf-selected;
+			background: $sf-selected;/*
+	   	background-image: linear-gradient($sf-selected, darken($sf-selected, 5%));*/
 			color: #fff;
     	box-shadow: 0;
     	border-color: $sf-selected;
@@ -98,7 +121,7 @@ fieldset {
 	    -webkit-appearance: none;
 	    -moz-appearance: none;
 	    appearance: none;
-	    background-image: url("/img/dropdown.svg");
+	    background-image: url("../img/dropdown.svg");
 	    background-size: 20px;
 	    background-repeat: no-repeat;
 	    background-position: 97% 13px;
@@ -119,6 +142,10 @@ fieldset {
 
 .form__cta {
 	padding: 10px;
+	@media screen and (min-width: 32rem) {
+		border: 1px solid darken($brand_grey_light, 10%);
+		border-top: 0;
+	}
 
 }
 
@@ -126,4 +153,25 @@ fieldset {
 .form__header {
 	text-align: center;
 	padding: 1rem;
+	@media screen and (min-width: 32rem) {
+		border: 1px solid darken($brand_grey_light, 10%);
+	}
 }
+
+.form-group.done {
+	background: red;
+	background: url("../img/check.png") right 20px bottom 10px no-repeat;
+	background-size: 40px;
+}
+
+.first-name {
+	float: left; width: 50%; border-right-width: 1px; border-bottom-width: 0;
+	@media screen and (min-width: 32rem) {
+		border-right-width: 0px;
+	}
+}
+
+.last-name {
+	float: right; width: 50%; clear: none;
+}
+

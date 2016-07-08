@@ -18,20 +18,22 @@
 @import "modules/footer.scss";
 @import "modules/social.scss";
 @import "modules/forms.scss"; 
+@import "browsers/browser-hacks.scss"; 
  
 /* developement to toggle overlays */
 
 /*.pick-a-channel, 
 .toggle-gender,
-#below-the-footer-fold, 
-.men-or-women,
+.footer__content, 
+.footer__social__select,
 .secondary-nav,
-.main {
+.main,
+.men-or-women {
   display: block !important;
 }
   */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 
 	.hide-on-small {
 		display: none !important;
@@ -40,7 +42,7 @@
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
 
 	.hide-on-big {
 		display: none !important;
@@ -51,7 +53,6 @@
 
 /* BY TORUNN SEIM SKROGSTAD
 -------------------------------------*/
-
 
 html {
   box-sizing: border-box;
@@ -69,12 +70,12 @@ body {
 }
 
 .page {
-	padding-top: 50px;
+	padding-top: 80px;
 	margin:  0 auto;
 	padding-left: calc(50% - 20rem);
 	padding-right: calc(50% - 20rem);
 	display: block;
-  background: lighten($brand_grey_light, 5%);
+	background: #fff;
 
 	@media screen and (min-width: 900px) {
 		padding-top: 100px;
@@ -106,7 +107,7 @@ img { max-width: 100%; }
   display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: 'BrandonGrotesque-Medium'; 
+  font-family: 'BrandonText-Bold'; 
   color: $brand_grey;
 
 }
@@ -154,27 +155,29 @@ img { max-width: 100%; }
     	outline: 0;
   	}
 
-  	.mens & {	
-  	}
+	&.login {
+		background: rgba(255,255,255,0.9);
+		border: 1px solid #000;
+		color: #000;
+
+	}
 
 }
+
 
 .splash {
 	position: relative;
 	width: 100%;
 	display: block;
-	img { display: block; }
 
-	.login {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		font-size: 0.8rem;
-		background: rgba(255,255,255,0.9);
+	img,
+	.get-started {
+		width: 100%;
+		display: block;
+		border-bottom: 0;
 	}
 
 	.logo {
-		max-width: 230px;
 		margin: 0 auto 1rem;
 	}
 }
@@ -188,7 +191,7 @@ img { max-width: 100%; }
 	padding-right: calc(50% - 300px/2);
 
 	h5 {
-		font-family: 'BrandonGrotesque-Bold'; 
+		font-family: 'BrandonText-Bold'; 
 	  letter-spacing: 0.05rem;
 	  text-transform: uppercase;
 	}
@@ -202,11 +205,26 @@ img { max-width: 100%; }
 		font-size: 1.2rem;
 		display: block;
 		margin-bottom: 5px;
+		line-height: 2rem;
 
 		.home & {
 			width: 48%;
 			float: left; 
 			margin: 1%;
+		}
+	}
+
+	.opposite-gender & {
+		background: $brand_hunter_green;
+		color: #fff;
+		.btn--cta-secondary {
+			border-color: darken(#fff, 15%);
+			color: darken(#fff, 15%);
+			&:focus, &:hover {
+				background: transparent;
+				border-color: #fff;
+				color: #fff;
+			}
 		}
 	}
 }
@@ -217,7 +235,7 @@ img { max-width: 100%; }
 		position: absolute;
 		top: 30%;
 		right: 30px;
-		padding: 50px 20px;
+		padding: 40px;
 		max-width: 370px;
 
 		.opposite-gender & {
@@ -254,7 +272,9 @@ img { max-width: 100%; }
 		display: block; 
 		position: absolute;
 		bottom: -10px;
-		left: calc(50% - 10px);
+		left: calc(50% - 10px); 
+		-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
 		transform: rotate(45deg);
 
 		@media screen and (min-width: 800px) {
@@ -300,7 +320,7 @@ img { max-width: 100%; }
 }
 
 .how-it-works__step__title {
-		font-family: BrandonGrotesque-Bold;
+		font-family: BrandonText-Bold;
 		text-transform: uppercase;
 		font-size: 1.1rem;
 		margin-bottom: 1rem;
@@ -310,58 +330,59 @@ img { max-width: 100%; }
 
 .get-started-container {
 	
-	background: lighten($brand_grey_light, 5%);
+	background: #fff;
 
 	@media screen and (min-width: 32rem) {
-		border-top: 2rem solid lighten($brand_grey_light, 5%);
-		border-bottom: 2rem solid lighten($brand_grey_light, 5%);
+		border-top: 2rem solid #fff;
+		border-bottom: 2rem solid #fff;
 	}
 
 	@media screen and (min-width: 700px) {
-		border-color: lighten($brand_grey_light, 3%);
-		background: lighten($brand_grey_light, 3%);
+		border-color: #fff;
+		background: #fff;
 	}
 
 	@media screen and (min-width: 50rem) {
-		background-image: url("/img/form-background.jpg");
+		background-image: url("../img/form-background.jpg");
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: 2rem 0 ;
 
 		.opposite-gender &,
 		.mens &,
-		&.mens { background-image: url("/img/form-background-mens.jpg"); }
+		&.mens { background-image: url("../img/form-background-mens.jpg"); }
 
-		.get-started-form,
-		.refer-form {
+		.opposite-gender & {
+			background: none;
+		}
+
+		.get-started-form {
 			&:before {
 				content: "";
-				background: lighten($brand_grey_light, 3%);
+				background: #fff;
 				width: 30px;
 				display: block;
 				position: absolute;
 				top: -1rem;
-				left: -31px;
+				left: -30px;
 				bottom: -1rem;
 			}
 		}
 	}
 	@media screen and (min-width: 70rem) {
-		padding-left: calc(50% - 33rem);
-		padding-right: calc(50% - 33rem);
-		background-position: calc(50% - 13rem) 0;
+		margin-left: calc(50% - 33rem);
+		margin-right: calc(50% - 33rem);
+		background-position: 0 0;
 	}
 }
 
 
-.get-started-form, .refer-form {
+.get-started-form {
 	margin: 0 auto;
-	background: lighten($brand_grey_light, 4%);
-	padding-bottom: 1rem; 
+	background: #fff;
 
 	@media screen and (min-width: 32rem) {
 		max-width: 30rem;
-		border: 1px solid darken($brand_grey_light, 10%);
 	}
 
 	@media screen and (min-width: 50rem) {
@@ -383,22 +404,30 @@ img { max-width: 100%; }
 		.flr-wrap {
 			text-align: center;
 			max-width: 200px;
-    	margin: 0 auto;
-    	@include clear;
+	    	margin: 0 auto;
+	    	@include clear;
 
 			.btn {
-				width: 50%;
+			text-transform: inherit;
+			width: 50%;
 		    display: block;
 		    float: left;
+		    padding: 0;
+		    line-height: 32px;
 		    color: $brand_grey_dark;
-		    border-color: darken($brand_grey_light, 10%);
+		    border-color: darken($brand_grey_light, 10%);/*
+		    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/
+    		&:last-child { border-right: 1px solid darken($brand_grey_light, 10%);}
+
 		    &:first-child { border-right: 0;}
 		    &:last-child { border-left: 0;}
 	    	&:hover,
 				&:focus {
 		    		outline: 0;
 		    		color: darken($brand_grey_dark, 20%);
-		    		background: $sf-hover; 
+		    		background: $sf-hover; /*
+	   				background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
+						-webkit-tap-highlight-color: transparent;
 				}
 			}
 
@@ -417,18 +446,35 @@ img { max-width: 100%; }
 	}
 }
 
+.refer-form,
+.sign-in-form {
+	max-width: 40rem;
+	margin:  0 auto;
 
-.help-block,
-.instructional-note {
-	font-size: 0.8rem;
-	padding: 0 0 0 10px;
-	margin-bottom: 5px;
+	h2 {
+		font-family: 'Grad-Bold';
+		margin: 0 0 0.5rem;
+	}
 }
 
-.promo {
-	background: $brand_copper !important;
-	padding: 20px 0 !important;
-	a { color: lighten($brand_mint, 10%); }
+
+.help-block, 
+.instructional-note {
+	font-size: 0.9rem;
+	padding: 10px 0 0;
+	margin-bottom: 0;
+	&.size-chart {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 5px;
+	}
+}
+
+
+.fine-print {
+	font-size: 0.8rem;
+	margin: 5px 0 0;
 }
 
 .wireframe {
@@ -437,4 +483,9 @@ img { max-width: 100%; }
 	margin: 0;
 	text-align: center;/*
 	max-width: 1000px;*/
+}
+
+.style-profile-navigation {
+	background: #f5f4f2;
+	height: 200px;
 }

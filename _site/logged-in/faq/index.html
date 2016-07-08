@@ -28,46 +28,46 @@
 
 <!-- For all browsers -->
  <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen, handheld">
+<link rel="stylesheet" type="text/css" href="/gateway-prototype//css/styles.css" media="screen, handheld">
 
 <!-- JavaScript -->
 
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/modernizr.min.js"></script>
-<script type="text/javascript" src="/js/footer.js"></script>
-<script type="text/javascript" src="/js/core.js"></script>
-<script type="text/javascript" src="/js/fitvids.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/jquery.min.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/modernizr.min.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/footer.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/core.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/fitvids.js"></script>
 
 
 <script>
-var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
+var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w 1x'};
 </script>
 
-<script src="/js/rimg.min.js"></script>
+<script src="/gateway-prototype//js/rimg.min.js"></script>
 
 <!--- For Facebook -->
-<link rel="image_src" href="/img/prototype.jpg" />
+<link rel="image_src" href="/gateway-prototype//img/prototype.jpg" />
 
 
 
 
 <!-- For iPhone 4 -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/h/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/gateway-prototype//img/h/apple-touch-icon.png">
 <!-- For iPad 1-->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/m/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/gateway-prototype//img/m/apple-touch-icon.png">
 <!-- For the new iPad -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/h/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/gateway-prototype//img/h/apple-touch-icon-144x144-precomposed.png">
 <!-- For iPhone 3G, iPod Touch and Android -->
-<link rel="apple-touch-icon-precomposed" href="/img/l/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/gateway-prototype//img/l/apple-touch-icon-precomposed.png">
 <!-- For Nokia -->
-<link rel="shortcut icon" href="/img/l/apple-touch-icon.png">
+<link rel="shortcut icon" href="/gateway-prototype//img/l/apple-touch-icon.png">
 <!-- For everything else -->
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/gateway-prototype//favicon.ico">
 
 <!--iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="apple-touch-startup-image" href="/img/splash.png">
+<link rel="apple-touch-startup-image" href="/gateway-prototype//img/splash.png">
 
 
 <!-- Prevents links from opening in mobile Safari -->
@@ -86,12 +86,17 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 <header> 
     
     
-<a href="/logged-in" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="/gateway-prototype//logged-in" class="link--avatar"><img src="/gateway-prototype//img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 
 
+<div class="cookie ">
+
+</div>
+      
 
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
   
     
@@ -100,15 +105,30 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
     <nav class="main">
+
+        
+
+        <ul class="account-nav">
+
+          <li><a href="#" class="account-toggle">Kimberly ▾</a>
+            <ul class="sub-nav">
+              <li><a href="#">Account</a><li>
+              <li><a href="#">Credit</a><li>
+              <li><a href="/gateway-prototype/">Sign out</a></li>
+            </ul> 
+          </li>
+
+        </ul>
+
+        
       
-        <ul>
+        <ul class="primary-nav">
 
 
               
-                <li><a href="/logged-in">My fix</a></li>
-                <li><a href="/logged-in">Style profile</a></li>
+                <li><a href="/gateway-prototype//logged-in">My fix</a></li>
+                <li><a href="/gateway-prototype//logged-in/style-profile">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
-                <li class="hide-on-small show-on-big"><a href="#">Account</a></li>
               
 
               <li>
@@ -119,35 +139,42 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
                     <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
                   
 
-
-                  
-                    <li class="active"><a href="/logged-in/faq">Get help</a></li>
-                  
-
-                  
-                    <li><a href="http://blog.stitchfix.com">Style Tips</a></li>
-                  
-
+ <!--                   -->
 
 
                   
-                    <li><a href="#">Reviews</a></li>
-                  
-                  <li><a href="#">Gift cards</a></li>
 
+                    <li class="active"><a href="/gateway-prototype//logged-in/faq">FAQ</a></li>
 
-                  <!--  -->
-
-                     <li><a href="/logged-in/mens">Mens</a></li>
-               
                   
 
+                  
+
+                    <li><a href="#">Style Guide</a></li>
+
+                  
+
+                  <li>
+
+                    <ul class="tertiary-nav">
+
+                    
+                      <li><a href="http://stitchfixreviews.com/">Reviews</a></li>
+                    
+
+                    <li><a href="#">Gift cards</a></li>
                 
-                  
+                    
 
-                    <li><a href="/">Sign out</a></li>
+                      <li ><a href="/gateway-prototype//logged-in/mens">Mens</a></li>
 
-                  
+                      <li class="show-on-small hide-on-big"><a href="/gateway-prototype/">Sign out</a></li>
+
+                    
+
+                  </li>
+
+                </ul>
 
               </li>
 
@@ -157,7 +184,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 <!--
             
-                <li><a href="/schedule/">Element</a></li>
+                <li><a href="/gateway-prototype//schedule/">Element</a></li>
             
 
      -->       
@@ -175,22 +202,9 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 	<div class="article-content" style="padding: 10px;">
 
-	<h1>FAQ</h1>
-    <p><a name="top"></a></p>
-<ul>
-<li><a href="#general">GENERAL INFORMATION</a></li>
-<li><a href="#profile">STYLE PROFILE</a></li>
-<li><a href="#billing">BILLING</a></li>
-<li><a href="#scheduling">SCHEDULING</a></li>
-<li><a href="#returns">RETURNS</a></li>
-<li><a href="#gift">GIFT CARDS</a></li>
-<li><a href="#donations">CHARITABLE DONATIONS</a></li>
-</ul>
-<p class="wysiwyg-text-align-center">&nbsp;</p>
-<h2 class="wysiwyg-text-align-center"><a name="general"></a>GENERAL INFORMATION</h2>
-<h2 class="wysiwyg-text-align-left"><a href="/hc/en-us/articles/203317264"><strong>What is Stitch Fix?</strong></a></h2>
+<h2 class="wysiwyg-text-align-left"><a href=""><strong>What is Stitch Fix?</strong></a></h2>
 <p>Stitch Fix is the first fashion retailer to blend expert styling, proprietary technology and unique product to deliver a shopping experience that is truly personalized for you. Simply fill out the Stitch Fix Style Profile and our personal stylists will handpick a selection of five clothing items and accessories unique to your taste, budget and lifestyle. You can buy what you like and return the rest!&nbsp;</p>
-<h3><a href="/hc/en-us/articles/203317264"><strong>How does it work?</strong></a></h3>
+<h3><a href="/"><strong>How does it work?</strong></a></h3>
 <p>1. Fill out your Style Profile</p>
 <p>Begin by filling out the Style Profile. This helps us understand your size, style, shape, budget and lifestyle. Completing your profile should only take about 10 minutes.</p>
 <p>2. Pick the date you’d like to receive your shipment</p>
@@ -200,97 +214,29 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 <p>4. Buy what you like and return the rest</p>
 <ul>
 <li>Take three days to decide what you’ll purchase and what you’d like to send back. You’re only charged for these items when you tell us what you’re keeping and returning.</li>
-<li>Check out by logging in to your <a style="background-color: #ffffff;" href="https://www.stitchfix.com/account">account</a> to pay for those items you want to keep. The $20 styling fee will be applied as credit towards any items you purchase. If you buy all five items, we’ll give you 25% off the entire purchase!</li>
+<li>Check out by logging in to your <a style="background-color: #ffffff;" href="">account</a> to pay for those items you want to keep. The $20 styling fee will be applied as credit towards any items you purchase. If you buy all five items, we’ll give you 25% off the entire purchase!</li>
 <li>Simply return the items you don't want in our pre-paid mailing bag and drop it at any USPS mailbox. Stitch Fix clients enjoy free shipping both ways as a benefit of using our service!&nbsp;</li>
 </ul>
 <p>5. Tell us what you think!</p>
-<p>Don't forget to give us specific feedback on each of the items you receive. Our personal stylists are able to send you better selections when we know what did and didn’t work for you, and why. <a style="background-color: #ffffff;" href="http://blog.stitchfix.com/leaving-fix-feedback/">Our blog</a> offers a number of tips on the best ways to communicate with your personal stylist.</p>
+<p>Don't forget to give us specific feedback on each of the items you receive. Our personal stylists are able to send you better selections when we know what did and didn’t work for you, and why. <a style="">Our blog</a> offers a number of tips on the best ways to communicate with your personal stylist.</p>
 <p>If you choose to receive regularly scheduled shipments, we will automatically schedule the delivery date for your next shipment. You can always choose an alternative date that better suits your needs or opt out of regularly scheduled shipments entirely.<br>Stitch Fix does not require a membership fee or a monthly subscription.&nbsp;</p>
-<h3><a href="/hc/en-us/articles/203317264"><strong>How is Stitch Fix different than shopping online, or in a store?</strong></a></h3>
+<h3><a href=""><strong>How is Stitch Fix different than shopping online, or in a store?</strong></a></h3>
 <p>The Stitch Fix experience is not merely curated, it’s truly personalized to your taste, budget and lifestyle. Personal stylists handpick a selection of five items just for you. In fact, no two clients have ever received the same selection of items!</p>
 <p>Stitch Fix makes shopping not just convenient, but effortless. Like other online retailers, Stitch Fix saves you a trip to the store by shipping items directly to you. But our personal stylists also save you the time and trouble of selecting clothing and accessories. Many of our clients enjoy the ease and convenience of automatically scheduled shipments that arrive at a frequency of their choosing.</p>
 <p>At Stitch Fix, our dressing room is your home. We encourage you to try everything on in the comfort of your home and see how the items we send work with what’s already in your closet.</p>
 <p>Returns are easy at Stitch Fix. Simply slip the items you’re returning into the prepaid mailing envelope and drop it into any USPS mailbox. Shipping is always free at Stitch Fix!&nbsp;</p>
-<h3><a href="/hc/en-us/articles/203484460"><strong>How much does it cost?</strong></a></h3>
+<h3><a href=""><strong>How much does it cost?</strong></a></h3>
 <p>Our average price point is $55 per item, but we carry a wide variety of price points. When you fill out the Style Profile, you tell us how much you are comfortable paying. We do our best to pick items that reflect those preferences. If you choose to buy all 5 pieces, you get a 25% discount off of your entire purchase!&nbsp;</p>
-<p align="center"><img class="img-responsive" src="/hc/en-us/article_attachments/202595560/Price_Preferences.png" alt="" width="407" height="289"></p>
-<h3><a href="/hc/en-us/articles/203484470"><strong>What types of items might you send me?</strong></a></h3>
+<h3><a href=""><strong>What types of items might you send me?</strong></a></h3>
 <p>Because our clients’ tastes are varied we carry a wide range of items. We currently offer pants, skirts, shorts, dresses, sweaters, shirts, outerwear, scarves, jewelry and bags. We’re growing and evolving quickly and you can expect to see us add more and more new categories and brands.</p>
-<h3><a href="/hc/en-us/articles/203484470"><strong>What brands can I expect?</strong></a></h3>
+<h3><a href=""><strong>What brands can I expect?</strong></a></h3>
 <p>We work with over 200 of the best up-and-coming labels and brands — the kinds featured in magazines and on stylish celebs. For example, your shipment might feature clothing by Collective Concepts, Kut From The Kloth, Daniel Rainn, Kensie, L.A. Made, Sanctuary, Mystree or Tart. Part of the fun of Stitch Fix is that we will introduce you to new brands that bring diversity and freshness to your wardrobe!</p>
-<h3><a href="/hc/en-us/articles/203485130"><strong>What ages can you style?</strong></a></h3>
+<h3><a href=""><strong>What ages can you style?</strong></a></h3>
 <p>Each shipment is completely customized to suit your individual preferences and needs. &nbsp;We carry a wide range of inventory that allows us to choose pieces that will be perfect for your personal style, regardless of your age.<strong><strong><strong><strong>&nbsp;</strong></strong></strong></strong></p>
-<h3><a href="/hc/en-us/articles/203485130"><strong>What sizes can you style?</strong></a></h3>
+<h3><a href=""><strong>What sizes can you style?</strong></a></h3>
 <p>We are currently able to style women who wear sizes 0/XS–14/XL, which reflects the size offering currently available to us from the brands we carry. We are actively working with our brands to increase the range of sizes so that we can deliver great selections to more women.</p>
-<h3><a href="/hc/en-us/articles/203485130"><strong>Do you style for men?</strong></a></h3>
-<p>We are currently exploring a men’s line with a small number of beta clients. A more extensive men’s offering is planned for fall 2016. For those interested in learning more about Stitch Fix Men as details become available, please visit&nbsp;<a href="http://stitchfix.com/mens" target="_blank">stitchfix.com/mens</a> and join the waiting list for Stitch Fix Men.</p>
-<p>&nbsp;</p>
-<p align="right"><a href="#top">^Top</a></p>
-<p>&nbsp;</p>
-<h2 class="wysiwyg-text-align-center"><a name="profile"></a>STYLE PROFILE</h2>
-<h3><a href="/hc/en-us/articles/204732770"><strong>How do I find my size?</strong></a></h3>
-<p>Please use the size guide we have provided to provide us with your size. Because we constantly validate sizing to ensure consistency among the many brands we carry, we may choose to ship you a different size than what you have included in your Style Profile. Don’t worry about the size on the tag, we are just making sure we are sending you the items that will fit you best!</p>
-<h3><a href="/hc/en-us/articles/203822174"><strong>Do you offer petite sizing?</strong></a></h3>
-<p>Yes! We are very excited to offer petite sizes to our clients! We now offer petite along with our regular selection of inventory.&nbsp;</p>
-<h3><a href="/hc/en-us/articles/203822174"><strong>What is the difference between your regular inventory and petite sizes?</strong></a></h3>
-<p>Our petite selection offers our clients access to inventory with shorter sleeves, narrower shoulders, and shorter hems and inseams—all to fit you better!</p>
-<h3><a href="/hc/en-us/articles/204166320"><strong>Do you offer maternity items?</strong></a></h3>
-<p>Yes! Just let your Stylist know that you would like to receive maternity clothing by <a href="https://www.stitchfix.com/style">updating your Style Profile</a>&nbsp;with your due date. By letting us know when you are due, your Stylist will be able to send you the right pieces at the right time.</p>
-<p align="center"><img class="img-responsive" src="/hc/en-us/article_attachments/202335994/Maternity_on_FAQ.png" alt=""></p>
-<h3><a href="/hc/en-us/articles/204166320"><strong>Can you style me throughout my pregnancy?</strong></a></h3>
-<p>Yes! We can style around your bump through all three trimesters and even post-baby. Let us know your due date and your Stylist can take it from there.&nbsp;</p>
-<h3><a href="/hc/en-us/articles/203484520"><strong>Can I request specific pieces?</strong></a></h3>
-<p>You can leave a note for your stylist whenever you schedule a shipment. Once your shipment is scheduled, you can view, edit, or add to the note directly on your Stitch Fix homepage.&nbsp;We recommend giving your personal stylist an idea of what types of pieces you are looking for rather than exact pieces so that she can choose new items you will love. For example, instead of a specific blouse, please let her know you’d love a drapey, colorful blouse and then she can choose the best piece for you from our current inventory. If you request a specific item we’ll do our best to find it for you, but sometimes these requests are out of stock.</p>
-<p align="center"><img class="img-responsive" src="/hc/en-us/article_attachments/202368100/Make_a_request_for_your_shipment_for_FAQ.png" alt=""></p>
-<p>&nbsp;</p>
-<h2 class="wysiwyg-text-align-center"><a name="billing"></a>BILLING</h2>
-<h3><a href="/hc/en-us/articles/203484940"><strong>When will my credit card be charged?</strong></a></h3>
-<p>When you enter your credit card information upon completing our Style Profile, your credit card will not be charged. Each time you choose to order a shipment, a $20 styling fee will be charged after your personal stylist begins styling for you. That styling fee will be credited towards anything you purchase in that shipment.</p>
-<h3><a href="/hc/en-us/articles/203484940"><strong>Does the style fee roll over if I decide not to keep anything?</strong></a></h3>
-<p>Your styling fee can only be applied to the purchase of anything in your <em>current</em> Fix. It does not roll over to your next shipment and cannot be refunded. Most of our clients fall in love with at least one item in each shipment.</p>
-<p>&nbsp;</p>
-<p align="right"><a href="#top">^Top</a></p>
-<p>&nbsp;</p>
-<h2 class="wysiwyg-text-align-center"><a name="scheduling"></a>SCHEDULING</h2>
-<h3><a href="/hc/en-us/articles/203317734"><strong>How does the subscription work?</strong></a></h3>
-<p>You can elect to receive shipments at a frequency that’s right for you - every 2-3 weeks, every month, or every other month. If a subscription is not the best option for you, we also offer you the ability to manually schedule a shipment when it is convenient for you.</p>
-<p align="center"><img class="img-responsive" src="/hc/en-us/article_attachments/202335804/Shipment_Frequency.png" alt=""></p>
-<h3><a href="/hc/en-us/articles/203317734"><strong>Do I have to sign up for automatic shipments?</strong></a></h3>
-<p>Not unless you want to! We think regularly scheduled shipments are a truly effortless way to keep your style fresh. You can elect to receive shipments at a frequency that’s right for you—every 2-3 weeks, every month, every other month or quarterly.</p>
-<p>We want you to choose the solution that works best for you, whether that means shipments arrive automatically or you place an order manually each time. Stitch Fix does does not require a membership fee or a monthly subscription.</p>
-<h3><a href="/hc/en-us/articles/203317734"><strong>How do I change or cancel my subscription?</strong></a></h3>
-<p>You can still sign up for a subscription if you already have a shipment scheduled. From your homepage, click on “Sign up for automatic Fixes.” This will not change the date of your current shipment.</p>
-<p>If you want to skip your next shipment, you don’t need to change your subscription. From your homepage, click on “Skip this Fix.” When you select this option, we won’t send your next scheduled shipment, but your subscription will resume as usual for the following shipment. If we’re already working on your next shipment, this option won’t appear on your homepage and you’ll need to <a href="/hc/en-us/requests/new?ticket_form_id=21500">contact us</a>&nbsp;to check if there is still time to cancel your next shipment.</p>
-<p class="wysiwyg-text-align-left">To cancel your subscription, click on “Manage automatic Fixes” on your homepage. When you cancel your automatic shipments you can also select to cancel your upcoming shipment. If you don’t cancel your next shipment, it will still arrive on the requested date.</p>
-<p>&nbsp;</p>
-<p align="right"><a href="#top">^Top</a></p>
-<p>&nbsp;</p>
-<h2 class="wysiwyg-text-align-center"><a name="returns"></a>RETURNS</h2>
-<h3><a href="/hc/en-us/articles/203484970"><strong>How do returns work?</strong></a></h3>
-<p>A return envelope with a pre-paid shipping label is included in each package. Returns may be dropped off in any USPS drop box or post office.</p>
-<h3><a href="/hc/en-us/articles/203484970"><strong>How long do I have to send back the items I don’t want to keep?</strong></a></h3>
-<p>Returns are due back in the mail three days after you receive the package (for example, if your shipment arrives on Monday, we ask that you drop your returns in the mail by that Thursday.) If the third day falls on a Sunday or holiday, please drop your return envelope in the mail the following business day. Please let us know if you don’t get your package on time or if the post office has lost your package by <a href="/hc/en-us/requests/new?ticket_form_id=25724">contacting us</a>&nbsp;and we will make an exception on your return date. If your return has not been postmarked within three days of receipt, we will assume you are keeping all five items and charge your credit card for the entire shipment. We can't accept additional returns after your initial return is sent. Please make sure you try everything on before you drop your package in the mail.</p>
-<p>&nbsp;</p>
-<p align="right"><a href="#top">^Top</a></p>
-<p>&nbsp;</p>
-<h2 class="wysiwyg-text-align-center"><a name="gift"></a>GIFT CARDS</h2>
-<h3><a href="/hc/en-us/articles/203317694"><strong>How do I purchase a gift card?</strong></a></h3>
-<p>You can purchase a gift card <a href="https://www.stitchfix.com/gifts/buy">here</a>. There are three options for delivering a gift card: Mail, Email and Print-at-Home.</p>
-<p align="center"><img class="img-responsive" src="/hc/en-us/article_attachments/203692318/gift_card_image_.png" alt="" width="700"></p>
-<h3><a href="/hc/en-us/articles/203317694"><strong>How do I redeem my gift card?</strong></a></h3>
-<p class="wysiwyg-text-align-left">Redeem your gift card <a href="https://www.stitchfix.com/gifts/redeem">here</a>. You must be signed in as a Stitch Fix user to apply it to your account.</p>
-<p>&nbsp;</p>
-<p align="right"><a href="#top">^Top</a></p>
-<h2 class="wysiwyg-text-align-center"><a name="donations"></a>CHARITABLE DONATIONS</h2>
-<h3>Does Stitch Fix make charitable donations?</h3>
-<p>At Stitch Fix, we care deeply about ​social impact and remain committed to improving the lives of people in the communities we touch. We’re currently building a team to grow our impact strategy—to give more &amp; give meaningfully. Currently, we donate time and in-kind product donations to several non profit partners including Dress for Success and local women’s shelters.</p>
-<p>If you would like to nominate a registered 501(c)3 tax-exempt nonprofit organization to receive in-kind donations of clothing or accessories to support people in need, please fill out this <a href="/hc/en-us/requests/new?ticket_form_id=21520">contact form</a> and our Director of Social Impact will be in touch.</p>
-<p align="right"><a href="#top">^Top</a></p>
 
-                        <div class="attachments">
-                            <ul class="attachments">
-                              
-                            </ul>
+<p align="right"><a href="#top">^Top</a></p>
                         </div>
                     </div>
 
@@ -301,25 +247,83 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 <footer>
 
 
-	<div class="above-the-footer-fold">
+	<div class="footer__header">
 
+		<p class="hide-on-big"><span>Have a question?</span> 
+				
+          <a href="/gateway-prototype//logged-in/faq">Visit our FAQ »</a>
+        
+     </p>
 
-		<p><span>Have a question?</span> <a href="/faq">Visit our FAQ »</a></p>
-	
 	</div>
 
 	
-		<a href="#" class="footer-toggle">
+		<a href="#" class="footer__toggle">
 
-			Footer?
+			More about Stitch Fix
 		
 		</a>
 
 
 	
-	<div id="below-the-footer-fold" class="below-the-footer-fold">
+	<div class="footer__content">
 
-		<div class="social">
+		<div class="footer__logo">
+			<img alt="Stitch Fix Logo" data-png-src="https://d27bvhtwhzf6pr.cloudfront.net/assets/branding/logo_w_tagline_left_aligned-3e569ab79718532cb329320202481374.png" src="https://d27bvhtwhzf6pr.cloudfront.net/assets/branding/logo_w_tagline_left_aligned-b3878c8a7116e8f78ac8809de9888559.svg">
+		</div>
+
+		<ul class="unstyled footer__nav">
+
+<!-- 			<li>
+				<ul class="unstyled">
+		<h5>Have a question?</h5> 
+			<li><a href="/gateway-prototype//faq">Visit our FAQ »</a></li>
+			</ul>
+		</li>
+ -->
+
+			<li>
+				<h5>The service</h5>
+				<ul class="unstyled">
+					<li class="hide-on-big"><a>Help Center »</a></li>
+					<li class="hide-on-big"><a>Contact Us »</a></li>	          		
+					<li><a>Gift Cards »</a></li>
+					
+					<li><a>iPhone App »</a></li>
+					<li><a>Plus Sizes »</a></li>
+					
+					
+					
+
+	        	<li><a>Style Tips »</a></li>
+
+	        
+				</ul>
+			</li>
+			<li>
+				<h5>The company</h5>
+				<ul class="unstyled">
+					<li><a>About Us »</a></li>
+					<li><a>Press »</a></li>
+					<li><a>Affiliate Program »</a></li>
+					<li><a>Careers »</a></li>
+					<li><a>Tech Blog »</a></li>
+				</ul>
+			</li>
+			<li class="hide-on-small">
+				<h5>Have a question?</h5>
+				<ul class="unstyled">
+
+				
+	          	<li><a href="/gateway-prototype/womens/faq">FAQ »</a></li>
+	        	
+					<li><a>Help Center »</a></li>
+					<li><a>Contact Us »</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="footer__social">
 
 			<h5>Follow us</h5>
 
@@ -330,52 +334,8 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 				<li><a class="icon pinterest social-open"><span>Pinterest</span></a></li>
 			</ul>
 
-			<div class="pick-a-channel">
-		
-				<a href="#" class="icon social-close"><span>Close</span></a>
-				 <ul class="unstyled">
-		          <li class="choose-women"><a href="#">Women<div class="helper-text">@stitchfix</div></a></li>
-		          <li><a href="#">Men<div class="helper-text">@stitchfix_men</div></a></li>
-        </ul>
-
-			</div>
-
+			
 		</div>
-
-		<ul class="unstyled footer-nav">
-
-<!-- 			<li>
-				<ul class="unstyled">
-		<h5>Have a question?</h5> 
-			<li><a href="/faq">Visit our FAQ »</a></li>
-			</ul>
-		</li>
- -->
-
-			<li>
-				<h5>The service</h5>
-				<ul class="unstyled">
-					<li><a href="#">Help Center »</a></li>
-					<li><a href="#">Contact us »</a></li>
-					
-		            	<li><a href="http://blog.stitchfix.com">Style Tips »</a></li>
-		          	
-					<li><a href="#">Gift Cards »</a></li>
-					<li><a href="#">iPhone App »</a></li>
-					<li><a href="#">Plus Sizes »</a></li>
-				</ul>
-			</li>
-			<li>
-				<h5>The company</h5>
-				<ul class="unstyled">
-					<li><a href="#">About Us »</a></li>
-					<li><a href="#">Press »</a></li>
-					<li><a href="#">Affiliate Program »</a></li>
-					<li><a href="#">Careers »</a></li>
-					<li><a href="#">Tech Blog »</a></li>
-				</ul>
-			</li>
-		</ul>
 
 		<div class="download">
 
@@ -386,7 +346,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 		<div class="copyright">
 
-		<p class="terms-and-conditions"><a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></p>
+		<p class="terms-and-conditions"><a>Terms of Use</a> &amp; <a>Privacy Policy</a></p>
 
 		<p>Stitch Fix and Fix are trademarks of Stitch Fix, Inc.</p>
 
@@ -395,7 +355,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 	</div>
 
-
+<div class="safari_only">&nbsp;</div>
 </footer>
 
 </body>

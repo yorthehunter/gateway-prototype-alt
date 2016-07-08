@@ -18,6 +18,12 @@ $(function() {
     return false;
   });
 
+  $('#tertiary-toggle').click(function(){
+    $('.tertiary-nav').slideToggle( "fast" );
+    $('#tertiary-toggle').toggleClass('active');
+    return false;
+  });
+
 
   // $('#toggle-secondary').click(function(){
   //   $('.secondary-nav').slideToggle( "fast" );
@@ -26,12 +32,18 @@ $(function() {
   // });
 
 
-  $('footer .nav__style-tips').hover(function(){
-    $('footer .men-or-women').slideToggle( "fast" );
+  $('.account-toggle').hover(function(){
+    $('.account-nav .sub-nav').slideToggle( "fast" );
     return false;
   });
 
-  $('header .nav__style-tips').hover(function(){
+  $('footer .nav__style-tips').hover(function(){
+    $('footer .men-or-women').slideToggle( "fast" );
+    $('footer .nav__style-tips').toggleClass('is-open')
+    return false;
+  });
+
+  $('header .nav__style-tips').click(function(){
     $('header .men-or-women').slideToggle( "fast" );
     $('header .nav__style-tips').toggleClass('is-open');
     return false;
@@ -54,7 +66,7 @@ $(function() {
 
 
   $('.social-open.twitter').click(function(){
-    $('.pick-a-channel').slideToggle( "fast" );
+    $('.footer__social__select').slideToggle( "fast" );
     $(this).toggleClass('active');
     return false;
   });
@@ -69,11 +81,11 @@ $(function() {
 
 
 
-  $('.footer-toggle').click(function(){
-    $('#below-the-footer-fold').slideToggle( "fast" );
+  $('.footer__toggle').click(function(){
+    $('.footer__content').slideToggle( "fast" );
     var desiredHeight = $(window).height() - 220;
     $('html, body').animate({
-        scrollTop: $("#below-the-footer-fold").offset().top - desiredHeight
+        scrollTop: $(".footer__content").offset().top - desiredHeight
     }, 500);
     $('footer').toggleClass('is-open')
     return false;
@@ -113,10 +125,20 @@ $(function() {
     return false;
   });
 
-  $('.get-started').click(function(){
+
+  $('.refer-a-friend').click(function(){
             //$(this).animate(function(){
                 $('html, body').animate({
                     scrollTop: $("#get-started-form").offset().top - 50
+                     }, 700);
+            //});
+    return false;
+  });
+
+  $('.how-it-works-link').click(function(){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#how-it-works").offset().top - 50
                      }, 700);
             //});
     return false;
@@ -148,6 +170,15 @@ $(function() {
       $('.get-started-container').removeClass('mens');
     return false;
   });
+
+  $('.refer-link').click(function(){
+      $('.form-group').addClass('done');
+      $('.form-group-hidden').slideDown('fast');
+      $('.form-group-hidden').removeClass('done');
+      $('.form-group-hidden').removeClass('form-group-hidden');
+    return false;
+  });
+
 
 
 

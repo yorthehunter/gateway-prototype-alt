@@ -9,16 +9,66 @@ header {
   color: #374019;
   background: #fff;
   text-align: left;
-  min-height: 50px;
-  font-family: 'BrandonText-Bold'; 
+  min-height: 51px;
+  font-family: 'BrandonText-Regular'; 
   font-size: 14px; 
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  border-bottom: 1px solid $brand_grey_light;
+  background: #fff;
+  border-bottom: 1px solid lighten($brand_grey, 30%);
+
+  .home & {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    padding-right: 6px;
+  }
+
+  .opposite-gender & { 
+    border-color: lighten($brand_grey_light, 3%); 
+    .secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }
+  }
+
+  .logged-in & {
+    background-color: lighten($brand_grey_light, 3%); 
+  }
 
   a { 
     text-decoration: none !important; 
     padding: 0 1rem;
+  }
+
+  .active {
+    a {
+      color: darken($brand_grey_dark, 25%);    
+      position: relative;
+      &:after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background:  #fff;
+        border-right: 1px solid lighten($brand_grey, 30%);
+        border-bottom: 1px solid lighten($brand_grey, 30%);
+        display: block; 
+        position: absolute;
+        bottom: -8px;
+        left: calc(50% - 7px);
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Safari */
+        transform: rotate(45deg);
+      }    
+    }
+  }
+
+  .logged-in {
+    background: lighten($brand_grey_light, 3%);
+    .active {
+      a {
+        &:after {
+          background: lighten($brand_grey_light, 3%);
+        }
+      }
+    }
   }
 
   .btn {
@@ -28,13 +78,13 @@ header {
 } 
 
 #toggle,
-#secondary-toggle {
+#secondary-toggle,
+#tertiary-toggle {
   float: right;
   padding: 0 15px;
-  line-height: 49px;
+  line-height: 50px;
   font-size: 22px;
   z-index: 6;
-  background: #fff;
   border-bottom: 0;
   color: $brand_grey_dark; 
   display: block;
@@ -45,13 +95,10 @@ header {
 
   &:hover, 
   &:focus { 
-      background-color: #fff; 
       color: darken($brand_grey_dark, 10%);
       }
       &:active,
-      &.active { 
-        background-color: $brand_grey_dark; 
-        color: #fff; 
+      &.open { 
         i:after { content: "\ea0f"; }
       }
     i {
@@ -60,7 +107,8 @@ header {
   span { display: none; }
 }
 
-#secondary-toggle {
+#secondary-toggle,
+#tertiary-toggle {
   display: none;
 }
 
@@ -70,10 +118,11 @@ nav {
   width: 250px;
   right: 0;    
   top: 50px;
-  background: rgba(255,255,255,0.95);
   display: none;
   z-index: 0;
   line-height: 50px;
+  background: lighten($brand_grey_light, 3%);
+  border-top: 1px solid lighten($brand_grey, 30%);
 
   ul, 
   li { 
@@ -86,65 +135,65 @@ nav {
     display: block;
     border: none;
     color: $brand_grey_dark;
-    position: relative;
     .mens & { 
       color: $brand_grey_dark; 
     }
     &:hover,
     &:focus { 
-      color: $sf-link;   
+      color: $sf-link; 
       &:active { 
         color: #000; 
       }
     }
   }
 
-  .active {  
+  .secondary-nav {
     a {
-      &:after {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background:  #fff;
-      border-right: 1px solid $brand_grey_light;
-      border-bottom: 1px solid $brand_grey_light;
-      display: block; 
-      position: absolute;
-      bottom: -7px;
-      left: calc(50% - 7px);
-      transform: rotate(45deg);
+      padding: 0 1rem;
     }
   }
-  
 
- /*   &.sign-up {
-      background: darken(#e4981b, 5%);
-      color: #fff; 
-      &:focus, 
-        &:hover { background: #c70008; }
-        &:active { background: #07b675; color: #fff;  }
-      
-    }*/
-
-  }
-
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 365px) {
     border-left: 1px solid $brand_grey_light;
     border-bottom: 1px solid $brand_grey_light;
   }
 
+  @media screen and (min-width: 300px) {
+    a { 
+      font-size: 14px;
+      padding: 0 3px; 
+    }
 
+ /*   .active a:after {
+      display: none;
+    }*/
+  }
+
+
+  @media screen and (min-width: 400px) {
+    a { 
+      padding: 0 5px; 
+    }
+  }
+
+  @media screen and (min-width: 450px) {
+    a { 
+      font-size: 14px;
+      padding: 0 10px; 
+    }
+  }
 
   @media screen and (min-width: 650px) {
     display: block;
     top: 0; 
     background: transparent;
-    width: 100%;
-    left: 70px;
+    width: 100%;   
+    padding-left: 50px;
+    padding-right: 50px;
+    border-top: 0;
 
     li {
       display: inline-block;
-      a { padding: 0 10px; }
     }
   }
 
@@ -155,41 +204,89 @@ nav {
 
 }
 
+.account-nav {
+  display: none;
+  float: left;
+  .sub-nav {
+    background: lighten($brand_grey_light, 3%);
+    position: absolute;
+    top: 51px;
+    left: 50px;
+    text-align: left;
+    display: none;
+    li {
+      display: block;
+      a {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+ @media screen and (min-width: 550px) {
+  .account-nav {
+    display: block;
+  }
+}
+
 
 .logged-in  {
 
-  @media screen and (min-width: 375px) {
-    #secondary-toggle {
-      display: block;
-    }
+  header {
+    position: absolute;
 
-    #toggle {
-      display: none;
-    }
-  }
+    @media screen and (min-width: 365px) {
 
-  nav {
+      #secondary-toggle {
+        display: block;
+      }
 
-    @media screen and (min-width: 375px) {
-      background: none;
-      display: block;
-      top: 0;
-      width: 100%;
-      text-align: center;
+      #toggle {
+        display: none;
+      }
+
+
+      nav {
+        display: block;
+        top: 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-top: 0;
+      }
 
       li {
         display: inline-block;
       }
 
-      a {
-        padding: 0 0.3rem;
+      .active {  
+        a {
+          color: darken($brand_grey_dark, 25%);
+          &:after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background:  lighten($brand_grey_light, 3%);
+            border-right: 1px solid lighten($brand_grey, 30%);
+            border-bottom: 1px solid lighten($brand_grey, 30%);
+            display: block; 
+            position: absolute;
+            bottom: -8px;
+            left: calc(50% - 7px);
+            -ms-transform: rotate(45deg); 
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+          }
+        }
       }
 
       .secondary-nav {
         display: none;
-        background: rgba(255,255,255,0.95);
+        background: lighten($brand_grey_light, 3%);
         position: absolute;
-        top: 50px;
+        top: 51px;
         right: 0px;
         width: 250px;
         text-align: left;
@@ -198,126 +295,99 @@ nav {
         }
         a {
           padding: 0 1rem;
+          color: $brand_grey;
+          &:hover, &:focus {
+            color: darken($brand_grey, 15%);
+          }
+        }
+
+        .active {
+          a {
+            color: $brand_grey_dark;
+          /*  &:after {
+              display: none;
+            }*/
+          }
         }
       }
     }
 
-    @media screen and (min-width: 480px) {
+  
 
+    @media screen and (min-width: 750px) {
 
-      font-size: inherit;
-
-      a {
-        padding: 0 0.6rem;
+      #secondary-toggle {
+        display: none;
       }
-    }
 
-    @media screen and (min-width: 600px) {
-
-      a {
-        padding: 0 1rem;
+      #tertiary-toggle {
+        display: block;
       }
-    }
-
-    @media screen and (min-width: 650px) {
-
-      text-align: right;
-      padding-right: 120px;
-
-      a {
-        padding: 0 1.3rem;
-      }
-    }
-
-    @media screen and (min-width: 800px) {
-      padding-right: 60px;
-    }
-  }
-
-  @media screen and (min-width: 1000px) {
-
-
-    header {
-      height: 100px;
-      position: absolute;
-    }
-
-    nav {
-      top: 50px;
-      padding-right: 0;
 
       .secondary-nav {
         display: block;
-        top: -50px;
-        width: auto;
-        text-align: right;
-
-        li { display: inline; }
+        position: absolute;
+        width: inherit;
+        top: 0;
+        right: 60px;
+        background: transparent;
+        li {
+          display: inline-block;
+        }
 
         a {
-          float: left;
+          padding: 0 10px;
+        }
+
+        .active {
+          a {
+            /*&:after {
+              display: block;
+            }*/
+          }
+        }
+      }
+
+
+      .tertiary-nav {
+        display: none;
+        position: absolute;
+        top: 51px;
+        right: -60px;
+        background: lighten($brand_grey_light, 3%);
+        li {
+          display: block;
+        }
+
+        a {
+          padding: 0 1rem;
         }
       }
     }
 
-    #secondary-toggle {
-      display: none;
-    }
+    @media screen and (min-width: 950px) {
 
-  }
-}
+      #tertiary-toggle { 
+        display: none;
+      }
 
+      .secondary-nav {
+        right: 1rem;
+      }
 
-
-.nav__style-tips {
-  position: relative;
-  
-  &.active {
-    background: #e6e6e6;
-      a { 
-      display: block;
-      } 
-    }
-  .men-or-women { 
-    background: #e6e6e6;
-    display: none;
-
-    a {
-      padding: 0 4px;
-      color: $brand_grey_dark;
-      &:hover, &:focus {
-        color: darken($brand_grey_dark, 20%);
+      .tertiary-nav {
+        display: block;
+        position: relative;
+        display: inline;
+        top: auto;
+        right: auto;
+        background: transparent;
+        li {
+          display: inline-block;
+        }
       }
     }
   }
-}
-
-.men-or-women {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  right: 0;
-  li {
-    display: block;
-    float: left;
-    width: 50%;
-    a { padding: 0 1rem; }
-  }
-
-  @media screen and (min-width: 650px) {
-
-    top: 40px;
-    left: 0;
-    li {
-      display: block;
-      float: none;
-      width: 100%;
-    }
-  }
-
-  footer & { left: 80px; }
-
 }
 
 
@@ -337,6 +407,45 @@ header {
     margin: 6px 0;
     position: relative;
   }
+
+
+  .nav__style-tips {
+    position: relative;
+    
+    &.is-open {
+      a { 
+        color: darken($brand_grey_dark, 15%);
+      } 
+    }
+  }
+
+  .men-or-women {
+    background: #fff;
+    display: none;
+    li {
+      display: block;
+      a { 
+        padding: 0 1rem; 
+        &:hover, &:focus {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: 650px) {
+      position: absolute;
+      top: 50px;
+      left: 0; 
+      right: 0;     
+      border: 1px solid lighten($brand_grey, 30%);
+      border-top: #fff;
+      li {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
 }
 
 .link--avatar {
@@ -346,45 +455,38 @@ header {
   padding: 10px;
   position: relative;
   z-index: 12;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  float: left;
 
   a { display: block; }
+}  
 
-}
+.logged-out {
 
-.gender-toggle {
-  height: 50px;
-  width: 54px;
-  float: left;
-  &:hover  {
-  background: #eee;
+  .link--logo {
+    display: none;
   }
-}
 
-.toggle-gender {
-  display: none;
-  height: 50px;
-  background: #eee;
-  position: absolute;
-  top: 0px;
-  line-height: 50px;
-  left: 50px;
-  z-index: 11;
-  padding-right: 1rem;
-  a { 
-    display: inline-block; 
-    padding: 0 0.4rem;
-    line-height: 1.7rem;
-    color: $brand_grey_dark;
-    .mens & { color: $brand_grey_dark; }
-    &.active {
-     /* background: rgba(255,255,255,0.5);*/
+  @media screen and (min-width: 1100px) {
+
+    .link--avatar {
+      display: none;
     }
-    &:hover { cursor: pointer; color: darken($brand_grey_dark, 20%); }
+
+    .link--logo {
+      display: block;
+      width: 190px;
+      float: left;
+      padding-top: 15px;
+      position: relative;
+      z-index: 5;
+      height: 50px;
+      &:hover, &:focus { border-bottom: 0; }
+
+    }
   }
 }
+
+
 
 .divet-link {
   position: absolute;
@@ -418,4 +520,25 @@ i.divet {
     display: block;
     text-align: left;
   }
+}
+
+%nav-element {
+  position: relative;
+  display: block;
+  border-bottom: 0;
+  color: $brand_grey_dark;
+  &:hover {
+  }
+
+}
+
+.cookie {
+
+  a {
+    @extend %nav-element;
+    line-height: 50px;
+    float: left;
+    z-index: 10;
+  }
+
 }

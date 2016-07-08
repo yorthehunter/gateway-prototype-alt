@@ -5,74 +5,149 @@ footer {
   background: #fff;
   color: lighten($brand-grey, 10%);
 
-
   li { 
-    line-height: 44px; 
+    line-height: 44px;
+    padding-right: 5px; 
     margin-bottom: 0; 
   }
 
   &.is-open {
-      .footer-toggle {
-        background: #fff;
-      }
+    .footer__toggle {
+      background: #fff;
+    }
   }
 
   h5 {
-    font-family: 'BrandonGrotesque-Bold';
+    font-family: 'BrandonText-Bold';
     text-transform: uppercase;
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
 
-  .social {
+  .footer__social {
     position: relative;
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 10px;   
+    border-top: 1px solid $brand_grey-light;
+    border-bottom: 1px solid $brand_grey-light;
+    background: lighten($brand_grey-light, 5%);
+    margin-bottom: 1rem;
 
     .social-close {
       display: none; 
+    }
+
+    li {
+      padding-right: 0px;
     }
   }
 
 
   a {
-    color: $brand_grey_dark;
+    color: $sf_link;
+    border-bottom: 1px solid transparent;
     &:hover,
     &:focus {
-      color: $sf-link;
-      border-bottom: none;
-      border-bottom: 1px solid $sf-link; 
+      color: $sf_link;
+      border-bottom-color: $sf_link; 
     } 
-    .mens & { color: $brand_grey_dark; }
+    .mens & { 
+      color: $sf_link;
+      &:hover,
+      &:focus {
+        color: $sf_link;
+        border-bottom-color: $sf_link; 
+      } 
+    }
+  }
+
+  .nav__style-tips {
+    padding: 0px 10px;
+    margin-left: -10px;
+    margin-top: 0px;
+    position: relative;
+
+    a {
+      border-bottom-color: transparent;
+      color: $brand_grey_dark;
+    }
+
+    .men-or-women {
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      right: 0;
+      padding-left: 10px;
+      display: none;
+
+      a {
+        color: $sf_link;
+        &:hover
+        &:focus {
+          color: $sf_hover;
+          border-bottom-color: $sf_hover;
+        }
+      }
+    }
+
+    &.is-open {
+      background: lighten($brand_grey-light, 3%);
+      .men-or-women {
+        background: lighten($brand_grey-light, 3%);
+      }
+    }
   }
 
   
 }
 
-.above-the-footer-fold {
+.footer__header {
   padding: 15px;
   text-align: center;
   @include clear;
-  background: lighten($brand_grey-light, 4%);
-
-  @media screen and (min-width: 32rem) { background: lighten($brand_grey-light, 5%); }
+  background: #fff;
 
   span {
-    font-family: 'BrandonGrotesque-Bold';
-    text-transform: uppercase;
-    font-size: 1rem;
+    color: $brand_grey_dark;
+  }
+
+
+  .is-open & {
+    background: -moz-linear-gradient(top, #fff 0%, lighten($brand_grey-light, 3%) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fff), color-stop(100%, lighten($brand_grey-light, 3%)));
+    background: -webkit-linear-gradient(top, #fff 0%, lighten($brand_grey-light, 3%) 100%);
+    background: -o-linear-gradient(top, #fff 0%, lighten($brand_grey-light, 3%) 100%);
+    background: -ms-linear-gradient(top, #fff 0%, lighten($brand_grey-light, 3%) 100%);
+    background: linear-gradient(to bottom, #fff 0%, lighten($brand_grey-light, 3%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f8f7', GradientType=0 );
   }
 }
 
-a.footer-toggle {
+a.footer__toggle {
 
   background: $brand_grey-light;
+  color: lighten($brand_grey_dark, 15%);
+  .mens & {
+    color: lighten($brand_grey_dark, 15%);
+    &:hover,
+    &:focus {
+      color: lighten($brand_grey_dark, 5%);
+    }
+  }
   display: block;
   position: relative;
   border-top: 1px solid darken($brand_grey-light, 10%);
   text-align: center;
   padding: 20px;
-  border-bottom: 0px !important;
+  border-bottom: 0px !important;  
+  font-family: 'BrandonText-Bold';
+  text-transform: uppercase;
+  font-size: 1rem;
+
+  &:hover,
+  &:focus {
+    color: lighten($brand_grey_dark, 5%);
+  }
 
   &:before {
     position: absolute;
@@ -88,25 +163,33 @@ a.footer-toggle {
     position: absolute;
     bottom: -7px;
     left: calc(50% - 7px);
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
     transform: rotate(45deg);
+
+  }
+
+  .is-open & {
+    color: $brand-grey;
+    &:before {
+      background: lighten($brand_grey-light, 3%);
+    }
+
   }
 
   @media screen and (min-width: 700px) { display: none; }
 }
 
-.below-the-footer-fold {
+.footer__content {
   display: none;
 
   @media screen and (min-width: 700px) { display: block; }
 
 }
 
-.footer-nav {
+.footer__nav {
   clear: both;
   @include clear;
-  border-top: 1px solid $brand_grey-light;
-  border-bottom: 1px solid $brand_grey-light;
-  background: lighten($brand_grey-light, 5%);
   margin-bottom: 1rem;
   padding: 20px calc(50% - 10rem);
 
@@ -116,12 +199,15 @@ a.footer-toggle {
 
   }
 
-  .men-or-women {
-    left: 0;
+  a {
+    color: $brand_grey_dark;
+    .mens & {
+      color: $brand_grey_dark;
+    }
   }
 }
 
-.pick-a-channel {
+.footer__social__select {
   display: none;
   padding: 10px 0 20px;
   position: relative;
@@ -139,8 +225,22 @@ a.footer-toggle {
     }
   }
 
+  a {
+    display: block;
+    background: #fff;
+    border-bottom: 0;
+    padding: 10px;
+    border: 1px solid darken($brand_grey-light, 6%);
+    color: $brand_grey_dark;
+    &:hover,
+    &:focus {
+      border: 1px solid darken($brand_grey-light, 15%);
+      color: darken($brand_grey_dark, 10%);
+    }
+  }
+
   .helper-text {
-    font-size: 12px;
+    font-size: 14px;
     border-top: 1px solid darken($brand_grey-light, 6%);
   }
 }
@@ -162,93 +262,69 @@ a.footer-toggle {
   }
 }
 
+.footer__logo {
+  display: none;
+}
+
+.terms-and-conditions {
+  a {
+    color: $brand_grey_dark;
+     .mens & {
+      color: $brand_grey_dark;
+    }
+  }
+}
+
 @media screen and (min-width: 700px) { 
 
   footer {
 
-    padding: 2rem;
     background: #fff;
     text-align: left;
+    font-size: 0.9rem;
 
 
-    li { line-height: inherit; }
+    li { 
+      line-height: 2rem; 
+    }
 
-    .below-the-footer-fold,
-    .footer-nav,
-    .copyright,
-    .social {
+    .footer__content,
+    .footer__nav,
+    .copyright {
       padding: 0;
       background: none;
     }
 
-    .above-the-footer-fold {
+    .footer__header {
       text-align: left; 
       padding: 0;
       background: none;
     }
-
-    .pick-a-channel {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      background: #fff;
-      padding: 0;
-
-    }
   
-    .social {
-      float: right; 
-      width: 17rem;
-      border-bottom: 0;
-      text-align: center;
 
-      
-      .social-close {
-        display: block;
-        font-size: 10px;
-        margin: 0 auto;
-
-        &:after {
-          line-height: 10px;
-        }
-
-        &:hover, &:focus {
-          background-color: transparent;
-          color: darken($brand_grey_dark, 20%);
-          border-color: transparent;
-        }
-      }
-    }
-
-    .footer-nav {
-      float: left;
-      width: 60%; 
+    .footer__nav {
       clear: none;
-      margin-bottom: 1rem; 
       border: 0;
-      max-width: 25rem;
-    }
+      max-width: 35rem;
+      margin: 0 auto 1rem;
 
-    h5 { margin-bottom: 0.5rem; }
+      > li {
+        width: 33%;
+        }    
+      }
+
+    h5 { margin-bottom: 0;}
 
     a {
       color: $brand_grey_dark; 
     }
 
-    a.iphone-app-store {
-      position: absolute;
-      bottom: 5.5rem;
-      right: 6.2rem;
-      border: 0;
-    }
-
     .terms-and-conditions {
-      float: left;
+      float: right;
     }
 
     .copyright {
-      text-align: right;
+      text-align: left;
       border-top: 1px solid $brand_grey-light;
       padding-top: 1rem;
       margin-bottom: 0;
@@ -257,29 +333,80 @@ a.footer-toggle {
 
     }
 
+    .download {
+      margin-bottom: 1rem;
+    }
+  }
+}
 
-    .nav__style-tips {
-      .men-or-women {
-        top: 0;
-        left: 80px;
-        background: transparent;
-        li {
-          float: left;
-          width: 60px;
-        }
+@media screen and (min-width: 900px) {
+
+  footer {
+
+    padding: 0 3%;
+
+    .footer__nav {
+
+      width: 60%;
+      float: left;
+    } 
+
+    .footer__social {
+      float: right;
+      width: 40%;
+      clear: none;
+      background: none;
+      border: 0;
+      padding: 0;
+
+      .footer__social__select {
+        background: #fff;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        padding-bottom: 10px;
       }
     }
   }
+}
+
+@media screen and (min-width: 1100px) {
+
+  footer {
+
+    .footer__nav {
+      width: 50%;
+    }
+
+    .footer__social {
+      width: 25%;
+    }
+
+    .download {
+
+      float: left;
+      clear: both;
+      top: -140px;
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    .footer__logo {
+      display: block;
+      float: left;
+      width: 25%;
+      img { max-width: 200px; }
+    }
+
+  }
+
 }
 
 @media screen and (min-width: 70rem) { 
 
   footer {
     padding: 2rem calc(50% - 32rem);
-    
-     a.iphone-app-store {
-      right: calc(50% - 27.6rem);
-    }
   }
 
 }

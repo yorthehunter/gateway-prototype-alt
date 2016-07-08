@@ -28,46 +28,46 @@
 
 <!-- For all browsers -->
  <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen, handheld">
+<link rel="stylesheet" type="text/css" href="/gateway-prototype//css/styles.css" media="screen, handheld">
 
 <!-- JavaScript -->
 
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/modernizr.min.js"></script>
-<script type="text/javascript" src="/js/footer.js"></script>
-<script type="text/javascript" src="/js/core.js"></script>
-<script type="text/javascript" src="/js/fitvids.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/jquery.min.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/modernizr.min.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/footer.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/core.js"></script>
+<script type="text/javascript" src="/gateway-prototype//js/fitvids.js"></script>
 
 
 <script>
-var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
+var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w 1x'};
 </script>
 
-<script src="/js/rimg.min.js"></script>
+<script src="/gateway-prototype//js/rimg.min.js"></script>
 
 <!--- For Facebook -->
-<link rel="image_src" href="/img/prototype.jpg" />
+<link rel="image_src" href="/gateway-prototype//img/prototype.jpg" />
 
 
 
 
 <!-- For iPhone 4 -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/h/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/gateway-prototype//img/h/apple-touch-icon.png">
 <!-- For iPad 1-->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/m/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/gateway-prototype//img/m/apple-touch-icon.png">
 <!-- For the new iPad -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/h/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/gateway-prototype//img/h/apple-touch-icon-144x144-precomposed.png">
 <!-- For iPhone 3G, iPod Touch and Android -->
-<link rel="apple-touch-icon-precomposed" href="/img/l/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/gateway-prototype//img/l/apple-touch-icon-precomposed.png">
 <!-- For Nokia -->
-<link rel="shortcut icon" href="/img/l/apple-touch-icon.png">
+<link rel="shortcut icon" href="/gateway-prototype//img/l/apple-touch-icon.png">
 <!-- For everything else -->
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/gateway-prototype//favicon.ico">
 
 <!--iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="apple-touch-startup-image" href="/img/splash.png">
+<link rel="apple-touch-startup-image" href="/gateway-prototype//img/splash.png">
 
 
 <!-- Prevents links from opening in mobile Safari -->
@@ -86,24 +86,26 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 <header> 
     
     
-<div class="gender-toggle">
-<a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
-  <div class="toggle-gender">
-      <a  href="/mens">Mens</a>
-      <a  href="/womens">Womens</a> 
-  </div>
+<a href="/gateway-prototype/" class="link--avatar"><img src="/gateway-prototype//img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="/gateway-prototype/" class="link--logo"><img src="/gateway-prototype//img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
+
+
+<div class="cookie ">
+
+  
+   
+
 </div>
-
-
-
+      
 
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
 
 
   
-  <a href="/#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  <a href="/gateway-prototype/#get-started" class="btn btn--cta" id="get-started">Get started</a>
   
   
 
@@ -112,8 +114,10 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
     <nav class="main">
+
+        
       
-        <ul>
+        <ul class="primary-nav">
 
 
               
@@ -124,37 +128,45 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
                   
 
+ <!--                  
+                    
+                   -->
+
+
+                   
+                    
+                    <li ><a href="/gateway-prototype//faq">FAQ</a></li>
+                    
+                  
 
                   
-                    <li ><a href="/faq">FAQ</a></li>
-                  
 
-                  
-                    <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
+                    
+                    <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Guide</a>
                    
                         <ul class="men-or-women unstyled">
-                          <li><a href="http://blog.stitchfix.com">Women</a></li>
-                          <li><a href="http://blog.stitchfix.com/mens">Men</a></li>
+                          <li><a href="/gateway-prototype//style-tips">Women</a></li>
+                          <li><a href="/gateway-prototype//style-tips">Men</a></li>
                         </ul>
                       
                     </li>
-                  
-
-
-
-                  
-                  <li><a href="#">Gift cards</a></li>
-
-
-                  <!-- 
                     
-                      <li ><a href="/mens">Men</a></li>
-                      <li ><a href="/womens">Women</a></li>            
 
                   
 
+                  <li>
+
+                    <ul class="tertiary-nav">
+
+                    
+
+                    <li><a href="#">Gift cards</a></li>
                 
-                  
+                    
+
+                  </li>
+
+                </ul>
 
               </li>
 
@@ -164,7 +176,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 <!--
             
-                <li><a href="/schedule/">Element</a></li>
+                <li><a href="/gateway-prototype//schedule/">Element</a></li>
             
 
      -->       
@@ -181,73 +193,137 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 <div class="page">
 
 
-<form class="sign-in-form" id="new_user">
+<form class="sign-in-form" id="new_user" style="padding: 10px;">
+ 
+          <h2 class="content-headline">Sign In</h2>
+        <fieldset>
         <div class="row">
-          <div class="col-xs-12">
-            <legend class="content-headline">Sign In</legend>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 form-group">
+          <div class="form-group">
             <label class="control-label" for="user_login">Email</label>
-            <input autofocus="autofocus" class="form-control input-lg" type="email" value="torunn@stitchfix.com" />
+            <input autofocus="autofocus" id="user_login" class="form-control input-lg" type="email" value="" />
           </div>
         </div>
 
         <div class="row">
-          <div class="col-xs-12">
+          <div class="form-group">
             <label class="control-label" for="user_password">Password</label>
-            <input maxlength="75" class="form-control input-lg" size="75" type="password" value="**********" />
+            <input maxlength="75" class="form-control input-lg" id="user_password" size="75" type="password" value="" />
 
-      <span class="help-inline-block">Forgot your password?<a title="Forgot your password?"> Reset it now
-</a>            </span>
+     
           </div>
         </div>
-        <br />
-      <div class="row">
-        <div class="col-xs-12">
-          <a href="/logged-in" type="submit" name="commit" value="Sign In" class="btn btn--cta ">Sign in</a>
-        </div>
-      </div>
+
+       </fieldset>
+
+         <p><span class="help-block">Forgot your password?<a title="Forgot your password?"> Reset it now</a></span></p>
+
+          <a href="/gateway-prototype//logged-in" type="submit" name="commit" value="Sign In" class="btn btn--cta ">Sign in</a>
+
+
+         <p><span class="help-block">Don't have an account? <a href="/gateway-prototype/#get-started">Get started</a></span></p>
+    
 </form>
 
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 </div>
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
 
 </div>
 
 <footer>
 
 
-	<div class="above-the-footer-fold">
+	<div class="footer__header">
 
+		<p class="hide-on-big"><span>Have a question?</span> 
+				
+          <a href="/gateway-prototype//faq">Visit our FAQ »</a>
+        
+     </p>
 
-		<p><span>Have a question?</span> <a href="/faq">Visit our FAQ »</a></p>
-	
 	</div>
 
 	
-		<a href="#" class="footer-toggle">
+		<a href="#" class="footer__toggle">
 
-			Footer?
+			More about Stitch Fix
 		
 		</a>
 
 
 	
-	<div id="below-the-footer-fold" class="below-the-footer-fold">
+	<div class="footer__content">
 
-		<div class="social">
+		<div class="footer__logo">
+			<img alt="Stitch Fix Logo" data-png-src="https://d27bvhtwhzf6pr.cloudfront.net/assets/branding/logo_w_tagline_left_aligned-3e569ab79718532cb329320202481374.png" src="https://d27bvhtwhzf6pr.cloudfront.net/assets/branding/logo_w_tagline_left_aligned-b3878c8a7116e8f78ac8809de9888559.svg">
+		</div>
+
+		<ul class="unstyled footer__nav">
+
+<!-- 			<li>
+				<ul class="unstyled">
+		<h5>Have a question?</h5> 
+			<li><a href="/gateway-prototype//faq">Visit our FAQ »</a></li>
+			</ul>
+		</li>
+ -->
+
+			<li>
+				<h5>The service</h5>
+				<ul class="unstyled">
+					<li class="hide-on-big"><a>Help Center »</a></li>
+					<li class="hide-on-big"><a>Contact Us »</a></li>	          		
+					<li><a>Gift Cards »</a></li>
+					
+					
+					
+
+						
+	            <li class="nav__style-tips"><a  href="#" class="style-tips-toggle">Style Tips »</a>
+	         
+	              <ul class="men-or-women unstyled">
+	                <li><a href="/gateway-prototype//style-tips">Women »</a></li>
+	                <li><a href="/gateway-prototype//style-tips">Men »</a></li>
+	              </ul>
+	          
+	        	</li>
+		        
+	        
+				</ul>
+			</li>
+			<li>
+				<h5>The company</h5>
+				<ul class="unstyled">
+					<li><a>About Us »</a></li>
+					<li><a>Press »</a></li>
+					<li><a>Affiliate Program »</a></li>
+					<li><a>Careers »</a></li>
+					<li><a>Tech Blog »</a></li>
+				</ul>
+			</li>
+			<li class="hide-on-small">
+				<h5>Have a question?</h5>
+				<ul class="unstyled">
+
+					
+					<li><a href="/gateway-prototype//faq">FAQ »</a></li>
+					
+					<li><a>Help Center »</a></li>
+					<li><a>Contact Us »</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="footer__social">
 
 			<h5>Follow us</h5>
 
@@ -258,59 +334,20 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 				<li><a class="icon pinterest social-open"><span>Pinterest</span></a></li>
 			</ul>
 
-			<div class="pick-a-channel">
+			
+
+			<div class="footer__social__select">
 		
-				<a href="#" class="icon social-close"><span>Close</span></a>
 				 <ul class="unstyled">
-		          <li class="choose-women"><a href="#">Women<div class="helper-text">@stitchfix</div></a></li>
-		          <li><a href="#">Men<div class="helper-text">@stitchfix_men</div></a></li>
+		          <li class="choose-women"><a>Women<div class="helper-text">@stitchfix</div></a></li>
+		          <li><a>Men<div class="helper-text">@stitchfixmen</div></a></li>
         </ul>
+
 
 			</div>
 
+       
 		</div>
-
-		<ul class="unstyled footer-nav">
-
-<!-- 			<li>
-				<ul class="unstyled">
-		<h5>Have a question?</h5> 
-			<li><a href="/faq">Visit our FAQ »</a></li>
-			</ul>
-		</li>
- -->
-
-			<li>
-				<h5>The service</h5>
-				<ul class="unstyled">
-					<li><a href="#">Help Center »</a></li>
-					<li><a href="#">Contact us »</a></li>
-					
-			            <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips »</a>
-		           
-		                <ul class="men-or-women unstyled">
-		                  <li><a href="http://blog.stitchfix.com/">Women</a></li>
-		                  <li><a href="http://blog.stitchfix.com/mens">Men</a></li>
-		                </ul>
-	              
-	            	</li>
-	          		
-					<li><a href="#">Gift Cards »</a></li>
-					<li><a href="#">iPhone App »</a></li>
-					<li><a href="#">Plus Sizes »</a></li>
-				</ul>
-			</li>
-			<li>
-				<h5>The company</h5>
-				<ul class="unstyled">
-					<li><a href="#">About Us »</a></li>
-					<li><a href="#">Press »</a></li>
-					<li><a href="#">Affiliate Program »</a></li>
-					<li><a href="#">Careers »</a></li>
-					<li><a href="#">Tech Blog »</a></li>
-				</ul>
-			</li>
-		</ul>
 
 		<div class="download">
 
@@ -321,7 +358,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 		<div class="copyright">
 
-		<p class="terms-and-conditions"><a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></p>
+		<p class="terms-and-conditions"><a>Terms of Use</a> &amp; <a>Privacy Policy</a></p>
 
 		<p>Stitch Fix and Fix are trademarks of Stitch Fix, Inc.</p>
 
@@ -330,7 +367,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -desktop 800w 1x'};
 
 	</div>
 
-
+<div class="safari_only">&nbsp;</div>
 </footer>
 
 </body>

@@ -1,19 +1,25 @@
 {% if page.status == "logged-in" %}
-<a href="/logged-in" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="{{ site.baseurl }}/logged-in" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 {% else %}
-<div class="gender-toggle">
-<a href="/" class="link--avatar"><img src="/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
-  <div class="toggle-gender">
-      <a {% if page.active == "mens" %}class="active"{% endif %} href="/mens">Mens</a>
-      <a {% if page.active == "womens" %}class="active"{% endif %} href="/womens">Womens</a> 
-  </div>
-</div>
-
+<a href="{{ site.baseurl }}" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="{{ site.baseurl }}" class="link--logo"><img src="{{ site.baseurl }}/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
 {% endif %}
 
+<div class="cookie {% if page.active == "womens" or page.active == "mens" %}active{% endif %}">
+{% if page.status != "logged-in" %}
+  {% if page.skin == "womens"%}
+    <a href="{{ site.baseurl }}/womens">Women</a>
+  {% endif %}
+  {% if page.skin == "mens" %}
+    <a href="{{ site.baseurl }}/mens">Men</a>
+  {% endif %} 
+{% endif %}
+</div>
+      
 
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
+  <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
 {% if page.status == "logged-in" %}  
   {% if page.body_class == "mens" %} 
@@ -22,12 +28,14 @@
 {% else %}
 
   {% if page.skin == "neutral" %}
-  <a href="/#get-started" class="btn btn--cta" id="get-started">Get started</a>
-  {% else %}
-  <a href="/" class="btn btn--cta" id="get-started">Get started</a>
+  <a href="{{ site.baseurl }}#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  {% elsif page.skin == "womens" %}
+  <a href="{{ site.baseurl }}womens/#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  {% elsif page.skin == "mens" %}
+  <a href="{{ site.baseurl }}mens/#get-started" class="btn btn--cta" id="get-started">Get started</a>
   {% endif %}
   {% unless page.active == "login" %}
-    <a href="/login" class="btn btn--cta-secondary">Sign in</a>
+    <a class="btn btn--cta-secondary">Sign in</a>
   {% endunless %}
 
 {% endif %}
@@ -35,15 +43,30 @@
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
 
     <nav class="main">
+
+        {% if page.status == "logged-in" %}
+
+        <ul class="account-nav">
+
+          <li><a href="#" class="account-toggle">Kimberly ▾</a>
+            <ul class="sub-nav">
+              <li><a href="#">Account</a><li>
+              <li><a href="#">Credit</a><li>
+              <li><a href="{{ site.baseurl }}">Sign out</a></li>
+            </ul> 
+          </li>
+
+        </ul>
+
+        {% endif %}
       
-        <ul>
+        <ul class="primary-nav">
 
 
               {% if page.status == "logged-in" %}
-                <li{% if page.active == "my-fix" %} class="active"{% endif %}><a href="/logged-in">My fix</a></li>
-                <li><a href="/logged-in">Style profile</a></li>
+                <li{% if page.active == "my-fix" %} class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in">My fix</a></li>
+                <li{% if page.active == "style-profile" %} class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/style-profile">Style profile</a></li>
                 <li><a href="#">Referrals</a></li>
-                <li class="hide-on-small show-on-big"><a href="#">Account</a></li>
               {% endif %}
 
               <li>
@@ -54,53 +77,71 @@
                     <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
                   {% endif %}
 
+ <!--                  {% if page.status != "logged-in" %}
+                    {% if page.active == "womens" or page.active == "mens" %}
+                      <li><a href="#" class="how-it-works-link">How it works</a></li>
+                    {% endif %}
+                  {% endif %} -->
+
 
                   {% if page.status == "logged-in" %}
-                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="/logged-in/faq">Get help</a></li>
-                  {% else %}
-                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="/faq">FAQ</a></li>
+
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/faq">FAQ</a></li>
+
+                  {% else %} 
+                    {% if page.skin == "womens" %}
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}womens/faq">FAQ</a></li>
+                    {% elsif page.skin == "mens" %}
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}mens/faq">FAQ</a></li>
+                    {% else %}
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/faq">FAQ</a></li>
+                    {% endif %}
                   {% endif %}
 
-                  {% if page.skin == "womens" %}
-                    <li><a href="http://blog.stitchfix.com">Style Tips</a></li>
-                  {% elsif page.skin == "mens" %}
-                    <li><a href="http://blog.stitchfix.com/mens">Style Tips</a></li>
+                  {% if page.status == "logged-in" %}
+
+                    <li><a href="#">Style Guide</a></li>
+
                   {% else %}
-                    <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Tips</a>
+
+                    {% if page.skin == "womens" %}
+                      <li><a href="http://blog.stitchfix.com">Style Guide</a></li>
+                    {% elsif page.skin == "mens" %}
+                      <li><a href="{{ site.baseurl }}/style-tips">Style Guide</a></li>
+                    {% else %}
+                    <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Guide</a>
                    
                         <ul class="men-or-women unstyled">
-                          <li><a href="http://blog.stitchfix.com">Women</a></li>
-                          <li><a href="http://blog.stitchfix.com/mens">Men</a></li>
+                          <li><a href="{{ site.baseurl }}/style-tips">Women</a></li>
+                          <li><a href="{{ site.baseurl }}/style-tips">Men</a></li>
                         </ul>
                       
                     </li>
+                    {% endif %}
+
                   {% endif %}
 
+                  <li>
 
+                    <ul class="tertiary-nav">
 
-                  {% if page.active == "womens" or page.status == "logged-in" %}
-                    <li><a href="#">Reviews</a></li>
-                  {% endif %}
-                  <li><a href="#">Gift cards</a></li>
+                    {% if page.skin == "womens" or page.status == "logged-in" %}
+                      <li><a href="http://stitchfixreviews.com/">Reviews</a></li>
+                    {% endif %}
 
-
-                  <!-- {% if page.status == "logged-out" %}
-                    
-                      <li {% if page.active == "mens" %}class="active"{% endif %}><a href="/mens">Men</a></li>
-                      <li {% if page.active == "womens" %}class="active"{% endif %}><a href="/womens">Women</a></li>            
-
-                  {% else %} -->
-
-                     <li><a href="/logged-in/mens">Mens</a></li>
-               
-                  {% endif %}
-
+                    <li><a href="#">Gift cards</a></li>
                 
-                  {% if page.status == "logged-in" %}
+                    {% if page.status == "logged-in" %}
 
-                    <li><a href="/">Sign out</a></li>
+                      <li {% if page.active == "mens" %}class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/mens">Mens</a></li>
 
-                  {% endif %}
+                      <li class="show-on-small hide-on-big"><a href="{{ site.baseurl }}">Sign out</a></li>
+
+                    {% endif %}
+
+                  </li>
+
+                </ul>
 
               </li>
 
@@ -110,9 +151,9 @@
 
 <!--
             {% if page.active == "element" %}
-                <li class="active"><a href="/page/">Element</a></li>
+                <li class="active"><a href="{{ site.baseurl }}/page/">Element</a></li>
             {% else %}
-                <li><a href="/schedule/">Element</a></li>
+                <li><a href="{{ site.baseurl }}/schedule/">Element</a></li>
             {% endif %}
 
      -->       

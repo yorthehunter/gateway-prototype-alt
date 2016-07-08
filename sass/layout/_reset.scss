@@ -32,7 +32,6 @@ body {
   background: #fff; 
   margin: 0; 
   line-height: 1.4; 
-  height: 100%; 
   font-weight: 400; 
   }
 
@@ -105,6 +104,7 @@ a {
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; 
       -webkit-tap-highlight-color: transparent;
+      outline: 0;
   }
 }
 
