@@ -127,6 +127,13 @@ a.footer__toggle {
 
   background: $brand_grey-light;
   color: lighten($brand_grey_dark, 15%);
+  .mens & {
+    color: lighten($brand_grey_dark, 15%);
+    &:hover,
+    &:focus {
+      color: lighten($brand_grey_dark, 5%);
+    }
+  }
   display: block;
   position: relative;
   border-top: 1px solid darken($brand_grey-light, 10%);

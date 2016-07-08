@@ -1242,6 +1242,10 @@ a.footer__toggle {
   font-family: 'BrandonText-Bold';
   text-transform: uppercase;
   font-size: 1rem; }
+  .mens a.footer__toggle {
+    color: #525760; }
+    .mens a.footer__toggle:hover, .mens a.footer__toggle:focus {
+      color: #3b3f45; }
   a.footer__toggle:hover, a.footer__toggle:focus {
     color: #3b3f45; }
   a.footer__toggle:before {
