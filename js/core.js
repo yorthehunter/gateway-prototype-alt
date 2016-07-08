@@ -37,7 +37,7 @@ $(function() {
     return false;
   });
 
-  $('footer .nav__style-tips').click(function(){
+  $('footer .nav__style-tips').hover(function(){
     $('footer .men-or-women').slideToggle( "fast" );
     $('footer .nav__style-tips').toggleClass('is-open')
     return false;

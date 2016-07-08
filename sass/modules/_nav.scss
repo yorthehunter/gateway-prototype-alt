@@ -29,6 +29,10 @@ header {
     .secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }
   }
 
+  .logged-in & {
+    background-color: lighten($brand_grey_light, 3%); 
+  }
+
   a { 
     text-decoration: none !important; 
     padding: 0 1rem;

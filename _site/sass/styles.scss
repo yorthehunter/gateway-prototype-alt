@@ -30,8 +30,8 @@
 .main,
 .men-or-women {
   display: block !important;
-}*/
-  
+}
+  */
 
 @media screen and (max-width: 700px) {
 
@@ -370,9 +370,9 @@ img { max-width: 100%; }
 		}
 	}
 	@media screen and (min-width: 70rem) {
-		padding-left: calc(50% - 33rem);
-		padding-right: calc(50% - 33rem);
-		background-position: calc(50% - 13rem) 0;
+		margin-left: calc(50% - 33rem);
+		margin-right: calc(50% - 33rem);
+		background-position: 0 0;
 	}
 }
 
@@ -408,9 +408,12 @@ img { max-width: 100%; }
 	    	@include clear;
 
 			.btn {
-				width: 50%;
+			text-transform: inherit;
+			width: 50%;
 		    display: block;
 		    float: left;
+		    padding: 0;
+		    line-height: 32px;
 		    color: $brand_grey_dark;
 		    border-color: darken($brand_grey_light, 10%);/*
 		    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/

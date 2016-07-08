@@ -782,6 +782,8 @@ header {
     border-color: #f9f8f7; }
     .opposite-gender header .secondary-nav .active a:after {
       border-color: #f9f8f7; }
+  .logged-in header {
+    background-color: #f9f8f7; }
   header a {
     text-decoration: none !important;
     padding: 0 1rem; }
@@ -1184,6 +1186,9 @@ footer {
     margin-left: -10px;
     margin-top: 0px;
     position: relative; }
+    footer .nav__style-tips a {
+      border-bottom-color: transparent;
+      color: #2f3237; }
     footer .nav__style-tips .men-or-women {
       position: absolute;
       z-index: 5;
@@ -1191,6 +1196,12 @@ footer {
       right: 0;
       padding-left: 10px;
       display: none; }
+      footer .nav__style-tips .men-or-women a {
+        color: #0085c4; }
+        footer .nav__style-tips .men-or-women a:hover
+        footer .nav__style-tips .men-or-women a:focus {
+          color: #f2f1ef;
+          border-bottom-color: #f2f1ef; }
     footer .nav__style-tips.is-open {
       background: #f9f8f7; }
       footer .nav__style-tips.is-open .men-or-women {
@@ -1209,9 +1220,7 @@ footer {
     display: table;
     clear: both; }
   .footer__header span {
-    font-family: 'BrandonText-Bold';
-    text-transform: uppercase;
-    font-size: 1rem; }
+    color: #2f3237; }
   .is-open .footer__header {
     background: -moz-linear-gradient(top, white 0%, #f9f8f7 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(100%, #f9f8f7));
@@ -1223,13 +1232,18 @@ footer {
 
 a.footer__toggle {
   background: #f2f1ef;
-  color: #2f3237;
+  color: #525760;
   display: block;
   position: relative;
   border-top: 1px solid #dbd8d3;
   text-align: center;
   padding: 20px;
-  border-bottom: 0px !important; }
+  border-bottom: 0px !important;
+  font-family: 'BrandonText-Bold';
+  text-transform: uppercase;
+  font-size: 1rem; }
+  a.footer__toggle:hover, a.footer__toggle:focus {
+    color: #3b3f45; }
   a.footer__toggle:before {
     position: absolute;
     top: -7px;
@@ -1249,8 +1263,10 @@ a.footer__toggle {
     -webkit-transform: rotate(45deg);
     /* Safari */
     transform: rotate(45deg); }
-  .is-open a.footer__toggle:before {
-    background: #f9f8f7; }
+  .is-open a.footer__toggle {
+    color: #96908c; }
+    .is-open a.footer__toggle:before {
+      background: #f9f8f7; }
   @media screen and (min-width: 700px) {
     a.footer__toggle {
       display: none; } }
@@ -1325,7 +1341,6 @@ a.footer__toggle {
 
 @media screen and (min-width: 700px) {
   footer {
-    padding: 2rem;
     background: #fff;
     text-align: left;
     font-size: 0.9rem; }
@@ -1363,23 +1378,25 @@ a.footer__toggle {
     footer .download {
       margin-bottom: 1rem; } }
 @media screen and (min-width: 900px) {
-  footer .footer__nav {
-    width: 60%;
-    float: left; }
-  footer .footer__social {
-    float: right;
-    width: 40%;
-    clear: none;
-    background: none;
-    border: 0;
-    padding: 0; }
-    footer .footer__social .footer__social__select {
-      background: #fff;
-      position: absolute;
-      top: 75px;
-      left: 0;
-      right: 0;
-      padding-bottom: 10px; } }
+  footer {
+    padding: 0 3%; }
+    footer .footer__nav {
+      width: 60%;
+      float: left; }
+    footer .footer__social {
+      float: right;
+      width: 40%;
+      clear: none;
+      background: none;
+      border: 0;
+      padding: 0; }
+      footer .footer__social .footer__social__select {
+        background: #fff;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        padding-bottom: 10px; } }
 @media screen and (min-width: 1100px) {
   footer .footer__nav {
     width: 50%; }
@@ -1628,7 +1645,8 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
 .main,
 .men-or-women {
   display: block !important;
-}*/
+}
+  */
 @media screen and (max-width: 700px) {
   .hide-on-small {
     display: none !important; } }
@@ -1882,9 +1900,9 @@ img {
         bottom: -1rem; } }
   @media screen and (min-width: 70rem) {
     .get-started-container {
-      padding-left: calc(50% - 33rem);
-      padding-right: calc(50% - 33rem);
-      background-position: calc(50% - 13rem) 0; } }
+      margin-left: calc(50% - 33rem);
+      margin-right: calc(50% - 33rem);
+      background-position: 0 0; } }
 
 .get-started-form {
   margin: 0 auto;
@@ -1915,9 +1933,12 @@ img {
       display: table;
       clear: both; }
     .get-started-form .pick-a-gender .flr-wrap .btn {
+      text-transform: inherit;
       width: 50%;
       display: block;
       float: left;
+      padding: 0;
+      line-height: 32px;
       color: #2f3237;
       border-color: #dbd8d3;
                                              /*

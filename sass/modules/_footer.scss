@@ -44,19 +44,19 @@ footer {
 
 
   a {
-    color: $sf-link;
+    color: $sf_link;
     border-bottom: 1px solid transparent;
     &:hover,
     &:focus {
-      color: $sf-link;
-      border-bottom-color: $sf-link; 
+      color: $sf_link;
+      border-bottom-color: $sf_link; 
     } 
     .mens & { 
-      color: $sf-link;
+      color: $sf_link;
       &:hover,
       &:focus {
-        color: $sf-link;
-        border-bottom-color: $sf-link; 
+        color: $sf_link;
+        border-bottom-color: $sf_link; 
       } 
     }
   }
@@ -67,6 +67,11 @@ footer {
     margin-top: 0px;
     position: relative;
 
+    a {
+      border-bottom-color: transparent;
+      color: $brand_grey_dark;
+    }
+
     .men-or-women {
       position: absolute;
       z-index: 5;
@@ -74,6 +79,15 @@ footer {
       right: 0;
       padding-left: 10px;
       display: none;
+
+      a {
+        color: $sf_link;
+        &:hover
+        &:focus {
+          color: $sf_hover;
+          border-bottom-color: $sf_hover;
+        }
+      }
     }
 
     &.is-open {
@@ -94,10 +108,9 @@ footer {
   background: #fff;
 
   span {
-    font-family: 'BrandonText-Bold';
-    text-transform: uppercase;
-    font-size: 1rem;
+    color: $brand_grey_dark;
   }
+
 
   .is-open & {
     background: -moz-linear-gradient(top, #fff 0%, lighten($brand_grey-light, 3%) 100%);
@@ -113,13 +126,21 @@ footer {
 a.footer__toggle {
 
   background: $brand_grey-light;
-  color: $brand_grey_dark;
+  color: lighten($brand_grey_dark, 15%);
   display: block;
   position: relative;
   border-top: 1px solid darken($brand_grey-light, 10%);
   text-align: center;
   padding: 20px;
-  border-bottom: 0px !important;
+  border-bottom: 0px !important;  
+  font-family: 'BrandonText-Bold';
+  text-transform: uppercase;
+  font-size: 1rem;
+
+  &:hover,
+  &:focus {
+    color: lighten($brand_grey_dark, 5%);
+  }
 
   &:before {
     position: absolute;
@@ -142,6 +163,7 @@ a.footer__toggle {
   }
 
   .is-open & {
+    color: $brand-grey;
     &:before {
       background: lighten($brand_grey-light, 3%);
     }
@@ -238,7 +260,6 @@ a.footer__toggle {
 
   footer {
 
-    padding: 2rem;
     background: #fff;
     text-align: left;
     font-size: 0.9rem;
@@ -302,6 +323,8 @@ a.footer__toggle {
 @media screen and (min-width: 900px) {
 
   footer {
+
+    padding: 0 3%;
 
     .footer__nav {
 
