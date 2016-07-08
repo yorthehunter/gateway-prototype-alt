@@ -1339,6 +1339,9 @@ a.footer__toggle {
 .footer__logo {
   display: none; }
 
+.terms-and-conditions a {
+  color: #2f3237; }
+
 @media screen and (min-width: 700px) {
   footer {
     background: #fff;
