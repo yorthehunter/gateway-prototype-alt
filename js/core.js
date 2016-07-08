@@ -33,7 +33,7 @@ $(function() {
 
 
   $('.account-toggle').hover(function(){
-    $('.account-nav').slideToggle( "fast" );
+    $('.account-nav .sub-nav').slideToggle( "fast" );
     return false;
   });
 
