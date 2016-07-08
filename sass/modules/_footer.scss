@@ -194,6 +194,9 @@ a.footer__toggle {
 
   a {
     color: $brand_grey_dark;
+    .mens & {
+      color: $brand_grey_dark;
+    }
   }
 }
 
@@ -259,6 +262,9 @@ a.footer__toggle {
 .terms-and-conditions {
   a {
     color: $brand_grey_dark;
+     .mens & {
+      color: $brand_grey_dark;
+    }
   }
 }
 

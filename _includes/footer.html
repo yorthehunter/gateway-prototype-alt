@@ -46,8 +46,10 @@
 					<li class="hide-on-big"><a>Help Center »</a></li>
 					<li class="hide-on-big"><a>Contact Us »</a></li>	          		
 					<li><a>Gift Cards »</a></li>
+					{% if page.skin == "womens" %}
 					<li><a>iPhone App »</a></li>
 					<li><a>Plus Sizes »</a></li>
+					{% endif %}
 					
 					{% if page.status == "logged-out" %}
 
