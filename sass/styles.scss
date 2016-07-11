@@ -141,6 +141,16 @@ img { max-width: 100%; }
   		border-color: darken($brand_copper, 10%);
   	}
   }
+
+  &#get-started {
+  	padding-right: 35px;
+  	img {
+  		position: absolute;
+  		top: 8px;
+  		right: 8px;
+  		width: 50px;
+  	}
+  }
 }
 
 .btn--cta-secondary {
@@ -163,6 +173,7 @@ img { max-width: 100%; }
 	}
 
 }
+
 
 
 .splash {

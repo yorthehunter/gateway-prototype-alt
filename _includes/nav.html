@@ -28,11 +28,11 @@
 {% else %}
 
   {% if page.skin == "neutral" %}
-  <a href="{{ site.baseurl }}#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  <a href="{{ site.baseurl }}#get-started" class="btn btn--cta" id="get-started">Get started <img src="{{ site.baseurl }}img/arrow.svg" /></a>
   {% elsif page.skin == "womens" %}
-  <a href="{{ site.baseurl }}womens/#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  <a href="{{ site.baseurl }}womens/#get-started" class="btn btn--cta" id="get-started">Get started <img src="{{ site.baseurl }}img/arrow.svg" /></a>
   {% elsif page.skin == "mens" %}
-  <a href="{{ site.baseurl }}mens/#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  <a href="{{ site.baseurl }}mens/#get-started" class="btn btn--cta" id="get-started">Get started <img src="{{ site.baseurl }}img/arrow.svg" /></a>
   {% endif %}
   {% unless page.active == "login" %}
     <a class="btn btn--cta-secondary">Sign in</a>

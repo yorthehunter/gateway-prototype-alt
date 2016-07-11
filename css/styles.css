@@ -1735,6 +1735,13 @@ img {
     .mens .btn--cta:hover, .mens .btn--cta:focus {
       background: #cc6031;
       border-color: #cc6031; }
+  .btn--cta#get-started {
+    padding-right: 35px; }
+    .btn--cta#get-started img {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 50px; }
 
 .btn--cta-secondary {
   color: #2f3237; }
