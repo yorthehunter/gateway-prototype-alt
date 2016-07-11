@@ -14,7 +14,7 @@
 
 <head>
 
-	<title>Refer a friend!</title>	
+	<title>Gift Cards</title>	
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -81,15 +81,21 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 </head>
 
 
-<body class="marketing-page opposite-gender womens logged-in">
+<body class="gift-cards womens logged-out">
 
 <header> 
     
     
-<a href="/gateway-prototype//logged-in" class="link--avatar"><img src="/gateway-prototype//img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="/gateway-prototype/" class="link--avatar"><img src="/gateway-prototype//img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="/gateway-prototype/" class="link--logo"><img src="/gateway-prototype//img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
 
 <ul class="cookie-nav">
-  <li class=" active">
+  <li class=" ">
+  
+    
+      <a href="/gateway-prototype//womens">Women</a>
+    
+     
   
   </li>
 </ul>
@@ -99,8 +105,15 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
+
+
   
-    
+  <a href="/gateway-prototype/womens/#get-started" class="btn btn--cta" id="get-started">Get started</a>
+  
+  
+    <a class="btn btn--cta-secondary">Sign in</a>
+  
+
 
 
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
@@ -108,28 +121,10 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
     <nav class="main">
 
         
-
-        <ul class="account-nav">
-
-          <li><a href="#" class="account-toggle">Kimberly ▾</a>
-            <ul class="sub-nav">
-              <li><a href="#">Account</a><li>
-              <li><a href="#">Credit</a><li>
-              <li><a href="/gateway-prototype/">Sign out</a></li>
-            </ul> 
-          </li>
-
-        </ul>
-
-        
       
         <ul class="primary-nav">
 
 
-              
-                <li><a href="/gateway-prototype//logged-in">My fix</a></li>
-                <li><a href="/gateway-prototype//logged-in/style-profile">Style profile</a></li>
-                <li><a href="#">Referrals</a></li>
               
 
               <li>
@@ -137,21 +132,23 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
                 <ul class="secondary-nav">
 
                   
-                    <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
+
+ <!--                  
+                    
+                   -->
+
+
+                   
+                    
+                    <li ><a href="/gateway-prototype/womens/faq">FAQ</a></li>
+                    
                   
 
- <!--                   -->
-
-
                   
 
-                    <li ><a href="/gateway-prototype//logged-in/faq">FAQ</a></li>
-
-                  
-
-                  
-
-                    <li><a href="#">Style Guide</a></li>
+                    
+                      <li><a href="http://blog.stitchfix.com">Style Guide</a></li>
+                    
 
                   
 
@@ -163,14 +160,8 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
                       <li><a href="http://stitchfixreviews.com/">Reviews</a></li>
                     
 
-                    <li ><a href="/gateway-prototype//womens/gift-cards">Gift cards</a></li>
+                    <li class="active"><a href="/gateway-prototype//womens/gift-cards">Gift cards</a></li>
                 
-                    
-
-                      <li class="active"><a href="/gateway-prototype//logged-in/mens">Mens</a></li>
-
-                      <li class="show-on-small hide-on-big"><a href="/gateway-prototype/">Sign out</a></li>
-
                     
 
                   </li>
@@ -199,121 +190,19 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 
 
 
-<div class="page mens">
+<div class="page">
 
-<div class="splash">
+	<div class="article-content" style="padding: 10px;">
 
-	<img data-src="/gateway-prototype/img/mens-lio.jpg" alt="Mens" />
+	<h1>Gift cards</h1>
 
-
-<div class="hero-overlay">
-
-	<h5>Introducing</h5>
-  <img src="/gateway-prototype/img/stitchfix-inverse.svg" alt="logo" class="logo"/>
-  <h5>Men</h5>
-  <p>We can now style all the men in your life!</p>
-	  <a href="#get-started" class="refer-a-friend btn btn--cta">Refer a friend</a><br />
-	</p>
-	<p>To sign up for Stitch Fix Men you'll have to sign out of your account</p>
-
-  
-</div>
-
-</div>
-
-<br/>
-<h5 class="wireframe">
-
-Placeholder for value proposition
-
-</h5>
-<br/>
-
-<h5 class="wireframe">
-
-Placeholder for referral widget 
-
-</h5>
-
-<!-- 
-<div class="get-started-container">
-
-<form id="get-started-form" class="refer-form"  style="padding: 10px;">
-
-	<div class="">
-
-		<h2>Refer a friend to Stitch Fix Men <br />and get $25</h2>
-
-
-	</div>
-
-	<fieldset>
-
-	<div class="form-group" style="border-right: 1px solid #dbd8d3; border-left: 1px solid #dbd8d3;">
-
-	    <label class="control-label" for="referee-email">Email</label>
-	    <input maxlength="75" class="form-control input-lg" size="75" type="email" name="user[email]" id="referee-email" value="" >
-
-	</div>
-
-	<div class="form-group form-group-hidden" style="display:none; border-right: 1px solid #dbd8d3; border-left: 1px solid #dbd8d3;">
-
-	    <label class="control-label" for="referee-email">Email</label>
-	    <input maxlength="75" class="form-control input-lg" size="75" type="email" name="user[email]" id="referee-email" value="" >
-
-	</div>
-
-<div class="form__cta">
-
-		<a href="#" class="btn btn--cta refer-link">Refer</a>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 </div>
 
 
-</fieldset>
-
-<br />
-<br />
- 
-<div class="" style="padding: 20px; text-align: center; background: #efefef">
-
-	<h5>Share your referral link<br />and get $25</h5>
-
-	<ul class="social unstyled">
-
-	<li><i class="icon facebook"><span>Facebook</span></i></li>
-	<li><i class="icon twitter"><span>Twitter</span></i></li>
-	<li><i class="icon email"><span>Email</span></i></li>
-	<li><i class="icon link"><span>Copy link</span></i></li>
-
-	</ul>
-
 </div>
 
-<br /><br />
-
-
-<div class="" style="padding: 20px; text-align: center; background: #efefef">
-
-	<p>
-		<a href="/gateway-prototype/mens/#get-started-form" class="btn">Sign up for a Mens account</a>
-		<br/>
-		(We'll have to sign you out of your account)
-	</p>
-
-</div>
-
-<br /><br />
-
-<div class="" style="padding: 20px; text-align: center; background: #efefef">
-
-	<p><a class="btn">Buy a gift card</a></p>
-
-</div>
-
-</form>
-
-</div> -->
 
 </div>
 
@@ -324,7 +213,7 @@ Placeholder for referral widget
 
 		<p class="hide-on-big"><span>Have a question?</span> 
 				
-          <a href="/gateway-prototype//logged-in/faq">Visit our FAQ »</a>
+          <a href="/gateway-prototype//faq">Visit our FAQ »</a>
         
      </p>
 
@@ -368,8 +257,9 @@ Placeholder for referral widget
 					
 					
 
-	        	<li><a>Style Tips »</a></li>
-
+						
+	          	<li><a>Style Tips »</a></li>
+	        	
 	        
 				</ul>
 			</li>

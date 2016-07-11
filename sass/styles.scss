@@ -132,13 +132,13 @@ img { max-width: 100%; }
   }
 
   .mens & { 
-  	background: $brand_copper; 
-  	border-color: $brand_copper; 
+  	background: $brand_butternut; 
+  	border-color: $brand_butternut; 
   	color: #fff;
   	&:hover,
   	&:focus {
-  		background: darken($brand_copper, 10%);
-  		border-color: darken($brand_copper, 10%);
+  		background: darken($brand_butternut, 10%);
+  		border-color: darken($brand_butternut, 10%);
   	}
   }
 }

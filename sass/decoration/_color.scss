@@ -8,7 +8,8 @@ $brand_mint_dark: #00a19a;
 $brand_watermelon: #f05d61; 
 
 /* Mens */
-$brand_copper: #D77F59; 
+$brand_butternut: #D77F59;
+$brand_copper: #97694B; 
 $brand_hunter_green: #1C453B;
 
 /* UI */
@@ -23,3 +24,4 @@ $sf_link: $ui_blue;
 $sf_selected: $ui_turquoise;
 $sf_selected_text: $ui_turquoise_dark;
 
+$sf-border: lighten($brand_grey, 30%);
