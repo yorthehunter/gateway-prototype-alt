@@ -132,13 +132,13 @@ img { max-width: 100%; }
   }
 
   .mens & { 
-  	background: $brand_copper; 
-  	border-color: $brand_copper; 
+  	background: $brand_butternut; 
+  	border-color: $brand_butternut; 
   	color: #fff;
   	&:hover,
   	&:focus {
-  		background: darken($brand_copper, 10%);
-  		border-color: darken($brand_copper, 10%);
+  		background: darken($brand_butternut, 10%);
+  		border-color: darken($brand_butternut, 10%);
   	}
   }
 
@@ -422,16 +422,17 @@ img { max-width: 100%; }
 	    	@include clear;
 
 			.btn {
-			text-transform: inherit;
-			width: 50%;
+				font-family: 'BrandonText-Regular';
+				text-transform: inherit;
+				width: 50%;
 		    display: block;
 		    float: left;
 		    padding: 0;
 		    line-height: 32px;
 		    color: $brand_grey_dark;
-		    border-color: darken($brand_grey_light, 10%);/*
+		    border-color: $sf-border;/*
 		    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/
-    		&:last-child { border-right: 1px solid darken($brand_grey_light, 10%);}
+    		&:last-child { border-right: 1px solid $sf-border;}
 
 		    &:first-child { border-right: 0;}
 		    &:last-child { border-left: 0;}
@@ -446,6 +447,8 @@ img { max-width: 100%; }
 			}
 
 			.btn.active {
+
+				font-family: 'BrandonText-Medium';
 				background: $sf-selected;
 				border-color: $sf-selected;
 				color: #fff;

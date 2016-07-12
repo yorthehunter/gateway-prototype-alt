@@ -5,9 +5,12 @@
   display: none; }
 
 /* Neutrals */
+/* Gender neutral */
+/* Womens */
 /* Mens */
 /* UI */
 /* Usage */
+/* should be 60% of $brand_grey  - perhaps we can calculate this is Sass */
 /* 
  * HTML5 ✰ Boilerplate
  *
@@ -1557,20 +1560,24 @@ fieldset {
       clear: both;
       padding-bottom: 0; }
   .form-group label.btn-default {
+    font-family: 'BrandonText-Regular';
     padding: 0;
     position: relative;
-    border-color: #dbd8d3;
+    border-color: #c0bdba;
     color: #2f3237;
     display: block;
     float: left;
-    width: 48px;
+    width: 50px;
     line-height: 44px;
     text-align: center;
     margin-right: -1px;
     margin-top: -1px;
     z-index: 1;
-           /*
-background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
+    /*    font-size: 18px;*/
+    /*
+
+
+    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
     .form-group label.btn-default:last-child {
       border-right: 1px solid #dbd8d3; }
     .form-group label.btn-default:hover, .form-group label.btn-default:focus, .form-group label.btn-default:active {
@@ -1582,6 +1589,7 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
       z-index: 1;
       -webkit-tap-highlight-color: transparent; }
     .form-group label.btn-default.active {
+      font-family: 'BrandonText-Medium';
       background: #1695a3;
       		                         /*
          	background-image: linear-gradient($sf-selected, darken($sf-selected, 5%));*/
@@ -1972,6 +1980,7 @@ img {
       display: table;
       clear: both; }
     .get-started-form .pick-a-gender .flr-wrap .btn {
+      font-family: 'BrandonText-Regular';
       text-transform: inherit;
       width: 50%;
       display: block;
@@ -1979,11 +1988,11 @@ img {
       padding: 0;
       line-height: 32px;
       color: #2f3237;
-      border-color: #dbd8d3;
-                                             /*
+      border-color: #c0bdba;
+                         /*
 background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
       .get-started-form .pick-a-gender .flr-wrap .btn:last-child {
-        border-right: 1px solid #dbd8d3; }
+        border-right: 1px solid #c0bdba; }
       .get-started-form .pick-a-gender .flr-wrap .btn:first-child {
         border-right: 0; }
       .get-started-form .pick-a-gender .flr-wrap .btn:last-child {
@@ -1996,6 +2005,7 @@ background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
            				background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
         -webkit-tap-highlight-color: transparent; }
     .get-started-form .pick-a-gender .flr-wrap .btn.active {
+      font-family: 'BrandonText-Medium';
       background: #1695a3;
       border-color: #1695a3;
       color: #fff; }
