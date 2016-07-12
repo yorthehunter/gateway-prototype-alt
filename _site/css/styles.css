@@ -772,7 +772,17 @@ header {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   background: #fff;
-  border-bottom: 1px solid #dfdddc; }
+  border-bottom: 1px solid #dfdddc;
+  /*  .logged-in & {
+      background: lighten($brand_grey_light, 3%);
+      .active {
+        a {
+          &:after {
+            background: lighten($brand_grey_light, 3%);
+          }
+        }
+      }
+    }*/ }
   .home header {
     background: transparent;
     border: 0;
@@ -781,10 +791,6 @@ header {
   .opposite-gender header {
     /*border-color: lighten($brand_grey_light, 3%); */
     /*.secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }*/ }
-  .logged-in header {
-    background: #f9f8f7; }
-    .logged-in header .active a:after {
-      background: #f9f8f7; }
 
 #toggle,
 #secondary-toggle,
@@ -1052,6 +1058,8 @@ header {
         -webkit-transform: rotate(45deg);
         /* Safari */
         transform: rotate(45deg); }
+  .logged-in .nav-element--referrals {
+    display: none; }
   .logged-in .secondary-nav {
     position: absolute;
     width: 250px;

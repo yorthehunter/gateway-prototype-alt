@@ -29,7 +29,7 @@ header {
     /*.secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }*/
   }
   
-  .logged-in & {
+/*  .logged-in & {
     background: lighten($brand_grey_light, 3%);
     .active {
       a {
@@ -38,7 +38,7 @@ header {
         }
       }
     }
-  }
+  }*/
 } 
 
 #toggle,
@@ -242,6 +242,9 @@ header {
     nav {
       @include visible-nav;
     }
+    .nav-element--referrals {
+      display: none;
+    }
     .secondary-nav {
       @include hamburger-nav;
     }
@@ -252,6 +255,7 @@ header {
     display: block;
     }
   }
+  
   @media screen and (min-width: 50rem) {
 
     .primary-nav {

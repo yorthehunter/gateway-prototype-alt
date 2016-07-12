@@ -130,7 +130,25 @@
                       <li><a href="http://stitchfixreviews.com/">Reviews</a></li>
                     {% endif %}
 
-                    <li {% if page.active == "gift-cards" %}class="active"{% endif %}><a href="{{ site.baseurl }}/womens/gift-cards">Gift cards</a></li>
+                    {% if page.status == "logged-out" %}
+
+                      {% if page.skin == "womens" or page.skin == "neutral" %}
+
+                        <li {% if page.active == "gift-cards" %}class="active"{% endif %}><a href="{{ site.baseurl }}/womens/gift-cards">Gift cards</a></li>
+
+                      {% else %}
+
+                      <li><a href="#">Gift cards</a></li>
+
+                      {% endif %}
+
+                    {% else %}
+
+                    <li><a href="#">Gift cards</a></li>
+
+                    {% endif %}
+
+
                 
                     {% if page.status == "logged-in" %}
 
