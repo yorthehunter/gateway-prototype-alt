@@ -2154,6 +2154,15 @@ img {
     .mens .btn--cta:hover, .mens .btn--cta:focus {
       background: #cc6031;
       border-color: #cc6031; }
+  .btn--cta.btn--cta-primary {
+    /*padding-right: 50px;*/
+    position: relative; }
+    .btn--cta.btn--cta-primary img {
+      /*position: absolute;
+      top: calc(50% - 10px);
+      right: 1rem;*/
+      width: 30px;
+      display: inline; }
 
 .btn--cta-secondary {
   border-color: #96908c;
@@ -2205,7 +2214,8 @@ img {
     font-size: 1.2rem;
     display: block;
     margin-bottom: 5px;
-    line-height: 2rem; }
+    line-height: 2rem;
+    padding: 0.6rem 0; }
     .home .hero-overlay .btn {
       width: 48%;
       float: left;
