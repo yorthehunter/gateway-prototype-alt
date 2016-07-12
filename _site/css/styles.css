@@ -5,9 +5,12 @@
   display: none; }
 
 /* Neutrals */
+/* Gender neutral */
+/* Womens */
 /* Mens */
 /* UI */
 /* Usage */
+/* should be 60% of $brand_grey  - perhaps we can calculate this is Sass */
 /* 
  * HTML5 ✰ Boilerplate
  *
@@ -772,7 +775,7 @@ header {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   background: #fff;
-  border-bottom: 1px solid #dfdddc;
+  border-bottom: 1px solid #d5d3d1;
   /*  .logged-in & {
       background: lighten($brand_grey_light, 3%);
       .active {
@@ -847,8 +850,8 @@ header {
   right: 0;
   top: 50px;
   background: #fff;
-  border-left: 1px solid #dfdddc;
-  border-bottom: 1px solid #dfdddc;
+  border-left: 1px solid #c0bdba;
+  border-bottom: 1px solid #c0bdba;
   border-top: 1px solid #fff;
   display: none; }
   .logged-out nav ul,
@@ -902,8 +905,8 @@ header {
           height: 14px;
           background: #f9f8f7;
           background: #fff;
-          border-right: 1px solid #dfdddc;
-          border-bottom: 1px solid #dfdddc;
+          border-right: 1px solid #d5d3d1;
+          border-bottom: 1px solid #d5d3d1;
           display: block;
           position: absolute;
           bottom: -8px;
@@ -950,8 +953,8 @@ header {
       height: 14px;
       background: #f9f8f7;
       background: #fff;
-      border-right: 1px solid #dfdddc;
-      border-bottom: 1px solid #dfdddc;
+      border-right: 1px solid #d5d3d1;
+      border-bottom: 1px solid #d5d3d1;
       display: block;
       position: absolute;
       bottom: -8px;
@@ -969,7 +972,7 @@ header {
     position: relative; }
   .account-nav .sub-nav {
     background: #fff;
-    border: 1px solid #dfdddc;
+    border: 1px solid #c0bdba;
     border-top-color: #fff;
     position: absolute;
     top: 50px;
@@ -991,8 +994,8 @@ header {
   right: 0;
   top: 50px;
   background: #fff;
-  border-left: 1px solid #dfdddc;
-  border-bottom: 1px solid #dfdddc;
+  border-left: 1px solid #c0bdba;
+  border-bottom: 1px solid #c0bdba;
   border-top: 1px solid #fff;
   display: none;
   border-top-color: #f9f8f7; }
@@ -1047,8 +1050,8 @@ header {
         height: 14px;
         background: #f9f8f7;
         background: #fff;
-        border-right: 1px solid #dfdddc;
-        border-bottom: 1px solid #dfdddc;
+        border-right: 1px solid #d5d3d1;
+        border-bottom: 1px solid #d5d3d1;
         display: block;
         position: absolute;
         bottom: -8px;
@@ -1066,8 +1069,8 @@ header {
     right: 0;
     top: 50px;
     background: #fff;
-    border-left: 1px solid #dfdddc;
-    border-bottom: 1px solid #dfdddc;
+    border-left: 1px solid #c0bdba;
+    border-bottom: 1px solid #c0bdba;
     border-top: 1px solid #fff;
     display: none; }
     .logged-in .secondary-nav ul,
@@ -1134,8 +1137,8 @@ header {
         height: 14px;
         background: #f9f8f7;
         background: #fff;
-        border-right: 1px solid #dfdddc;
-        border-bottom: 1px solid #dfdddc;
+        border-right: 1px solid #d5d3d1;
+        border-bottom: 1px solid #d5d3d1;
         display: block;
         position: absolute;
         bottom: -8px;
@@ -1151,8 +1154,8 @@ header {
     right: 0;
     top: 50px;
     background: #fff;
-    border-left: 1px solid #dfdddc;
-    border-bottom: 1px solid #dfdddc;
+    border-left: 1px solid #c0bdba;
+    border-bottom: 1px solid #c0bdba;
     border-top: 1px solid #fff;
     display: none; }
     .logged-in .tertiary-nav ul,
@@ -1217,8 +1220,8 @@ header {
         height: 14px;
         background: #f9f8f7;
         background: #fff;
-        border-right: 1px solid #dfdddc;
-        border-bottom: 1px solid #dfdddc;
+        border-right: 1px solid #d5d3d1;
+        border-bottom: 1px solid #d5d3d1;
         display: block;
         position: absolute;
         bottom: -8px;
@@ -1563,6 +1566,21 @@ header {
       }
     }*/ }
 
+@-webkit-keyframes symbolAnim {
+  0% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Safari */
+    transform: rotate(0deg); }
+
+  100% {
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Safari */
+    transform: rotate(45deg); } }
+
 footer {
   zoom: 1;
   background: #fff;
@@ -1668,7 +1686,7 @@ a.footer__toggle {
   border-bottom: 0px !important;
   font-family: 'BrandonText-Bold';
   text-transform: uppercase;
-  font-size: 1rem; }
+  font-size: 0.8rem; }
   .mens a.footer__toggle {
     color: #525760; }
     .mens a.footer__toggle:hover, .mens a.footer__toggle:focus {
@@ -1677,27 +1695,30 @@ a.footer__toggle {
     color: #3b3f45; }
   a.footer__toggle:before {
     position: absolute;
-    top: -7px;
-    right: 50%;
-    content: "";
-    width: 14px;
-    height: 14px;
-    background: #fdfdfd;
-    border-right: 1px solid #dbd8d3;
-    border-bottom: 1px solid #dbd8d3;
+    top: -12px;
+    left: calc(50% - 12px);
+    content: "+";
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border: 1px solid #dbd8d3;
     display: block;
-    position: absolute;
-    bottom: -7px;
-    left: calc(50% - 7px);
-    -ms-transform: rotate(45deg);
-    /* IE 9 */
-    -webkit-transform: rotate(45deg);
-    /* Safari */
-    transform: rotate(45deg); }
+    font-size: 23px;
+    line-height: 27px;
+    color: #96908c;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
   .is-open a.footer__toggle {
-    color: #96908c; }
+    background: #fff;
+    color: #aeaaa7 !important; }
     .is-open a.footer__toggle:before {
-      background: #f9f8f7; }
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      /* Safari */
+      transform: rotate(45deg); }
   @media screen and (min-width: 700px) {
     a.footer__toggle {
       display: none; } }
@@ -1966,20 +1987,24 @@ fieldset {
       clear: both;
       padding-bottom: 0; }
   .form-group label.btn-default {
+    font-family: 'BrandonText-Regular';
     padding: 0;
     position: relative;
-    border-color: #dbd8d3;
+    border-color: #c0bdba;
     color: #2f3237;
     display: block;
     float: left;
-    width: 48px;
+    width: 50px;
     line-height: 44px;
     text-align: center;
     margin-right: -1px;
     margin-top: -1px;
     z-index: 1;
-           /*
-background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
+    /*    font-size: 18px;*/
+    /*
+
+
+    background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
     .form-group label.btn-default:last-child {
       border-right: 1px solid #dbd8d3; }
     .form-group label.btn-default:hover, .form-group label.btn-default:focus, .form-group label.btn-default:active {
@@ -1991,6 +2016,7 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
       z-index: 1;
       -webkit-tap-highlight-color: transparent; }
     .form-group label.btn-default.active {
+      font-family: 'BrandonText-Medium';
       background: #1695a3;
       		                         /*
          	background-image: linear-gradient($sf-selected, darken($sf-selected, 5%));*/
@@ -2382,6 +2408,7 @@ img {
       display: table;
       clear: both; }
     .get-started-form .pick-a-gender .flr-wrap .btn {
+      font-family: 'BrandonText-Regular';
       text-transform: inherit;
       width: 50%;
       display: block;
@@ -2389,11 +2416,11 @@ img {
       padding: 0;
       line-height: 32px;
       color: #2f3237;
-      border-color: #dbd8d3;
-                                             /*
+      border-color: #c0bdba;
+                         /*
 background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
       .get-started-form .pick-a-gender .flr-wrap .btn:last-child {
-        border-right: 1px solid #dbd8d3; }
+        border-right: 1px solid #c0bdba; }
       .get-started-form .pick-a-gender .flr-wrap .btn:first-child {
         border-right: 0; }
       .get-started-form .pick-a-gender .flr-wrap .btn:last-child {
@@ -2406,6 +2433,7 @@ background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
            				background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
         -webkit-tap-highlight-color: transparent; }
     .get-started-form .pick-a-gender .flr-wrap .btn.active {
+      font-family: 'BrandonText-Medium';
       background: #1695a3;
       border-color: #1695a3;
       color: #fff; }

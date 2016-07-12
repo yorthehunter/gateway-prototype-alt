@@ -1,3 +1,25 @@
+@mixin corners($rounded: 50%) {
+
+  -webkit-border-radius: $rounded;
+  -moz-border-radius: $rounded;
+  -o-border-radius: $rounded;
+  border-radius: $rounded;
+}
+
+
+@-webkit-keyframes symbolAnim {
+  0% { 
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari */
+    transform: rotate(0deg); 
+  }
+  100% { 
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg); 
+  }
+}
+
 
 footer {
 
@@ -127,13 +149,6 @@ a.footer__toggle {
 
   background: $brand_grey-light;
   color: lighten($brand_grey_dark, 15%);
-  .mens & {
-    color: lighten($brand_grey_dark, 15%);
-    &:hover,
-    &:focus {
-      color: lighten($brand_grey_dark, 5%);
-    }
-  }
   display: block;
   position: relative;
   border-top: 1px solid darken($brand_grey-light, 10%);
@@ -142,37 +157,44 @@ a.footer__toggle {
   border-bottom: 0px !important;  
   font-family: 'BrandonText-Bold';
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  .mens & {
+    color: lighten($brand_grey_dark, 15%);
+    &:hover,
+    &:focus {
+      color: lighten($brand_grey_dark, 5%);
+    }
+  }
 
   &:hover,
   &:focus {
     color: lighten($brand_grey_dark, 5%);
   }
 
+  
   &:before {
     position: absolute;
-    top: -7px;
-    right: 50%;
-    content: "";
-    width: 14px;
-    height: 14px;
-    background: lighten($brand_grey-light, 5%);
-    border-right: 1px solid darken($brand_grey-light, 10%);
-    border-bottom: 1px solid darken($brand_grey-light, 10%);
+    top: -12px;
+    left: calc(50% - 12px);
+    content: "+";
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border: 1px solid darken($brand_grey-light, 10%);
     display: block;
-    position: absolute;
-    bottom: -7px;
-    left: calc(50% - 7px);
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Safari */
-    transform: rotate(45deg);
-
+    font-size: 23px;
+    line-height: 27px;
+    color: $brand_grey;
+    @include corners;
   }
 
   .is-open & {
-    color: $brand-grey;
+    background: #fff;
+    color: lighten($brand-grey, 10%) !important;
     &:before {
-      background: lighten($brand_grey-light, 3%);
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Safari */
+      transform: rotate(45deg);
     }
 
   }

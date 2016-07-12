@@ -15,7 +15,7 @@ header {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   background: #fff;
-  border-bottom: 1px solid $sf-border;
+  border-bottom: 1px solid $sf-line;
 
   .home & {
     background: transparent;
@@ -120,8 +120,8 @@ header {
         height: 14px;
         background:  lighten($brand_grey_light, 3%);
         background: #fff;
-        border-right: 1px solid lighten($brand_grey, 30%);
-        border-bottom: 1px solid lighten($brand_grey, 30%);
+        border-right: 1px solid $sf-line;
+        border-bottom: 1px solid $sf-line;
         display: block; 
         position: absolute;
         bottom: -8px;

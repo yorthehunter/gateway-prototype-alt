@@ -3,14 +3,18 @@ $brand_grey_light: #F2F1EF;
 $brand_grey: #96908c;
 $brand_grey_dark: #2F3237;
 
-$brand_mint: #00bdb4;
+/* Gender neutral */
 $brand_mint_dark: #00a19a;
 $brand_watermelon: #f05d61; 
+
+/* Womens */
+$brand_mint: #00bdb4;
 
 /* Mens */
 $brand_butternut: #D77F59;
 $brand_copper: #97694B; 
 $brand_hunter_green: #1C453B;
+$brand_charcoal: #25282d;
 
 /* UI */
 $ui_blue: #0085c4;
@@ -23,5 +27,5 @@ $sf_hover: $brand_grey_light;
 $sf_link: $ui_blue;
 $sf_selected: $ui_turquoise;
 $sf_selected_text: $ui_turquoise_dark;
-
-$sf-border: lighten($brand_grey, 30%);
+$sf-border: #c0BDBA; /* should be 60% of $brand_grey  - perhaps we can calculate this is Sass */
+$sf-line: #d5d3d1 /* should be 40% of $brand_grey */
