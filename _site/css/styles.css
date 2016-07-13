@@ -860,21 +860,12 @@ header {
     padding: 0;
     list-style: none; }
   .logged-out nav li {
-<<<<<<< HEAD
     display: block;
     text-align: left; }
   .logged-out nav a {
     padding: 0 1rem;
     line-height: 50px;
     display: block;
-=======
-    display: block;
-    text-align: left; }
-  .logged-out nav a {
-    padding: 0 1rem;
-    line-height: 50px;
-    display: block;
->>>>>>> logged-in-nav
     border-bottom: 0;
     color: #2f3237; }
     .logged-out nav a:hover, .logged-out nav a:focus {
@@ -1804,10 +1795,12 @@ a.footer__toggle {
 .footer__logo {
   display: none; }
 
-.terms-and-conditions a {
-  color: #2f3237; }
-  .mens .terms-and-conditions a {
+.terms-and-conditions {
+  font-size: 1rem; }
+  .terms-and-conditions a {
     color: #2f3237; }
+    .mens .terms-and-conditions a {
+      color: #2f3237; }
 
 @media screen and (min-width: 700px) {
   footer {

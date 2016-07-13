@@ -1795,10 +1795,12 @@ a.footer__toggle {
 .footer__logo {
   display: none; }
 
-.terms-and-conditions a {
-  color: #2f3237; }
-  .mens .terms-and-conditions a {
+.terms-and-conditions {
+  font-size: 1rem; }
+  .terms-and-conditions a {
     color: #2f3237; }
+    .mens .terms-and-conditions a {
+      color: #2f3237; }
 
 @media screen and (min-width: 700px) {
   footer {
