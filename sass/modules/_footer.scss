@@ -205,7 +205,11 @@ a.footer__toggle {
 .footer__content {
   display: none;
 
-  @media screen and (min-width: 700px) { display: block; }
+  @media screen and (min-width: 700px) { 
+    display: block; 
+    border-top: 1px solid $sf-line;
+    padding-top: 20px;
+  }
 
 }
 
@@ -299,6 +303,7 @@ a.footer__toggle {
 
 @media screen and (min-width: 700px) { 
 
+
   footer {
 
     background: #fff;
@@ -310,7 +315,7 @@ a.footer__toggle {
       line-height: 2rem; 
     }
 
-    .footer__content,
+
     .footer__nav,
     .copyright {
       padding: 0;
@@ -347,8 +352,8 @@ a.footer__toggle {
 
     .copyright {
       text-align: left;
-      border-top: 1px solid $brand_grey-light;
-      padding-top: 1rem;
+      border-top: 1px solid $sf-line;
+      padding: 1rem;
       margin-bottom: 0;
 
       p { display: inline;}
@@ -390,15 +395,23 @@ a.footer__toggle {
         padding-bottom: 10px;
       }
     }
+
+    .copyright {
+      padding: 1rem 0;
+    }
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
 
   footer {
 
     .footer__nav {
       width: 50%;
+    }
+
+    .footer__content {
+      position: relative;
     }
 
     .footer__social {
@@ -407,11 +420,15 @@ a.footer__toggle {
 
     .download {
 
-      float: left;
+ /*     float: left;
       clear: both;
       top: -140px;
-      position: relative;
+      position: relative;*/
       margin-bottom: 0;
+      position: absolute;
+      top: 100px;
+      left: 0;
+
     }
 
     .footer__logo {
@@ -428,7 +445,7 @@ a.footer__toggle {
 @media screen and (min-width: 70rem) { 
 
   footer {
-    padding: 2rem calc(50% - 32rem);
+    padding: 2rem calc(50% - 33rem);
   }
 
 }

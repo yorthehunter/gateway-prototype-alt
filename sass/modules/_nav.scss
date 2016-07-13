@@ -15,7 +15,7 @@ header {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   background: #fff;
-  border-bottom: 1px solid lighten($brand_grey, 30%);
+  border-bottom: 1px solid $sf-line;
 
   .home & {
     background: transparent;
@@ -25,42 +25,11 @@ header {
   }
 
   .opposite-gender & { 
-    border-color: lighten($brand_grey_light, 3%); 
-    .secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }
+    /*border-color: lighten($brand_grey_light, 3%); */
+    /*.secondary-nav .active a:after { border-color: lighten($brand_grey_light, 3%); }*/
   }
-
-  .logged-in & {
-    background-color: lighten($brand_grey_light, 3%); 
-  }
-
-  a { 
-    text-decoration: none !important; 
-    padding: 0 1rem;
-  }
-
-  .active {
-    a {
-      color: darken($brand_grey_dark, 25%);    
-      position: relative;
-      &:after {
-        content: "";
-        width: 14px;
-        height: 14px;
-        background:  #fff;
-        border-right: 1px solid lighten($brand_grey, 30%);
-        border-bottom: 1px solid lighten($brand_grey, 30%);
-        display: block; 
-        position: absolute;
-        bottom: -8px;
-        left: calc(50% - 7px);
-        -ms-transform: rotate(45deg); /* IE 9 */
-        -webkit-transform: rotate(45deg); /* Safari */
-        transform: rotate(45deg);
-      }    
-    }
-  }
-
-  .logged-in {
+  
+/*  .logged-in & {
     background: lighten($brand_grey_light, 3%);
     .active {
       a {
@@ -69,12 +38,7 @@ header {
         }
       }
     }
-  }
-
-  .btn {
-    line-height: 1rem;
-    padding: 0.6em 0.8em;
-  }
+  }*/
 } 
 
 #toggle,
@@ -86,12 +50,12 @@ header {
   font-size: 22px;
   z-index: 6;
   border-bottom: 0;
-  color: $brand_grey_dark; 
-  display: block;
+  color: $brand_grey_dark;
+  display: block; 
   position: relative;
   font-family: Arial;
 
-  @media screen and (min-width: 650px) { display: none; }
+  @media screen and (min-width: 45rem) { display: none; }
 
   &:hover, 
   &:focus { 
@@ -108,13 +72,355 @@ header {
 }
 
 #secondary-toggle,
-#tertiary-toggle {
+#tertiary-toggle  {
   display: none;
 }
 
+%nav-element {
+  position: relative;
+  display: block;
+  border-bottom: 0;
+  color: $brand_grey_dark;
+  &:hover {
+  }
+}
+
+@mixin visible-nav {
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  text-align: center;
+  background: #fff;
+  border: 0;
+  margin: 0; 
+  padding: 0; 
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+  a {
+    padding: 0 1rem;
+    text-decoration: none !important; 
+    line-height: 50px;
+    @extend %nav-element;
+    @media screen and (max-width: 50rem) {
+      padding: 0 5px;
+    }
+  }
+  .active {
+    a {
+      color: darken($brand_grey_dark, 25%);
+      background: inherit;    
+      position: relative;
+      &:after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background:  lighten($brand_grey_light, 3%);
+        background: #fff;
+        border-right: 1px solid $sf-line;
+        border-bottom: 1px solid $sf-line;
+        display: block; 
+        position: absolute;
+        bottom: -8px;
+        left: calc(50% - 7px);
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Safari */
+        transform: rotate(45deg);
+      }    
+    }
+  }
+}
+
+@mixin hamburger-nav {
+  position: absolute;
+  width: 250px;
+  right: 0;    
+  top: 50px;
+  background: #fff;
+  border-left: 1px solid $sf-border;
+  border-bottom: 1px solid $sf-border;
+  border-top: 1px solid #fff;
+  display: none;
+  ul, 
+  li { 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+  }
+  li {
+    display: block;
+    text-align: left;
+  }
+  a {
+    padding: 0 1rem;
+    line-height: 50px;
+    display: block;
+    border-bottom: 0;
+    color: $brand_grey_dark;
+    &:hover,
+    &:focus {
+      color: $sf-link;
+    }
+  }
+  .active {
+    a {
+      background: red;
+      background: lighten($brand_grey_light, 3%);
+      &:after {
+        background: red;
+        display: none;
+      }
+    }
+  }
+}
+
+
+.logged-out {
+  nav {
+    @include hamburger-nav;
+    @media screen and (min-width: 45rem) {
+      @include visible-nav;
+    }
+  }
+}
+
+.cookie-nav {
+
+    @include visible-nav;
+    float: left;
+    z-index: 10;
+
+}
+
+.account-nav {
+  float: left;
+  display: none;
+
+  li {
+    position: relative;
+  }
+  a {
+    
+  }
+  .sub-nav {
+    background: #fff;
+    border: 1px solid $sf-border;
+    border-top-color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: -1rem;
+    text-align: left;
+    display: none;
+    li {
+      display: block;
+      a {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+ @media screen and (min-width: 550px) {
+  .account-nav {
+    display: block;
+  }
+}
+
+.logged-in  {
+
+  nav {
+    @include hamburger-nav;
+    border-top-color: lighten($brand_grey_light, 3%);
+  }
+
+  @media screen and (min-width: 23rem) {
+
+    nav {
+      @include visible-nav;
+    }
+    .nav-element--referrals {
+      display: none;
+    }
+    .secondary-nav {
+      @include hamburger-nav;
+    }
+    #toggle {
+      display: none;
+    }
+    #secondary-toggle {
+    display: block;
+    }
+  }
+  
+  @media screen and (min-width: 50rem) {
+
+    .primary-nav {
+      text-align: left;
+    }
+
+    .secondary-nav {
+      @include visible-nav;
+      position: absolute;
+      right: 0;
+      padding-right: 50px;
+      top: 0;
+    }
+    .tertiary-nav {
+      @include hamburger-nav;
+    }
+
+    #toggle {
+      display: none;
+    }
+
+    #secondary-toggle {
+      display: none;
+    }
+    #tertiary-toggle {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 70rem) {
+    .secondary-nav {
+      padding-right: 0;
+    }
+    .tertiary-nav {
+      @include visible-nav;
+    }
+    #tertiary-toggle {
+      display: none;
+    }
+  }
+}
+
+
+header {
+
+
+  .btn {
+    line-height: 1rem;
+    padding: 0.6em 0.8em;
+  }
+
+  .btn--cta { 
+    float: right;
+    z-index: 10;
+    margin: 6px;
+    position: relative;
+
+  }
+
+  .btn--cta-secondary {
+    float: right;
+    z-index: 10;
+    margin: 6px 0;
+    position: relative;
+  }
+
+
+  .nav__style-tips {
+    position: relative;
+    
+    &.is-open {
+      a { 
+        color: darken($brand_grey_dark, 15%);
+      } 
+    }
+  }
+
+  .men-or-women {
+    background: #fff;
+    display: none;
+    li {
+      display: block;
+      a { 
+        padding: 0 1rem; 
+        &:hover, &:focus {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: 650px) {
+      position: absolute;
+      top: 50px;
+      left: 0; 
+      right: 0;     
+      border: 1px solid lighten($brand_grey, 30%);
+      border-top: #fff;
+      li {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.link--avatar {
+  display: block;
+  border: 0;
+  width: 50px;
+  padding: 10px;
+  position: relative;
+  z-index: 12;
+  float: left;
+
+  a { display: block; }
+}  
+
+.logged-out {
+
+  .link--logo {
+    display: none;
+  }
+
+  @media screen and (min-width: 1100px) {
+
+    .link--avatar {
+      display: none;
+    }
+
+    .link--logo {
+      display: block;
+      width: 190px;
+      float: left;
+      padding: 13px 10px;
+      position: relative;
+      z-index: 5;
+      height: 50px;
+      &:hover, &:focus { border-bottom: 0; }
+
+    }
+  }
+}
+
+
+
+/*.toggleable-gender {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  right: 0;
+  display: none;
+  width: 80px;
+
+  a { 
+    padding-left: 10px;
+    background: #fff;
+    display: block;
+    text-align: left;
+  }
+}*/
+
+
 
 nav {
-  position: absolute;
+/*  position: absolute;
   width: 250px;
   right: 0;    
   top: 50px;
@@ -145,15 +451,15 @@ nav {
         color: #000; 
       }
     }
-  }
+  }*/
 
-  .secondary-nav {
+ /* .secondary-nav {
     a {
       padding: 0 1rem;
     }
-  }
+  }*/
 
-  @media screen and (max-width: 365px) {
+  /*@media screen and (max-width: 365px) {
     border-left: 1px solid $brand_grey_light;
     border-bottom: 1px solid $brand_grey_light;
   }
@@ -164,9 +470,6 @@ nav {
       padding: 0 3px; 
     }
 
- /*   .active a:after {
-      display: none;
-    }*/
   }
 
 
@@ -200,42 +503,34 @@ nav {
   @media screen and (min-width: 800px) {
     text-align: center;
     left: 0;
-  }
+  }*/
 
 }
 
-.account-nav {
-  display: none;
-  float: left;
-  .sub-nav {
-    background: lighten($brand_grey_light, 3%);
-    position: absolute;
-    top: 51px;
-    left: 50px;
-    text-align: left;
-    display: none;
-    li {
-      display: block;
-      a {
-        padding: 0 1rem;
-      }
-    }
-  }
+
+/*
+.divet-link {
+  position: absolute;
+  left: 50px;
+  top: 2px;
+  font-size: 20px;
+  width: 90px;
+  text-align: right;
 }
 
- @media screen and (min-width: 550px) {
-  .account-nav {
-    display: block;
+i.divet {
+  position: relative;
+  z-index: 1000;
+  color: #ccc;
+  &:after {
+    content: "\e602";
   }
-}
+}*/
 
+header {
+    /*position: absolute;*/
 
-.logged-in  {
-
-  header {
-    position: absolute;
-
-    @media screen and (min-width: 365px) {
+    /*@media screen and (min-width: 365px) {
 
       #secondary-toggle {
         display: block;
@@ -304,17 +599,14 @@ nav {
         .active {
           a {
             color: $brand_grey_dark;
-          /*  &:after {
-              display: none;
-            }*/
           }
         }
       }
     }
-
+*/
   
 
-    @media screen and (min-width: 750px) {
+    /*@media screen and (min-width: 750px) {
 
       #secondary-toggle {
         display: none;
@@ -341,12 +633,10 @@ nav {
 
         .active {
           a {
-            /*&:after {
-              display: block;
-            }*/
           }
         }
       }
+
 
       .tertiary-nav {
         display: none;
@@ -363,8 +653,8 @@ nav {
         }
       }
     }
-
-    @media screen and (min-width: 950px) {
+*/
+   /* @media screen and (min-width: 950px) {
 
       #tertiary-toggle { 
         display: none;
@@ -385,159 +675,5 @@ nav {
           display: inline-block;
         }
       }
-    }
+    }*/
   }
-}
-
-
-header {
-
-  .btn--cta { 
-    float: right;
-    z-index: 10;
-    margin: 6px;
-    position: relative;
-
-  }
-
-  .btn--cta-secondary {
-    float: right;
-    z-index: 10;
-    margin: 6px 0;
-    position: relative;
-  }
-
-
-  .nav__style-tips {
-    position: relative;
-    
-    &.is-open {
-      a { 
-        color: darken($brand_grey_dark, 15%);
-      } 
-    }
-  }
-
-  .men-or-women {
-    background: #fff;
-    display: none;
-    li {
-      display: block;
-      a { 
-        padding: 0 1rem; 
-        &:hover, &:focus {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    @media screen and (min-width: 650px) {
-      position: absolute;
-      top: 50px;
-      left: 0; 
-      right: 0;     
-      border: 1px solid lighten($brand_grey, 30%);
-      border-top: #fff;
-      li {
-        display: block;
-        width: 100%;
-      }
-    }
-  }
-
-}
-
-.link--avatar {
-  display: block;
-  border: 0;
-  width: 50px;
-  padding: 10px;
-  position: relative;
-  z-index: 12;
-  float: left;
-
-  a { display: block; }
-}  
-
-.logged-out {
-
-  .link--logo {
-    display: none;
-  }
-
-  @media screen and (min-width: 1100px) {
-
-    .link--avatar {
-      display: none;
-    }
-
-    .link--logo {
-      display: block;
-      width: 190px;
-      float: left;
-      padding-top: 15px;
-      position: relative;
-      z-index: 5;
-      height: 50px;
-      &:hover, &:focus { border-bottom: 0; }
-
-    }
-  }
-}
-
-
-
-.divet-link {
-  position: absolute;
-  left: 50px;
-  top: 2px;
-  font-size: 20px;
-  width: 90px;
-  text-align: right;
-}
-
-i.divet {
-  position: relative;
-  z-index: 1000;
-  color: #ccc;
-  &:after {
-    content: "\e602";
-  }
-}
-
-.toggleable-gender {
-  position: absolute;
-  top: 0;
-  left: 50px;
-  right: 0;
-  display: none;
-  width: 80px;
-
-  a { 
-    padding-left: 10px;
-    background: #fff;
-    display: block;
-    text-align: left;
-  }
-}
-
-%nav-element {
-  position: relative;
-  display: block;
-  border-bottom: 0;
-  color: $brand_grey_dark;
-  &:hover {
-  }
-
-}
-
-.cookie {
-
-  a {
-    @extend %nav-element;
-    line-height: 50px;
-    float: left;
-    z-index: 10;
-  }
-
-}

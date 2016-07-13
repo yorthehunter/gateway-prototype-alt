@@ -35,7 +35,7 @@
 <!-- 			<li>
 				<ul class="unstyled">
 		<h5>Have a question?</h5> 
-			<li><a href="{{ site.baseurl }}/faq">Visit our FAQ »</a></li>
+			<li><a href="{{ site.baseurl }}/faq">Visit our FAQ</a></li>
 			</ul>
 		</li>
  -->
@@ -43,31 +43,31 @@
 			<li>
 				<h5>The service</h5>
 				<ul class="unstyled">
-					<li class="hide-on-big"><a>Help Center »</a></li>
-					<li class="hide-on-big"><a>Contact Us »</a></li>	          		
-					<li><a>Gift Cards »</a></li>
+					<li class="hide-on-big"><a>Help Center</a></li>
+					<li class="hide-on-big"><a>Contact Us</a></li>	          		
+					<li><a>Gift Cards</a></li>
 					{% if page.skin == "womens" %}
-					<li><a>iPhone App »</a></li>
-					<li><a>Plus Sizes »</a></li>
+					<li><a>iPhone App</a></li>
+					<li><a>Plus Sizes</a></li>
 					{% endif %}
 					
 					{% if page.status == "logged-out" %}
 
 						{% if page.skin == "womens" or page.skin == "mens" %}
-	          	<li><a>Style Tips »</a></li>
+	          	<li><a>Style Tips</a></li>
 	        	{% else %}
-	            <li class="nav__style-tips"><a  href="#" class="style-tips-toggle">Style Tips »</a>
+	            <li class="nav__style-tips"><a  href="#" class="style-tips-toggle">Style Tips</a>
 	         
 	              <ul class="men-or-women unstyled">
-	                <li><a href="{{ site.baseurl }}/style-tips">Women »</a></li>
-	                <li><a href="{{ site.baseurl }}/style-tips">Men »</a></li>
+	                <li><a href="{{ site.baseurl }}/style-tips">Women</a></li>
+	                <li><a href="{{ site.baseurl }}/style-tips">Men</a></li>
 	              </ul>
 	          
 	        	</li>
 		        {% endif %}
 	        {% else %}
 
-	        	<li><a>Style Tips »</a></li>
+	        	<li><a>Style Tips</a></li>
 
 	        {% endif %}
 				</ul>
@@ -75,11 +75,11 @@
 			<li>
 				<h5>The company</h5>
 				<ul class="unstyled">
-					<li><a>About Us »</a></li>
-					<li><a>Press »</a></li>
-					<li><a>Affiliate Program »</a></li>
-					<li><a>Careers »</a></li>
-					<li><a>Tech Blog »</a></li>
+					<li><a>About Us</a></li>
+					<li><a>Press</a></li>
+					<li><a>Affiliate Program</a></li>
+					<li><a>Careers</a></li>
+					<li><a>Tech Blog</a></li>
 				</ul>
 			</li>
 			<li class="hide-on-small">
@@ -87,12 +87,12 @@
 				<ul class="unstyled">
 
 				{% if page.skin == "womens" or page.skin == "mens" %}
-	          	<li><a href="{{ site.baseurl }}{{ page.skin }}/faq">FAQ »</a></li>
+	          	<li><a href="{{ site.baseurl }}{{ page.skin }}/faq">FAQ</a></li>
 	        	{% else %}	
-					<li><a href="{{ site.baseurl }}/faq">FAQ »</a></li>
+					<li><a href="{{ site.baseurl }}/faq">FAQ</a></li>
 					{% endif %}
-					<li><a>Help Center »</a></li>
-					<li><a>Contact Us »</a></li>
+					<li><a>Help Center</a></li>
+					<li><a>Contact Us</a></li>
 				</ul>
 			</li>
 		</ul>
