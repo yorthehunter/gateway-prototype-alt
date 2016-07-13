@@ -28,6 +28,10 @@
   {% endif %}  
 {% else %}
 
+  {% unless page.active == "login" %}
+    <a class="btn btn--cta-secondary">Sign in</a>
+  {% endunless %}
+
   {% if page.skin == "neutral" %}
   <a href="{{ site.baseurl }}#get-started" class="btn btn--cta" id="get-started">Get started</a>
   {% elsif page.skin == "womens" %}
@@ -35,10 +39,6 @@
   {% elsif page.skin == "mens" %}
   <a href="{{ site.baseurl }}mens/#get-started" class="btn btn--cta" id="get-started">Get started</a>
   {% endif %}
-  {% unless page.active == "login" %}
-    <a class="btn btn--cta-secondary">Sign in</a>
-  {% endunless %}
-
 {% endif %}
 
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->

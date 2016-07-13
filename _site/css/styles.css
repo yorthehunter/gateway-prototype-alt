@@ -1243,12 +1243,12 @@ header .btn {
 header .btn--cta {
   float: right;
   z-index: 10;
-  margin: 6px;
+  margin: 6px 0;
   position: relative; }
 header .btn--cta-secondary {
   float: right;
   z-index: 10;
-  margin: 6px 0;
+  margin: 6px;
   position: relative; }
 header .nav__style-tips {
   position: relative; }
@@ -2412,7 +2412,8 @@ img {
     text-align: center;
     max-width: 200px;
     margin: 0 auto;
-    zoom: 1; }
+    zoom: 1;
+    display: none; }
     .get-started-form .pick-a-gender .flr-wrap:before {
       content: "";
       display: table; }
@@ -2420,6 +2421,8 @@ img {
       content: "";
       display: table;
       clear: both; }
+    .home .get-started-form .pick-a-gender .flr-wrap {
+      display: block; }
     .get-started-form .pick-a-gender .flr-wrap .btn {
       font-family: 'BrandonText-Regular';
       text-transform: inherit;
