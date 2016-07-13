@@ -4,17 +4,18 @@
 <a href="{{ site.baseurl }}" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 <a href="{{ site.baseurl }}" class="link--logo"><img src="{{ site.baseurl }}/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
 {% endif %}
-
-<div class="cookie {% if page.active == "womens" or page.active == "mens" %}active{% endif %}">
-{% if page.status != "logged-in" %}
-  {% if page.skin == "womens"%}
-    <a href="{{ site.baseurl }}/womens">Women</a>
+<ul class="cookie-nav">
+  <li class=" {% if page.active == "womens" or page.active == "mens" %}active{% endif %}">
+  {% if page.status != "logged-in" %}
+    {% if page.skin == "womens"%}
+      <a href="{{ site.baseurl }}/womens">Women</a>
+    {% endif %}
+    {% if page.skin == "mens" %}
+      <a href="{{ site.baseurl }}/mens">Men</a>
+    {% endif %} 
   {% endif %}
-  {% if page.skin == "mens" %}
-    <a href="{{ site.baseurl }}/mens">Men</a>
-  {% endif %} 
-{% endif %}
-</div>
+  </li>
+</ul>
       
 
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
@@ -85,8 +86,10 @@
 
 
                   {% if page.status == "logged-in" %}
+
                     <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/faq">FAQ</a></li>
-                  {% else %}
+
+                  {% else %} 
                     {% if page.skin == "womens" %}
                     <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}womens/faq">FAQ</a></li>
                     {% elsif page.skin == "mens" %}
@@ -127,7 +130,25 @@
                       <li><a href="http://stitchfixreviews.com/">Reviews</a></li>
                     {% endif %}
 
+                    {% if page.status == "logged-out" %}
+
+                      {% if page.skin == "womens" or page.skin == "neutral" %}
+
+                        <li {% if page.active == "gift-cards" %}class="active"{% endif %}><a href="{{ site.baseurl }}/womens/gift-cards">Gift cards</a></li>
+
+                      {% else %}
+
+                      <li><a href="#">Gift cards</a></li>
+
+                      {% endif %}
+
+                    {% else %}
+
                     <li><a href="#">Gift cards</a></li>
+
+                    {% endif %}
+
+
                 
                     {% if page.status == "logged-in" %}
 

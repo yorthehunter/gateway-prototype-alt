@@ -159,8 +159,8 @@ img { max-width: 100%; }
 }
 
 .btn--cta-secondary {
-
-	color: $brand_grey_dark;
+  	border-color: $brand_grey;
+  	color: $brand_grey;
 
   	&:hover,
   	&:focus { 

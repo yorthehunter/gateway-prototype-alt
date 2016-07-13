@@ -2210,7 +2210,8 @@ img {
       display: inline; }
 
 .btn--cta-secondary {
-  color: #2f3237; }
+  border-color: #96908c;
+  color: #96908c; }
   .btn--cta-secondary:hover, .btn--cta-secondary:focus {
     background: #fff;
     color: #625d5a;

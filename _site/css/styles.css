@@ -860,12 +860,21 @@ header {
     padding: 0;
     list-style: none; }
   .logged-out nav li {
+<<<<<<< HEAD
     display: block;
     text-align: left; }
   .logged-out nav a {
     padding: 0 1rem;
     line-height: 50px;
     display: block;
+=======
+    display: block;
+    text-align: left; }
+  .logged-out nav a {
+    padding: 0 1rem;
+    line-height: 50px;
+    display: block;
+>>>>>>> logged-in-nav
     border-bottom: 0;
     color: #2f3237; }
     .logged-out nav a:hover, .logged-out nav a:focus {
@@ -2210,7 +2219,8 @@ img {
       display: inline; }
 
 .btn--cta-secondary {
-  color: #2f3237; }
+  border-color: #96908c;
+  color: #96908c; }
   .btn--cta-secondary:hover, .btn--cta-secondary:focus {
     background: #fff;
     color: #625d5a;
