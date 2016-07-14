@@ -12,4 +12,15 @@ $(function() {
     $("#calendar-duration").show();
   });
 
+  $("#cal-initial").click(function(e){
+    e.preventDefault();
+    $("#cal-initial").hide();
+    $("#cal-new").show();
+    $("#submit-calendar-duration").text("Extend to Thursday, July 28th");
+  })
+
+  $("#cal-new").click(function(e){
+    e.preventDefault();
+  })
+
 });
