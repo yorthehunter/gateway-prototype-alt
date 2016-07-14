@@ -11,7 +11,7 @@
 /* UI */
 /* Usage */
 /* should be 60% of $brand_grey  - perhaps we can calculate this is Sass */
-/* 
+/*
  * HTML5 ✰ Boilerplate
  *
  */
@@ -1313,7 +1313,7 @@ header .men-or-women {
   display: none;
   width: 80px;
 
-  a { 
+  a {
     padding-left: 10px;
     background: #fff;
     display: block;
@@ -1323,33 +1323,33 @@ header .men-or-women {
 nav {
   /*  position: absolute;
     width: 250px;
-    right: 0;    
+    right: 0;
     top: 50px;
     display: none;
     z-index: 0;
     line-height: 50px;
     background: lighten($brand_grey_light, 3%);
     border-top: 1px solid lighten($brand_grey, 30%);
-  
-    ul, 
-    li { 
-      margin: 0; 
-      padding: 0; 
-      list-style: none; 
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
-  
+
     a {
       display: block;
       border: none;
       color: $brand_grey_dark;
-      .mens & { 
-        color: $brand_grey_dark; 
+      .mens & {
+        color: $brand_grey_dark;
       }
       &:hover,
-      &:focus { 
-        color: $sf-link; 
-        &:active { 
-          color: #000; 
+      &:focus {
+        color: $sf-link;
+        &:active {
+          color: #000;
         }
       }
     }*/
@@ -1364,32 +1364,32 @@ nav {
   }
 
   @media screen and (min-width: 300px) {
-    a { 
+    a {
       font-size: 14px;
-      padding: 0 3px; 
+      padding: 0 3px;
     }
 
   }
 
 
   @media screen and (min-width: 400px) {
-    a { 
-      padding: 0 5px; 
+    a {
+      padding: 0 5px;
     }
   }
 
   @media screen and (min-width: 450px) {
-    a { 
+    a {
       font-size: 14px;
-      padding: 0 10px; 
+      padding: 0 10px;
     }
   }
 
   @media screen and (min-width: 650px) {
     display: block;
-    top: 0; 
+    top: 0;
     background: transparent;
-    width: 100%;   
+    width: 100%;
     padding-left: 50px;
     padding-right: 50px;
     border-top: 0;
@@ -1449,7 +1449,7 @@ header {
         display: inline-block;
       }
 
-      .active {  
+      .active {
         a {
           color: darken($brand_grey_dark, 25%);
           &:after {
@@ -1459,11 +1459,11 @@ header {
             background:  lighten($brand_grey_light, 3%);
             border-right: 1px solid lighten($brand_grey, 30%);
             border-bottom: 1px solid lighten($brand_grey, 30%);
-            display: block; 
+            display: block;
             position: absolute;
             bottom: -8px;
             left: calc(50% - 7px);
-            -ms-transform: rotate(45deg); 
+            -ms-transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 
@@ -1479,8 +1479,8 @@ header {
         right: 0px;
         width: 250px;
         text-align: left;
-        li { 
-          display: block; 
+        li {
+          display: block;
         }
         a {
           padding: 0 1rem;
@@ -1548,7 +1548,7 @@ header {
 */
    /* @media screen and (min-width: 950px) {
 
-      #tertiary-toggle { 
+      #tertiary-toggle {
         display: none;
       }
 
@@ -2112,9 +2112,9 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
     background: #fff;
     display: none; } }
 /* developement to toggle overlays */
-/*.pick-a-channel, 
+/*.pick-a-channel,
 .toggle-gender,
-.footer__content, 
+.footer__content,
 .footer__social__select,
 .secondary-nav,
 .main,
@@ -2504,8 +2504,8 @@ p {
   margin: 0 0 11px; }
 
 .cta-primary .action-primary {
-  background: #e7f3f2;
-  border: 1px solid rgba(137, 198, 189, 0.7);
+  background: #FAF9F8;
+  border: 1px solid #D5D5D5;
   padding: 20px;
   border-radius: 6px; }
 
