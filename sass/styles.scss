@@ -2,29 +2,29 @@
 #dp_swf_engine { display: none; }
 
 @import "decoration/color.scss";
-@import "layout/reset.scss"; 
+@import "layout/reset.scss";
 
-@import "layout/mixins.scss"; 
+@import "layout/mixins.scss";
 @import "layout/limiters.scss";
-@import "layout/cols.scss"; 
+@import "layout/cols.scss";
 @import "layout/lists.scss";
 
 @import "decoration/icons.scss";
 @import "decoration/animation.scss";
 @import "decoration/alerts.scss";
 @import "decoration/webfonts.scss";
- 
-@import "modules/nav.scss"; 
+
+@import "modules/nav.scss";
 @import "modules/footer.scss";
 @import "modules/social.scss";
-@import "modules/forms.scss"; 
-@import "browsers/browser-hacks.scss"; 
- 
+@import "modules/forms.scss";
+@import "browsers/browser-hacks.scss";
+
 /* developement to toggle overlays */
 
-/*.pick-a-channel, 
+/*.pick-a-channel,
 .toggle-gender,
-.footer__content, 
+.footer__content,
 .footer__social__select,
 .secondary-nav,
 .main,
@@ -62,7 +62,7 @@ html {
   box-sizing: inherit;
 }
 
-body { 
+body {
 	color: $sf-text;
 	font-family: 'BrandonText-Regular';
 	background: $brand_grey_light;
@@ -96,9 +96,9 @@ body {
 	}
 }
 
-a { 
-	color: $sf-link; 
-	text-decoration: none; 
+a {
+	color: $sf-link;
+	text-decoration: none;
 }
 
 img { max-width: 100%; }
@@ -111,7 +111,7 @@ img { max-width: 100%; }
   display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: 'BrandonText-Bold'; 
+  font-family: 'BrandonText-Bold';
   color: $brand_grey;
 
 }
@@ -135,9 +135,9 @@ img { max-width: 100%; }
     outline: 0;
   }
 
-  .mens & { 
-  	background: $brand_butternut; 
-  	border-color: $brand_butternut; 
+  .mens & {
+  	background: $brand_butternut;
+  	border-color: $brand_butternut;
   	color: #fff;
   	&:hover,
   	&:focus {
@@ -164,10 +164,10 @@ img { max-width: 100%; }
   	color: $brand_grey;
 
   	&:hover,
-  	&:focus { 
-  		background: #fff; 
-  		color: darken($brand_grey, 20%); 
-  		border-color: darken($brand_grey, 20%); 
+  	&:focus {
+  		background: #fff;
+  		color: darken($brand_grey, 20%);
+  		border-color: darken($brand_grey, 20%);
     	outline: 0;
   	}
 
@@ -208,7 +208,7 @@ img { max-width: 100%; }
 	padding-right: calc(50% - 300px/2);
 
 	h5 {
-		font-family: 'BrandonText-Bold'; 
+		font-family: 'BrandonText-Bold';
 	  letter-spacing: 0.05rem;
 	  text-transform: uppercase;
 	}
@@ -217,7 +217,7 @@ img { max-width: 100%; }
 		text-align: center;
 	}
 
-	.btn { 
+	.btn {
 		/*width: 49%; */
 		font-size: 1.2rem;
 		display: block;
@@ -227,7 +227,7 @@ img { max-width: 100%; }
 
 		.home & {
 			width: 48%;
-			float: left; 
+			float: left;
 			margin: 1%;
 		}
 	}
@@ -268,7 +268,7 @@ img { max-width: 100%; }
 }
 
 
-.how-it-works { 
+.how-it-works {
 
 	text-align: center;
 	background: $brand_grey_light;
@@ -287,10 +287,10 @@ img { max-width: 100%; }
 		width: 20px;
 		height: 20px;
 		background:  $brand_grey;
-		display: block; 
+		display: block;
 		position: absolute;
 		bottom: -10px;
-		left: calc(50% - 10px); 
+		left: calc(50% - 10px);
 		-ms-transform: rotate(45deg); /* IE 9 */
     -webkit-transform: rotate(45deg); /* Safari */
 		transform: rotate(45deg);
@@ -347,7 +347,7 @@ img { max-width: 100%; }
 
 
 .get-started-container {
-	
+
 	background: #fff;
 
 	@media screen and (min-width: 32rem) {
@@ -482,7 +482,7 @@ img { max-width: 100%; }
 }
 
 
-.help-block, 
+.help-block,
 .instructional-note {
 	font-size: 0.9rem;
 	padding: 10px 0 0;
@@ -552,8 +552,8 @@ p {
 }
 .btn-primary {
 	color: white;
-	background-color: #69bdb0;
-	border-color: #69bdb0;
+	background-color: #FF5C61;
+	border-color: #FF5C61;
 }
 .content-headline {
 	margin-top: 12px;
