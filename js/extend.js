@@ -16,7 +16,8 @@ $(function() {
     e.preventDefault();
     $("#cal-initial").hide();
     $("#cal-new").show();
-    $("#submit-calendar-duration").text("Extend to Thursday, July 28th");
+    var newText = $.parseHTML("Extend to <br /> Thursday, July 28th");
+    $("#submit-calendar-duration").html(newText);
   })
 
   $("#cal-new").click(function(e){
