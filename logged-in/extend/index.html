@@ -1,5 +1,5 @@
 ---
-body_class: 
+body_class:
 status: logged-in
 title: My Fix
 skin: womens
@@ -25,12 +25,19 @@ active: my-fix
 
         <div id="return-extension-reason">
           <p class="instructional-note"> Why do you need this?</p>
-          <input type="radio" name="reason" value="vacation"> I'm going on vacation<br>
-          <input type="radio" name="reason" value="paycheck"> I'm waiting for my next paycheck<br>
-          <input type="radio" name="reason" value="indecisive"> I'm trying to decide what to keep<br>
-          <input type="radio" name="reason" value="other"> Other<br>
+          <label name="reason1">
+            <input type="checkbox" name="reason1" value="vacation"> I'm going on vacation
+          </label>
+          <label name="reason2">
+            <input type="checkbox" name="reason2" value="vacation"> I'm waiting for my next paycheck
+          </label>
+          <label name="reason3">
+            <input type="checkbox" name="reason3" value="vacation"> I'm trying to decide what to keep
+          </label>
+          <label name="reason4">
+            <input type="checkbox" name="reason4" value="vacation"> Other
+          </label>
         </div>
-
 
         <div id="return-extension-duration" style="margin-top: 2em;">
           <p>
@@ -75,4 +82,3 @@ active: my-fix
 
 
 {% include footer.html %}
-
