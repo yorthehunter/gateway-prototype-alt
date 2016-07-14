@@ -975,7 +975,7 @@ header {
     position: absolute;
     top: 50px;
     right: 0;
-    left: -1rem;
+    left: 0;
     text-align: left;
     display: none; }
     .account-nav .sub-nav li {
@@ -2121,7 +2121,8 @@ background-image: linear-gradient($sf-hover, darken($sf-hover, 5%));*/
 .footer__social__select,
 .secondary-nav,
 .main,
-.men-or-women {
+.men-or-women,
+.sub-nav {
   display: block !important;
 }
   */
