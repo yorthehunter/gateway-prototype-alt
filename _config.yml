@@ -1,4 +1,5 @@
 name: Prototype
 permalink: /:categories/:title/
-timezone: 
+timezone:
 baseurl: /gateway-prototype/
+encoding: UTF-8
