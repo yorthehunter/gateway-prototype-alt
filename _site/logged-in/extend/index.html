@@ -14,7 +14,7 @@
 
 <head>
 
-	<title>Style Tips</title>	
+	<title>My Fix</title>	
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -82,19 +82,15 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 </head>
 
 
-<body class="style-tips neutral logged-out">
+<body class=" womens logged-in">
 
 <header> 
     
     
-<a href="/gateway-prototype/" class="link--avatar"><img src="/gateway-prototype//img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
-<a href="/gateway-prototype/" class="link--logo"><img src="/gateway-prototype//img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
+<a href="/gateway-prototype//logged-in" class="link--avatar"><img src="/gateway-prototype//img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 
 <ul class="cookie-nav">
   <li class=" ">
-  
-    
-     
   
   </li>
 </ul>
@@ -104,15 +100,8 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
-
-
   
-    <a class="btn btn--cta-secondary">Sign in</a>
-  
-
-  
-  <a href="/gateway-prototype/#get-started" class="btn btn--cta" id="get-started">Get started</a>
-  
+    
 
 
   <!-- <a href="#" id="toggle-secondary"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a> -->
@@ -125,36 +114,31 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 
 
               
+                <li class="active"><a href="/gateway-prototype//logged-in">My fix</a></li>
+                <li><a href="/gateway-prototype//logged-in/style-profile">Style profile</a></li>
+                <li><a href="#">Referrals</a></li>
+              
 
               <li>
 
                 <ul class="secondary-nav">
 
                   
+                    <li class="show-on-small hide-on-big"><a href="#">Account</a></li>
+                  
 
- <!--                  
-                    
-                   -->
+ <!--                   -->
 
 
-                   
-                    
-                    <li ><a href="/gateway-prototype//faq">Faq</a></li>
-                    
+                  
+
+                    <li ><a href="/gateway-prototype//logged-in/faq">Faq</a></li>
+
                   
 
                   
 
-                    
-                    <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Guide</a>
-                   
-                        <ul class="men-or-women unstyled">
-                          <li><a href="/gateway-prototype//style-tips">Women</a></li>
-                          <li><a href="/gateway-prototype//style-tips">Men</a></li>
-                        </ul>
-                      
-                    </li>
-                    
+                    <li><a href="#">Style Guide</a></li>
 
                   
 
@@ -163,19 +147,23 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
                     <ul class="tertiary-nav">
 
                     
+                      <li><a href="http://stitchfixreviews.com/">Reviews</a></li>
+                    
 
                     
 
-                      
-
-                        <li ><a href="/gateway-prototype//womens/gift-cards">Gift cards</a></li>
-
-                      
+                    <li><a href="#">Gift cards</a></li>
 
                     
 
 
                 
+                    
+
+                      <li ><a href="/gateway-prototype//logged-in/mens">Mens</a></li>
+
+                      <li class="show-on-small hide-on-big"><a href="/gateway-prototype/">Sign out</a></li>
+
                     
 
                   </li>
@@ -199,6 +187,20 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 
         
 
+        <ul class="account-nav">
+
+          <li><a href="#" class="account-toggle">Kimberly ▾</a>
+            <ul class="sub-nav">
+              <li><a href="#">Account</a><li>
+              <li><a href="#">Credit</a><li>
+              <li><a href="/gateway-prototype/">Sign out</a></li>
+            </ul> 
+          </li>
+
+        </ul>
+
+        
+
     </nav>
   
 </header>
@@ -208,34 +210,62 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 
 <div class="page">
 
-	<div class="article-content" style="padding: 10px;">
+<div class="calendar" style="width: 100%; position: relative; display: block;">
+  <div class="cta-primary">
+    <section class="stateful-message">
+      <p class="page-subheading">
+        Extend
+      </p>
+    </section>
+    <div class="action-primary">
+      <p class="content-headline"><span class="ss-standard ss-cart"></span> Please do something</p>
+      <p class="instructional-note"> some prompt</p>
 
-	<h1>Placeholder for Style Tips</h1>
+      <form id="return-extension" action="">
+        <p class="instructional-note"> How much time do you need?</p>
+        <div id="return-extension-duration">
 
-	<br />
-	Go to the next task
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-            
+          <input type="radio" name="duration" value="7/19/2016"> Tuesday, July 19th<br>
+          <input type="radio" name="duration" value=""> I need more time<br>
+
+        </div>
+
+        <div id="return-extension-reason">
+          <p class="instructional-note"> Why do you need this?</p>
+          <input type="radio" name="reason" value="vacation"> I'm going on vacation<br>
+          <input type="radio" name="reason" value="paycheck"> I'm waiting for my next paycheck<br>
+          <input type="radio" name="reason" value="indecisive"> I'm trying to decide what to keep<br>
+          <input type="radio" name="reason" value="other"> Other<br>
+        </div>
+
+      </form>
+
+      <a href="/order_review/edit" class="btn btn-lg btn-primary btn-block-dynamic">Extend!</a>
+      <p class="action-primary-alternate">
+        Something? <span class="visible-xs-inline"><br></span><a href="#">Do it&nbsp;»</a>
+      </p>
+    </div>
+
+    <div class="actions-secondary">
+      <p> You might want to </p>
+      <ul>
+        <li>
+          <a href="/client/start_automatic_fixes">
+            Sign up for automatic Fixes&nbsp;»
+          </a>
+        </li>
+        <li>
+          <a href="/account">
+            Change your credit card info&nbsp;»
+          </a>
+        </li>
+        <li id="gift-redeem">
+          <a href="/gifts/redeem">Redeem a gift code &nbsp;»
+          </a>      </li>
+      </ul>
+    </div>
+  </div>
+</div>
 </div>
 
 
@@ -248,7 +278,7 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 
 		<p class="hide-on-big"><span>Have a question?</span> 
 				
-          <a href="/gateway-prototype//faq">Visit our FAQ »</a>
+          <a href="/gateway-prototype//logged-in/faq">Visit our FAQ »</a>
         
      </p>
 
@@ -293,16 +323,8 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 					
 					
 
-						
-	            <li class="nav__style-tips"><a  href="#" class="style-tips-toggle">Style Tips</a>
-	         
-	              <ul class="men-or-women unstyled">
-	                <li><a href="/gateway-prototype//style-tips">Women</a></li>
-	                <li><a href="/gateway-prototype//style-tips">Men</a></li>
-	              </ul>
-	          
-	        	</li>
-		        
+	        	<li><a>Style Tips</a></li>
+
 	        
 				</ul>
 			</li>
@@ -320,9 +342,9 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 				<h5>Have a question?</h5>
 				<ul class="unstyled">
 
-					
-					<li><a href="/gateway-prototype//faq">FAQ</a></li>
-					
+				
+	          	<li><a href="/gateway-prototype/womens/faq">FAQ</a></li>
+	        	
 					<li><a>Help Center</a></li>
 					<li><a>Contact Us</a></li>
 				</ul>
@@ -341,18 +363,6 @@ var RimgOptions = { breakpoint:'-mobile 320w 1x, -tablet 700w 1x, -desktop 1000w
 			</ul>
 
 			
-
-			<div class="footer__social__select">
-		
-				 <ul class="unstyled">
-		          <li class="choose-women"><a>Women<div class="helper-text">@stitchfix</div></a></li>
-		          <li><a>Men<div class="helper-text">@stitchfixmen</div></a></li>
-        </ul>
-
-
-			</div>
-
-       
 		</div>
 
 		<div class="download">

@@ -20,7 +20,27 @@ active: my-fix
     <div class="action-primary">
       <p class="content-headline"><span class="ss-standard ss-cart"></span> Please do something</p>
       <p class="instructional-note"> some prompt</p>
-      <a href="/order_review/edit" class="btn btn-lg btn-primary btn-block-dynamic">Big action </a>
+
+      <form id="return-extension" action="">
+        <p class="instructional-note"> How much time do you need?</p>
+        <div id="return-extension-duration">
+
+          <input type="radio" name="duration" value="7/19/2016"> Tuesday, July 19th<br>
+          <input type="radio" name="duration" value=""> I need more time<br>
+
+        </div>
+
+        <div id="return-extension-reason">
+          <p class="instructional-note"> Why do you need this?</p>
+          <input type="radio" name="reason" value="vacation"> I'm going on vacation<br>
+          <input type="radio" name="reason" value="paycheck"> I'm waiting for my next paycheck<br>
+          <input type="radio" name="reason" value="indecisive"> I'm trying to decide what to keep<br>
+          <input type="radio" name="reason" value="other"> Other<br>
+        </div>
+
+      </form>
+
+      <a href="/order_review/edit" class="btn btn-lg btn-primary btn-block-dynamic">Extend!</a>
       <p class="action-primary-alternate">
         Something? <span class="visible-xs-inline"><br></span><a href="#">Do it&nbsp;»</a>
       </p>
