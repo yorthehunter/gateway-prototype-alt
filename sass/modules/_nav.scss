@@ -167,10 +167,8 @@ header {
   }
   .active {
     a {
-      background: red;
       background: lighten($brand_grey_light, 3%);
       &:after {
-        background: red;
         display: none;
       }
     }
@@ -224,11 +222,6 @@ header {
   }
 }
 
- @media screen and (min-width: 550px) {
-  .account-nav {
-    display: block;
-  }
-}
 
 .logged-in  {
 
@@ -255,6 +248,16 @@ header {
     display: block;
     }
   }
+
+  @media screen and (min-width: 30rem) {
+    .account-nav {
+      display: block;
+    }
+
+    .primary-nav {
+      float: left;
+    }
+  }
   
   @media screen and (min-width: 50rem) {
 
@@ -268,6 +271,12 @@ header {
       right: 0;
       padding-right: 50px;
       top: 0;
+      text-transform: capitalize;
+      letter-spacing: 0;
+      a {
+        padding: 0 0.5rem;
+        color: #584A49;
+      }
     }
     .tertiary-nav {
       @include hamburger-nav;
@@ -285,12 +294,23 @@ header {
     }
   }
 
-  @media screen and (min-width: 70rem) {
+  @media screen and (min-width: 60rem) {
+
+    header {
+      padding-right: calc(50% - 33rem);
+      padding-left: calc(50% - 33rem);
+    }
+
+    nav {
+    }
     .secondary-nav {
       padding-right: 0;
     }
     .tertiary-nav {
       @include visible-nav;
+      a {
+        padding: 0 0.5rem;
+      }
     }
     #tertiary-toggle {
       display: none;

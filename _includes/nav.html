@@ -45,21 +45,7 @@
 
     <nav class="main">
 
-        {% if page.status == "logged-in" %}
-
-        <ul class="account-nav">
-
-          <li><a href="#" class="account-toggle">Kimberly ▾</a>
-            <ul class="sub-nav">
-              <li><a href="#">Account</a><li>
-              <li><a href="#">Credit</a><li>
-              <li><a href="{{ site.baseurl }}">Sign out</a></li>
-            </ul> 
-          </li>
-
-        </ul>
-
-        {% endif %}
+        
       
         <ul class="primary-nav">
 
@@ -87,15 +73,15 @@
 
                   {% if page.status == "logged-in" %}
 
-                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/faq">FAQ</a></li>
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/faq">Faq</a></li>
 
                   {% else %} 
                     {% if page.skin == "womens" %}
-                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}womens/faq">FAQ</a></li>
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}womens/faq">Faq</a></li>
                     {% elsif page.skin == "mens" %}
-                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}mens/faq">FAQ</a></li>
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}mens/faq">Faq</a></li>
                     {% else %}
-                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/faq">FAQ</a></li>
+                    <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/faq">Faq</a></li>
                     {% endif %}
                   {% endif %}
 
@@ -178,5 +164,21 @@
      -->       
     
         </ul>
+
+        {% if page.status == "logged-in" %}
+
+        <ul class="account-nav">
+
+          <li><a href="#" class="account-toggle">Kimberly ▾</a>
+            <ul class="sub-nav">
+              <li><a href="#">Account</a><li>
+              <li><a href="#">Credit</a><li>
+              <li><a href="{{ site.baseurl }}">Sign out</a></li>
+            </ul> 
+          </li>
+
+        </ul>
+
+        {% endif %}
 
     </nav>
