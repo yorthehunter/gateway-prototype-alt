@@ -2571,7 +2571,8 @@ a {
   background: transparent; }
 
 .cta-primary .actions-secondary {
-  margin-top: 40px; }
+  margin-top: 40px;
+  padding-bottom: 20px; }
 
 ul, ol {
   margin-top: 0;
