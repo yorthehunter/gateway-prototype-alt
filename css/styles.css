@@ -136,10 +136,10 @@ blockquote {
   margin: 0 0 1em;
   font-weight: 400; }
   blockquote p {
-    font-style: italic; }
+    font-style: normal; }
 
 dfn {
-  font-style: italic; }
+  font-style: normal; }
 
 hr {
   display: block;
@@ -157,7 +157,7 @@ ins {
 mark {
   background: #ff0;
   color: #000;
-  font-style: italic;
+  font-style: normal;
   font-weight: bold; }
 
 /* Redeclare monospace font family: h5bp.com/j */
@@ -2526,24 +2526,15 @@ p {
 
 .btn-lg {
   min-width: 200px;
-  width: 80%;
-  text-align: center;
-  min-height: 50px;
-  font-size: 18px !important;
-  padding-top: 14px !important;
-  margin: 0 auto;
-  line-height: 22px !important;
-  letter-spacing: .5px;
-  font-weight: 700;}
+  height: 50px;
+  font-size: 16px !important;
+  padding-top: 10px !important;
+  line-height: 1.9 !important; }
 
 .btn-primary {
   color: white;
-  background-color: #F05D61;
-  border-color: #FF5C61;
-  display: block;
-  overflow: visible;
-  white-space: normal;
-}
+  background-color: #FF5C61;
+  border-color: #FF5C61; }
 
 .content-headline {
   margin-top: 12px;
@@ -2553,12 +2544,12 @@ p {
   line-height: 1.2; }
 
 .instructional-note {
-  font-family: "BrandonText-Italic", sans-serif;
+  font-family: "BrandonText-Regular", sans-serif;
   font-size: 14px;
   margin-bottom: 12px; }
 
 .action-primary-alternate {
-  font-family: "BrandonText-Italic", sans-serif;
+  font-family: "BrandonText-Regular", sans-serif;
   font-size: 14px;
   margin-top: 24px;
   margin-bottom: 0; }
@@ -2593,3 +2584,18 @@ ul, ol {
 
 .side-margins {
   padding: 0 10px; }
+
+.date-lockup {
+  font-size: 24px;
+  font-family: 'Grad-Bold';
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
