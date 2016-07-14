@@ -2530,4 +2530,11 @@ max-width: 1000px;*/ }
   background-color: #69bdb0;
   border-color: #69bdb0; }
 
+.content-headline {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-family: "BrandonText-Bold", sans-serif;
+  line-height: 1.2; }
+
 /*# sourceMappingURL=styles.css.map */
