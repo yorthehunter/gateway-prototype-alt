@@ -85,6 +85,15 @@ header {
   }
 }
 
+@mixin nav-element {
+  position: relative;
+  display: block;
+  border-bottom: 0;
+  color: $brand_grey_dark;
+  &:hover {
+  }
+}
+
 @mixin visible-nav {
   display: block;
   position: relative;
@@ -104,7 +113,7 @@ header {
     padding: 0 1rem;
     text-decoration: none !important; 
     line-height: 50px;
-    @extend %nav-element;
+    @include nav-element;
     @media screen and (max-width: 50rem) {
       padding: 0 5px;
     }
