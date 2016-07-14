@@ -2472,7 +2472,6 @@ background-image: linear-gradient(#fff, lighten($brand_grey_light, 2%));*/ }
 .help-block,
 .instructional-note {
   font-size: 0.9rem;
-  padding: 10px 0 0;
   margin-bottom: 0; }
   .help-block.size-chart,
   .instructional-note.size-chart {
