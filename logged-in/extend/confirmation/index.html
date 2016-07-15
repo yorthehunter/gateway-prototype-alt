@@ -26,9 +26,13 @@ active: my-fix
 
         <form id="return-extension" action="">
 
-          <div id="return-extension-duration" style="margin-top: 2em;">
-            <div id="default-duration">
-              <p>Your new return date is Thursday, July 21st</p>
+          <div id="return-extension-duration">
+            <div id="default-duration" class="text-center">
+
+              <div class="date-lockup">
+                <div class="date-lockup--intro">Your new return date is </div>
+                <time datetime="2016-07-21">Thursday, July 21st</time>
+              </div>
               <p><span class="visible-xs-inline"><br></span><a id="more-needed" href="#">Need to adjust the date again? &nbsp;»</a></p>
             </div>
             <div id="calendar-duration" style="display: none;">
@@ -42,7 +46,7 @@ active: my-fix
 
       </div>
 
-      <div class="actions-secondary">
+      <div class="actions-secondary hidden">
         <p> You might want to </p>
         <ul>
           <li>
