@@ -1,5 +1,5 @@
 {% if page.status == "logged-in" %}
-<a href="{{ site.baseurl }}/logged-in" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
+<a href="{{ site.baseurl }}/logged-in/delivered/" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 {% else %}
 <a href="{{ site.baseurl }}" class="link--avatar"><img src="{{ site.baseurl }}/img/avatar.svg" alt="avatar" class="nav__avatar" /></a>
 <a href="{{ site.baseurl }}" class="link--logo"><img src="{{ site.baseurl }}/img/stitchfix.svg" alt="logo" class="nav__logo" /></a>
@@ -51,7 +51,7 @@
 
 
               {% if page.status == "logged-in" %}
-                <li{% if page.active == "my-fix" %} class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in">My fix</a></li>
+                <li{% if page.active == "my-fix" %} class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/delivered">My fix</a></li>
                 <li{% if page.active == "style-profile" %} class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/style-profile">Style profile</a></li>
               {% endif %}
 
@@ -168,7 +168,7 @@
 
         <ul class="account-nav">
 
-          <li><a href="#" class="account-toggle">Kimberly ▾</a>
+          <li><a href="#" class="account-toggle">Kimberly&nbsp;▾</a>
             <ul class="sub-nav">
               <li><a href="#">Account</a><li>
               <li><a href="#">Credit</a><li>
