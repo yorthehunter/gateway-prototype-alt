@@ -2525,7 +2525,6 @@ p {
 
 .btn-lg {
   min-width: 200px;
-  height: 50px;
   font-size: 16px !important;
   padding-top: 10px !important;
   line-height: 1.9 !important; }
@@ -2586,13 +2585,16 @@ ul, ol {
 
 .date-lockup {
   font-size: 24px;
-  font-family: 'Grad-Bold';
   text-align: center;
   margin: 20px auto;
   padding: 20px 0;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   display: inline-block;
+}
+.date-lockup--heading {
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .text-center {
