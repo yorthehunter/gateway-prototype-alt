@@ -12,20 +12,20 @@
     {% endif %}
     {% if page.skin == "mens" %}
       <a href="{{ site.baseurl }}/mens">Men</a>
-    {% endif %} 
+    {% endif %}
   {% endif %}
   </li>
 </ul>
-      
+
 
   <a href="#" id="toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="secondary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
   <a href="#" id="tertiary-toggle"><i aria-hidden="true" class="icon" data-icon="e609"></i><span>Menu</span></a>
 
-{% if page.status == "logged-in" %}  
-  {% if page.body_class == "mens" %} 
+{% if page.status == "logged-in" %}
+  {% if page.body_class == "mens" %}
     <a href="#get-started" class="btn btn--cta" id="get-started">Refer</a>
-  {% endif %}  
+  {% endif %}
 {% else %}
 
   {% unless page.active == "login" %}
@@ -45,8 +45,8 @@
 
     <nav class="main">
 
-        
-      
+
+
         <ul class="primary-nav">
 
 
@@ -74,7 +74,7 @@
 
                     <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/faq">Faq</a></li>
 
-                  {% else %} 
+                  {% else %}
                     {% if page.skin == "womens" %}
                     <li {% if page.active == "faq" %}class="active"{% endif %}><a href="{{ site.baseurl }}womens/faq">Faq</a></li>
                     {% elsif page.skin == "mens" %}
@@ -96,12 +96,12 @@
                       <li><a href="{{ site.baseurl }}/style-tips">Style Guide</a></li>
                     {% else %}
                     <li class="nav__style-tips"><a href="#" class="style-tips-toggle">Style Guide</a>
-                   
+
                         <ul class="men-or-women unstyled">
                           <li><a href="{{ site.baseurl }}/style-tips">Women</a></li>
                           <li><a href="{{ site.baseurl }}/style-tips">Men</a></li>
                         </ul>
-                      
+
                     </li>
                     {% endif %}
 
@@ -134,7 +134,7 @@
                     {% endif %}
 
 
-                
+
                     {% if page.status == "logged-in" %}
 
                       <li {% if page.active == "mens" %}class="active"{% endif %}><a href="{{ site.baseurl }}/logged-in/mens">Mens</a></li>
@@ -151,7 +151,7 @@
 
               </ul>
 
-              
+
 
 <!--
             {% if page.active == "element" %}
@@ -160,20 +160,20 @@
                 <li><a href="{{ site.baseurl }}/schedule/">Element</a></li>
             {% endif %}
 
-     -->       
-    
+     -->
+
         </ul>
 
         {% if page.status == "logged-in" %}
 
         <ul class="account-nav">
 
-          <li><a href="#" class="account-toggle">Kimberly&nbsp;▾</a>
+          <li><a href="#" class="account-toggle">Jane&nbsp;▾</a>
             <ul class="sub-nav">
               <li><a href="#">Account</a><li>
               <li><a href="#">Credit</a><li>
               <li><a href="{{ site.baseurl }}">Sign out</a></li>
-            </ul> 
+            </ul>
           </li>
 
         </ul>
