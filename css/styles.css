@@ -2584,17 +2584,21 @@ ul, ol {
   padding: 0 10px; }
 
 .date-lockup {
-  font-size: 24px;
   text-align: center;
-  margin: 20px auto;
-  padding: 20px 0;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  margin: 18px auto;
+  padding: 18px 0;
+  border-top: 1px solid #F2F1EF;
+  border-bottom: 1px solid #F2F1EF;
   display: inline-block;
 }
-.date-lockup--heading {
-  font-size: 18px;
+.date-lockup--intro {
+  font-size: 15px;
+  line-height: 24px;
   text-transform: uppercase;
+}
+.date-lockup time {
+  font-size: 24px;
+  font-family: 'Grad-Bold';
 }
 
 .text-center {

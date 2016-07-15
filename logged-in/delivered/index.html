@@ -16,20 +16,23 @@ active: my-fix
 
     <div class="text-center">
       <div class="content-headline">
-        <div class="date-lockup-intro">Please check out by</div>
-        <div class="date-lockup">Thursday, July 15th</div>
+        <p style="margin-bottom: 0;">Ellen, your Fix has been delivered!</p>
+        <div class="date-lockup">
+          <div class="date-lockup--intro">Please check out by</div>
+          <time datetime="2016-07-15">Thursday, July 15th</time>
+        </div>
       </div>
-      <a href="../checkout/" class="btn btn-lg btn-primary btn-block-dynamic">Check Out Now&nbsp;»</a>
-      <p class="instructional-note">Tell us about your Fix &ndash; the more feedback you give, the better your next Fix will be!</p>
+      <a href="../checkout/" class="btn btn-lg btn-primary btn-block-dynamic" style="margin-bottom: 36px; min-width: 300px;">Begin Checkout</a>
+      <p>Tell us about your Fix &ndash; the more feedback you give, the better your next Fix will be!</p>
       <p class="action-primary-alternate">
-        <a href="../extend/">Need more time? Request an extension&nbsp;»</a>
+        <a href="../extend/">Request an extension&nbsp;»</a>
       </p>
-      <p class="action-primary-alternate">
-        Didn't receive your Fix yet? <a href="https://www.fedex.com/fedextrack/?tracknumbers=20afe204a12f7d1dac412106">Track your USPS package&nbsp;»</a>
+      <p class="action-primary-alternate" style="padding-bottom: 36px;">
+        <a href="https://www.fedex.com/fedextrack/?tracknumbers=20afe204a12f7d1dac412106">Track your USPS package&nbsp;»</a>
       </p>
     </div>
 
-    <div class="actions-secondary">
+    <div class="actions-secondary hidden">
       <p> You might want to </p>
       <ul>
         <li>
@@ -48,9 +51,10 @@ active: my-fix
         </li>
       </ul>
     </div>
+
   </div>
 </div>
-</div>
 
+</div>
 
 {% include footer.html %}
